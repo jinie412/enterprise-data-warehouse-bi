@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="42"
-  DTS:VersionGUID="{0062B8D7-4C88-4B91-B398-33CB92A5B7D3}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{789E994A-9FCD-4E37-8368-3F011DD92495}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2728,6 +2728,21 @@ From STG_FLight</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Import to NDS_Flight"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9575E657-3975-4321-B17D-18BF9B8316C6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import to NDS_Flight"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Import to NDS_Reason"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -3473,6 +3488,13 @@ WHERE CANCELLATION_REASON IS NOT NULL AND CANCELLATION_REASON &lt;&gt; ''</prope
                   refId="Package\Import to NDS_Time\Derived Column.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import to NDS_Time\Derived Column.Inputs[Derived Column Input].Columns[Day_Of_Week]"
+                      cachedDataType="i4"
+                      cachedName="Day_Of_Week"
+                      lineageId="Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Day_Of_Week]" />
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -3483,6 +3505,31 @@ WHERE CANCELLATION_REASON IS NOT NULL AND CANCELLATION_REASON &lt;&gt; ''</prope
                   exclusionGroup="1"
                   name="Derived Column Output"
                   synchronousInputId="Package\Import to NDS_Time\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Time\Derived Column.Outputs[Derived Column Output].Columns[Day_new]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Import to NDS_Time\Derived Column.Outputs[Derived Column Output].Columns[Day_new]"
+                      name="Day_new"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,50)(#{Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Day_Of_Week]} == 1 ? "Monday" : #{Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Day_Of_Week]} == 2 ? "Tuesday" : #{Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Day_Of_Week]} == 3 ? "Wednesday" : #{Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Day_Of_Week]} == 4 ? "Thursday" : #{Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Day_Of_Week]} == 5 ? "Friday" : #{Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Day_Of_Week]} == 6 ? "Saturday" : #{Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Day_Of_Week]} == 7 ? "Sunday" : "Unknown")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,50)(Day_Of_Week == 1 ? "Monday" : Day_Of_Week == 2 ? "Tuesday" : Day_Of_Week == 3 ? "Wednesday" : Day_Of_Week == 4 ? "Thursday" : Day_Of_Week == 5 ? "Friday" : Day_Of_Week == 6 ? "Saturday" : Day_Of_Week == 7 ? "Sunday" : "Unknown")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -4251,6 +4298,11 @@ From STG_Flight</property>
               name="Derived Column Output"
               startId="Package\Import to NDS_Time\Created_Date.Outputs[Derived Column Output]" />
             <path
+              refId="Package\Import to NDS_Time.Paths[Derived Column Output2]"
+              endId="Package\Import to NDS_Time\Lookup in NDS_Time.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Import to NDS_Time\Derived Column.Outputs[Derived Column Output]" />
+            <path
               refId="Package\Import to NDS_Time.Paths[Lookup Match Output]"
               endId="Package\Import to NDS_Time\Updated_Date.Inputs[Derived Column Input]"
               name="Lookup Match Output"
@@ -4289,19 +4341,23 @@ From STG_Flight</property>
         <NodeLayout
           Size="180.8,41.6"
           Id="Package\Import to NDS_Airport"
-          TopLeft="438.333309383857,76.2666661363178" />
+          TopLeft="446.666642261877,84.9333327427175" />
         <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\Import to NDS_Time"
-          TopLeft="457.499975003303,189.33333342976" />
+          Size="190.4,41.6"
+          Id="Package\Import to NDS_Distance"
+          TopLeft="184.999989892046,290.93333342976" />
         <NodeLayout
           Size="185.6,41.6"
           Id="Package\Import to NDS_Reason"
           TopLeft="184.999989892046,185.200000831683" />
         <NodeLayout
-          Size="190.4,41.6"
-          Id="Package\Import to NDS_Distance"
-          TopLeft="184.999989892046,290.93333342976" />
+          Size="172.8,41.6"
+          Id="Package\Import to NDS_Time"
+          TopLeft="457.499975003303,189.33333342976" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Import to NDS_Flight"
+          TopLeft="449.166642125283,295.533331278231" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4754,108 +4810,130 @@ From STG_Flight</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Import to NDS_Time">
+    design-time-name="Package\Import to NDS_Distance">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="145.6,41.6"
-          Id="Package\Import to NDS_Time\Updated_Date"
-          TopLeft="74.1666658926342,245.466665376955" />
-        <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\Import to NDS_Time\Lookup in NDS_Time"
-          TopLeft="190.833326184916,163.133332616157" />
+          Size="194.4,41.6"
+          Id="Package\Import to NDS_Distance\Lookup in NDS_Distance"
+          TopLeft="180.833326333928,159.287178827315" />
         <NodeLayout
           Size="171.2,41.6"
-          Id="Package\Import to NDS_Time\OLE DB Destination"
+          Id="Package\Import to NDS_Distance\OLE DB Destination"
           TopLeft="322.499985657633,323.466664834552" />
         <NodeLayout
           Size="167.2,41.6"
-          Id="Package\Import to NDS_Time\OLE DB Command"
+          Id="Package\Import to NDS_Distance\OLE DB Command"
           TopLeft="60,321.733331513273" />
         <NodeLayout
           Size="131.2,41.6"
-          Id="Package\Import to NDS_Time\STG_Flight"
+          Id="Package\Import to NDS_Distance\STG_Flight"
           TopLeft="214.166658243372,60" />
         <NodeLayout
           Size="143.2,41.6"
-          Id="Package\Import to NDS_Time\Created_Date"
+          Id="Package\Import to NDS_Distance\Created_Date"
           TopLeft="332.499985111257,242.866665395035" />
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\Import to NDS_Distance\Updated_Date"
+          TopLeft="74.1666658926342,245.466665376955" />
         <EdgeLayout
-          Id="Package\Import to NDS_Time.Paths[Lookup No Match Output]"
-          TopLeft="307.366659518249,204.733332616157">
+          Id="Package\Import to NDS_Distance.Paths[OLE DB Source Output]"
+          TopLeft="278.89999228865,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="96.7333255930076,38.133332778878"
+              EndConnector="0,57.6871788273153"
               Start="0,0"
-              End="96.7333255930076,30.633332778878">
+              End="0,50.1871788273153">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.4585349022896" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.4585349022896"
-                    Point2="0,15.4585349022896"
-                    Point3="4,15.4585349022896" />
+                    End="0,50.1871788273153" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Distance.Paths[Lookup No Match Output]"
+          TopLeft="309.099993000594,200.887178827315">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="94.9999921106627,41.9794865677197"
+              Start="0,0"
+              End="94.9999921106627,34.4794865677197">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="92.7333255930076,15.4585349022896" />
+                    End="0,12.9974084388481" />
                   <mssgle:CubicBezierSegment
-                    Point1="92.7333255930076,15.4585349022896"
-                    Point2="96.7333255930076,15.4585349022896"
-                    Point3="96.7333255930076,19.4585349022896" />
+                    Point1="0,12.9974084388481"
+                    Point2="0,16.9974084388481"
+                    Point3="4,16.9974084388481" />
                   <mssgle:LineSegment
-                    End="96.7333255930076,30.633332778878" />
+                    End="90.9999921106627,16.9974084388481" />
+                  <mssgle:CubicBezierSegment
+                    Point1="90.9999921106627,16.9974084388481"
+                    Point2="94.9999921106627,16.9974084388481"
+                    Point3="94.9999921106627,20.9974084388481" />
+                  <mssgle:LineSegment
+                    End="94.9999921106627,34.4794865677197" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-7.43972392224618,20.4585349022896,111.6127734375,11.609375"
+              BoundingBox="-8.30639066341866,21.9974084388481,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Import to NDS_Time.Paths[Lookup Match Output]"
-          TopLeft="251.099992851583,204.733332616157">
+          Id="Package\Import to NDS_Distance.Paths[Lookup Match Output]"
+          TopLeft="246.966659667261,200.887178827315">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-104.133326958948,40.733332760798"
+              EndConnector="-99.9999937746268,44.5794865496397"
               Start="0,0"
-              End="-104.133326958948,33.233332760798">
+              End="-99.9999937746268,37.0794865496397">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.5125259263504" />
+                    End="0,14.0501431254051" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.5125259263504"
-                    Point2="0,16.5125259263504"
-                    Point3="-4,16.5125259263504" />
+                    Point1="0,14.0501431254051"
+                    Point2="0,18.0501431254051"
+                    Point3="-4,18.0501431254051" />
                   <mssgle:LineSegment
-                    End="-100.133326958948,16.5125259263504" />
+                    End="-95.9999937746268,18.0501431254051" />
                   <mssgle:CubicBezierSegment
-                    Point1="-100.133326958948,16.5125259263504"
-                    Point2="-104.133326958948,16.5125259263504"
-                    Point3="-104.133326958948,20.5125259263504" />
+                    Point1="-95.9999937746268,18.0501431254051"
+                    Point2="-99.9999937746268,18.0501431254051"
+                    Point3="-99.9999937746268,22.0501431254051" />
                   <mssgle:LineSegment
-                    End="-104.133326958948,33.233332760798" />
+                    End="-99.9999937746268,37.0794865496397" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-100.258050198224,21.5125259263504,96.3827734375,11.609375"
+              BoundingBox="-98.1913836060634,23.0501431254051,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Import to NDS_Time.Paths[Derived Column Output1]"
+          Id="Package\Import to NDS_Distance.Paths[Derived Column Output1]"
           TopLeft="406.099985384445,284.466665395035">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4873,13 +4951,11 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,7.74999971975895,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Import to NDS_Time.Paths[Derived Column Output]"
+          Id="Package\Import to NDS_Distance.Paths[Derived Column Output]"
           TopLeft="145.283332946317,287.066665376955">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4897,34 +4973,6 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,5.58333306815895,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Import to NDS_Time\Derived Column"
-          TopLeft="448.999993309379,57.9999991357327" />
-        <EdgeLayout
-          Id="Package\Import to NDS_Time.Paths[OLE DB Source Output]"
-          TopLeft="345.366658243372,79.7999995678663">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="103.633335066007,0"
-              Start="0,0"
-              End="96.1333350660067,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="96.1333350660067,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4932,7 +4980,7 @@ From STG_Flight</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Time\Lookup in NDS_Time">
+    design-time-name="Package\Import to NDS_Distance\Lookup in NDS_Distance">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -4942,7 +4990,7 @@ From STG_Flight</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[NDS_Time]</Value>
+          type="q3:string">[dbo].[NDS_Distance]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -4955,7 +5003,7 @@ From STG_Flight</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Time\OLE DB Destination">
+    design-time-name="Package\Import to NDS_Distance\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4968,7 +5016,7 @@ From STG_Flight</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Time\STG_Flight">
+    design-time-name="Package\Import to NDS_Distance\STG_Flight">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5106,29 +5154,6 @@ From STG_Flight</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Reason\Lookup in NDS_Reason">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[NDS_Reason]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Import to NDS_Reason\OLE DB Destination">
     <Properties>
       <Property>
@@ -5149,73 +5174,158 @@ From STG_Flight</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Reason\Lookup in NDS_Reason">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[NDS_Reason]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Import to NDS_Distance">
+    design-time-name="Package\Import to NDS_Time">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="145.6,41.6"
-          Id="Package\Import to NDS_Distance\Updated_Date"
-          TopLeft="74.1666658926342,245.466665376955" />
-        <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\Import to NDS_Distance\Lookup in NDS_Distance"
-          TopLeft="180.833326333928,159.287178827315" />
-        <NodeLayout
           Size="171.2,41.6"
-          Id="Package\Import to NDS_Distance\OLE DB Destination"
+          Id="Package\Import to NDS_Time\OLE DB Destination"
           TopLeft="322.499985657633,323.466664834552" />
         <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Import to NDS_Distance\OLE DB Command"
-          TopLeft="60,321.733331513273" />
+          Size="152.8,41.6"
+          Id="Package\Import to NDS_Time\Derived Column"
+          TopLeft="448.999993309379,57.9999991357327" />
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\Import to NDS_Time\Updated_Date"
+          TopLeft="74.1666658926342,245.466665376955" />
         <NodeLayout
           Size="131.2,41.6"
-          Id="Package\Import to NDS_Distance\STG_Flight"
+          Id="Package\Import to NDS_Time\STG_Flight"
           TopLeft="214.166658243372,60" />
         <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\Import to NDS_Time\Lookup in NDS_Time"
+          TopLeft="190.833326184916,163.133332616157" />
+        <NodeLayout
           Size="143.2,41.6"
-          Id="Package\Import to NDS_Distance\Created_Date"
+          Id="Package\Import to NDS_Time\Created_Date"
           TopLeft="332.499985111257,242.866665395035" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Import to NDS_Time\OLE DB Command"
+          TopLeft="60,321.733331513273" />
         <EdgeLayout
-          Id="Package\Import to NDS_Distance.Paths[Lookup Match Output]"
-          TopLeft="246.966659667261,200.887178827315">
+          Id="Package\Import to NDS_Time.Paths[OLE DB Source Output]"
+          TopLeft="345.366658243372,79.7999995678663">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-99.9999937746268,44.5794865496397"
+              EndConnector="103.633335066007,0"
               Start="0,0"
-              End="-99.9999937746268,37.0794865496397">
+              End="96.1333350660067,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.0501431254051" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.0501431254051"
-                    Point2="0,18.0501431254051"
-                    Point3="-4,18.0501431254051" />
+                    End="96.1333350660067,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Time.Paths[Lookup No Match Output]"
+          TopLeft="307.366659518249,204.733332616157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96.7333255930076,38.133332778878"
+              Start="0,0"
+              End="96.7333255930076,30.633332778878">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-95.9999937746268,18.0501431254051" />
+                    End="0,11.4585349022896" />
                   <mssgle:CubicBezierSegment
-                    Point1="-95.9999937746268,18.0501431254051"
-                    Point2="-99.9999937746268,18.0501431254051"
-                    Point3="-99.9999937746268,22.0501431254051" />
+                    Point1="0,11.4585349022896"
+                    Point2="0,15.4585349022896"
+                    Point3="4,15.4585349022896" />
                   <mssgle:LineSegment
-                    End="-99.9999937746268,37.0794865496397" />
+                    End="92.7333255930076,15.4585349022896" />
+                  <mssgle:CubicBezierSegment
+                    Point1="92.7333255930076,15.4585349022896"
+                    Point2="96.7333255930076,15.4585349022896"
+                    Point3="96.7333255930076,19.4585349022896" />
+                  <mssgle:LineSegment
+                    End="96.7333255930076,30.633332778878" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-98.1913836060634,23.0501431254051,96.3827734375,11.609375"
+              BoundingBox="-7.43972392224618,20.4585349022896,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Import to NDS_Distance.Paths[Derived Column Output1]"
+          Id="Package\Import to NDS_Time.Paths[Lookup Match Output]"
+          TopLeft="251.099992851583,204.733332616157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-104.133326958948,40.733332760798"
+              Start="0,0"
+              End="-104.133326958948,33.233332760798">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5125259263504" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5125259263504"
+                    Point2="0,16.5125259263504"
+                    Point3="-4,16.5125259263504" />
+                  <mssgle:LineSegment
+                    End="-100.133326958948,16.5125259263504" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-100.133326958948,16.5125259263504"
+                    Point2="-104.133326958948,16.5125259263504"
+                    Point3="-104.133326958948,20.5125259263504" />
+                  <mssgle:LineSegment
+                    End="-104.133326958948,33.233332760798" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-100.258050198224,21.5125259263504,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Time.Paths[Derived Column Output1]"
           TopLeft="406.099985384445,284.466665395035">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5237,7 +5347,7 @@ From STG_Flight</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Import to NDS_Distance.Paths[Derived Column Output]"
+          Id="Package\Import to NDS_Time.Paths[Derived Column Output]"
           TopLeft="145.283332946317,287.066665376955">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5259,19 +5369,31 @@ From STG_Flight</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Import to NDS_Distance.Paths[OLE DB Source Output]"
-          TopLeft="278.89999228865,101.6">
+          Id="Package\Import to NDS_Time.Paths[Derived Column Output2]"
+          TopLeft="525.399993309379,99.5999991357327">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57.6871788273153"
+              EndConnector="-246.166667124463,63.5333334804243"
               Start="0,0"
-              End="0,50.1871788273153">
+              End="-246.166667124463,56.0333334804243">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.1871788273153" />
+                    End="0,27.7666667402121" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.7666667402121"
+                    Point2="0,31.7666667402121"
+                    Point3="-4,31.7666667402121" />
+                  <mssgle:LineSegment
+                    End="-242.166667124463,31.7666667402121" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-242.166667124463,31.7666667402121"
+                    Point2="-246.166667124463,31.7666667402121"
+                    Point3="-246.166667124463,35.7666667402121" />
+                  <mssgle:LineSegment
+                    End="-246.166667124463,56.0333334804243" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5280,70 +5402,11 @@ From STG_Flight</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to NDS_Distance.Paths[Lookup No Match Output]"
-          TopLeft="309.099993000594,200.887178827315">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="94.9999921106627,41.9794865677197"
-              Start="0,0"
-              End="94.9999921106627,34.4794865677197">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.9974084388481" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.9974084388481"
-                    Point2="0,16.9974084388481"
-                    Point3="4,16.9974084388481" />
-                  <mssgle:LineSegment
-                    End="90.9999921106627,16.9974084388481" />
-                  <mssgle:CubicBezierSegment
-                    Point1="90.9999921106627,16.9974084388481"
-                    Point2="94.9999921106627,16.9974084388481"
-                    Point3="94.9999921106627,20.9974084388481" />
-                  <mssgle:LineSegment
-                    End="94.9999921106627,34.4794865677197" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8.30639066341866,21.9974084388481,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Distance\Lookup in NDS_Distance">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[NDS_Distance]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Distance\OLE DB Destination">
+    design-time-name="Package\Import to NDS_Time\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5356,8 +5419,31 @@ From STG_Flight</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Distance\STG_Flight">
+    design-time-name="Package\Import to NDS_Time\STG_Flight">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Time\Lookup in NDS_Time">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[NDS_Time]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
