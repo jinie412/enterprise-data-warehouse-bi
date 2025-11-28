@@ -1,4 +1,4 @@
-CREATE DATABASE STAGE_DATH
+﻿CREATE DATABASE STAGE_DATH
 GO
 
 USE STAGE_DATH
@@ -35,23 +35,22 @@ CREATE TABLE STG_Flight (
     Day_Of_Week INT,
     Iata_Airline CHAR(2),
     Flight_Number INT,
-    Time_Id INT,
     Tail_Number VARCHAR(20),
-    Origin_Airport CHAR(3),
-    Destination_Airport CHAR(3),
+    Origin_Airport CHAR(5), -- từ 3 sang 5
+    Destination_Airport CHAR(5), -- từ 3 sang 5
 	Distance Int,
-    Scheduled_Departure INT,
-    Departure_Time INT,
-    Departure_Delay INT,
+    Scheduled_Departure TIME, -- time
+    Departure_Time TIME, -- time
+    Departure_Delay INT, 
     Taxi_Out INT,
-    Wheels_Off INT,
+    Wheels_Off TIME, -- time
     Scheduled_Time INT,
     Elapsed_Time INT,
     Air_Time INT,
     Wheels_On INT,
     Taxi_In INT,
-    Scheduled_Arrival INT,
-    Arrival_Time INT,
+    Scheduled_Arrival TIME, -- time
+    Arrival_Time TIME, -- time
     Arrival_Delay INT,
     Diverted BIT,
     Cancelled BIT,
@@ -61,8 +60,6 @@ CREATE TABLE STG_Flight (
     Late_Aircraft_Delay INT,
     Weather_Delay INT,
     Cancellation_Reason CHAR(1)
-
-   
 );
 
 SELECT * FROM STG_Airline
