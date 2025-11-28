@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{E198B6A0-CA8C-4371-B923-796341A64D7E}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{0062B8D7-4C88-4B91-B398-33CB92A5B7D3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1879,6 +1879,1480 @@ WHERE Iata_Code=?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Import to NDS_Distance"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2bd264d0-e31a-485c-b884-101624e16754}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import to NDS_Distance"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import to NDS_Distance\Created_Date"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Created_Date"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Distance\Created_Date.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Import to NDS_Distance\Created_Date.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Output].Columns[Created_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Output].Columns[Created_Date]"
+                      name="Created_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Output].Columns[Updated_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Output].Columns[Updated_Date]"
+                      name="Updated_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Import to NDS_Distance\Created_Date.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Distance\Lookup in NDS_Distance"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup in NDS_Distance"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[NDS_Distance]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[NDS_Distance]) [refTable]
+where [refTable].[Origin_Airport] = ? and [refTable].[Destination_Airport] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Origin_Airport" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Destination_Airport" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Distance" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Created_Date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Updated_Date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]};#{Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Inputs[Lookup Input].Columns[Origin_Airport]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Origin_Airport"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Origin_Airport</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Inputs[Lookup Input].Columns[Destination_Airport]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Destination_Airport"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Destination_Airport</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Distance\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE NDS_Distance
+SET
+Distance=?,
+Updated_Date=?
+
+WHERE Origin_Airport=? AND Destination_Airport=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import to NDS_Distance\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].Columns[Distance]"
+                      cachedDataType="i4"
+                      cachedName="Distance"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Distance]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].Columns[Updated_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Updated_Date"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Output].Columns[Updated_Date]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].Columns[Origin_Airport]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Origin_Airport"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].Columns[Destination_Airport]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Destination_Airport"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="dbTimeStamp"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">1</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">1</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Distance\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Distance\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Distance\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[NDS_Distance]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import to NDS_Distance\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Created_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created_Date"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created_Date]"
+                      lineageId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Output].Columns[Created_Date]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Updated_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Updated_Date"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Updated_Date]"
+                      lineageId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Output].Columns[Updated_Date]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Origin_Airport]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Origin_Airport"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Origin_Airport]"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Destination_Airport]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Destination_Airport"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Destination_Airport]"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Distance]"
+                      cachedDataType="i4"
+                      cachedName="Distance"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distance]"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Distance]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created_Date]"
+                      dataType="dbTimeStamp"
+                      name="Created_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Updated_Date]"
+                      dataType="dbTimeStamp"
+                      name="Updated_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Origin_Airport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Origin_Airport" />
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Destination_Airport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Destination_Airport" />
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distance]"
+                      dataType="i4"
+                      name="Distance" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Distance\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Distance\STG_Flight"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="STG_Flight"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[STG_Flight]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select distinct Origin_Airport, Destination_Airport, Distance
+From STG_FLight</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import to NDS_Distance\STG_Flight.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.STAGE_DATH]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.STAGE_DATH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Origin_Airport]"
+                      length="3"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]"
+                      name="Origin_Airport"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Destination_Airport]"
+                      length="3"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]"
+                      name="Destination_Airport"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Distance]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Distance]"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Distance]"
+                      name="Distance"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Origin_Airport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="Origin_Airport" />
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Destination_Airport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="Destination_Airport" />
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Distance]"
+                      dataType="i4"
+                      name="Distance" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Origin_Airport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Origin_Airport]"
+                      name="Origin_Airport" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Destination_Airport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Destination_Airport]"
+                      name="Destination_Airport" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Distance]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Distance]"
+                      name="Distance" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Distance\Updated_Date"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Updated_Date"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Distance\Updated_Date.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Import to NDS_Distance\Updated_Date.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Output].Columns[Updated_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Output].Columns[Updated_Date]"
+                      name="Updated_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Import to NDS_Distance\Updated_Date.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import to NDS_Distance.Paths[Derived Column Output]"
+              endId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\Import to NDS_Distance\Updated_Date.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Import to NDS_Distance.Paths[Derived Column Output1]"
+              endId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Import to NDS_Distance\Created_Date.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Import to NDS_Distance.Paths[Lookup Match Output]"
+              endId="Package\Import to NDS_Distance\Updated_Date.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Import to NDS_Distance.Paths[Lookup No Match Output]"
+              endId="Package\Import to NDS_Distance\Created_Date.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Import to NDS_Distance.Paths[OLE DB Source Output]"
+              endId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import to NDS_Reason"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{5d40fd97-8867-472c-9496-bfcc4034adf6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import to NDS_Reason"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import to NDS_Reason\Created_Date"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Created_Date"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Reason\Created_Date.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Import to NDS_Reason\Created_Date.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Output].Columns[Created_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Output].Columns[Created_Date]"
+                      name="Created_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Output].Columns[Updated_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Output].Columns[Updated_Date]"
+                      name="Updated_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Import to NDS_Reason\Created_Date.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Reason\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Reason\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import to NDS_Reason\Derived Column.Inputs[Derived Column Input].Columns[Reason_Id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Reason_Id"
+                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Import to NDS_Reason\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Output].Columns[Reason_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Output].Columns[Reason_Name]"
+                      name="Reason_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,255)(#{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "A" ? "Airline/Carrier" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "B" ? "Weather" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "C" ? "National Air System" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "D" ? "Security" : "")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)(Reason_Id == "A" ? "Airline/Carrier" : Reason_Id == "B" ? "Weather" : Reason_Id == "C" ? "National Air System" : Reason_Id == "D" ? "Security" : "")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Import to NDS_Reason\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Reason\Lookup in NDS_Reason"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup in NDS_Reason"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[NDS_Reason]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[NDS_Reason]) [refTable]
+where [refTable].[Reason_Id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Reason_Id" dataType="DT_STR" length="1" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Reason_Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Created_Date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Updated_Date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Inputs[Lookup Input].Columns[Reason_Id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Reason_Id"
+                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Reason_Id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Reason\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[NDS_Reason]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import to NDS_Reason\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.NDS_DATH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Created_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Created_Date"
+                      externalMetadataColumnId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created_Date]"
+                      lineageId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Output].Columns[Created_Date]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Updated_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Updated_Date"
+                      externalMetadataColumnId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Updated_Date]"
+                      lineageId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Output].Columns[Updated_Date]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reason_Id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Reason_Id"
+                      externalMetadataColumnId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reason_Id]"
+                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reason_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reason_Name"
+                      externalMetadataColumnId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reason_Name]"
+                      lineageId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Output].Columns[Reason_Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created_Date]"
+                      dataType="dbTimeStamp"
+                      name="Created_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Updated_Date]"
+                      dataType="dbTimeStamp"
+                      name="Updated_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reason_Id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Reason_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reason_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Reason_Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Reason\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Reason\STG_Flight"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="STG_Flight"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[STG_Flight]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT
+    CANCELLATION_REASON AS Reason_Id
+FROM STG_Flight
+WHERE CANCELLATION_REASON IS NOT NULL AND CANCELLATION_REASON &lt;&gt; ''</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import to NDS_Reason\STG_Flight.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.STAGE_DATH]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.STAGE_DATH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Reason_Id]"
+                      length="1"
+                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]"
+                      name="Reason_Id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Reason_Id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Reason_Id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Reason_Id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Reason_Id]"
+                      name="Reason_Id" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import to NDS_Reason.Paths[Derived Column Output]"
+              endId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Import to NDS_Reason\Created_Date.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Import to NDS_Reason.Paths[Derived Column Output1]"
+              endId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Import to NDS_Reason.Paths[Lookup No Match Output]"
+              endId="Package\Import to NDS_Reason\Created_Date.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Import to NDS_Reason.Paths[OLE DB Source Output]"
+              endId="Package\Import to NDS_Reason\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Import to NDS_Time"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -1988,11 +3462,60 @@ WHERE Iata_Code=?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Import to NDS_Time\Lookup in NDS_Airport"
+              refId="Package\Import to NDS_Time\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Time\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Time\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Import to NDS_Time\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Time\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Import to NDS_Time\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Time\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Time\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Time\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Time\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Time\Lookup in NDS_Time"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup in NDS_Airport"
+              name="Lookup in NDS_Time"
               usesDispositions="true"
               version="6">
               <properties>
@@ -2056,7 +3579,7 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
               </properties>
               <connections>
                 <connection
-                  refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Connections[OleDbConnection]"
+                  refId="Package\Import to NDS_Time\Lookup in NDS_Time.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.NDS_DATH]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.NDS_DATH]"
                   description="Connection manager used to access lookup data."
@@ -2064,11 +3587,11 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
               </connections>
               <inputs>
                 <input
-                  refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Inputs[Lookup Input]"
+                  refId="Package\Import to NDS_Time\Lookup in NDS_Time.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Inputs[Lookup Input].Columns[Year_Value]"
+                      refId="Package\Import to NDS_Time\Lookup in NDS_Time.Inputs[Lookup Input].Columns[Year_Value]"
                       cachedDataType="i4"
                       cachedName="Year_Value"
                       lineageId="Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Year_Value]">
@@ -2084,7 +3607,7 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Inputs[Lookup Input].Columns[Month_Value]"
+                      refId="Package\Import to NDS_Time\Lookup in NDS_Time.Inputs[Lookup Input].Columns[Month_Value]"
                       cachedDataType="i4"
                       cachedName="Month_Value"
                       lineageId="Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Month_Value]">
@@ -2100,7 +3623,7 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Inputs[Lookup Input].Columns[Day_Value]"
+                      refId="Package\Import to NDS_Time\Lookup in NDS_Time.Inputs[Lookup Input].Columns[Day_Value]"
                       cachedDataType="i4"
                       cachedName="Day_Value"
                       lineageId="Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output].Columns[Day_Value]">
@@ -2121,17 +3644,17 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Match Output]"
+                  refId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Import to NDS_Time\Lookup in NDS_Airport.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Import to NDS_Time\Lookup in NDS_Time.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Match Output].Columns[Time_Id]"
+                      refId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Match Output].Columns[Time_Id]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Match Output].Columns[Time_Id]"
+                      lineageId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Match Output].Columns[Time_Id]"
                       name="Time_Id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2145,30 +3668,30 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup No Match Output]"
+                  refId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Import to NDS_Time\Lookup in NDS_Airport.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Import to NDS_Time\Lookup in NDS_Time.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Error Output]"
+                  refId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Import to NDS_Time\Lookup in NDS_Airport.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Import to NDS_Time\Lookup in NDS_Time.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2238,13 +3761,15 @@ WHERE Time_Id=?</property>
                       cachedDataType="i4"
                       cachedName="Time_Id"
                       externalMetadataColumnId="Package\Import to NDS_Time\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Match Output].Columns[Time_Id]" />
+                      lineageId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Match Output].Columns[Time_Id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Time\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Param_0">
                       <properties>
                         <property
@@ -2447,7 +3972,9 @@ WHERE Time_Id=?</property>
                       name="Day_Value" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Time\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day_Of_Week]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Day_Of_Week" />
                   </externalMetadataColumns>
                 </input>
@@ -2727,15 +4254,15 @@ From STG_Flight</property>
               refId="Package\Import to NDS_Time.Paths[Lookup Match Output]"
               endId="Package\Import to NDS_Time\Updated_Date.Inputs[Derived Column Input]"
               name="Lookup Match Output"
-              startId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup Match Output]" />
+              startId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Import to NDS_Time.Paths[Lookup No Match Output]"
               endId="Package\Import to NDS_Time\Created_Date.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
-              startId="Package\Import to NDS_Time\Lookup in NDS_Airport.Outputs[Lookup No Match Output]" />
+              startId="Package\Import to NDS_Time\Lookup in NDS_Time.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Import to NDS_Time.Paths[OLE DB Source Output]"
-              endId="Package\Import to NDS_Time\Lookup in NDS_Airport.Inputs[Lookup Input]"
+              endId="Package\Import to NDS_Time\Derived Column.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Import to NDS_Time\STG_Flight.Outputs[OLE DB Source Output]" />
           </paths>
@@ -2754,7 +4281,7 @@ From STG_Flight</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="179.2,41.6"
           Id="Package\Import to NDS_Airline"
@@ -2762,11 +4289,19 @@ From STG_Flight</property>
         <NodeLayout
           Size="180.8,41.6"
           Id="Package\Import to NDS_Airport"
-          TopLeft="456.666641715501,90.9999993671974" />
+          TopLeft="438.333309383857,76.2666661363178" />
         <NodeLayout
           Size="172.8,41.6"
           Id="Package\Import to NDS_Time"
-          TopLeft="471.666640895937,189.33333342976" />
+          TopLeft="457.499975003303,189.33333342976" />
+        <NodeLayout
+          Size="185.6,41.6"
+          Id="Package\Import to NDS_Reason"
+          TopLeft="184.999989892046,185.200000831683" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Import to NDS_Distance"
+          TopLeft="184.999989892046,290.93333342976" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3170,19 +4705,6 @@ From STG_Flight</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Airport\STG_Airport">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Import to NDS_Airport\Lookup in NDS_Airport">
     <Properties>
       <Property>
@@ -3218,18 +4740,31 @@ From STG_Flight</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Airport\STG_Airport">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Import to NDS_Time">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="131.2,41.6"
-          Id="Package\Import to NDS_Time\STG_Flight"
-          TopLeft="214.166658243372,60" />
+          Size="145.6,41.6"
+          Id="Package\Import to NDS_Time\Updated_Date"
+          TopLeft="74.1666658926342,245.466665376955" />
         <NodeLayout
-          Size="184.8,41.6"
-          Id="Package\Import to NDS_Time\Lookup in NDS_Airport"
+          Size="176.8,41.6"
+          Id="Package\Import to NDS_Time\Lookup in NDS_Time"
           TopLeft="190.833326184916,163.133332616157" />
         <NodeLayout
           Size="171.2,41.6"
@@ -3240,13 +4775,85 @@ From STG_Flight</property>
           Id="Package\Import to NDS_Time\OLE DB Command"
           TopLeft="60,321.733331513273" />
         <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Import to NDS_Time\STG_Flight"
+          TopLeft="214.166658243372,60" />
+        <NodeLayout
           Size="143.2,41.6"
           Id="Package\Import to NDS_Time\Created_Date"
           TopLeft="332.499985111257,242.866665395035" />
-        <NodeLayout
-          Size="145.6,41.6"
-          Id="Package\Import to NDS_Time\Updated_Date"
-          TopLeft="74.1666658926342,245.466665376955" />
+        <EdgeLayout
+          Id="Package\Import to NDS_Time.Paths[Lookup No Match Output]"
+          TopLeft="307.366659518249,204.733332616157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96.7333255930076,38.133332778878"
+              Start="0,0"
+              End="96.7333255930076,30.633332778878">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.4585349022896" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.4585349022896"
+                    Point2="0,15.4585349022896"
+                    Point3="4,15.4585349022896" />
+                  <mssgle:LineSegment
+                    End="92.7333255930076,15.4585349022896" />
+                  <mssgle:CubicBezierSegment
+                    Point1="92.7333255930076,15.4585349022896"
+                    Point2="96.7333255930076,15.4585349022896"
+                    Point3="96.7333255930076,19.4585349022896" />
+                  <mssgle:LineSegment
+                    End="96.7333255930076,30.633332778878" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-7.43972392224618,20.4585349022896,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Time.Paths[Lookup Match Output]"
+          TopLeft="251.099992851583,204.733332616157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-104.133326958948,40.733332760798"
+              Start="0,0"
+              End="-104.133326958948,33.233332760798">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5125259263504" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5125259263504"
+                    Point2="0,16.5125259263504"
+                    Point3="-4,16.5125259263504" />
+                  <mssgle:LineSegment
+                    End="-100.133326958948,16.5125259263504" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-100.133326958948,16.5125259263504"
+                    Point2="-104.133326958948,16.5125259263504"
+                    Point3="-104.133326958948,20.5125259263504" />
+                  <mssgle:LineSegment
+                    End="-104.133326958948,33.233332760798" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-100.258050198224,21.5125259263504,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Import to NDS_Time.Paths[Derived Column Output1]"
           TopLeft="406.099985384445,284.466665395035">
@@ -3266,7 +4873,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,7.74999971975895,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3288,123 +4897,47 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,5.58333306815895,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Import to NDS_Time\Derived Column"
+          TopLeft="448.999993309379,57.9999991357327" />
         <EdgeLayout
           Id="Package\Import to NDS_Time.Paths[OLE DB Source Output]"
-          TopLeft="281.499992214144,101.6">
+          TopLeft="345.366658243372,79.7999995678663">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.533332616157"
+              EndConnector="103.633335066007,0"
               Start="0,0"
-              End="0,54.033332616157">
+              End="96.1333350660067,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.033332616157" />
+                    End="96.1333350660067,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-15.45359375,22.2324866205785,30.9071875,9.568359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to NDS_Time.Paths[Lookup Match Output]"
-          TopLeft="283.233326184916,204.733332616157">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-136.266660292282,40.733332760798"
-              Start="0,0"
-              End="-136.266660292282,33.233332760798">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.366666380399" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.366666380399"
-                    Point2="0,20.366666380399"
-                    Point3="-4,20.366666380399" />
-                  <mssgle:LineSegment
-                    End="-132.266660292282,20.366666380399" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-132.266660292282,20.366666380399"
-                    Point2="-136.266660292282,20.366666380399"
-                    Point3="-136.266660292282,24.366666380399" />
-                  <mssgle:LineSegment
-                    End="-136.266660292282,33.233332760798" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-116.324716864891,25.366666380399,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to NDS_Time.Paths[Lookup No Match Output]"
-          TopLeft="312.699992851583,204.733332616157">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="91.3999922596743,38.133332778878"
-              Start="0,0"
-              End="91.3999922596743,30.633332778878">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.449727958481" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.449727958481"
-                    Point2="0,15.449727958481"
-                    Point3="4,15.449727958481" />
-                  <mssgle:LineSegment
-                    End="87.3999922596743,15.449727958481" />
-                  <mssgle:CubicBezierSegment
-                    Point1="87.3999922596743,15.449727958481"
-                    Point2="91.3999922596743,15.449727958481"
-                    Point3="91.3999922596743,19.449727958481" />
-                  <mssgle:LineSegment
-                    End="91.3999922596743,30.633332778878" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-10.1063905889129,20.449727958481,111.6127734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Time\STG_Flight">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Time\Lookup in NDS_Airport">
+    design-time-name="Package\Import to NDS_Time\Lookup in NDS_Time">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3414,7 +4947,7 @@ From STG_Flight</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3431,6 +4964,402 @@ From STG_Flight</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Time\STG_Flight">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Import to NDS_Reason">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Import to NDS_Reason\Lookup in NDS_Reason"
+          TopLeft="190.833326184916,163.133332616157" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Import to NDS_Reason\OLE DB Destination"
+          TopLeft="211.666658379966,328.666664798392" />
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Import to NDS_Reason\STG_Flight"
+          TopLeft="214.166658243372,60" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\Import to NDS_Reason\Created_Date"
+          TopLeft="220.833324545788,248.066665358875" />
+        <EdgeLayout
+          Id="Package\Import to NDS_Reason.Paths[Derived Column Output]"
+          TopLeft="294.849991462877,289.666665358875">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.9999994395172"
+              Start="0,0"
+              End="0,31.4999994395172">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.4999994395172" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Reason.Paths[Lookup No Match Output]"
+          TopLeft="289.033325365352,204.733332616157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.3333327427179"
+              Start="0,0"
+              End="0,35.8333327427179">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.8333327427179" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,12.1119788713589,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Import to NDS_Reason\Derived Column"
+          TopLeft="426.666643354629,58.9333329235183" />
+        <EdgeLayout
+          Id="Package\Import to NDS_Reason.Paths[OLE DB Source Output]"
+          TopLeft="345.366658243372,80.2666664617592">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.2999851112569,0"
+              Start="0,0"
+              End="73.7999851112569,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="73.7999851112569,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Reason.Paths[Derived Column Output1]"
+          TopLeft="503.066643354629,100.533332923518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-217.433317169713,62.5999996926387"
+              Start="0,0"
+              End="-217.433317169713,55.0999996926387">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.2999998463193" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.2999998463193"
+                    Point2="0,31.2999998463193"
+                    Point3="-4,31.2999998463193" />
+                  <mssgle:LineSegment
+                    End="-213.433317169713,31.2999998463193" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-213.433317169713,31.2999998463193"
+                    Point2="-217.433317169713,31.2999998463193"
+                    Point3="-217.433317169713,35.2999998463193" />
+                  <mssgle:LineSegment
+                    End="-217.433317169713,55.0999996926387" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Reason\Lookup in NDS_Reason">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[NDS_Reason]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Reason\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Reason\STG_Flight">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Import to NDS_Distance">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\Import to NDS_Distance\Updated_Date"
+          TopLeft="74.1666658926342,245.466665376955" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\Import to NDS_Distance\Lookup in NDS_Distance"
+          TopLeft="180.833326333928,159.287178827315" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Import to NDS_Distance\OLE DB Destination"
+          TopLeft="322.499985657633,323.466664834552" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Import to NDS_Distance\OLE DB Command"
+          TopLeft="60,321.733331513273" />
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Import to NDS_Distance\STG_Flight"
+          TopLeft="214.166658243372,60" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\Import to NDS_Distance\Created_Date"
+          TopLeft="332.499985111257,242.866665395035" />
+        <EdgeLayout
+          Id="Package\Import to NDS_Distance.Paths[Lookup Match Output]"
+          TopLeft="246.966659667261,200.887178827315">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-99.9999937746268,44.5794865496397"
+              Start="0,0"
+              End="-99.9999937746268,37.0794865496397">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.0501431254051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.0501431254051"
+                    Point2="0,18.0501431254051"
+                    Point3="-4,18.0501431254051" />
+                  <mssgle:LineSegment
+                    End="-95.9999937746268,18.0501431254051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-95.9999937746268,18.0501431254051"
+                    Point2="-99.9999937746268,18.0501431254051"
+                    Point3="-99.9999937746268,22.0501431254051" />
+                  <mssgle:LineSegment
+                    End="-99.9999937746268,37.0794865496397" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-98.1913836060634,23.0501431254051,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Distance.Paths[Derived Column Output1]"
+          TopLeft="406.099985384445,284.466665395035">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.9999994395179"
+              Start="0,0"
+              End="0,31.4999994395179">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.4999994395179" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Distance.Paths[Derived Column Output]"
+          TopLeft="145.283332946317,287.066665376955">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.6666661363179"
+              Start="0,0"
+              End="0,27.1666661363179">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1666661363179" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Distance.Paths[OLE DB Source Output]"
+          TopLeft="278.89999228865,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.6871788273153"
+              Start="0,0"
+              End="0,50.1871788273153">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.1871788273153" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Distance.Paths[Lookup No Match Output]"
+          TopLeft="309.099993000594,200.887178827315">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="94.9999921106627,41.9794865677197"
+              Start="0,0"
+              End="94.9999921106627,34.4794865677197">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.9974084388481" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.9974084388481"
+                    Point2="0,16.9974084388481"
+                    Point3="4,16.9974084388481" />
+                  <mssgle:LineSegment
+                    End="90.9999921106627,16.9974084388481" />
+                  <mssgle:CubicBezierSegment
+                    Point1="90.9999921106627,16.9974084388481"
+                    Point2="94.9999921106627,16.9974084388481"
+                    Point3="94.9999921106627,20.9974084388481" />
+                  <mssgle:LineSegment
+                    End="94.9999921106627,34.4794865677197" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8.30639066341866,21.9974084388481,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Distance\Lookup in NDS_Distance">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[NDS_Distance]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Distance\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Distance\STG_Flight">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

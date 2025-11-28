@@ -55,13 +55,12 @@ CREATE TABLE STG_Flight (
     Arrival_Delay INT,
     Diverted BIT,
     Cancelled BIT,
-	Cancelled_Reason Char(3),
     Air_System_Delay INT,
     Security_Delay INT,
     Airline_Delay INT,
     Late_Aircraft_Delay INT,
     Weather_Delay INT,
-    Cancellation_Reason CHAR(3)
+    Cancellation_Reason CHAR(1)
 
    
 );
