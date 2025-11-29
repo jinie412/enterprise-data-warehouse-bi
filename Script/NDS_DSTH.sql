@@ -28,7 +28,7 @@ CREATE TABLE NDS_Airline (
 
 
 CREATE TABLE NDS_Airport (
-    Iata_Code NVARCHAR(10) PRIMARY KEY,
+    Iata_Code VARCHAR(10) PRIMARY KEY,
     Airport_Name VARCHAR(255),
     City_Name VARCHAR(255),
     State_Code VARCHAR(50),
@@ -63,6 +63,7 @@ UNIQUE (Year_Value, Month_Value, Day_Value)
 
 
 CREATE TABLE NDS_Flight (
+	Flight_ID INT IDENTITY(1,1) PRIMARY KEY,
     Iata_Airline VARCHAR(10),
     Flight_Number INT,
     Time_Id INT,
@@ -93,7 +94,7 @@ CREATE TABLE NDS_Flight (
     Created_Date DATETIME,
     Updated_Date DATETIME
 
-    PRIMARY KEY (Iata_Airline, Flight_Number, Time_Id),
+    CONSTRAINT UQ_NDS_Flight UNIQUE (Iata_Airline, Flight_Number, Time_Id),
 
     FOREIGN KEY (Iata_Airline) REFERENCES NDS_Airline(Iata_Code),
     FOREIGN KEY (Origin_Airport) REFERENCES NDS_Airport(Iata_Code),
