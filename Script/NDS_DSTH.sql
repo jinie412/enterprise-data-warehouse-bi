@@ -63,24 +63,25 @@ UNIQUE (Year_Value, Month_Value, Day_Value)
 
 
 CREATE TABLE NDS_Flight (
+	Flight_ID INT IDENTITY(1,1) PRIMARY KEY,
     Iata_Airline VARCHAR(10),
     Flight_Number INT,
     Time_Id INT,
     Tail_Number VARCHAR(20),
     Origin_Airport VARCHAR(10),
     Destination_Airport VARCHAR(10),
-    Scheduled_Departure INT,
-    Departure_Time INT,
+    Scheduled_Departure TIME,
+    Departure_Time TIME,
     Departure_Delay INT,
     Taxi_Out INT,
-    Wheels_Off INT,
+    Wheels_Off TIME,
     Scheduled_Time INT,
     Elapsed_Time INT,
     Air_Time INT,
-    Wheels_On INT,
+    Wheels_On TIME,
     Taxi_In INT,
-    Scheduled_Arrival INT,
-    Arrival_Time INT,
+    Scheduled_Arrival TIME,
+    Arrival_Time TIME,
     Arrival_Delay INT,
     Diverted BIT,
     Cancelled BIT,
@@ -93,7 +94,7 @@ CREATE TABLE NDS_Flight (
     Created_Date DATETIME,
     Updated_Date DATETIME
 
-    PRIMARY KEY (Iata_Airline, Flight_Number, Time_Id),
+    CONSTRAINT UQ_NDS_Flight UNIQUE (Iata_Airline, Flight_Number, Time_Id),
 
     FOREIGN KEY (Iata_Airline) REFERENCES NDS_Airline(Iata_Code),
     FOREIGN KEY (Origin_Airport) REFERENCES NDS_Airport(Iata_Code),
