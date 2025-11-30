@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SourceToStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="175"
-  DTS:VersionGUID="{3F851325-26B2-4957-953F-EB1DDF2EDFA5}">
+  DTS:VersionBuild="176"
+  DTS:VersionGUID="{59163B6E-7E47-4C6E-9D61-0035ED04F2DD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1420,7 +1420,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -13800,6 +13800,8 @@
       DTS:ObjectName="Mapping airport code"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -14957,7 +14959,7 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -14976,7 +14978,7 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -14995,7 +14997,7 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_Airline"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15073,7 +15075,7 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_Airlport"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15111,7 +15113,7 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15130,8 +15132,10 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate table OLE DB Destination 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{08A73CB6-29D0-414E-A6E8-455FA2E2AC2F}"
@@ -15285,9 +15289,17 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
           Id="Package\Import to STG_Airport"
           TopLeft="245.267840173844,298.999997920791" />
         <NodeLayout
+          Size="244.8,41.6"
+          Id="Package\Import to STG_AirportCodeMapping"
+          TopLeft="477.08330726665,302.462746591218" />
+        <NodeLayout
           Size="174.4,41.6"
           Id="Package\Import to STG_Flight"
           TopLeft="756.874992705971,499.187251453591" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Mapping airport code"
+          TopLeft="754.79162542667,581.449996885707" />
         <NodeLayout
           Size="145.6,41.6"
           Id="Package\Set CET Flight"
@@ -15305,9 +15317,17 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
           Id="Package\Truncate STG_Airlport"
           TopLeft="246.934506749448,222.066665828956" />
         <NodeLayout
+          Size="244.8,41.6"
+          Id="Package\Truncate STG_AirportCodeMapping"
+          TopLeft="482.291640315413,225.54608045942" />
+        <NodeLayout
           Size="174.4,41.6"
           Id="Package\Truncate STG_Flight"
           TopLeft="761.458325788882,340.137253266117" />
+        <NodeLayout
+          Size="248.8,41.6"
+          Id="Package\Truncate table OLE DB Destination 1"
+          TopLeft="720.833293948738,420.333330410388" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="118.574998395021,252.199998535514">
@@ -15344,6 +15364,28 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,27.8333320918351" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="846.94580986881,381.737253266117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.5960771442707"
+              Start="0,0"
+              End="0,31.0960771442707">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.0960771442707" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15396,10 +15438,6 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Mapping airport code"
-          TopLeft="754.79162542667,581.449996885707" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
           TopLeft="843.433309066321,540.787251453591">
@@ -15444,14 +15482,6 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="244.8,41.6"
-          Id="Package\Import to STG_AirportCodeMapping"
-          TopLeft="477.08330726665,302.462746591218" />
-        <NodeLayout
-          Size="244.8,41.6"
-          Id="Package\Truncate STG_AirportCodeMapping"
-          TopLeft="482.291640315413,225.54608045942" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
           TopLeft="602.087473791031,267.14608045942">
@@ -15466,32 +15496,6 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,27.8166661317977" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="248.8,41.6"
-          Id="Package\Truncate table OLE DB Destination 1"
-          TopLeft="720.833293948738,420.333330410388" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="846.94580986881,381.737253266117">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.5960771442707"
-              Start="0,0"
-              End="0,31.0960771442707">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.0960771442707" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15756,6 +15760,95 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
   </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Import to STG_Airport\STG_Airport">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Import to STG_AirportCodeMapping">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Import to STG_AirportCodeMapping\Data Conversion 1"
+          TopLeft="647.999990344048,153.999997705221" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Import to STG_AirportCodeMapping\File mapping Airport"
+          TopLeft="642.999990418553,65.9999990165233" />
+        <NodeLayout
+          Size="200.8,41.6"
+          Id="Package\Import to STG_AirportCodeMapping\STG_AirportCodeMapping"
+          TopLeft="629.999990612269,280.999995812774" />
+        <EdgeLayout
+          Id="Package\Import to STG_AirportCodeMapping.Paths[Flat File Source Output]"
+          TopLeft="729.2999903813,107.599999016523">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.3999986886978"
+              Start="0,0"
+              End="0,38.8999986886978">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.8999986886978" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_AirportCodeMapping.Paths[Data Conversion Output]"
+          TopLeft="730.199990478158,195.599997705221">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,85.3999981075527"
+              Start="0,0"
+              End="0,77.8999981075527">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.8999981075527" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Import to STG_AirportCodeMapping.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\Import to STG_AirportCodeMapping.EventHandlers[OnError]\Insert error log"
+          TopLeft="386.99999512732,191.999998033047" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to STG_AirportCodeMapping\STG_AirportCodeMapping">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -16080,7 +16173,7 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to STG_Flight\OLE DB Destination">
+    design-time-name="Package\Import to STG_Flight\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -16092,20 +16185,8 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Truncate STG_Airline.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Truncate STG_Airline.EventHandlers[OnError]\Execute SQL Task"
-          TopLeft="272.999995931983,222.999996677041" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
   <PipelineComponentMetadata
-    design-time-name="Package\Import to STG_Flight\OLE DB Destination 1">
+    design-time-name="Package\Import to STG_Flight\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -16176,94 +16257,17 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Import to STG_AirportCodeMapping">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="164,41.6"
-          Id="Package\Import to STG_AirportCodeMapping\Data Conversion 1"
-          TopLeft="647.999990344048,153.999997705221" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Import to STG_AirportCodeMapping\File mapping Airport"
-          TopLeft="642.999990418553,65.9999990165233" />
-        <NodeLayout
-          Size="200.8,41.6"
-          Id="Package\Import to STG_AirportCodeMapping\STG_AirportCodeMapping"
-          TopLeft="629.999990612269,280.999995812774" />
-        <EdgeLayout
-          Id="Package\Import to STG_AirportCodeMapping.Paths[Flat File Source Output]"
-          TopLeft="729.2999903813,107.599999016523">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.3999986886978"
-              Start="0,0"
-              End="0,38.8999986886978">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.8999986886978" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_AirportCodeMapping.Paths[Data Conversion Output]"
-          TopLeft="730.199990478158,195.599997705221">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,85.3999981075527"
-              Start="0,0"
-              End="0,77.8999981075527">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,77.8999981075527" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <DtsEventHandler
-    design-time-name="Package\Import to STG_AirportCodeMapping.EventHandlers[OnError]">
+    design-time-name="Package\Truncate STG_Airline.EventHandlers[OnError]">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="145.6,41.6"
-          Id="Package\Import to STG_AirportCodeMapping.EventHandlers[OnError]\Insert error log"
-          TopLeft="386.99999512732,191.999998033047" />
+          Size="164.8,41.6"
+          Id="Package\Truncate STG_Airline.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="272.999995931983,222.999996677041" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import to STG_AirportCodeMapping\STG_AirportCodeMapping">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
