@@ -224,8 +224,22 @@ VALUES
 ---------------------------------------------------------
 -- 6. event_type
 ---------------------------------------------------------
+--INSERT INTO event_type (event_type)
+--VALUES ('START'),('END'),('INFO'),('ERROR'),('ROW_COUNT');
+
 INSERT INTO event_type (event_type)
-VALUES ('START'),('END'),('INFO'),('ERROR'),('ROW_COUNT');
+VALUES 
+('Error'),
+('Load Stage Airline'),
+('Load Stage Airport'),
+('Load Stage Flight'),
+
+('Load NDS Airline'),
+('Load NDS Airport'),
+('Load NDS Reason'),
+('Load NDS Time'),
+('Load NDS Distance'),
+('Load NDS Flight');
 
 -----------------------------------------------------------
 ---- 7. event_log

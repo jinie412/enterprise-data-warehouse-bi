@@ -1,0 +1,77 @@
+Các trường hợp đặc biệt:
+TH0: ---
+File 1: ACV,Arcata Airport,Arcata/Eureka,CA,USA,40.97812,-124.10862
+File 2: 10157,Arcata/Eureka,CA,California Redwood Coast Humboldt County
+
+TH1: ---
+File 1: BDL,Bradley International Airport,Windsor Locks,CT,USA,41.93887,-72.68323
+File 2: 10529,Hartford,CT,Bradley International
+
+Th2: ---
+File 1: CVG,Cincinnati/Northern Kentucky International Airport,Covington,KY,USA,39.04614,-84.66217
+File 2: 11193,Cincinnati,OH,Cincinnati/Northern Kentucky International
+
+Th3: ---
+File 1: DCA,Ronald Reagan Washington National Airport,Arlington,VA,USA,38.85208,-77.03772
+File 2: 11278,Washington,DC,Ronald Reagan Washington National
+
+TH4: ---
+File 1: FSD,Sioux Falls Regional Airport,Sioux Falls,SD,USA,43.58135,-96.74170
+File 2: 11775,Sioux Falls,SD,Joe Foss Field
+
+Th5: ---
+File 1: GCC,Gillette-Campbell County Airport,Gillette,WY,USA,44.34890,-105.53936
+File 2: 11865,Gillette,WY,Northeast Wyoming Regional
+
+
+Th6: ---
+File 1: GRK,Killeen-Fort Hood Regional Airport,Killeen,TX,USA,31.06490,-97.82780
+File 2: 11982,Killeen,TX,Robert Gray AAF
+
+
+TH7: ---
+File 1: GUM,Guam International Airport,Agana,GU,USA,13.48345,-144.79598
+File 2: 12016,Guam,TT,Guam International
+
+TH8: ---
+File 1: IAD,Washington Dulles International Airport,Chantilly,VA,USA,38.94453,-77.45581
+File 2: 12264,Washington,DC,Washington Dulles International
+
+TH9: ---
+File 1: MEI,Meridian Regional Airport,Meridian,MS,USA,32.33313,-88.75121
+File 2: 13241,Meridian,MS,Key Field
+
+
+TH10: ---
+File 1: PPG,Pago Pago International Airport (Tafuna Airport),Pago Pago,AS,USA,14.33102,-170.71053
+File 2: 14222,Pago Pago,TT,Pago Pago International
+
+TH11: ---
+File 1: RKS,Rock Springs-Sweetwater County Airport,Rock Springs,WY,USA,41.59422,-109.06519
+File 2: 14543,Rock Springs,WY,Southwest Wyoming Regional
+
+TH12: ---
+File 1: SCE,University Park Airport,State College,PA,USA,40.85121,-77.84630
+File 2: 14711,State College,PA,State College Regional
+
+TH13: ---
+File 1: CLD,McClellan-Palomar Airport,San Diego,CA,USA,33.12723,-117.27873
+File 2: 11041,Carlsbad,CA,McClellan-Palomar
+
+TH14: ---
+File 1: HYA,Barnstable Municipal Airport,Hyannis,MA,USA,41.66934,-70.28036
+File 2: 12250,Hyannis,MA,Cape Cod Gateway
+
+
+TH15: ---
+File 1: ILG,Wilmington Airport,Wilmington,DE,USA,39.67872,-75.60653
+File 2: 12320,Wilmington,DE,New Castle
+
+TH16: ---
+File 1: VEL,Valdez Airport,Vernal,UT,USA,40.44090,-109.50992
+File 2: 15582,Vernal,UT,Vernal Regional
+
+TH17: ---
+File 1: WYS,Westerly State Airport,West Yellowstone,MT,USA,44.68840,-111.11764
+File 2: 15897,West Yellowstone,MT,Yellowstone
+

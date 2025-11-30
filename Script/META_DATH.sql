@@ -92,13 +92,14 @@ CREATE TABLE event_type (
 CREATE TABLE event_log (
     log_key INT PRIMARY KEY IDENTITY(1,1),
     event_type INT NOT NULL, 
-    timestamp DATETIME NOT NULL,
+    timestamp DATETIME DEFAULT GETDATE(),
     object INT NULL,              
     rows INT NULL,
-    note VARCHAR(255) NULL,
+    note VARCHAR(MAX) NULL,
     data_flow INT NULL,
     
     
     FOREIGN KEY (event_type) REFERENCES event_type(event_type_key),
-    FOREIGN KEY (data_flow) REFERENCES data_flow(data_flow_key)
+    FOREIGN KEY (data_flow) REFERENCES data_flow(data_flow_key),
+	FOREIGN KEY (object) REFERENCES ds_table(table_key)
 );

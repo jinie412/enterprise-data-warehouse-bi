@@ -1,0 +1,2956 @@
+Code,Cities,State,Airport_Name
+10001,Afognak Lake,AK,Afognak Lake Airport
+10003,Granite Mountain,AK,Bear Creek Mining Strip
+10004,Lik,AK,Lik Mining Camp
+10005,Little Squaw,AK,Little Squaw Airport
+10006,Kizhuyak,AK,Kizhuyak Bay
+10007,Klawock,AK,Klawock Seaplane Base
+10008,Elizabeth Island,AK,Elizabeth Island Airport
+10009,Homer,AK,Augustin Island
+10010,Hudson,NY,Columbia County
+10011,Peach Springs,AZ,Grand Canyon West
+10012,Blairstown,NJ,Blairstown Airport
+10013,Crosbyton,TX,Crosbyton Municipal
+10014,Fairbanks/Ft. Wainwright,AK,Blair Lake
+10015,Deadmans Bay,AK,Deadmans Bay Airport
+10016,Hallo Bay,AK,Hallo Bay Airport
+10017,Red Lake,AK,Red Lake Airport
+10018,Shell Lake,AK,Shell Lake Airport
+10019,Kougarok,AK,Navigator Airstrip
+10020,Selawik,AK,Roland Norton Memorial
+10021,Pillar Bay,AK,Pillar Bay Airport
+10022,Johnstone Point,AK,Johnstone Point Airport
+10023,Tikchik Lodge,AK,Tikchik Lodge Airport
+10024,Bell Creek,AK,Bell Creek Airport
+10025,Cinnabar,AK,Cinnabar Airport
+10026,Mountaintop Mine,AK,Mountaintop Mine Airport
+10027,Whitebear,AK,Whitebear Airport
+10028,Puviaq,AK,Puviaq Airport
+10029,Arley Lake,AK,Arley Lake Airport
+10030,Port Vita,AK,Port Vita Airport
+10031,Kantishna,AK,Kantishna Airport
+10033,Alpine,AK,Alpine Airstrip
+10034,Serpentine,AK,Serpentine Airport
+10035,Driftwood Bay,AK,Driftwood Bay Airport
+10036,Bradley Lake,AK,Bradley Lake Airport
+10037,Chilkat Lake,AK,Chilkat Lake Airport
+10038,Nugget Creek,AK,Nugget Creek Airport
+10039,Ivotuk,AK,Ivotuk Airstrip
+10040,Pogo Mines,AK,Pogo Mines Airport
+10041,Ayakulik River,AK,Ayakulik River Airport
+10042,Kiluda Bay,AK,Kiluda Bay Airport
+10043,Terror Lake,AK,Terror Lake Airport
+10044,Selief Bay,AK,Selief Bay Airport
+10047,Laura Lake,AK,Laura Lake Airport
+10049,Deep Bay,AK,Deep Bay Airport
+10050,Kako,AK,Kako Airport
+10051,Molly Creek,AK,Molly Creek Airport
+10052,Ptarmigan Lake,AK,Ptarmigan Lake Airport
+10053,Cape Simpson,AK,Cape Simpson Airport
+10054,Kogru River,AK,Kogru River Airport
+10055,Teshepkuk Lake,AK,Teshepkuk Lake Airport
+10056,Kodiak Island,AK,Trident Basin Seaplane Base
+10058,Lake Florence,AK,Lake Florence Airport
+10059,Lake Hasselborg,AK,Lake Hasselborg Airport
+10060,Distin Lake,AK,Distin Lake Airport
+10061,Port Hobron,AK,Port Hobron Airport
+10062,Mooseville Airstrip,AK,Mooseville Airstrip Airport
+10063,Big Bay,AK,Big Bay Airport
+10064,Wien Lake,AK,Wien Lake Airport
+10065,Silver Salmon Creek,AK,Silver Salmon Creek Airport
+10066,Blear Lake,AK,Blear Lake Airport
+10067,Cannery Bay,AK,Cannery Bay Airport
+10069,Bear Lake,AK,Johnsons Landing
+10070,International Seafoods,AK,International Seafoods Airport
+10071,Cosna River,AK,Cosna River Airport
+10072,Ivatuk,AK,Ivatuk Airport
+10074,Cape Sarichef,AK,Cape Sarichef Airport
+10075,Taylor Mountain Mine,AK,Taylor Mountain
+10076,Yukon Charley Rivvers,AK,Coal Creek
+10078,Karluk Portage,AK,Karluk Portage Airport
+10079,Hope,AK,Hope Airport
+10080,Viekoda Bay,AK,Viekoda Bay Airport
+10082,Cold Bay,AK,Cathedral Strip
+10083,Village Islands,AK,Village Islands Airport
+10084,Homer,AK,Bear Cove Farm
+10085,Chinitna Bay,AK,Chinitna Bay Airport
+10086,McKinley Park,AK,McKinley National Park
+10087,Nanwalek,AK,Dog Fish Bay
+10088,Malina Bay,AK,Malina Bay Airport
+10089,Red Fox Bay,AK,Red Fox Bay Airport
+10090,Shearwater,AK,Shearwater Airport
+10091,Cape Simpson,AK,Lake
+10092,Cape Simpson,AK,Cape Simpson No. 1
+10093,Cape Simpson,AK,Cape Simpson No. 7
+10094,Aglaq,AK,Cape Simpson #1
+10095,Nikiski,AK,Nikiski Private Airstrip
+10096,Petrof Point,AK,Petrof Point Airport
+10097,Denali,AK,Denali West Lodge Private
+10098,Big River,AK,Big River Airport
+10100,Carry Inlet,AK,Carry Inlet Airport
+10102,Montague Island,AK,Montague Island Airport
+10103,Shannon Pond,AK,Shannon Pond Airport
+10104,Omalik Lagoon,AK,Omalik Lagoon Airport
+10105,Omolik Lagoon,AK,Omolik Lagoon Airport
+10106,Bradley Lake Project,AK,Bradley Lake Project Airport
+10107,Barrow,AK,Ice Strip
+10108,Barrow,AK,Ice Strip
+10109,Barrow,AK,Ice Strip
+10110,Akulik,AK,Akulik Air Strip
+10111,Deadfall,AK,Deadfall Air Strip
+10112,Eagle Creek,AK,Eagle Creek Airport
+10113,Bethel,AK,Ice Kong
+10116,Kachemak Bay,AK,Glacier Split
+10117,Selby Lake,AK,Selby Lake Airport
+10122,Apalachicola,FL,Apalachicola Regional Cleve Randolph Field
+10135,Allentown/Bethlehem/Easton,PA,Lehigh Valley International
+10136,Abilene,TX,Abilene Regional
+10139,Ambler,AK,Ambler River
+10140,Albuquerque,NM,Albuquerque International Sunport
+10141,Aberdeen,SD,Aberdeen Regional
+10146,Albany,GA,Southwest Georgia Regional
+10149,Bellaire,MI,Antrim County
+10154,Nantucket,MA,Nantucket Memorial
+10155,Waco,TX,Waco Regional
+10157,Arcata/Eureka,CA,California Redwood Coast Humboldt County
+10158,Atlantic City,NJ,Atlantic City International
+10165,Adak Island,AK,Adak
+10167,Ardmore,OK,Ardmore Municipal
+10170,Kodiak,AK,Kodiak Airport
+10171,Dallas,TX,Addison
+10172,Camp Springs,MD,Joint Base Andrews
+10176,Aleneva,AK,Aleneva Airport
+10184,Allakaket,AK,Allakaket Airport
+10185,Alexandria,LA,Alexandria International
+10189,Colorado Springs,CO,USAF Academy Davis Airfield
+10190,Nebraska,NE,Nebraska City Municipal
+10191,Afton,WY,Afton Lincoln County Gen Boyd L Eddins Field
+10192,Wadesboro,NC,Anson County Jeff Cloud Field
+10194,Dallas/Fort Worth,TX,Perot Field Fort Worth Alliance
+10198,Pittsburgh,PA,Allegheny County
+10204,Angoon,AK,Angoon Seaplane Base
+10208,Augusta,GA,Augusta Regional at Bush Field
+10215,Ardmore,OK,Ardmore Downtown Executive
+10216,Athens,GA,Athens/Ben Epps
+10219,Amchitka Island,AK,Amchitka
+10221,Alliance,NE,Alliance Municipal
+10222,Anita Bay,AK,Anita Bay Airport
+10223,Anderson,IN,Anderson Regional
+10224,Aiken,SC,Aiken Regional
+10225,Wainwright,AK,Wainwright Airport
+10227,Atlantic City,NJ,Bader Field
+10228,Lake of the Ozarks,MO,Lee C Fine Memorial
+10237,Atka,AK,Atka Airport
+10238,Akron,OH,Akron Fulton International
+10241,Akiak,AK,Akiak Airport
+10243,Akhiok,AK,Akhiok Airport
+10245,King Salmon,AK,King Salmon Airport
+10246,Akron,CO,Colorado Plains Regional
+10247,Anaktuvuk Pass,AK,Anaktuvuk Pass Airport
+10253,Albertville,AL,Albertville Regional-Thomas J Brumlik Field
+10254,Alabaster,AL,Shelby County
+10255,Huntsville,AL,Huntsville Executive Tom Sharp Jr
+10257,Albany,NY,Albany International
+10259,Alpine,TX,Alpine Casparis Municipal
+10263,Alice,TX,Alice International
+10266,Alamogordo,NM,Alamogordo White Sands Regional
+10267,Alton,IL,St. Louis Regional
+10268,Waterloo,IA,Waterloo Regional
+10272,Alamosa,CO,San Luis Valley Regional/Bergman Field
+10275,Walla Walla,WA,Walla Walla Regional
+10276,Alexander City,AL,Thomas C. Russell Field
+10278,Lazy Bay,AK,Alitak Seaplane Base
+10279,Amarillo,TX,Rick Husband Amarillo International
+10285,Durango,CO,Animas Air Park
+10288,Alma,MI,Gratiot Community
+10294,Ames,IA,Ames Municipal
+10297,Anaheim,CA,Anaheim-Disneyland HP
+10298,Anniston,AL,Anniston Regional
+10299,Anchorage,AK,Ted Stevens Anchorage International
+10300,Anderson,SC,Anderson Regional
+10304,Aniak,AK,Aniak Airport
+10307,Annette,AK,Annette Island
+10309,Annapolis,MD,Lee
+10313,Anvik,AK,Anvik Airport
+10317,Lima,OH,Lima Allen County
+10322,Altoona,PA,Altoona-Blair County
+10324,Amook Bay,AK,Amook Bay Airport
+10325,Denver,CO,Centennial
+10327,Napa,CA,Napa County
+10329,Naples,FL,Naples Municipal
+10330,Aberdeen,MD,Phillips AAF
+10333,Alpena,MI,Alpena County Regional
+10336,Jasper,TN,Marion County Brown Field
+10337,Apple Valley,CA,Apple Valley Airport
+10344,Girdwood,AK,Girdwood Airport
+10345,Russellville,AR,Russellville Regional
+10346,Conway,AR,Dennis F Cantrell Field
+10347,New Iberia,LA,Acadiana Regional
+10348,Ann Arbor,MI,Ann Arbor Municipal
+10349,Arctic Village,AK,Arctic Village Airport
+10351,Arecibo,PR,Antonio/Nery/Juarbe Pol
+10352,Walnut Ridge,AR,Walnut Ridge Regional
+10361,Watertown,NY,Watertown International
+10363,Minocqua/Woodruff,WI,Lakeland/Noble F. Lee Memorial Field
+10365,Asbury Park,NJ,Asbury Park/Monmouth County
+10372,Aspen,CO,Aspen Pitkin County Sardy Field
+10374,Nashua,NH,Boire Field
+10378,Marshall,TX,Harrison County
+10380,Talladega,AL,Talladega Municipal
+10383,Austin,NV,Austin Airport
+10385,Astoria/Seaside,OR,Astoria Regional
+10388,Ashland,WI,John F Kennedy Memorial
+10389,Ashley,ND,Ashley Municipal
+10393,Antlers,OK,Antlers Municipal
+10396,Atqasuk,AK,Atqasuk Edward Burnell Sr. Memorial
+10397,Atlanta,GA,Hartsfield-Jackson Atlanta International
+10400,Athens,OH,Ohio University
+10404,Artesia,NM,Artesia Municipal
+10405,Atmautluak,AK,Atmautluak Airport
+10406,Attu,AK,Casco Cove CGS
+10408,Appleton,WI,Appleton International
+10409,Watertown,SD,Watertown Regional
+10414,Augusta/Waterville,ME,Augusta State
+10416,Alakanuk,AK,Alakanuk Airport
+10417,Austin/Albert Lea,MN,Austin Municipal
+10418,Auburn,CA,Auburn Municipal
+10419,Auburn,AL,Auburn University Regional
+10423,Austin,TX,Austin - Bergstrom International
+10424,Wausau,WI,Wausau Downtown
+10427,Aurora,IL,Aurora Municipal
+10431,Asheville,NC,Asheville Regional
+10433,Avon Park,FL,Avon Park Executive
+10434,Scranton/Wilkes-Barre,PA,Wilkes Barre Scranton International
+10436,Tucson,AZ,Marana Regional
+10437,Avalon,CA,Catalina
+10439,Wake Island,TT,Wake Island Airfield
+10440,West Memphis,AR,West Memphis Municipal
+10442,Andrews,TX,Andrews County
+10445,Alexandria Bay,NY,Maxson Airfield
+10449,Alexandria,MN,Alexandria Regional Chandler Field
+10451,Altus,OK,Altus/Quartz Mountain Regional
+10454,Wapakoneta,OH,Neil Armstrong
+10455,Eagle Nest,NM,Angel Fire
+10460,Waycross,GA,Waycross-Ware County
+10463,Grand Canyon,AZ,Valle
+10464,Williams,AZ,H. A. Clark Memorial Field
+10465,Glendale,AZ,Glendale Regional
+10466,Phoenix,AZ,Mesa Gateway
+10469,Kalamazoo,MI,Kalamazoo/Battle Creek International
+10471,Biddeford,ME,Biddeford Municipal
+10472,Carrabassett,ME,Sugarloaf Regional
+10474,Marysville,CA,Beale AFB
+10476,Shreveport,LA,Barksdale AFB
+10478,Westfield,MA,Westfield Barnes Regional
+10484,Battle Mountain,NV,Battle Mountain Airport
+10487,Baker Island,AK,Baker AAF
+10494,Bay City,TX,Bay City Regional
+10495,Burlington,MA,N Eng Heliport
+10504,Blue Bell,PA,Wings Field
+10508,Blacksburg,VA,Virginia Tech Montgomery Exec
+10509,Bear Creek,AK,Bear Creek Airport
+10511,Bryce Canyon,UT,Bryce Canyon Airport
+10514,Crestone,CO,Baca Grande
+10518,Belle Chasse,LA,Southern Seaplane
+10519,Boca Raton,FL,Boca Raton Public
+10523,Baudette,MN,Baudette International
+10524,Blanding,UT,Blanding Municipal
+10529,Hartford,CT,Bradley International
+10535,Bridgeport,CT,Bridgeport Sikorsky
+10538,Bandon,OR,Bandon State
+10540,Bedford,MA,Laurence G Hanscom Field
+10543,Benton Harbor/St. Joseph,MI,Southwest Michigan Regional
+10551,Bethel,AK,Bethel Airport
+10556,Blue Fox Bay,AK,Blue Fox Bay Airport
+10557,Bradford,PA,Bradford Regional
+10558,Scottsbluff,NE,Scottsbluff W Neb Regional Wm B Heilig Field
+10559,Seattle,WA,Boeing Field/King County International
+10560,Aurora,CO,Buckley Sfb
+10561,Bakersfield,CA,Meadows Field
+10562,Mobile,AL,Mobile International
+10565,Beaver Falls,PA,Beaver County
+10567,Bedford,IN,Virgil I Grissom Municipal
+10569,Beaufort,SC,Beaufort Executive
+10572,Borger,TX,Hutchinson County
+10573,Bainbridge,GA,Decatur County Industrial Air Park
+10577,Binghamton,NY,Greater Binghamton/Edwin A. Link Field
+10580,Big Lake,AK,Big Lake Airport
+10581,Bangor,ME,Bangor International
+10582,Big Spring,TX,Big Spring McMahon-Wrinkle
+10583,Bagdad,AZ,Bagdad Airport
+10589,Bar Harbor,ME,Hancock County-Bar Harbor
+10590,Bullhead City,AZ,Laughlin/Bullhead International
+10599,Birmingham,AL,Birmingham-Shuttlesworth International
+10612,Big Creek,AK,Big Creek Airport
+10613,Block Island,RI,Block Island State
+10614,Beatrice,NE,Beatrice Municipal
+10615,El Paso,TX,Biggs AAF
+10616,Big Delta,AK,Allen AAF
+10617,Bishop,CA,Bishop Airport
+10620,Billings,MT,Billings Logan International
+10627,Bismarck/Mandan,ND,Bismarck Municipal
+10629,Biloxi,MS,Keesler AFB
+10630,Broomfield,CO,Rocky Mountain Metro
+10631,Bemidji,MN,Bemidji Regional
+10632,Wooster,OH,Wayne County
+10640,Buckland,AK,Buckland Airport
+10641,Baker,OR,Baker City Municipal
+10642,Brooks Lake,AK,Brooks Lake Airport
+10643,Branson,MO,Branson Airport
+10644,"Kekaha, Kauai",HI,Barking Sands PMRF
+10647,Cleveland,OH,Burke Lakefront
+10654,Beckley,WV,Raleigh County Memorial
+10655,Brookings,SD,Brookings Regional
+10661,Boulder City,NV,Boulder City Municipal
+10663,Princeton/Bluefield,WV,Mercer County
+10665,Blythe,CA,Blythe Airport
+10666,Bellingham,WA,Bellingham International
+10670,Belmar/Farmingdale,NJ,Monmouth Executive
+10676,Belleville,IL,Scott AFB MidAmerica St Louis
+10680,Brigham City,UT,Brigham City Regional
+10683,Bloomington,IN,Monroe County
+10685,Bloomington/Normal,IL,Central Il Regional Airport at Bloomington
+10687,Berlin,NH,Berlin Regional
+10692,Big Mountain,AK,Big Mountain AFS
+10693,Nashville,TN,Nashville International
+10697,Baranof,AK,Warm Spring Bay Seaplane Base
+10698,Banning,CA,Banning Municipal
+10701,Barnwell,SC,Barnwell Regional
+10703,Burns,OR,Burns Municipal
+10713,Boise,ID,Boise Air Terminal
+10715,Brookings,OR,Brookings Airport
+10721,Boston,MA,Logan International
+10722,Bartow,FL,Bartow Executive
+10728,Beaumont/Port Arthur,TX,Jack Brooks Regional
+10731,Brunswick,GA,Brunswick Golden Isles
+10732,Aguadilla,PR,Rafael Hernandez
+10735,Bartlett Cove,AK,Bartlett Cove Seaplane Base
+10739,Brainerd,MN,Brainerd Lakes Regional
+10741,Whitesburg,KY,Whitesburg Municipal
+10744,Burlington,IA,Southeast Iowa Regional
+10747,Brownsville,TX,Brownsville South Padre Island International
+10754,Barrow,AK,Wiley Post/Will Rogers Memorial
+10756,Bardstown,KY,Samuels Field
+10763,Austin,TX,Bergstrom AFB
+10765,Bisbee,AZ,Bisbee Municipal
+10769,Boswell Bay,AK,Boswell Bay Airport
+10770,Bartletts,AK,Bartletts Airport
+10775,Barter Island,AK,Barter Island Airport
+10778,Battle Creek,MI,Battle Creek Executive at Kellogg Field
+10779,Butte,MT,Bert Mooney
+10780,Butler,PA,Pittsburgh Butler Regional
+10781,Baton Rouge,LA,Baton Rouge Metropolitan/Ryan Field
+10783,Bettles,AK,Bettles Airport
+10785,Burlington,VT,Patrick Leahy Burlington International
+10786,Beatty,NV,Beatty Airport
+10792,Buffalo,NY,Buffalo Niagara International
+10796,Butler,MO,Butler Memorial
+10800,Burbank,CA,Bob Hope
+10809,Beaver Inlet,AK,Beaver Inlet Seaport
+10811,Bartlesville,OK,Bartlesville Municipal
+10812,St. James,MI,Beaver Island
+10814,Batesville,AR,Batesville Regional
+10815,Beverly,MA,Beverly Regional
+10817,Brownwood,TX,Brownwood Regional
+10819,Bowling Green,KY,Bowling Green-Warren County Regional
+10821,Baltimore,MD,Baltimore/Washington International Thurgood Marshall
+10823,Bowman,ND,Bowman Municipal
+10825,Blaine,WA,Blaine Municipal
+10828,Boxborough,MA,Sheraton Inn Heliport
+10832,Borrego Springs,CA,Borrego Valley
+10834,Boundary,AK,Boundary Airport
+10836,Rock Hill,SC,Rock Hill/York County/Bryant Field
+10837,Buffalo,WY,Johnson County
+10838,Blytheville,AR,Arkansas International
+10839,Burley/Rupert,ID,Burley Municipal
+10841,Boyne Falls,MI,Boyne Mountain
+10844,Blakely Island,WA,Blakely Island Airport
+10849,Bozeman,MT,Bozeman Yellowstone International
+10852,Washington,DC,Buzzards Point Seaplane Base
+10853,Brazoria,TX,Eagle Air Park
+10857,Camarillo,CA,Camarillo Airport
+10858,Bakersfield,CA,Bakersfield Municipal
+10867,Cadillac,MI,Wexford County
+10868,Columbia,SC,Columbia Metropolitan
+10874,Akron,OH,Akron-Canton Regional
+10879,Caribou,ME,Caribou Municipal
+10886,Corner Bay,AK,Corner Bay Airport
+10888,Cumberland,MD,Greater Cumberland Regional
+10889,Council Bluffs,IA,Council Bluffs Municipal
+10892,Colby,KS,Murray
+10894,Columbus,MS,Columbus AFB
+10910,Concord,CA,Buchanan Field
+10915,Charles City,IA,Northeast Iowa Regional
+10917,Cold Bay,AK,Cold Bay Airport
+10918,Cedar City,UT,Cedar City Regional
+10921,Camden,AR,Harrell Field
+10923,Candle,AK,Candle 2
+10924,Camden,SC,Woodward Field
+10925,Chadron,NE,Chadron Municipal
+10926,Cordova,AK,Merle K Mudhole Smith
+10927,Caldwell,NJ,Essex County
+10928,Wichita,KS,Cessna Aircraft Field
+10930,Crescent City,CA,Jack McNamara Field
+10933,Chicopee Falls,MA,Westover ARB Metropolitan
+10938,Central,AK,Central Airport
+10945,Clemson,SC,Oconee County Regional
+10946,Connersville,IN,Mettel Field
+10947,Crestview,FL,Bob Sikes
+10948,Chena Hot Springs,AK,Chena Hot Springs Airport
+10949,Murray,KY,Kyle-Oakley Field
+10950,Cortez,CO,Cortez Municipal
+10951,Coffee Point,AK,Coffee Point Airport
+10958,Clifton,AZ,Greenlee County
+10960,Coffeyville,KS,Coffeyville Municipal
+10961,Craig,AK,Craig Seaplane Base
+10964,Cambridge,MD,Cambridge Dorchester Regional
+10965,Cleveland,OH,Cuyahoga County
+10967,Cape Girardeau,MO,Cape Girardeau Regional
+10975,College Park,MD,College Park Airport
+10977,Chicago,IL,Meigs Field
+10979,Casa Grande,AZ,Casa Grande Municipal
+10980,Chattanooga,TN,Lovell Field
+10982,Chandler,AZ,Chandler Municipal
+10986,Chicago,IL,Chicago Metropolitan Area
+10987,Challis,ID,Challis Airport
+10990,Charlottesville,VA,Charlottesville Albemarle
+10991,Circle Hot Springs,AK,Circle Hot Springs Airport
+10994,Charleston,SC,Charleston AFB/International
+10996,Chuathbaluk,AK,Chuathbaluk Airport
+10999,Chiloquin,OR,Chiloquin State
+11001,Avalon,CA,Catalina
+11002,Chico,CA,Chico Regional
+11003,Cedar Rapids/Iowa City,IA,The Eastern Iowa
+11004,Craig,CO,Craig-Moffat
+11007,Chalkyitsik,AK,Chalkyitsik Airport
+11008,Council,AK,Council Airport
+11009,Carroll,IA,Arthur N Neu
+11011,Cairo,IL,Cairo Regional
+11013,Sault Ste. Marie,MI,Chippewa County International
+11014,Chomley,AK,Chomley Airport
+11021,Crafton Island,AK,Crafton Island Airport
+11026,Clay Center,KS,Clay Center Municipal
+11027,Clarksburg/Fairmont,WV,North Central West Virginia
+11028,Crooked Creek,AK,Crooked Creek Airport
+11029,Clear Lake,CA,Pearce Field
+11031,Clarksdale,MS,Fletcher Field
+11034,Cordova,AK,Cordova Municipal
+11035,Clarksville,TN,Outlaw Field
+11036,Chicken,AK,Chicken Airport
+11040,Clear Lake City,TX,Clear Lake Metroport
+11041,Carlsbad,CA,McClellan-Palomar
+11042,Cleveland,OH,Cleveland-Hopkins International
+11043,Clear,AK,Clear Mews
+11044,Coalinga,CA,New Coalinga Municipal
+11046,Clintonville,WI,Clintonville Municipal
+11048,Clinton,OK,Clinton Regional
+11049,College Station/Bryan,TX,Easterwood Field
+11050,Port Angeles,WA,William R. Fairchild International
+11053,Clarks Point,AK,Clarks Point Airport
+11055,Calipatria,CA,Cliff Hatfield Memorial
+11056,Chehalis,WA,Chehalis Centralia
+11057,Charlotte,NC,Charlotte Douglas International
+11058,Columbus,IN,Columbus Municipal
+11066,Columbus,OH,John Glenn Columbus International
+11067,Champaign/Urbana,IL,University of Illinois/Willard
+11076,Hancock/Houghton,MI,Houghton County Memorial
+11081,Canon City,CO,Fremont County
+11083,Concordia,KS,Blosser Municipal
+11085,Carlsbad,NM,Cavern City Air Terminal
+11086,Chino,CA,Chino Airport
+11090,Waco,TX,TSTC Waco
+11092,Moab,UT,Canyonlands Regional
+11093,Marina,CA,Marina Municipal
+11095,Columbia,CA,Columbia Airport
+11097,Cody,WY,Yellowstone Regional
+11098,Coeur d'Alene,ID,Coeur d'Alene - Pappy Boyington Field
+11099,Cocoa Beach,FL,Patrick Sfb
+11105,Coleman,TX,Coleman Municipal
+11106,Concord,NH,Concord Municipal
+11109,Colorado Springs,CO,City of Colorado Springs Municipal
+11110,Cotulla,TX,Cotulla-La Salle County
+11111,Columbia,MO,Columbia Regional
+11122,Casper,WY,Casper/Natrona County International
+11123,St. Louis,MO,Bi-State Parks
+11126,Culebra,PR,Benjamin Rivera Noriega
+11128,Carbondale,CO,Glen-Aspen
+11130,Cheraw,SC,Cheraw Municipal/Lynch Bellinger Field
+11135,Myrtle Beach,SC,Grand Strand
+11136,Jacksonville,FL,Jacksonville Executive at Craig
+11140,Corpus Christi,TX,Corpus Christi International
+11143,Corsicana,TX,C David Campbell Field-Corsicana Municipal
+11146,Charleston/Dunbar,WV,West Virginia International Yeager
+11147,Corinth,MS,Roscoe Turner
+11149,Crested Butte,CO,Crested Butte Airpark
+11150,Columbus,GA,Columbus Airport
+11152,Clinton,OK,Clinton Sherman
+11153,Carson City,NV,Carson City Airport
+11154,Cape Spencer,AK,Cape Spencer C.G. Helipad
+11158,Cape Sabine,AK,Cape Sabine Airport
+11159,Crossville,TN,Crossville Memorial-Whitson Field
+11162,Cut Bank,MT,Cut Bank International
+11165,Coatesville,PA,Chester County G. O. Carlson
+11169,Calverton,NY,Calverton Executive Airpark
+11173,Cottonwood,AZ,Cottonwood Airport
+11174,Cortland,NY,Cortland County Chase Field
+11175,Cross City,FL,Cross City Airport
+11176,Columbia,SC,Jim Hamilton L. B. Owens
+11188,Cube Cove,AK,Cube Cove Airport
+11191,Pittsburgh,PA,Civic Arena H/P
+11193,Cincinnati,OH,Cincinnati/Northern Kentucky International
+11197,Clovis,NM,Clovis Regional
+11198,Corvallis,OR,Corvallis Municipal
+11200,Clovis,NM,Cannon AFB
+11202,Charlevoix,MI,Charlevoix Municipal
+11203,Mosinee,WI,Central Wisconsin
+11207,Clinton,IA,Clinton Municipal
+11209,Center Island,WA,Center Island Airport
+11213,Chitina,AK,Chitina Airport
+11214,Coldfoot,AK,Coldfoot Airport
+11218,Calexico,CA,Calexico International
+11219,Conroe,TX,Conroe North Houston Regional
+11227,Chefornak,AK,Chefornak Airport
+11230,Chatham,AK,Chatham Airport
+11233,Cheyenne,WY,Cheyenne Regional/Jerry Olson Field
+11234,Cape Yakataga,AK,Yakataga
+11238,Copper Center,AK,Copper Center 2
+11241,Cape Romanzof,AK,Cape Romanzof LRRS
+11245,Chisana,AK,Chisana Airport
+11246,Chistochina,AK,Chistochina Airport
+11247,Cape Pole,AK,Cape Pole Airport
+11252,Daytona Beach,FL,Daytona Beach International
+11257,Daggett,CA,Barstow/Daggett
+11259,Dallas,TX,Dallas Love Field
+11261,Danville,VA,Danville Regional
+11267,Dayton,OH,James M Cox/Dayton International
+11272,Dublin,GA,W H Bud Barron
+11274,Dubuque,IA,Dubuque Regional
+11278,Washington,DC,Ronald Reagan Washington National
+11280,Dahl Creek,AK,Dahl Creek Airport
+11282,Decatur,AL,Pryor Field Regional
+11283,Dodge City,KS,Dodge City Regional
+11284,Dorado,PR,Dorado Airport
+11288,Decatur,IL,Decatur Airport
+11289,Decorah,IA,Decorah Municipal
+11292,Denver,CO,Denver International
+11295,Detroit,MI,Coleman A. Young Municipal
+11297,Defiance,OH,Defiance Memorial
+11298,Dallas/Fort Worth,TX,Dallas/Fort Worth International
+11299,Danger Bay,AK,Danger Bay Airport
+11303,Douglas,WY,Converse County
+11308,Dothan,AL,Dothan Regional
+11309,Dalhart,TX,Dalhart Municipal
+11315,Dickinson,ND,Dickinson - Theodore Roosevelt Regional
+11317,Diomede Island,AK,Diomede Heliport
+11327,Delta Junction,AK,Delta Junction Airport
+11331,Dunkirk,NY,Chautauqua County/Dunkirk
+11335,Del Rio,TX,Laughlin AFB
+11336,Dillingham,AK,Dillingham Airport
+11337,Duluth,MN,Duluth International
+11339,Dillon,SC,Dillon County
+11341,Dolomi,AK,Dolomi Airport
+11342,The Dalles,OR,Columbia Gorge Regional/The Dalles Municipal
+11344,Tucson,AZ,Davis Monthan AFB
+11348,Deming,NM,Deming Municipal
+11349,Sedalia,MO,Sedalia Regional
+11353,Duncan Canal,AK,Duncan Canal Airport
+11355,Dallas/Fort Worth,TX,Dallas North
+11358,Augusta,GA,Daniel Field
+11359,Dalton,GA,Dalton Municipal
+11363,Danville,IL,Vermilion Regional
+11367,Dora Bay,AK,Dora Bay Airport
+11375,Dover,DE,Dover AFB
+11376,Chicago,IL,Du Page County
+11377,Dugway,UT,Michael AAF
+11381,Deadhorse,AK,Badami
+11383,Sebastian,FL,Sebastian Municipal
+11384,Soda Springs,ID,Allen H Tigert
+11385,Holtville,CA,Holtville Airport
+11387,Springfield,TN,Springfield Robertson County
+11388,Alpine,AK,Alpine Airstrip
+11389,Colusa,CA,Colusa County
+11390,Killdeer,ND,Dunn County Weydahl Field
+11391,Fort Drum,NY,Wheeler-Sack AAF
+11392,Anchorage,AK,Lake Hood
+11394,New Smyrna Beach,FL,New Smyrna Beach Municipal Jack Bolt Field
+11395,Delhi,LA,Delhi Municipal
+11396,Georgetown,KY,Marshall Field
+11397,Cozad,NE,Cozad Municipal
+11398,Peach Springs,AZ,Grand Canyon West
+11399,Whitmore,AZ,Grand Canyon Bar Ten Airstrip
+11401,Ketchikan,AK,Neets Bay
+11402,Haines,AK,Glacier Point
+11403,Peach Springs,AZ,Hualapai
+11404,Tsui River,AK,Tsui River Airport
+11405,Cape Canaveral,FL,Cape Canaveral Sfs Skid Strip
+11406,Platinum,AK,Platinum Mine
+11407,Mercury,NV,Desert Rock
+11409,Drummond Island,MI,Drummond Island Airport
+11410,Drift River,AK,Drift River Airport
+11411,Deering,AK,Deering Airport
+11413,Durango,CO,Durango La Plata County
+11415,Del Rio,TX,Del Rio International
+11416,Drummond,MT,Drummond Airport
+11421,Destin,FL,Destin Executive
+11423,Des Moines,IA,Des Moines International
+11424,Delta,UT,Delta Municipal
+11425,Death Valley,CA,Furnace Creek
+11427,Detroit Lakes,MN,Detroit Lakes-Wething Field
+11429,Shreveport,LA,Shreveport Downtown
+11430,Denton,TX,Denton Enterprise
+11431,Decatur Island,WA,Decatur
+11432,Detroit,MI,Detroit Metropolitan Area
+11433,Detroit,MI,Detroit Metro Wayne County
+11434,Durant,OK,Eaker Field
+11436,Duncan,OK,Halliburton Field
+11439,Duck,NC,Pine Island
+11440,Douglas,AZ,Bisbee Douglas International
+11441,DuBois,PA,DuBois Regional
+11445,Unalaska,AK,Unalaska Airport
+11447,Devils Lake,ND,Devils Lake Regional
+11448,Davenport,IA,Davenport Municipal
+11450,Phoenix,AZ,Phoenix - Deer Valley
+11452,Davis/Woodland/Winters,CA,Yolo County
+11453,Houston,TX,David Wayne Hooks Memorial
+11454,Orlando,FL,Walt Disney World
+11456,Danbury,CT,Danbury Municipal
+11459,Abilene,TX,Dyess AFB
+11463,Eagle,AK,Eagle Airport
+11464,Noatak,AK,Eagle Creek Strip
+11467,Wheatland,WY,Phifer Airfield
+11468,Kearney,NE,Kearney Regional
+11470,Wenatchee,WA,Pangborn Memorial
+11471,Eau Claire,WI,Chippewa Valley Regional
+11478,East Tawas,MI,Iosco County
+11479,Elizabeth City,NC,Elizabeth City CGAS/Regional
+11481,Panama City,FL,Northwest Florida Beaches International
+11482,Newcastle,WY,Mondell Field
+11483,Rocksprings,TX,Edwards County
+11484,Edna Bay,AK,Edna Bay Airport
+11486,Edenton,NC,Northeastern Regional
+11487,Anchorage,AK,Elmendorf AFB
+11490,Edwards,CA,Edwards AFB
+11491,Needles,CA,Needles Airport
+11492,Eek,AK,Eek Airport
+11493,Keene,NH,Dillant Hopkins
+11494,Eight Fathom Bight,AK,Eight Fathom Bight Airport
+11495,Houston,TX,Ellington
+11496,Newport,VT,Northeast Kingdom International
+11501,Chenega,AK,Chenega Airport
+11503,Eagle,CO,Eagle County Regional
+11504,Crestview,FL,Duke Field
+11506,Eagle Pass,TX,Eagle Pass Municipal
+11508,Wellington,KS,Wellington Municipal
+11510,Eagle River,WI,Eagle River Union
+11511,Egegik,AK,Egegik Airport
+11512,Cape Newenham,AK,Cape Newenham LRRS
+11513,Eagle Harbor,AK,Eagle Harbor Airport
+11514,East Hartford,CT,Rentschler Heliport
+11517,Fairbanks,AK,Eielson AFB
+11522,Eureka,CA,Murray Field
+11523,Elkhart,IN,Elkhart Municipal
+11524,Elkins,WV,Elkins Randolph County
+11525,Elko,NV,Elko Regional
+11526,Elizabethtown,KY,Addington Field
+11527,Bessemer,AL,Bessemer Ntl
+11528,Eagle Lake,TX,Eagle Lake Airport
+11531,El Dorado,AR,South Arkansas Regional at Goodwin Field
+11535,Elim,AK,Elim Airport
+11537,Elmira/Corning,NY,Elmira/Corning Regional
+11538,Ellensburg,WA,Bowers Field
+11540,El Paso,TX,El Paso International
+11545,Elfin Cove,AK,Elfin Cove Seaplane Base
+11546,Ellamar,AK,Ellamar Seaplane Base
+11547,Ely,NV,Ely Airport/Yelland Field
+11550,Emmonak,AK,Emmonak Airport
+11551,Kemmerer,WY,Kemmerer Municipal
+11553,Emporia,KS,Emporia Municipal
+11554,El Monte,CA,San Gabriel Valley
+11555,Kenai,AK,Kenai Municipal
+11557,Enid,OK,Vance AFB
+11558,Centralia,IL,Centralia Municipal
+11559,Nenana,AK,Nenana Municipal
+11563,Wendover,UT,Wendover Airport
+11564,Kenosha,WI,Kenosha Regional
+11566,Keokuk,IA,Keokuk Municipal
+11567,Ephrata/Moses Lake,WA,Ephrata Municipal
+11577,Erie,PA,Erie International/Tom Ridge Field
+11582,Kerrville,TX,Kerrville Municipal/Louis Schreiner Field
+11587,Escanaba,MI,Delta County
+11588,Eastsound,WA,Orcas Island
+11590,Alexandria,LA,Esler Regional
+11592,Easton,MD,Easton/Newnam Field
+11593,Stroudsburg,PA,Stroudsburg Pocono
+11597,Eastland,TX,Eastland Municipal
+11598,Enterprise,AL,Enterprise Municipal
+11601,Eureka,NV,Eureka Airport
+11602,Eufaula,AL,Weedon Field
+11603,Eugene,OR,Mahlon Sweet Field
+11606,Eva Creek,AK,Eva Creek Airport
+11609,Eveleth,MN,Eveleth Virginia Municipal
+11612,Evansville,IN,Evansville Regional
+11613,Evanston,WY,Evanston-Uinta County Burns Field
+11615,New Bedford/Fall River,MA,New Bedford Regional
+11616,Newton,KS,Newton City County
+11617,New Bern/Morehead/Beaufort,NC,Coastal Carolina Regional
+11618,Newark,NJ,Newark Liberty International
+11619,Excursion Inlet,AK,Excursion Inlet Seaplane Base
+11624,Key West,FL,Key West International
+11627,Murrieta/Temecula,CA,French Valley
+11630,Fairbanks,AK,Fairbanks International
+11631,Fajardo,PR,Diego Jimenez Torres
+11632,False Island,AK,False Island Airport
+11633,Roma,TX,Falcon State Park
+11634,Farmington,MO,Farmington Regional
+11637,Fargo,ND,Hector International
+11638,Fresno,CA,Fresno Yosemite International
+11639,Fairmount Island,AK,Fairmount Island Airport
+11641,Fayetteville,NC,Fayetteville Regional/Grannis Field
+11642,Fort Bragg,NC,Simmons AAF
+11643,Fairbanks,AK,Ladd AAF
+11645,Fort Bridger,WY,Fort Bridger Airport
+11646,Friday Harbor,WA,Friday Harbor Seaplane Base
+11648,Kalispell,MT,Glacier Park International
+11649,Fresno,CA,Fresno Chandler Executive
+11650,Minneapolis,MN,Flying Cloud
+11652,Colorado Springs,CO,Butts AHP
+11656,Frederick,MD,Frederick Municipal
+11657,Frederick,OK,Frederick Regional
+11659,Findlay,OH,Findlay Airport
+11662,Freeport,IL,Albertus
+11663,Fremont,NE,Fremont Municipal
+11664,Cheyenne,WY,Francis E. Warren AFB Heliport
+11667,Fergus Falls,MN,Fergus Falls Municipal-Einar Mickelson Field
+11668,Dayton,OH,Wright-Patterson AFB
+11669,Frankfort,KY,Capital City
+11673,Fort Huachuca,AZ,Sierra Vista Municipal-Libby AAF
+11674,Fire Cove,AK,Fire Cove Airport
+11675,Fishers Island,NY,Elizabeth Field
+11677,Fillmore,UT,Fillmore Municipal
+11684,Franklin/Oil City,PA,Venango Regional
+11686,Zephyrhills,FL,Zephyrhills Municipal
+11687,Valkaria,FL,Valkaria Airport
+11688,Chipley,FL,Vosikas
+11689,Bunnell,FL,Flagler Executive
+11690,Williston,FL,Williston Regional
+11693,Fond Du Lac,WI,Fond Du Lac County
+11695,Flagstaff,AZ,Flagstaff Pulliam
+11696,Falls Bay,AK,Falls Bay Airport
+11697,Fort Lauderdale,FL,Fort Lauderdale-Hollywood International
+11699,Florence,SC,Florence Regional
+11702,Flat,AK,Flat Airport
+11703,New York,NY,Flushing
+11704,Leavenworth,KS,Sherman AAF
+11706,Fallon,NV,Fallon Municipal
+11708,Five Mile Camp,AK,Five Mile Camp Airport
+11709,Falmouth,MA,Cape Cod CGAS
+11711,Farmington,NM,Four Corners Regional
+11713,Fort Madison,IA,Fort Madison Municipal
+11714,Fort Myers,FL,Page Field
+11719,Fort Collins/Loveland,CO,Northern Colorado Regional
+11720,Funter Bay Alaska,AK,Funter Bay
+11721,Flint,MI,Bishop International
+11723,Fort Bragg,CA,Fort Bragg Airport
+11725,Fort Dodge,IA,Fort Dodge Regional
+11726,Topeka,KS,Topeka Regional
+11728,Westhampton,NY,Francis S. Gabreski
+11732,Fort Pierce,FL,Treasure Coast International
+11733,Perry,FL,Perry-Foley
+11734,Patching Lake,AK,Patching Lake Airport
+11735,Ventura,CA,San Nicolas Island NOLF
+11736,Kodiak,AK,Lilly Lake
+11737,Katmai National Park,AK,Trident Volcano
+11738,Annex Creek,AK,Annex Creek Airport
+11739,Davidson Creek,AK,Davidson Creek Airport
+11740,Snettisham,AK,Snettisham Airport
+11741,Fire Island,AK,Fire Island Airport
+11742,Scott,KY,Georgetown Scott County Regional
+11743,Greens Creek,AK,Greens Creek Airport
+11744,Gull Cove,AK,Gull Cove Airport
+11745,Flora,IL,Flora Municipal
+11747,Karta Lake,AK,Karta Lake Airport
+11748,Manzanita Lake,AK,Manzanita Lake Airport
+11749,Shrimp Bay,AK,Shrimp Bay Airport
+11750,Dry Bay,AK,Dry Bay Airport
+11751,Josephine Lake,AK,Josephine Lake Airport
+11754,Libby,MT,Libby Airport
+11755,Volcano Bay,AK,Volcano Bay Airport
+11756,Fort Glenn,AK,Fort Glenn Airport
+11757,Babe Islands,AK,Babe Islands Airport
+11758,Kahli Cove,AK,Kahli Cove Airport
+11762,Friday Harbor,WA,Friday Harbor Airport
+11764,East Farmingdale,NY,Republic
+11766,Fairmont,MN,Fairmont Municipal
+11768,Fresh Water Bay,AK,Fresh Water Bay Airport
+11769,Front Royal,VA,Front Royal-Warren County
+11773,Fryeburg,ME,Eastern Slopes Regional
+11775,Sioux Falls,SD,Joe Foss Field
+11776,Fort Sill,OK,Henry Post AAF
+11777,Fort Scott,KS,Fort Scott Municipal
+11778,Fort Smith,AR,Fort Smith Regional
+11780,Ft. Stockton,TX,Fort Stockton Pecos County
+11782,Fort Collins,CO,Fort Collins Airpark
+11784,Denver,CO,Colorado Air and Space Port
+11785,Fort Knox,KY,Godman AAF
+11786,Fortuna Ledge,AK,Fortuna Ledge Airport
+11789,Dallas/Fort Worth,TX,Fort Worth Meacham International
+11790,Atlanta,GA,Fulton County Exec Charlie Brown Field
+11794,Fullerton,CA,Fullerton Municipal
+11797,Osprey Lodge,AK,Osprey Lodge Airport
+11800,Sonora,TX,Sonora Municipal
+11801,Fallbrook,CA,Fallbrook Community Airpark
+11803,Wickenburg,AZ,Wickenburg Municipal
+11804,Othello,WA,Othello Municipal
+11805,Lake Providence,LA,Byerley
+11810,Culbertson,MT,Big Sky Field
+11811,Aurora,OR,Aurora State
+11812,Quincy,CA,Gansner Field
+11813,Donlin Creek Mine,AK,Donlin Creek Mine Airport
+11814,Three Forks,MT,Three Forks Airport
+11815,Rexburg,ID,Rexburg-Madison County
+11818,Kernville,CA,Kern Valley
+11819,Golden Creek Mine,AK,Golden Creek Mine Airport
+11820,Grace Harbor,AK,Grace Harbor Airport
+11821,Unuk River,AK,Unuk River Airport
+11822,Deadhorse,AK,Inigok
+11823,Fort Wayne,IN,Fort Wayne International
+11824,Fort Worth,TX,Fort Worth NAS JRB/Carswell Field
+11825,Farewell,AK,Farewell Airport
+11826,Fort Worth,TX,Fort Worth Spinks
+11827,Fort Lauderdale,FL,Fort Lauderdale Executive
+11828,Kaktovik,AK,Bullen Point AFS
+11830,Clinton,IN,Frankfort Clinton County Regional
+11831,Forest City,IA,Forest City Municipal Trimble Field
+11833,Fort Yukon,AK,Fort Yukon Airport
+11834,Fayetteville,AR,Drake Field
+11836,Lafayette,GA,Barwick Lafayette
+11837,Carrollton,GA,West Georgia Regional - O V Gray Field
+11838,Atlanta,GA,Newnan Coweta County
+11840,Gadsden,AL,Northeast Alabama Regional
+11842,Gaithersburg,MD,Montgomery County Airpark
+11844,Galena,AK,Edward G. Pitka Sr.
+11845,Gambell,AK,Gambell Airport
+11855,Goose Bay,AK,Goose Bay AAF
+11856,Great Bend,KS,Great Bend Municipal
+11858,Galesburg,IL,Harrel W Timmons Galesburg Regional
+11859,Galbraith Lake,AK,Galbraith Lake Airport
+11862,Great Barrington,MA,Walter J. Koladza
+11865,Gillette,WY,Northeast Wyoming Regional
+11867,Garden City,KS,Garden City Regional
+11869,Grand Canyon,AZ,Grand Canyon National Park
+11870,Greeneville,TN,Municipal
+11871,Greenville,SC,Donaldson Field
+11873,Golden Horn Lodge,AK,Golden Horn Lodge Seaplane Base
+11875,Gardner,MA,Gardner Municipal
+11879,Glendive,MT,Dawson Community
+11880,Gladwin,MI,Gladwin Zettel Memorial
+11883,Georgetown,DE,Delaware Coastal
+11884,Spokane,WA,Spokane International
+11885,Ganes Creek,AK,Ganes Creek Airport
+11893,Greybull,WY,South Big Horn County
+11894,Shelbyville,IN,Shelbyville Municipal
+11895,Great Falls,MT,Malmstrom AFB Heliport
+11896,Togiak Fish,AK,Togiak Fish Airport
+11898,Grand Forks,ND,Grand Forks International
+11899,Glens Falls,NY,Floyd Bennett Memorial
+11904,Georgetown,SC,Georgetown County
+11905,Longview,TX,East Texas Regional
+11908,Glasgow,MT,Wokal Field Glasgow Valley County
+11921,Grand Junction,CO,Grand Junction Regional
+11924,Gulkana,AK,Gulkana Airport
+11929,Goodland,KS,Renner Field Goodland Municipal
+11931,Greenville,MS,Greenville Mid Delta
+11937,Glennallen,AK,Glennallen Airport
+11938,Gaylord,MI,Gaylord Regional
+11939,Galveston,TX,Scholes International at Galveston
+11941,Golovin,AK,Golovin Airport
+11942,Glasgow,KY,Glasgow Municipal
+11946,Granite Mountain,AK,Granite Mountain AS
+11947,Greenville,SC,Greenville Downtown
+11952,Goodnews Bay,AK,Goodnews
+11953,Gainesville,FL,Gainesville Regional
+11959,Gold Beach,OR,Gold Beach Municipal
+11961,New London/Groton,CT,Groton-New London
+11971,Grand Prairie,TX,Grand Prairie Municipal
+11973,Gulfport/Biloxi,MS,Gulfport-Biloxi International
+11974,Grand Rapids,MN,Grand Rapids/Itasca County-Gordon Newstrom Field
+11975,Galion,OH,Horning
+11977,Green Bay,WI,Green Bay Austin Straubel International
+11978,Greenwood,SC,Greenwood County
+11979,Tacoma,WA,Gray AAF
+11980,Grand Island,NE,Central Nebraska Regional
+11982,Killeen,TX,Robert Gray AAF
+11986,Grand Rapids,MI,Gerald R. Ford International
+11992,Goldsboro,NC,Seymour Johnson AFB
+11994,Goshen,IN,Goshen Municipal
+11995,Greensboro/High Point,NC,Piedmont Triad International
+11996,Greer,SC,Greenville-Spartanburg International
+11997,Gustavus,AK,Gustavus Airport
+11999,Dallas/Fort Worth,TX,Greater Southwest International
+12003,Great Falls,MT,Great Falls International
+12007,Columbus,MS,Golden Triangle Regional
+12008,Georgetown,TX,Georgetown Exec
+12012,Gunnison,CO,Gunnison-Crested Butte Regional
+12016,Guam,TT,Guam International
+12018,Gallup,NM,Gallup Municipal
+12021,Peru,IN,Grissom ARB
+12024,Guymon,OK,Guymon Municipal
+12027,Gordonville,VA,Gordonsville Municipal
+12028,Gainesville,GA,Lee Gilmer Memorial
+12029,Batavia,NY,Genesee County
+12031,Greenville,TX,Majors
+12032,Grandview,MO,Richards/Gebaur AFB
+12039,Greenwood,MS,Greenwood/Leflore
+12040,Gwinner,ND,Gwinner-Roger Melroe Field
+12041,Glenwood Springs,CO,Kgws Sumers Airpark
+12054,Goodyear,AZ,Phoenix Goodyear
+12055,Gary,IN,Gary/Chicago International
+12058,Hamilton,AL,Marion County
+12061,Havasupai,AZ,Havasupai Airport
+12062,Half Moon Bay,CA,Half Moon Bay Airport
+12068,Hamilton,OH,Butler County Regional Hogan Field
+12070,Harrisburg,PA,Capital City
+12074,Haycock,AK,Haycock Airport
+12076,Hanus Bay,AK,Hanus Bay Airport
+12078,Hattiesburg,MS,Hattiesburg Bobby L. Chain Municipal
+12079,Hobart Bay,AK,Hobart Bay Airport
+12083,Hebbronville,TX,Jim Hogg County
+12084,Hood Bay,AK,Hood Bay Airport
+12085,Big Spring,TX,Howard County
+12086,Shoal Cove,AK,Shoal Cove Airport
+12087,Holy Cross,AK,Holy Cross Airport
+12088,Hidden Falls,AK,Hidden Falls Airport
+12092,Mokuleia,HI,Dillingham
+12094,Hayden,CO,Yampa Valley
+12098,Herendeen,AK,Herendeen Bay
+12103,Hermiston,OR,Hermiston Municipal
+12106,Natchez,MS,Hardy-Anders Field Natchez-Adams County
+12108,Hartford,CT,Hartford Brainard
+12110,Hoffman,NC,Mackall AAF
+12119,Hagerstown,MD,Hagerstown Regional-Richard A. Henson Field
+12122,Hogatza,AK,Hogatza Airport
+12124,Hilton Head,SC,Hilton Head Airport
+12127,Hawthorne,CA,Jack Northrop Field/Hawthorne Municipal
+12128,Hiawatha,KS,Hiawatha Municipal
+12129,Hibbing,MN,Range Regional
+12130,Whitefield,NH,Mount Washington Regional
+12131,Ogden,UT,Hill AFB
+12132,Lake Havasu City,AZ,Lake Havasu City Airport
+12134,Honolulu,HI,Daniel K Inouye International
+12136,Hillsboro,OR,Portland Hillsboro
+12140,Blytheville,AR,Blytheville Municipal
+12141,Healy,AK,Healy River
+12146,Kaanapali,HI,Kaanapali Airport
+12147,Jackson,MS,Hawkins Field
+12149,Hickory,NC,Hickory Regional
+12153,Wheeling,WV,Wheeling Ohio County
+12154,Hollister,CA,Hollister Municipal
+12155,Holland,MI,Park Township
+12156,Helena,MT,Helena Regional
+12157,Holbrook,AZ,Holbrook Municipal
+12163,Alamogordo,NM,Holloman AFB
+12165,Homeshore,AK,Homeshore Airport
+12166,Hemet,CA,Hemet-Ryan
+12168,Hatteras,NC,Billy Mitchell
+12171,Hoonah,AK,Hoonah Airport
+12173,Honolulu,HI,Daniel K Inouye International
+12174,Hana,HI,Hana Airport
+12175,Haines,AK,Haines Airport
+12177,Hobbs,NM,Lea County Regional
+12183,Holikachuk,AK,Holikachuk Airport
+12184,Homer,AK,Homer Airport
+12185,Huron,SD,Huron Regional
+12187,Hopkinsville,KY,Campbell AAF
+12190,Hot Springs,AR,Memorial Field
+12191,Houston,TX,William P Hobby
+12195,Hooper Bay,AK,Hooper Bay Airport
+12197,White Plains,NY,Westchester County
+12198,Hampton,IA,Hampton Municipal
+12199,Hanalei,HI,Princeville
+12200,Hoquiam,WA,Bowerman Field
+12206,Harlingen/San Benito,TX,Valley International
+12207,Harrison,AR,Boone County
+12211,Las Vegas,NV,Henderson Executive
+12212,Hastings,NE,Hastings Municipal
+12214,Huslia,AK,Huslia Airport
+12215,Hot Springs,VA,Ingalls Field
+12216,Homestead,FL,Homestead ARB
+12217,Huntsville,AL,Huntsville International-Carl T Jones Field
+12220,Hawthorne,NV,Hawthorne Industrial
+12222,East Hampton,NY,East Hampton Town
+12223,Ashland,WV,Tri-State/Milton J. Ferguson Field
+12225,Huntsville,AL,Redstone AAF
+12226,Humacao,PR,Dr Hermenegildo Ortiz Quinones
+12228,Terre Haute,IN,Terre Haute Regional
+12232,Houlton,ME,Houlton International
+12233,Houma,LA,Houma Terrebonne
+12235,Hughes,AK,Hughes Airport
+12236,Hutchinson,KS,Hutchinson Regional
+12243,Hopkinsville,KY,Hopkinsville-Christian County
+12244,New Haven,CT,Tweed New Haven
+12245,Havre,MT,Havre City-County
+12246,Hartsville,SC,Hartsville Regional
+12247,Hayward,CA,Hayward Executive
+12248,Hawk Inlet,AK,Hawk Inlet Airport
+12250,Hyannis,MA,Cape Cod Gateway
+12252,Hydaburg,AK,Hydaburg Seaplane Base
+12253,Hollis,AK,Hollis Seaplane Base
+12254,Hayward,WI,Sawyer County
+12255,Hays,KS,Hays Regional
+12259,Hazleton,PA,Hazleton Regional
+12260,Shenandoah,IA,Shenandoah Municipal
+12261,Webster City,IA,Webster City Municipal
+12262,Red Oak,IA,Red Oak Municipal
+12263,Wichita,KS,McConnell AFB
+12264,Washington,DC,Washington Dulles International
+12265,Niagara Falls,NY,Niagara Falls International
+12266,Houston,TX,George Bush Intercontinental/Houston
+12268,Kiana,AK,Bob Baker Memorial
+12278,Wichita,KS,Wichita Dwight D Eisenhower National
+12279,Icy Bay,AK,Icy Bay Airport
+12280,Idaho Falls,ID,Idaho Falls Regional
+12281,Indiana,PA,Indiana County Jimmy Stewart Field
+12283,Independence,KS,Independence Municipal
+12294,Igiugig,AK,Igiugig Airport
+12297,Kingman,AZ,Kingman Airport
+12303,Chapel Hill,NC,Horace Williams
+12305,Rantoul,IL,Rantoul National Aviation Center
+12306,Chicago/Romeoville,IL,Lewis University
+12307,De Kalb,IL,De Kalb Taylor Municipal
+12308,Lincoln,IL,Logan County
+12310,Jacksonville,IL,Jacksonville Municipal
+12312,Wilkesboro,NC,Wilkes County
+12314,Kankakee,IL,Greater Kankakee
+12315,Nikolski,AK,Nikolski AS
+12317,Ankeny,IA,Ankeny Regional
+12319,Killeen,TX,Skylark Field
+12320,Wilmington,DE,New Castle
+12321,Iliamna,AK,Iliamna Airport
+12322,Willmar,MN,Willmar Municipal
+12323,Wilmington,NC,Wilmington International
+12324,Wilmington,OH,Wilmington Air Park
+12332,Imperial,NE,Imperial Municipal
+12333,Immokalee,FL,Immokalee Regional
+12335,Iron Mountain/Kingsfd,MI,Ford
+12336,Auburn,IN,De Kalb County
+12337,Indianapolis,IN,Indianapolis Executive
+12339,Indianapolis,IN,Indianapolis International
+12343,International Falls,MN,Falls International Einarson Field
+12347,Indian Springs,NV,Creech AFB
+12348,Winston-Salem,NC,Smith Reynolds
+12351,Winslow,AZ,Winslow-Lindbergh Regional
+12358,Iowa City,IA,Iowa City Municipal
+12363,El Centro,CA,Imperial County
+12365,Williamsport,PA,Williamsport Regional
+12370,Circle,AK,Circle City
+12375,Kirksville,MO,Kirksville Regional
+12378,Sturgis,MI,Sturgis Airport
+12379,Bayou La Batre,AL,Roy E. Ray
+12387,Isabel Pass,AK,Isabel Pass Airport
+12388,Orlando,FL,Kissimmee Gateway
+12389,Williston,ND,Sloulin Field International
+12390,Kinston,NC,Kinston Regional Jetport at Stallings Field
+12391,Islip,NY,Long Island MacArthur
+12392,Manistique,MI,Schoolcraft County
+12394,Wiscasset,ME,Wiscasset Airport
+12396,Wisconsin Rapids,WI,Alexander Field South Wood County
+12397,Ithaca/Cortland,NY,Ithaca Tompkins International
+12402,Hilo,HI,Hilo International
+12412,Ironwood,MI,Gogebic-Iron County
+12415,Houston,TX,West Houston
+12436,Inyokern,CA,Inyokern Airport
+12441,Jackson,WY,Jackson Hole
+12445,Atlanta,GA,Perimeter Mall Helipad
+12448,Jackson/Vicksburg,MS,Jackson Medgar Wiley Evers International
+12449,Atlanta,GA,Beaver Ruin
+12451,Jacksonville,FL,Jacksonville International
+12452,Boston,MA,Boston City Heliport
+12453,Oakland,CA,Berkeley Municipal Heliport
+12454,Commerce,CA,Commerce Business Park Heliport
+12455,Jonesboro,AR,Jonesboro Municipal
+12457,San Francisco,CA,China Basin Heliport
+12458,Oakland,CA,Oakland Convention Center Heliport
+12460,Olathe,KS,New Century Aircenter
+12462,John Day,OR,Grant County Regional/Ogilvie Field
+12463,Dallas/Fort Worth,TX,Downtown Heliport
+12465,Seattle,WA,Edgewater Inn Helipad Sea Wash
+12467,Miami,FL,Miami Downtown Heliport
+12469,Minneapolis,MN,Minneapolis Heliport
+12470,Houston,TX,Houston Central Business District Heliport
+12474,Jefferson City,MO,Jefferson City Memorial
+12477,Seattle,WA,Seattle 1st National.Bank Helipad
+12478,New York,NY,John F. Kennedy International
+12479,Jefferson,OH,Northeast Ohio Regional
+12483,Grand Canyon,AZ,Grand Canyon Heliport
+12484,Williamsburg,VA,Waltrip Williamsburg Exec
+12485,Atlanta,GA,Galleria
+12486,Houston,TX,Greenway Plaza Heliport
+12487,Houston,TX,Transco Tower Galleria Heliport
+12490,Garden City,NY,Island Heliport
+12492,Kapalua,HI,Kapalua Airport
+12494,Jamestown,NY,Chautauqua County/Jamestown
+12495,Cambridge,MA,Cambridge Airport
+12497,City of Industry,CA,Civic Financial Center Heliport
+12508,Jacksonville,TX,Cherokee County
+12509,Cooper Lodge,AK,Quartz Creek
+12511,Joplin,MO,Joplin Regional
+12513,Houston,TX,Astrodome
+12515,San Francisco,CA,Marin County Heliport
+12518,Mankato,MN,Downtown Heliport
+12519,Jamestown,ND,Jamestown Regional
+12522,Newport Beach,CA,Newport Beach Airport
+12523,Juneau,AK,Juneau International
+12527,Santa Ana,CA,Centerport Heliport
+12535,Johnston Island,TT,Johnston Atoll
+12536,Orange,CA,Orange County Heliport
+12541,New York,NY,Pan Am Building Heliport
+12543,Houston,TX,Park Ten Helipad
+12544,Concord,NC,Concord Padgett Regional
+12545,New York,NY,West 30th Street Heliport
+12546,New York,NY,Downtown Manhattan/Wall Street Heliport
+12547,Rochester,MN,Appache Heliport
+12548,New York,NY,East 60th Street Heliport
+12549,Kapolei,HI,Kalaeloa
+12553,Ceiba,PR,Jose Aponte de la Torre
+12554,Juneau,AK,Juneau Seaplane Base
+12556,St. Cloud,MN,Crossroads Heliport
+12559,Johnstown,PA,John Murtha Johnstown-Cambria County
+12571,Beloit/Janesville,WI,Southern Wisconsin Regional
+12573,Houston,TX,Westchase Heliport
+12574,Nashville,TN,John C Tune
+12576,Jackson,MI,Jackson County-Reynolds Field
+12577,Seattle,WA,Olympic Hotel Helipad Sea Wash
+12579,Newton,MS,James H Easom Field
+12580,Orange,MA,Orange Municipal
+12581,Stanley,ND,Stanley Municipal
+12583,Trading Bay,AK,Trading Bay Production
+12585,Chamberlain,SD,Chamberlain Municipal
+12587,Portland,TN,Douglas Hunter Field
+12588,Duluth,MN,Sky Harbor
+12589,Cloquet,MN,Cloquet Carlton County
+12590,San Clemente Island,CA,San Clemente Island Nalf
+12591,Hog River,AK,Hog River Airport
+12592,Quincy,WA,Quincy Municipal
+12593,American Falls,ID,Savage Field
+12594,Prospect,OR,Prospect State
+12595,Brooksville,FL,Brooksville Tampa Bay Regional
+12596,Laurel,MT,Laurel Municipal
+12598,Arlington,TX,Arlington Municipal
+12599,Bennington,VT,William H. Morse State
+12600,Little Rock,AR,North Little Rock Municipal
+12601,Evergreen,AL,Evergreen Regional Middleton Field
+12602,Angwin,CA,Angwin-Parrett Field
+12603,Grangeville,ID,Idaho County
+12605,Russellville,KY,Russellville-Logan County
+12610,Kake,AK,Kake Seaplane Base
+12615,Kaltag,AK,Kaltag Airport
+12621,Birch Creek,AK,Birch Creek Airport
+12622,Bell Island,AK,Bell Island Hot Springs Seaplane Base
+12624,Klag Bay,AK,Klag Bay Airport
+12631,Chignik,AK,Chignik Bay
+12633,Coffman Cove,AK,Coffman Cove Seaplane Base
+12635,Chignik Bay,AK,Chignik Bay Airport
+12637,Kansas City,KS,Fairfax Municipal
+12638,Chignik Lagoon,AK,Chignik Lagoon Airport
+12639,Chernofski,AK,Chernofski Harbor
+12641,Chignik,AK,Chignik Lake
+12642,Colorado Creek,AK,Colorado Creek Airport
+12647,Kodiak,AK,Kodiak Municipal
+12649,Nanwalek,AK,Nanwalek Airport
+12652,Kenmore,WA,Kenmore Air Harbor
+12653,Ekwok,AK,Ekwok Airport
+12661,Key Largo,FL,Ocean Reef Club
+12663,False Pass,AK,False Pass Airport
+12671,Koliganek,AK,Koliganek Airport
+12676,Grayling,AK,Grayling Airport
+12677,Glacier Creek,AK,Glacier Creek Airport
+12686,Ivanof Bay,AK,Ivanof Bay Seaplane Base
+12704,Koyuk,AK,Koyuk Alfred Adams
+12705,Kitoi Bay,AK,Kitoi Bay Airport
+12708,Kongiganak,AK,Kongiganak Airport
+12709,Akiachak,AK,Akiachak Airport
+12711,Kalakaket,AK,Kalakaket Creek AS
+12712,Karluk Lake,AK,Karluk Lake Seaplane Base
+12716,Ekuk,AK,Ekuk Airport
+12719,Kalskag,AK,Kalskag Airport
+12720,Levelock,AK,Levelock Airport
+12721,Larsen Bay,AK,Larsen Bay Airport
+12723,Kelp Bay,AK,Kelp Bay Airport
+12725,Kelso,WA,Southwest Washington Regional
+12728,Klawock,AK,Klawock Airport
+12737,Manokotak,AK,Manokatak Seaplane Base
+12743,Moser Bay,AK,Moser Bay Airport
+12745,Kanab,UT,Kanab Municipal
+12748,Kokhanok,AK,Kokhanok Airport
+12753,Kennett,MO,Kennett Memorial
+12755,New Stuyahok,AK,New Stuyahok Airport
+12758,Kona,HI,Ellison Onizuka Kona International at Keahole
+12769,Kotlik,AK,Kotlik Airport
+12771,Olga Bay,AK,Olga Bay Seaplane Base
+12772,Ouzinkie,AK,Ouzinkie Airport
+12773,Point Baker,AK,Point Baker Airport
+12774,Port Clarence,AK,Port Clarence CGS
+12775,Pauloff Harbor,AK,Pauloff Harbor Airport
+12777,Parks,AK,Parks Seaplane Base
+12778,Napamute,AK,Napamute Airport
+12779,Kipnuk,AK,Kipnuk Airport
+12782,Port Williams,AK,Port Williams Airport
+12784,Perryville,AK,Perryville Airport
+12785,Port Bailey,AK,Port Bailey Airport
+12786,Akutan,AK,Akutan Airport
+12790,Kasitsna Bay,AK,Kasitsna
+12796,Burlington,KS,Coffey County
+12807,St. Mary's,AK,St. Mary's Airport
+12812,Sandy River,AK,Federal No.1
+12815,Thorne Bay,AK,Thorne Bay Seaplane Base
+12819,Ketchikan,AK,Ketchikan International
+12822,Brevig Mission,AK,Brevig Mission Airport
+12831,Kasigluk,AK,Kasigluk Airport
+12837,Kugururok River,AK,Kugururok River Airport
+12841,King Cove,AK,King Cove Airport
+12844,Kivalina,AK,Kivalina Airport
+12847,Waterfall,AK,Waterfall Seaplane Base
+12851,Kwigillingok,AK,Kwigillingok Airport
+12853,Quinhagak,AK,Quinhagak Airport
+12854,West Point,AK,West Point Village
+12855,Kwethluk,AK,Kwethluk Airport
+12857,Kasaan,AK,Kasaan Seaplane Base
+12859,Danville,KY,Stuart Powell Field
+12860,Sturgis,KY,Sturgis Municipal
+12861,Mount Sterling,KY,Mount Sterling Montgomery County
+12862,Henderson,KY,Henderson City - County
+12863,Madisonville,KY,Madisonville Regional
+12865,Yankee Creek,AK,Yankee Creek 2
+12866,Karluk,AK,Karluk Airport
+12868,Koyukuk,AK,Koyukuk Airport
+12869,Zachar Bay,AK,Zachar Bay Airport
+12870,Kizhuyak,AK,Kizhuyak Airport
+12873,Lamar,CO,Southeast Colorado Regional
+12878,Lafayette,IN,Purdue University
+12882,Lakeland,FL,Lakeland Linder International
+12883,Los Alamos,NM,Los Alamos Airport
+12884,Lansing,MI,Capital Region International
+12888,Laramie,WY,Laramie Regional
+12889,Las Vegas,NV,Harry Reid International
+12891,Lawton/Fort Sill,OK,Lawton-Fort Sill Regional
+12892,Los Angeles,CA,Los Angeles International
+12896,Lubbock,TX,Lubbock Preston Smith International
+12898,Latrobe,PA,Arnold Palmer Regional
+12899,North Platte,NE,North Platte Regional Airport Lee Bird Field
+12902,Liberal,KS,Liberal Mid-America Regional
+12906,Lumberton,NC,Lumberton Regional
+12915,Lake Charles,LA,Lake Charles Regional
+12916,Laconia,NH,Laconia Municipal
+12917,Columbus,OH,Rickenbacker International
+12925,Linden,NJ,Linden Airport
+12927,Ludington,MI,Mason County
+12932,Lebanon-Hanover,NH,Lebanon Municipal
+12934,Leesburg,FL,Leesburg International
+12944,Lewiston/Auburn,ME,Auburn Lewiston Municipal
+12945,Lexington,KY,Blue Grass
+12947,Newport News/Hampton,VA,Langley AFB
+12948,Lufkin,TX,Angelina County
+12951,Lafayette,LA,Lafayette Regional Paul Fournet Field
+12953,New York,NY,LaGuardia
+12954,Long Beach,CA,Long Beach Airport
+12955,LaGrange,GA,LaGrange-Callaway
+12956,La Grande,OR,La Grande/Union County
+12961,Longmont,CO,Longmont Municipal
+12965,Logan,UT,Logan Cache
+12968,Lost Harbor,AK,Lost Harbor Airport
+12971,Lancaster,OH,Fairfield County
+12973,Lake Havasu City,AZ,Lake Havasu City Airport
+12974,Lock Haven,PA,William T. Piper Memorial
+12976,La Junta,CO,La Junta Municipal
+12979,Limon,CO,Limon Municipal
+12982,Lihue,HI,Lihue Airport
+12983,Long Island,AK,Long Island Airport
+12992,Little Rock,AR,Bill and Hillary Clinton Nat Adams Field
+12993,Livengood,AK,Livengood Airport
+12995,Hinesville,GA,Wright AAF/Midcoast Regional
+12996,Limestone,ME,Loring International
+12999,Lake Jackson,TX,Brazoria County
+13001,Lebanon,MO,Floyd W Jones Lebanon
+13002,Seattle,WA,Lake Union Terminal
+13003,Kulik Lake,AK,Kulik Lake Airport
+13008,Lake Placid,NY,Lake Placid Airport
+13009,Lakeview,OR,Lake County
+13015,Mount Holly,NJ,South Jersey Regional
+13016,Lake Minchumina,AK,Lake Minchumina Airport
+13023,Louisville,MS,Louisville Winston County
+13024,Klamath Falls,OR,Crater Lake Klamath Regional
+13026,Lander,WY,Hunt Field
+13028,Lonely,AK,Lonely AS
+13029,Lincoln,NE,Lincoln Airport
+13030,Land O' Lakes,WI,Kings Land O' Lakes
+13031,Wise,VA,Lonesome Pine
+13032,Lancaster,PA,Lancaster Airport
+13033,Lanett,AL,Lanett Regional
+13034,Lanai,HI,Lanai Airport
+13038,Laredo,TX,Laredo Municipal
+13039,Lovelock,NV,Derby Field
+13044,Louisville,KY,Bowman Field
+13046,London/Corbin,KY,London-Corbin Airport-Magee Field
+13049,Lompoc,CA,Lompoc Airport
+13052,La Porte,IN,La Porte Municipal
+13055,Lopez Island,WA,Lopez Island Airport
+13057,Little Port Walter,AK,Little Port Walter Airport
+13058,Pickens,SC,Pickens County
+13061,Laredo,TX,Laredo International
+13063,Jacksonville,AR,Little Rock AFB
+13064,Loring,AK,Loring Airport
+13069,Moses Lake,WA,Larson AFB
+13070,Lathrop,CA,Sharpe AFF
+13072,Las Cruces,NM,Las Cruces International
+13075,Lexington,KY,Blue Grass Station AHP
+13076,La Crosse,WI,La Crosse Regional
+13077,Columbus,GA,Lawson AAF
+13080,Los Banos,CA,Los Banos Municipal
+13083,Lost River,AK,Lost River 1
+13087,Las Vegas,NV,Nellis AFB
+13097,Altus,OK,Altus AFB
+13102,Phoenix,AZ,Luke AFB
+13105,Cincinnati,OH,Cincinnati Municipal Lunken Field
+13106,Laurel,MS,Hesler-Noble Field
+13109,Kalaupapa,HI,Kalaupapa Airport
+13111,Cape Lisburne,AK,Cape Lisburne LRRS
+13115,Lime Village,AK,Lime Village Airport
+13117,Livermore,CA,Livermore Municipal
+13118,Livingston,MT,Livingston Airport
+13120,Las Vegas,NM,Las Vegas Municipal
+13121,Lewisburg,WV,Greenbrier Valley
+13122,Lawrence,KS,Lawrence Regional
+13123,Lawrenceburg,TN,Lawrenceburg-Lawrence County
+13124,Wells,NV,Wells Municipal/Harriet Field
+13125,Lawrence,MA,Lawrence Municipal
+13127,Lewiston,ID,Lewiston Nez Perce County
+13128,Lewistown,MT,Lewistown Municipal
+13129,Lawrenceville,IL,Lawrenceville-Vincennes International
+13132,Lexington,NE,Jim Kelly Field
+13135,Leadville,CO,Lake County
+13139,Lynchburg,VA,Lynchburg Regional/Preston Glenn Field
+13144,Ely,MN,Ely Municipal
+13151,Lawrenceville,GA,Gwinnett County - Briscoe Field
+13152,Edgartown,MA,Katama Airpark
+13155,Macon,GA,Macon Downtown
+13157,Madera,CA,Madera Municipal
+13158,Midland/Odessa,TX,Midland International Air and Space Port
+13173,Malden,MO,Malden Regional
+13176,Mayaguez,PR,Eugenio Maria de Hostos
+13182,Manistee/Ludington,MI,Manistee County-Blacker
+13184,Saginaw/Bay City/Midland,MI,MBS International
+13188,Moberley,MO,Omar N Bradley
+13191,McComb,MS,McComb/Pike County/John E. Lewis Field
+13192,Sacramento,CA,McClellan Airfield
+13193,Mackinac Island,MI,Mackinac Island Airport
+13194,Merced,CA,Merced Yosemite Regional
+13195,Tampa,FL,Macdill AFB
+13196,McGrath,AK,McGrath Airport
+13198,Kansas City,MO,Kansas City International
+13200,McCook,NE,McCook Ben Nelson Regional
+13201,McKinley Park,AK,Denali
+13203,Macon,GA,Middle Georgia Regional
+13204,Orlando,FL,Orlando International
+13211,Mason City,IA,Mason City Municipal
+13214,San Antonio,TX,Martindale AHP
+13217,Midland/Odessa,TX,Midland Airpark
+13219,Medford,WI,Taylor County
+13221,Carbondale,IL,Southern Illinois
+13223,Madras,OR,Madras Municipal
+13226,Middleton Island,AK,Middleton Island Airport
+13228,Medfra,AK,Medfra Airport
+13230,Harrisburg,PA,Harrisburg International
+13232,Chicago,IL,Chicago Midway International
+13234,Midway Island,TT,Sand Island Field
+13236,Rangeley,ME,Stephen A Bean Municipal
+13241,Meridian,MS,Key Field
+13242,Meadville,PA,Port Meadville
+13244,Memphis,TN,Memphis International
+13246,Manteo,NC,Dare County Regional
+13249,Atwater,CA,Castle
+13251,Minden,NV,Minden-Tahoe
+13255,Mansfield,OH,Mansfield Lahm Regional
+13256,Mission/McAllen/Edinburg,TX,McAllen International
+13259,Mesquite,NV,Mesquite Airport
+13260,Marshfield,WI,Marshfield Municipal
+13264,Medford,OR,Rogue Valley International - Medford
+13266,Fort Worth,TX,Mangham Field
+13268,Melfa,VA,Accomack County
+13271,Michigan City,IN,Michigan City Municipal Phillips Field
+13273,Marietta,GA,Dobbins ARB
+13275,Montgomery,NY,Orange County
+13277,Montgomery,AL,Montgomery Regional
+13280,Moultrie/Thomasville,GA,Moultrie/Thomasville Airport
+13282,Morgantown,WV,Morgantown Municipal Walter L Bill Hart Field
+13283,Dayton,OH,Dayton-Wright Brothers
+13287,Mitchell,SD,Mitchell Municipal
+13290,Manhattan/Ft. Riley,KS,Manhattan Regional
+13291,Marshall,MO,Marshall Memorial Municipal
+13292,Minchumina,AK,Minchumina Airport
+13295,Sacramento,CA,Sacramento Mather
+13296,Manchester,NH,Manchester Boston Regional
+13297,Mojave,CA,Mojave Air and Space Port Rutan Field
+13300,Greenville,MI,Greenville Municipal
+13301,Holland,MI,West Michigan Regional
+13302,Howell,MI,Livingston County Spencer J. Hardy
+13303,Miami,FL,Miami International
+13304,Minot,ND,Minot AFB
+13305,Minneapolis,MN,Crystal
+13307,Muncie/Anderson/Newcastle,IN,Delaware County Regional
+13314,Miami,OK,Miami Regional
+13316,Omaha,NE,Millard
+13319,Shafter,CA,Shafter - Minter Field
+13321,Millville,NJ,Millville Municipal
+13322,Marshalltown,IA,Marshalltown Municipal
+13335,Jackson,MN,Jackson Airport
+13338,Toms River,NJ,Ocean County
+13341,Kansas City,MO,Kansas City Downtown Wheeler Field
+13342,Milwaukee,WI,General Mitchell International
+13344,Muskegon,MI,Muskegon County
+13347,Hoolehua,HI,Molokai
+13348,Jackson,TN,Jackson Regional
+13350,Muskogee,OK,Muskogee Davis Regional
+13354,Mankato,MN,Mankato Regional
+13360,Melbourne,FL,Melbourne Orlando International
+13361,McAlester,OK,McAlester Regional
+13362,Malad City,ID,Malad City Airport
+13364,Milford,UT,Milford Municipal/Ben and Judy Briscoe Field
+13367,Moline,IL,Quad Cities International
+13368,Malta,MT,Malta Airport
+13369,Marshall,AK,Marshall Don Hunter Sr.
+13375,Miles City,MT,Frank Wiley Field
+13376,Millinocket,ME,Millinocket Municipal
+13377,Monroe,LA,Monroe Regional
+13381,Manley Hot Springs,AK,Manley Hot Springs Airport
+13388,Mammoth Lakes,CA,Mammoth Lakes Airport
+13389,Athens,TN,McMinn County
+13392,Marshall,MN,Southwest Minnesota Regional-Marshall/Ryan Field
+13394,Stow,MA,Minute Man Air Field
+13397,Columbia,SC,McEntire Jngb
+13398,Morristown,NJ,Morristown Municipal
+13401,Fosston,MN,Fosston Municipal Anderson Field
+13402,Moose Lake,MN,Moose Lake Carlton County
+13403,Ortonville,MN,Ortonville Municipal-Martinson Field
+13409,Marinette,MI,Menominee Regional
+13410,Marion,OH,Marion Municipal
+13415,Minto,AK,Minto Al Wright
+13418,Manassas,VA,Manassas Regional/Harry P. Davis Field
+13419,Mosby,MO,Midwest National Air Center
+13420,Washington,MO,Washington Regional
+13422,Mobile,AL,Mobile Regional
+13424,Modesto,CA,Modesto City-County-Harry Sham Field
+13429,Mount Pleasant,MI,Mount Pleasant Municipal
+13431,Morristown,TN,Moore-Murrell
+13432,Moses Point,AK,Moses Point Airport
+13433,Minot,ND,Minot International
+13434,Mountain Village,AK,Mountain Village Airport
+13439,Miami,FL,Watson Island International
+13440,Montpelier,ID,Montpelier Airport
+13441,Morrilton,AR,Petit Jean Park
+13446,Mt. Pocono,PA,Pocono Mountains Regional
+13447,McPherson,KS,McPherson Airport
+13448,Mount Pleasant,TX,Mount Pleasant Municipal
+13450,Montpelier/Barre,VT,Edward F Knapp State
+13452,Macomb,IL,Macomb Municipal
+13453,Indianapolis,IN,Indianapolis Regional
+13459,Marquette,MI,Marquette Sawyer Regional
+13461,Smyrna,TN,Smyrna Airport
+13463,Martinsburg,WV,Eastern WV Regional/Shepherd Field
+13464,Columbia,TN,Maury County Regional
+13466,Morehead City,NC,Beaufort Morehead City
+13467,Anchorage,AK,Merrill Field
+13469,Marco Island,FL,Marco Island Executive
+13470,Morganton,NC,Morganton Lenoir
+13476,Monterey,CA,Monterey Regional
+13478,Grenada,MS,Grenada Municipal
+13480,Mesa,AZ,Falcon Field
+13484,Muscle Shoals,AL,Northwest Alabama Regional
+13485,Madison,WI,Dane County Regional-Truax Field
+13486,Missoula,MT,Missoula Montana
+13487,Minneapolis,MN,Minneapolis-St Paul International
+13490,Massena,NY,Massena International-Richards Field
+13493,Monticello,NY,Sullivan County International
+13495,New Orleans,LA,Louis Armstrong New Orleans International
+13497,Colstrip,MT,Colstrip Airport
+13498,Mt. Clemens,MI,Selfridge Angb
+13501,Marathon,FL,The Florida Keys Marathon International
+13502,Montrose/Delta,CO,Montrose Regional
+13504,Metlakatla,AK,Metlakatala
+13505,Baltimore,MD,Martin State
+13506,Mattoon/Charleston,IL,Coles County Memorial
+13507,Montauk Point,NY,Sky Portal
+13512,Manitowoc,WI,Manitowoc County
+13513,Fairbanks,AK,Metro Field
+13520,Kamuela,HI,Waimea-Kohala
+13523,Moultrie,GA,Spence
+13525,Mountain Home,ID,Mountain Home AFB
+13527,Muscatine,IA,Muscatine Municipal
+13535,Morrisville,VT,Morrisville Stowe State
+13536,Kayenta,AZ,Kayenta Airport
+13537,Mount Vernon,IL,Mount Vernon Airport
+13540,Burlington/Mount Vernon,WA,Skagit Regional
+13541,Martha's Vineyard,MA,Martha's Vineyard Airport
+13543,Marion/Herrin,IL,Veterans Airport of Southern Illinois
+13544,Milwaukee,WI,Lawrence J Timmerman
+13546,Moses Lake,WA,Grant County International
+13547,Mineral Wells,TX,Mineral Wells Regional
+13548,Windom,MN,Windom Municipal
+13549,Middletown,OH,Middletown Regional/Hook Field
+13553,Monticello,UT,Monticello Airport
+13554,Maxton,NC,Laurinburg-Maxton
+13555,Montgomery,AL,Maxwell AFB
+13556,Marlboro,MA,Marlboro Airport
+13564,McCarthy,AK,McCarthy Airport
+13570,San Diego,CA,Montgomery Gibbs Executive
+13572,Marble Canyon,AZ,Cliff Dwellers
+13574,May Creek,AK,May Creek Airport
+13575,McCall,ID,McCall Municipal
+13577,Myrtle Beach,SC,Myrtle Beach International
+13579,Mekoryuk,AK,Mekoryuk Airport
+13580,Marysville,CA,Yuba County
+13587,Marana,AZ,Pinal Airpark
+13595,Marion,IN,Marion Municipal McKinney Field
+13596,Pottstown,PA,Pottstown Municipal
+13597,Robbinsville,NJ,Trenton-Robbinsville
+13599,North Adams,MA,Harriman-and-West
+13612,New Orleans,LA,New Orleans NAS JRB
+13613,Newburgh,NY,Newburgh Airport
+13617,Glenview,IL,Glenview NAS
+13619,Gastonia,NC,Gastonia Municipal
+13620,Smithfield,NC,Johnston Regional
+13621,Shelby,NC,Shelby-Cleveland County Regional
+13622,Currituck,NC,Currituck County Regional
+13623,Kenansville,NC,Duplin County
+13629,Chenega,AK,Chenega Bay
+13630,North Kingstown,RI,Quonset State Air Reserve National Guard Helipad
+13632,Marietta,GA,Dobbins ARB
+13637,Kindred,ND,Robert Odegaard Field
+13645,Gothenburg,NE,Gothenburg Municipal
+13646,Blair,NE,Blair Exec
+13647,Brunswick,GA,Glynco NAS
+13650,Lakehurst,NJ,Lakehurst/Maxfield Field
+13655,New Orleans,LA,Lakefront
+13656,Fallon,NV,Fallon NAS
+13659,Grand Canyon,AZ,North Rim
+13662,Kaneohe,HI,Kaneohe Bay MCAS
+13663,Guam,TT,Agana NAS
+13665,Corpus Christi,TX,Corpus Christi NAS
+13667,Norfolk,VA,Norfolk NS
+13668,Alameda,CA,Alameda NAS
+13671,Patuxent River,MD,Patuxent River NAS
+13674,Brunswick,ME,Brunswick Executive
+13676,Nikolai,AK,Nikolai Airport
+13678,Niblack,AK,Niblack Airport
+13681,Ninilchik,AK,Ninilchik Airport
+13682,Jacksonville,FL,Jacksonville NAS
+13685,Berlin,NJ,Pine Valley
+13686,West Creek,NJ,Eagles Nest
+13689,El Centro,CA,El Centro NAF
+13693,Naukiti,AK,Naukiti Airport
+13697,Cherry Point,NC,Cherry Point MCAS
+13698,Nichen Cove,AK,Nichin Cove Seaplane Base
+13700,San Diego,CA,Miramar MCAS
+13702,Lemoore,CA,Lemoore NAS
+13704,Nelson Lagoon,AK,Nelson Lagoon Airport
+13710,Nightmute,AK,Nightmute Airport
+13714,Naknek,AK,Naknek Airport
+13715,Nondalton,AK,Nondalton Airport
+13725,Novato,CA,Gnoss Field
+13728,Pensacola,FL,Pensacola NAS
+13731,Newport,RI,Newport State
+13732,Millington,TN,Millington Memphis
+13733,Kingsville,TX,Kingsville NAS
+13736,Key West,FL,Key West NAS
+13739,Mayport,FL,Mayport NS
+13740,Afton,OK,Grand Lake Regional
+13743,Ceiba,PR,Roosevelt Roads NAS
+13747,Milton,FL,Whiting Field NAS North
+13748,Camp Springs,MD,Joint Base Andrews
+13750,Titusville,FL,Space Florida Launch Landing Facility
+13756,Port Hueneme,CA,Point Mugu NAS
+13763,Oceana,VA,Oceana NAS
+13767,Nuiqsut,AK,Nuiqsut Airport
+13768,Nulato,AK,Nulato Airport
+13769,Pensacola,FL,Saufley Field NOLF
+13770,Nunapitchuk,AK,Nunapitchuk Airport
+13771,Mountain View,CA,Moffett Federal Airfield
+13772,Whidbey Island,WA,Whidbey Island NAS
+13773,Overton,NV,Perkins Field
+13775,Nevada,MO,Nevada Municipal
+13780,Willow Grove,PA,Willow Grove NAS JRB
+13781,Kingston,NY,Kingston Ulster
+13782,Fulton,NY,Oswego County
+13783,Oneonta,NY,F and F Airpark Inc
+13784,New York,NY,New York City Metropolitan Area
+13785,Yuma,AZ,Yuma MCAS/Yuma International
+13788,Jacksonville,FL,Cecil
+13789,Santa Ana,CA,El Toro MCAS
+13790,South Weymouth,MA,South Weymouth NAS
+13791,San Diego,CA,North Island NAS
+13792,Redding,CA,Benton Field
+13795,Jacksonville/Camp Lejeune,NC,Albert J Ellis
+13796,Oakland,CA,Oakland International
+13805,Oakland,MD,Garrett County
+13806,Kobuk,AK,Kobuk Airport
+13808,Ocean City,MD,Ocean City Municipal
+13809,Ocala,FL,Ocala International-Jim Taylor Field
+13810,Nacogdoches,TX,Nacogdoches A L Mangham Jr Regional
+13811,Oceanic,AK,Thumb Bay
+13813,Oceanside,CA,Bob Maxwell Memorial Airfield
+13814,Washington,NC,Washington Warren
+13819,Oakland,MD,Oakland Airport
+13821,Oak Harbor,WA,Delaurentis
+13824,Omaha,NE,Offutt AFB
+13825,Norfolk,NE,Norfolk Regional/Karl Stefan Memorial Field
+13826,Ofu,TT,Ofu Airport
+13827,Ogallala,NE,Searle Field
+13828,Orangeburg,SC,Orangeburg Municipal
+13829,Ogden,UT,Ogden-Hinckley
+13830,Kahului,HI,Kahului Airport
+13832,Ogdensburg,NY,Ogdensburg International
+13833,Washington Court House,OH,Fayette County
+13834,Bellefontaine,OH,Bellefontaine Regional
+13835,Chillicothe,OH,Ross County
+13836,Marysville,OH,Union County
+13837,Cincinnati,OH,Cincinnati - Blue Ash
+13838,Ravenna,OH,Portage County
+13839,Kent,OH,Kent State University
+13841,Northeast Cape,AK,Northeast Cape AFS
+13845,Norwich,NY,Eaton
+13848,Olathe,KS,Johnson County Executive
+13851,Oklahoma City,OK,Okc Will Rogers International
+13854,Kokomo/Logansport/Peru,IN,Kokomo Municipal
+13861,Olean,NY,Cattaraugus County-Olean
+13862,Wolf Point,MT,L. M. Clayton
+13863,Old Harbor,AK,Old Harbor Airport
+13865,Olympia,WA,Olympia Regional
+13868,Nogales,AZ,Nogales International
+13869,Columbus,NE,Columbus Municipal
+13870,Olive Branch,MS,Olive Branch Taylor Field
+13871,Omaha,NE,Eppley Airfield
+13873,Nome,AK,Nome Airport
+13876,Omak,WA,Omak Airport
+13881,Winona,MN,Winona Municipal/Max Conrad Field
+13884,Oneonta,NY,Albert S Nader Regional
+13886,O'Neill,NE,The O'Neill Municipal-John L. Baker Field
+13887,Socorro,NM,Socorro Municipal
+13888,Onion Bay,AK,Onion Bay Airport
+13889,Ontario,OR,Ontario Municipal
+13890,Newport,OR,Newport Municipal
+13891,Ontario,CA,Ontario International
+13893,Cobol,AK,Cobol Alaska/Scaled/
+13894,Toksook,AK,Toksook Bay
+13898,Miami,FL,Miami Opa Locka Executive
+13899,Ophir,AK,Ophir Airport
+13901,McDonald Lake,AK,McDonald Lake Airport
+13902,Bible Camp,AK,Bible Camp Airport
+13903,Cinder River Lodge,AK,Cinder River Lodge Airport
+13905,Lemesurier Island,AK,Lemesurier Island Airport
+13906,Tracy Arm,AK,Tracy Arm Airport
+13908,Vrems,AK,Vrems Airport
+13909,Akolik,AK,Akolik Airport
+13910,Mels,AK,Mels Airport
+13911,Meshik,AK,Meshik Airport
+13912,Telaquana Lake,AK,Telaquana Lake Airport
+13913,Chelatna Lake Lodge,AK,Chelatna Lake Lodge Airport
+13914,Pumice,AK,Pumice Airport
+13915,Port Alsworth,AK,Points Alsworth
+13916,Twin Lakes,AK,Twin Lakes Airport
+13917,Sandy,AK,Sandy Airport
+13920,Shirleyville,AK,Shirleyville Airport
+13921,Doug Carney Strip,AK,Doug Carney Strip Airport
+13922,Shisholik,AK,Shisholik Airport
+13923,Sivinuvik,AK,Camp Sivinuvik
+13924,American Creek,AK,American Creek Airport
+13925,Grants Pass,OR,Grants Pass Airport
+13926,Gleneden,OR,Siletz Bay State
+13927,Florence,OR,Florence Municipal
+13930,Chicago,IL,Chicago O'Hare International
+13931,Norfolk,VA,Norfolk International
+13933,Worcester,MA,Worcester Regional
+13934,Port Lions,AK,Port Lions Airport
+13936,Orlando,FL,Orlando Exec
+13940,Northway,AK,Northway Airport
+13942,Noorvik,AK,Robert/Bob/Curtis Memorial
+13946,Osage Beach,MO,Grand Glaize - Osage Beach
+13947,Oscoda,MI,Oscoda-Wurtsmith
+13949,Oshkosh,WI,Wittman Regional
+13958,Columbus,OH,Ohio State University
+13959,Kosciusko,MS,Kosciusko/Attala County
+13963,Worthington,MN,Worthington Municipal
+13964,North Bend/Coos Bay,OR,Southwest Oregon Regional
+13965,Ottumwa,IA,Ottumwa Regional
+13968,Anacortes,WA,Anacortes Airport
+13970,Kotzebue,AK,Ralph Wien Memorial
+13976,Norman,OK,University of Oklahoma/Max Westheimer
+13981,Oroville,CA,Oroville Municipal
+13982,Owatonna,MN,Owatonna Degner Regional
+13983,Owensboro,KY,Owensboro Daviess County Regional
+13984,Norwood,MA,Norwood Memorial
+13987,Waterbury,CT,Waterbury Oxford
+13988,Oxnard/Ventura,CA,Oxnard
+13989,Knoxville,IA,Knoxville Municipal
+13994,Yosemite National Park,CA,Yosemite National Park Airport
+13995,Ozona,TX,Ozona Municipal
+13999,Ozark,AL,Cairns AAF
+14000,Montrose,PA,Husky Haven
+14001,Bedford,PA,Bedford County
+14004,Everett,WA,Seattle Paine Field International
+14006,Paducah,KY,Barkley Regional
+14007,Hanapepe,HI,Port Allen
+14009,Panama City,FL,Tyndall AFB
+14011,Palo Alto,CA,Palo Alto Airport
+14013,Palmer,AK,Warren Bud Woods Palmer Municipal
+14021,Point Barrow,AK,Point Barrow LRRS
+14024,Pine Bluff,AR,Pine Bluff Regional Airport Grider Field
+14025,Plattsburgh,NY,Plattsburgh International
+14027,West Palm Beach/Palm Beach,FL,Palm Beach International
+14028,Pack Creek,AK,Pack Creek Airport
+14034,Pikeville,KY,Pike County Hatcher Field
+14037,Portage Creek,AK,Portage Creek Airport
+14039,Prairie Du Chien,WI,Prairie Du Chien Municipal
+14040,Painter Creek,AK,Painter Creek Airport
+14042,Porcupine Creek,AK,Porcupine Creek Airport
+14044,Princeton,NJ,Princeton Airport
+14046,Pedro Bay,AK,Pedro Bay Airport
+14050,Atlanta,GA,Dekalb Peachtree
+14054,Pendleton,OR,Eastern Oregon Regional at Pendleton
+14057,Portland,OR,Portland International
+14062,Pelican,AK,Pelican Seaplane Base
+14070,Pecos City,TX,Pecos Municipal
+14075,Paf Warren,AK,Paf Warren Airport
+14077,Port Frederick,AK,Port Frederick Airport
+14078,Panama City,FL,Bay County
+14081,Page,AZ,Page Municipal
+14082,Punta Gorda,FL,Punta Gorda Airport
+14087,Pascagoula,MS,Jackson County
+14088,Port Graham,AK,Port Graham Airport
+14089,Pagosa Springs,CO,Stevens Field
+14091,Peach Springs,AZ,Peach Springs Dirt Strip
+14092,Greenville,NC,Pitt Greenville
+14096,New Philadelphia,OH,Harry Clever Field
+14098,Newport News/Williamsburg,VA,Newport News/Williamsburg International
+14100,Philadelphia,PA,Philadelphia International
+14101,Port Huron,MI,St. Clair County International
+14102,Point Hope,AK,Point Hope Airport
+14105,Paris,TN,Henry County
+14107,Phoenix,AZ,Phoenix Sky Harbor International
+14108,Peoria,IL,General Downing - Peoria International
+14109,Hattiesburg/Laurel,MS,Hattiesburg-Laurel Regional
+14112,St. Petersburg,FL,St Pete Clearwater International
+14113,Pocatello,ID,Pocatello Regional
+14114,Fairbanks,AK,Phillips Field
+14116,Pine Mountain,GA,Harris County
+14119,Pilot Point,AK,Pilot Point Airport
+14120,Pierre,SD,Pierre Regional
+14122,Pittsburgh,PA,Pittsburgh International
+14125,Point Lay,AK,Point Lay LRRS
+14126,Payson,AZ,Payson Airport
+14129,Port San Juan,AK,Port San Juan Airport
+14130,Napaskiak,AK,Napaskiak Airport
+14131,Parkersburg,WV,Mid-Ohio Valley Regional
+14133,Park Rapids,MN,Park Rapids Municipal-Konshok Field
+14143,Plattsburgh,NY,Clinton County
+14147,Point Lookout,MO,M Graham Clark Downtown
+14150,Pellston,MI,Pellston Regional Emmet County
+14157,Plymouth,IN,Plymouth Municipal
+14160,Pembina,ND,Pembina Municipal
+14162,Palmdale,CA,Palmdale USAF Plant 42
+14165,Portsmouth,OH,Greater Portsmouth Regional
+14167,Port Moller,AK,Port Moller Airport
+14173,Paimiut,AK,Paimiut Airport
+14180,Ponca City,OK,Ponca City Regional
+14182,Philadelphia,PA,Northeast Philadelphia
+14183,Peterson's Point,AK,Peterson's Point Airport
+14193,Pensacola,FL,Pensacola International
+14194,Sherman-Denison,TX,Sherman-Denison Airport
+14197,Fayetteville,NC,Pope AAF
+14198,La Verne,CA,Brackett Field
+14199,Port Frederick,AK,Port Frederick Airport
+14200,Fort Polk,LA,Maks AAF
+14201,Poplar Bluff,MO,Hayes Field
+14203,Pocahontas,IA,Pocahontas Municipal
+14208,Polk Inlet,AK,Polk Inlet Airport
+14212,Poughkeepsie,NY,Hudson Valley Regional
+14215,Powell,WY,Powell Municipal
+14218,Prospect Creek,AK,Prospect Creek Airport
+14219,Humacao,PR,Palmas del Mar Airstrip
+14221,Parsons,KS,Tri City
+14222,Pago Pago,TT,Pago Pago International
+14223,Pompano Beach,FL,Pompano Beach Airpark
+14229,Port Protection,AK,Port Protection Airport
+14231,Presque Isle/Houlton,ME,Presque Isle International
+14234,Pilot Station,AK,Pilot Station Airport
+14236,Paso Robles,CA,Paso Robles Municipal
+14237,Prescott,AZ,Prescott Regional Ernest A Love Field
+14238,Pine Ridge,SD,Pine Ridge Airport
+14244,Point Retreat,AK,Coast Guard Heliport
+14247,Paris,TX,Cox Field
+14249,Prineville,OR,Prineville Airport
+14251,Philipsburg,PA,Mid State
+14252,Pasco/Kennewick/Richland,WA,Tri Cities
+14254,Ponce,PR,Mercedita
+14255,Pittsfield,MA,Pittsfield Municipal
+14256,Petersburg,AK,Petersburg James A Johnson
+14258,Dublin,VA,New River Valley
+14259,Portsmouth,NH,Portsmouth International at Pease
+14260,Palestine,TX,Palestine Municipal
+14262,Palm Springs,CA,Palm Springs International
+14265,Palacios,TX,Palacios Municipal
+14268,Port Alsworth,AK,Port Alsworth Airport
+14269,Port Alice,AK,Port Alice Airport
+14270,Port Alexander,AK,Port Alexander Airport
+14273,Port Heiden,AK,Port Heiden Airport
+14275,Pontiac,MI,Oakland County International
+14276,Port Armstrong,AK,Port Armstrong Airport
+14277,Patterson,LA,Harry P Williams Memorial
+14279,Pleasant Harbour,AK,Pleasant Harbour Airport
+14280,Pittsburg,KS,Atkinson Municipal
+14281,Pratt,KS,Pratt Regional
+14282,Platinum,AK,Platinum Airport
+14283,Porterville,CA,Porterville Municipal
+14284,Pottstown,PA,Heritage Field
+14288,Pueblo,CO,Pueblo Memorial
+14289,Price,UT,Carbon County Regional/Buck Davis Field
+14295,Poulsbo,WA,Port of Poulsbo Marina Moorage Seaplane Base
+14296,Prudhoe Bay,AK,Prudhoe Bay Airport
+14303,Pullman,WA,Pullman Moscow Regional
+14306,Provincetown,MA,Provincetown Municipal
+14307,Providence,RI,Rhode Island Tf Green International
+14308,Placerville,CA,Placerville Airport
+14314,Provo,UT,Provo Municipal
+14315,Plainview,TX,Hale County
+14316,Pope Vanoy,AK,Pope Vanoy Airport
+14317,Painesville,OH,Casement
+14318,Oklahoma City,OK,Wiley Post
+14320,Chicago,IL,Chicago Executive
+14321,Portland,ME,Portland International Jetport
+14322,Big Port Walter,AK,Big and Little Port Walter
+14323,Bremerton,WA,Bremerton National
+14327,Port Ashton,AK,Port Ashton Airport
+14331,Perry Island,AK,Perry Island Seaplane Base
+14332,Plymouth,MA,Plymouth Municipal
+14341,Jackpot,NV,Jackpot/Hayden Field
+14344,Globe,AZ,San Carlos Apache
+14345,Port Clinton,OH,Erie Ottawa International
+14346,Kelleys Island,OH,Kelleys Island Land Field
+14347,Lyndonville,VT,Caledonia County
+14348,Houston,TX,Astrodomain Helipad
+14352,Marina del Ray,CA,Marina del Ray Airport
+14358,Lathrop Wells,NV,Jackass Aeropark
+14359,Green River,UT,Oman Ranch
+14360,Put-In-Bay,OH,Put-In-Bay Airport
+14361,Middle Bass Island,OH,Middle Bass Island Airport
+14365,Indian Creek,ID,Indian Creek Usfs
+14366,Abilene,KS,Abilene Airport
+14367,North Bass Island,OH,North Bass Island Airport
+14371,Culpeper,VA,Culpeper Regional
+14375,Levelland,TX,Levelland Airport
+14377,Crane Island,WA,Crane Island Airport
+14378,Martinsville,VA,Blue Ridge
+14383,Emerald Bay,CA,Emerald Bay Airport
+14386,Avalon,CA,Camp Fox
+14387,Houghton,MI,Grognet Seaplane Base
+14388,Houston,TX,Astroworld Helipad
+14391,Houston,TX,Houston Metro-/Ho
+14392,Isle Royale Park,MI,Isle Royale National Park
+14395,Kona Village,HI,Kona Keahole
+14397,Kennesaw,GA,Cobb County International McCollum Field
+14399,Houston,TX,Marriot Helipad Hou.
+14400,Mansfield,MA,Mansfield Municipal
+14406,Orange,VA,Orange County
+14409,Houston,TX,Post Oak Manor
+14410,Pittsfield,ME,Pittsfield Municipal
+14412,Keyes Point,AK,Keyes Point Airport
+14413,Nimiuk Point,AK,Nimiuk Point Airport
+14414,Boston,MA,Nashua Street Heliport
+14415,Sealing Point,AK,Sealing Point Airport
+14417,Westminster,MD,Carroll County Regional/Jack B. Poage Field
+14420,Stevensville,MT,Stevensville Airport
+14422,Bonners Ferry,ID,Boundary County
+14423,Shingletown,CA,Shingletown Airport
+14424,Woodlake,CA,Woodlake Airport
+14427,Grass Valley,CA,Nevada County
+14430,Peachtree City,GA,Atlanta Regional Falcon Field
+14431,Window Rock,AZ,Window Rock Airport
+14434,Healdsburg,CA,Healdsburg Municipal
+14435,San Marcos,TX,San Marcos Regional
+14438,Redondo Beach,CA,Redondo Beach Airport
+14441,Southbridge,MA,Southbridge Municipal
+14444,Paonia,CO,North Fork Valley
+14447,Racine,WI,Batten International
+14454,Riverside,CA,Riverside Municipal
+14457,Rapid City,SD,Rapid City Regional
+14461,Red Bank,NJ,Greely Helipad
+14464,Ugashik,AK,Randy Field
+14465,Dallas/Fort Worth,TX,Dallas Executive
+14466,Big Bear City,CA,Big Bear City Airport
+14467,Roseburg,OR,Roseburg Regional
+14468,Brooks Lodge,AK,Brooks Lodge Airport
+14469,Red Bluff,CA,Red Bluff Municipal
+14470,Fort Jefferson,FL,Fort Jefferson Airport
+14474,Ruby,AK,Ruby Airport
+14475,Rapid City,SD,Ellsworth AFB
+14477,Roche Harbor,WA,Roche Harbor Airport
+14482,Reed City,MI,Miller Field
+14485,Red Dog,AK,Red Dog Airport
+14487,Redding,CA,Redding Regional
+14488,Reading,PA,Reading Regional/Carl A Spaatz Field
+14489,Bend/Redmond,OR,Roberts Field
+14490,Red River,ND,Grand Forks AFB
+14492,Raleigh/Durham,NC,Raleigh-Durham International
+14493,Red Devil,AK,Red Devil Airport
+14495,Redlands,CA,Redlands Municipal
+14497,Reedsville,PA,Mifflin County
+14498,Lubbock,TX,Reese AFB
+14500,Rehoboth,DE,Rehoboth Aircrafters
+14512,Rockford,IL,Chicago/Rockford International
+14520,Rhinelander,WI,Rhinelander/Oneida County
+14524,Richmond,VA,Richmond International
+14525,Richmond,IN,Richmond Municipal
+14526,Rice Lake,WI,Rice Lake Airport
+14527,Richfield,UT,Richfield Municipal
+14530,Rifle,CO,Rifle Garfield County
+14532,Riverside,CA,Flabob
+14533,Riverside,CA,March ARB
+14534,Riverton/Lander,WY,Central Wyoming Regional
+14539,Rockland,ME,Knox County Regional
+14541,Rockport,TX,Aransas County
+14542,Poteau,OK,Robert S Kerr
+14543,Rock Springs,WY,Southwest Wyoming Regional
+14546,Rockwood,TN,Rockwood Municipal
+14547,Rolla,MO,Rolla Downtown
+14548,Richland,WA,Richland Airport
+14551,Bornite/Ruby Creek,AK,Bornite Upper
+14553,Rome,NY,Griffiss International
+14554,Rome,GA,Richard B Russell Regional J H Towers Field
+14557,Stafford,VA,Stafford Regional
+14559,Rampart,AK,Rampart Airport
+14564,McMinnville,TN,Warren County Memorial
+14565,San Antonio,TX,Randolph AFB
+14567,Rangely,CO,Rangely Airport
+14570,Reno,NV,Reno/Tahoe International
+14572,Renton,WA,Renton Municipal
+14574,Roanoke,VA,Roanoke Blacksburg Regional
+14576,Rochester,NY,Frederick Douglass Grtr Rochester International
+14577,Rogers,AR,Rogers Executive Carter Field
+14579,Roosevelt,UT,Roosevelt Municipal
+14582,Rota,TT,Benjamin Taisacan Manglona International
+14588,Roswell,NM,Roswell Air Center
+14589,Roseau,MN,Roseau Municipal/Rudy Billberg Field
+14592,Roundup,MT,Roundup Airport
+14593,Lone Pine,CA,Lone Pine Death Valley
+14594,Atomic City,ID,Big Southern Butte
+14595,Harlowton,MT,Wheatland County at Harlowton
+14596,Mendota,CA,William Robert Johnston Municipal
+14597,Prosser,WA,Prosser Airport
+14598,Lincolnton,NC,Lincolnton-Lincoln County Regional
+14599,Covington,TN,Covington Municipal
+14600,Perkasie,PA,Pennridge
+14601,Nixon Fork Mine,AK,Nixon Fork Mine Airport
+14603,China Lake,CA,China Lake Naws
+14604,Lowell,IN,Lowell Airport
+14605,Sterling,MA,Sterling Airport
+14606,Cave Junction,OR,Illinois Valley
+14607,Seneca,NY,Seneca AAF
+14608,Lovington,NM,Lea County-Zip Franklin Memorial
+14609,Woodland,CA,Watts/Woodland
+14610,Harbor Springs,MI,Harbor Springs Airport
+14612,Lubbock,TX,Lubbock Executive Airpark
+14613,Wasco,CA,Wasco-Kern County
+14614,Salt Lake City,UT,South Valley Regional
+14615,Parowan,UT,Parowan Airport
+14616,Burlington,CO,Kit Carson County
+14617,Comanche,TX,Comanche County-City
+14618,Mary Esther,FL,Hurlburt Field
+14623,Warroad,MN,Warroad International Memorial
+14627,Russian Mission,AK,Russian Mission Airport
+14628,Rosario,WA,Rosario Seaplane Base
+14629,Russell,KS,Russell Municipal
+14630,Ruston,LA,Ruston Regional
+14631,Raspberry Strait,AK,Raspberry Straits
+14633,Rochester,MN,Rochester International
+14635,Fort Myers,FL,Southwest Florida International
+14638,Marguerite Bay,AK,Marguerite Bay Airport
+14640,Raton,NM,Raton Municipal/Crews Field
+14641,Colton,CA,Morrow Field
+14646,Ruidoso,NM,Sierra Blanca Regional
+14648,Rutland,VT,Rutland - Southern Vermont Regional
+14653,Tulsa,OK,Tulsa Riverside
+14655,Rowan Bay,AK,Rowan Bay Airport
+14656,Rocky Mount,NC,Rocky Mount-Wilson Regional
+14657,Rawlins,WY,Rawlins Municipal/Harvey Field
+14658,Rodman Bay,AK,Rodman Bay Airport
+14660,Greeley,CO,Weld County Municipal
+14668,Roanoke Rapids,NC,Halifax Northampton Regional
+14669,Kalispell,MT,Kalispell City
+14670,Saratoga,WY,Shively Field
+14672,Sacramento,CA,Sacramento Executive
+14673,Safford,AZ,Safford Regional1lt Duane Spalsbury Field
+14674,Santa Fe,NM,Santa Fe Regional
+14675,Sagwon,AK,Sagwon Airport
+14679,San Diego,CA,San Diego International
+14683,San Antonio,TX,San Antonio International
+14685,Savannah,GA,Savannah/Hilton Head International
+14689,Santa Barbara,CA,Santa Barbara Municipal
+14691,San Bernardino,CA,San Bernardino International
+14695,Sheboygan,WI,Sheboygan County Memorial International
+14696,South Bend,IN,South Bend International
+14697,Salina,UT,Salina-Gunnison
+14698,San Luis Obispo,CA,San Luis Obispo County Regional
+14699,Steamboat Springs,CO,Steamboat Springs/Bob Adams Field
+14700,San Bernardino,CA,Tri-City
+14702,South Boston,VA,William M Tuck
+14704,Salisbury,MD,Salisbury-Ocean City/Wicomico Regional
+14706,Beaufort,SC,Beaufort MCAS
+14707,Winnsboro,SC,Fairfield County
+14708,Conway,SC,Conway-Horry County
+14709,Deadhorse,AK,Deadhorse Airport
+14711,State College,PA,State College Regional
+14712,Phoenix,AZ,Scottsdale
+14713,Schenectady,NY,Schenectady County
+14715,Smith Cove,AK,Smith Cove Airport
+14716,Stockton,CA,Stockton Metro
+14718,Scammon Bay,AK,Scammon Bay Airport
+14726,Onida,SD,Onida Municipal
+14730,Louisville,KY,Louisville Muhammad Ali International
+14736,San Diego,CA,Brown Field Municipal
+14738,Sandpoint,AK,Sand Point
+14744,Sedona,AZ,Sedona Airport
+14745,Sidney,MT,Sidney Richland Regional
+14747,Seattle,WA,Seattle/Tacoma International
+14749,San Diego,CA,Gillespie Field
+14750,Sebring,FL,Sebring Regional
+14751,Selinsgrove,PA,Penn Valley
+14753,Selma,AL,Craig Field
+14756,Seymour,IN,Freeman Municipal
+14757,Selma,AL,Selfield
+14761,Sanford,FL,Orlando Sanford International
+14764,Spokane,WA,Felts Field
+14769,Sanford,ME,Sanford Seacoast Regional
+14771,San Francisco,CA,San Francisco International
+14778,Smithfield,RI,North Central State
+14783,Springfield,MO,Springfield-Branson National
+14785,Springfield,OH,Springfield-Beckley Municipal
+14792,Sugar Land,TX,Sugar Land Regional
+14793,Stuttgart,AR,Stuttgart Municipal Carl Humphrey Field
+14794,St. George,UT,St George Regional
+14795,Saginaw Bay,AK,Saginaw
+14797,Skagway,AK,Skagway Airport
+14802,Staunton,VA,Shenandoah Valley Regional
+14804,Shungnak,AK,Shungnak Airport
+14805,Shishmaref,AK,Shishmaref Airport
+14810,Shelton,WA,Sanderson Field
+14812,Sheridan,WY,Sheridan County
+14814,Shreveport,LA,Shreveport Regional
+14816,Shageluk,AK,Shageluk Airport
+14819,San Juan,PR,Isla Grande
+14822,Sikeston,MO,Sikeston Memorial Municipal
+14828,Sitka,AK,Sitka Rocky Gutierrez
+14830,Montague,CA,Siskiyou County
+14831,San Jose,CA,Norman Y. Mineta San Jose International
+14833,St. John,VI,St. John Airport
+14837,St. Johns,AZ,St. Johns Industrial Air Park
+14842,San Angelo,TX,San Angelo Regional/Mathis Field
+14843,San Juan,PR,Luis Munoz Marin International
+14848,Spokane,WA,Fairchild AFB
+14853,San Antonio,TX,Kelly Field
+14855,Sitkinak,AK,Sitkinak CGS
+14856,Shaktoolik,AK,Shaktoolik Airport
+14863,Skwentna,AK,Skwentna Airport
+14865,Sandusky,OH,Griffing Sandusky
+14868,Storm Lake,IA,Storm Lake Municipal
+14869,Salt Lake City,UT,Salt Lake City International
+14871,Salem,OR,McNary Field
+14874,Chandler,AZ,Stellar Airpark
+14875,Saranac Lake/Lake Placid,NY,Adirondack Regional
+14877,Salina,KS,Salina Regional
+14878,Salem,IL,Salem/Leckrone
+14880,Sleetmute,AK,Sleetmute Airport
+14881,Sulphur Springs,TX,Sulphur Springs Municipal
+14883,Salida,CO,Salida Airport Harriett Alexander Field
+14892,Somerset,KY,Lake Cumberland Regional
+14893,Sacramento,CA,Sacramento International
+14895,St. Michael,AK,St. Michael Airport
+14897,Salmon,ID,Lemhi County
+14898,Santa Monica,CA,Santa Monica Municipal
+14899,Somerville,NJ,Somerset
+14902,Stone Mountain,GA,Stone Mountain Airport
+14903,Sheep Mountain,AK,Sheep Mountain Airport
+14905,Santa Maria,CA,Santa Maria Public/Capt. G. Allan Hancock Field
+14908,Santa Ana,CA,John Wayne Airport-Orange County
+14915,Snyder,TX,Winston Field
+14916,Shawnee,OK,Shawnee Regional
+14919,St. Paul,AK,St. Paul Island
+14922,Salinas/Monterey,CA,Salinas Municipal
+14927,Sidney,NE,Sidney Municipal/Lloyd W. Carr Field
+14934,Solomon,AK,Solomon State Field
+14938,Pinehurst/Southern Pines,NC,Moore County
+14942,Seldovia,AK,Seldovia Airport
+14943,Show Low,AZ,Show Low Regional
+14944,Spartanburg,SC,Spartanburg Downtown Memorial Simpson Field
+14945,Charlotte Amalie,VI,Charlotte Amalie Harbor Seaplane Base
+14949,Spearfish,SD,Black Hills Clyde Ice Field
+14950,Tampa,FL,Albert Whitted
+14952,Springfield,IL,Abraham Lincoln Capital
+14955,Saipan,TT,Francisco C. Ada Saipan International
+14958,San Pedro,CA,Catalina Air-Sea Terminal Heliport
+14960,Wichita Falls,TX,Sheppard AFB/Wichita Falls Municipal
+14962,Spencer,IA,Spencer Municipal
+14964,Springdale,AR,Springdale Municipal
+14965,Santa Ynez,CA,Santa Ynez Kunkle Field
+14966,Sterling/Rockfalls,IL,Whiteside County-Jos H. Bittorf Field
+14967,San Carlos,CA,San Carlos Airport
+14972,Sequim,WA,Sequim Valley
+14975,Searcy,AR,Searcy Regional
+14977,Novato,CA,Hamilton AFB
+14986,Sarasota/Bradenton,FL,Sarasota/Bradenton International
+14987,Stony River,AK,Stony River Airport
+14988,Salisbury,NC,Mid Carolina Regional
+14992,Christiansted,VI,Christiansted Harbor Seaplane Base
+14993,Sumter,SC,Shaw AFB
+14996,Brunswick,GA,St Simons Island
+14999,Sault Ste. Marie,MI,Sault Ste. Marie Metropolitan Area
+15003,Stuart Island,WA,Stuart Island Airpark
+15008,St. Cloud,MN,St. Cloud Regional
+15010,Stevens Point,WI,Stevens Point Municipal
+15011,Starkville,MS,George M. Bryan
+15012,St. George Island,AK,St. George Island Airport
+15014,St. Joseph,MO,Rosecrans Memorial
+15015,Sterling,CO,Sterling Municipal
+15016,St. Louis,MO,St Louis Lambert International
+15020,Minneapolis/St. Paul,MN,St. Paul Downtown Holman Field
+15021,St. Marys,PA,St. Marys Municipal
+15023,Santa Rosa,CA,Charles M. Schulz - Sonoma County
+15024,Charlotte Amalie,VI,Cyril E King
+15027,Christiansted,VI,Henry E. Rohlsen
+15030,Stuart,FL,Witham Field
+15032,Sundance,WY,Schloredt
+15033,Sturgeon Bay,WI,Door County Cherryland
+15040,Sumter,SC,Sumter Airport
+15041,Sun Valley/Hailey/Ketchum,ID,Friedman Memorial
+15042,Sunriver,OR,Sunriver Airport
+15043,St. Louis,MO,Spirit of St. Louis
+15045,Fairfield,CA,Travis AFB
+15047,Superior,WI,Richard I Bong
+15048,Sioux City,IA,Sioux Gateway Brig Gen Bud Day Field
+15049,Savoonga,AK,Savoonga Airport
+15051,Silver City/Hurley,NM,Grant County
+15054,Statesville,NC,Statesville Regional
+15057,Savannah,GA,Hunter AAF
+15061,Stevens Village,AK,Stevens Village Airport
+15063,Sparrevohn,AK,Sparrevohn LRRS
+15069,Seward,AK,Seward Airport
+15070,Newburgh/Poughkeepsie,NY,New York Stewart International
+15074,Stillwater,OK,Stillwater Regional
+15078,Sweetwater,TX,Avenger Field
+15085,Sheldon Point,AK,Nunam Iqua
+15086,Soldotna,AK,Soldotna Airport
+15089,Sidney,NY,Sidney Municipal
+15090,Shemya,AK,Eareckson AS
+15091,Seal Bay,AK,Seal Bay Airport
+15093,Shelbyville/Tullahoma,TN,Bomar Field-Shelbyville Municipal
+15094,Stanton,MN,Stanton Airfield
+15096,Syracuse,NY,Syracuse Hancock International
+15108,Knob Noster,MO,Whiteman AFB
+15110,Santa Paula,CA,Santa Paula Airport
+15117,Trinidad,CO,Las Animas County
+15124,Tanana,AK,Ralph M Calhoun Memorial
+15132,Tau,TT,Tau Airport
+15138,Fort Leonard Wood,MO,Waynesville-St. Robert Regional Forney Field
+15141,Statesboro,GA,Statesboro-Bulloch County
+15148,Tucumcari,NM,Tucumcari Municipal
+15153,Tuscaloosa,AL,Tuscaloosa National
+15154,Tacoma,WA,McChord Field
+15159,Truth Or Consequences,NM,Truth Or Consequences Municipal
+15160,Takotna,AK,Takotna Airport
+15163,Roxboro,NC,Raleigh Regional at Person County
+15164,Amarillo,TX,Tradewind
+15165,Toledo,OH,Metcalf Field
+15167,Teterboro,NJ,Teterboro Airport
+15170,Tetlin,AK,Tetlin Airport
+15171,Tatitlek,AK,Tatitlek Airport
+15177,Telluride,CO,Telluride Regional
+15185,Tuskegee,AL,Sharpe Field
+15195,Tullahoma,TN,Tullahoma Regional Airport/William Northern Field
+15200,Thermopolis,WY,Hot Springs County Thermopolis Municipal
+15203,York,PA,York Airport
+15211,Oklahoma City,OK,Tinker AFB
+15215,Tinian,TT,Francisco Manglona Borja Tinian International
+15220,Tacoma,WA,Tacoma Narrows
+15221,Titusville,FL,Space Coast Regional
+15228,Talkeetna,AK,Talkeetna Airport
+15231,Tenakee,AK,Tenakee Airport
+15232,Truckee,CA,Truckee Tahoe
+15235,Tokeen,AK,Tokeen Airport
+15236,Tok,AK,Tok Junction
+15238,Taku Lodge,AK,Taku Seaplane Base
+15245,Teller,AK,Teller Airport
+15248,Telida,AK,Telida Airport
+15249,Tallahassee,FL,Tallahassee International
+15250,Tatalina,AK,Tatalina LRRS
+15255,Tulare,CA,Mefford Field
+15257,Tuluksak,AK,Tuluksak Airport
+15259,Tifton,GA,Henry Tift Myers
+15260,Miami,FL,Miami Executive
+15270,Lebanon,TN,Lebanon Municipal
+15271,Sparta,TN,Upper Cumberland Regional
+15272,Lewisburg,TN,Ellington
+15273,Pulaski,TN,Abernathy Field
+15274,Lexington,TN,Franklin Wilkins
+15275,Dyersburg,TN,Dyersburg Regional
+15276,Winchester,TN,Winchester Municipal
+15278,Tin City,AK,Tin City LRRS
+15282,Tununak,AK,Tununak Airport
+15284,Twentynine Palms,CA,Twentynine Palms Airport
+15286,Miami,FL,Dade-Collier Training and Transition
+15287,Newton,IA,Newton Municipal Earl Johnson Field
+15289,Torrance,CA,Zamperini Field
+15293,Togiak,AK,Togiak Airport
+15295,Toledo,OH,Eugene F Kranz Toledo Express
+15297,Topeka,KS,Philip Billard Municipal
+15299,Torrington,WY,Torrington Municipal
+15304,Tampa,FL,Tampa International
+15305,Topeka,KS,Allen Air Park
+15307,Tampa,FL,Peter O'Knight
+15308,Tonopah,NV,Tonopah Airport
+15310,Temple,TX,Draughon-Miller Central Texas Regional
+15322,Trona,CA,Trona Airport
+15323,Bristol/Johnson City/Kingsport,TN,Tri Cities
+15325,Thermal,CA,Jacqueline Cochran Regional
+15339,Tanacross,AK,Tanacross Airport
+15342,Taos,NM,Taos Regional
+15344,Tehachapi,CA,Tehachapi Municipal
+15346,New York,NY,East 34th Street Heliport
+15351,Troutdale,OR,Portland Troutdale
+15356,Trenton,NJ,Trenton Mercer
+15367,Tullahoma,TN,Arnold AFB
+15370,Tulsa,OK,Tulsa International
+15374,Tupelo,MS,Tupelo Regional
+15376,Tucson,AZ,Tucson International
+15380,Traverse City,MI,Cherry Capital
+15381,Thief River Falls,MN,Thief River Falls Regional
+15382,Thomasville,GA,Thomasville Regional
+15383,Lake Tahoe,CA,Lake Tahoe Airport
+15385,Twin Hills,AK,Twin Hills Airport
+15387,Port Townsend,WA,Jefferson County International
+15388,Taylor,AK,Taylor Airport
+15389,Twin Falls,ID,Joslin Field - Magic Valley Regional
+15390,Two Harbors,CA,Two Harbors Airport
+15393,Mesquite,TX,Mesquite Metro
+15394,Denver City,TX,Denver City Airport
+15395,Port Isabel,TX,Cameron County
+15396,Ballinger,TX,Bruce Field
+15397,Cleburne,TX,Cleburne Regional
+15398,Horseshoe Bay,TX,Horseshoe Bay Resort
+15399,Post,TX,Post Garza County Municipal
+15401,Texarkana,AR,Texarkana Regional-Webb Field
+15406,Tyonek,AK,Tyonek Airport
+15411,Tyler,TX,Tyler Pounds Regional
+15412,Knoxville,TN,McGhee Tyson
+15413,Taylor,AZ,Taylor Airport
+15422,Guam,TT,Andersen AFB
+15427,Chatham,MA,Chatham Municipal
+15430,Columbus,MS,Columbus-Lowndes County
+15431,Utica/Rome,NY,Oneida County
+15433,Union City,TN,Everett-Stewart Regional
+15434,Bermuda Dunes,CA,Bermuda Dunes Airport
+15435,Darlington,SC,Darlington County
+15440,Waukesha,WI,Waukesha County
+15443,Ugashik,AK,Ugashik Airport
+15444,Pilot Point,AK,Ugashik Bay
+15446,Uganik,AK,Uganik Airport
+15447,Waukegan,IL,Waukegan National
+15448,Ugashik,AK,Ugashik Airport
+15454,Quincy,IL,Quincy Regional-Baldwin Field
+15458,Ukiah,CA,Ukiah Municipal
+15462,New Ulm,MN,New Ulm Municipal
+15465,Ulysses,KS,Ulysses Airport
+15467,Umnak,AK,North Shore
+15470,Summit,AK,Summit Airport
+15472,Umiat,AK,Umiat Airport
+15478,Unalakleet,AK,Unalakleet Airport
+15479,Umnak,AK,Umnak Airport
+15481,Oxford,MS,University-Oxford
+15484,Upolo Point,HI,Upolu
+15485,Queens,AK,The Queens
+15494,Usibelli,AK,Usi Belli Coal Mine
+15497,St. Augustine,FL,Northeast Florida Regional
+15498,Heber,UT,Heber Valley
+15502,Tunica,MS,Tunica Municipal
+15504,Utopia,AK,Indian Mountain LRRS
+15508,Kuparuk,AK,North Kuparuk
+15511,Uvalde,TX,Garner Field
+15515,Lik Camp,AK,Lik Camp Airport
+15517,Hawley,MN,Hawley Municipal
+15518,Chowchilla,CA,Chowchilla Airport
+15519,Faulkton,SD,Faulkton Municipal
+15520,St. Anthony,ID,Stanford Field
+15521,Dutch John,UT,Dutch John Airport
+15523,Calder Bay,AK,Calder Bay Airport
+15524,Richmond,KY,Central Kentucky Regional
+15525,Petaluma,CA,Petaluma Municipal
+15526,Chariot,AK,Chariot Airport
+15527,47-Mile Mine,AK,47-Mile Mine Airport
+15528,Prestonsburg,KY,Big Sandy Regional
+15529,Fitchburg,MA,Fitchburg Municipal
+15530,Bay St. Louis,MS,Stennis International
+15532,Monument Valley,UT,Monument Valley Airport
+15533,Cimarron,KS,Cimarron Municipal
+15534,Lorain/Elyria,OH,Lorain County Regional
+15535,Cheboygan,MI,Cheboygan County
+15536,Enterprise,OR,Enterprise Municipal
+15537,Cookeville,TN,Putnam County
+15538,Hot Springs,MT,Hot Springs Airport
+15539,Circle,MT,Circle Town County
+15540,Garrison,ND,Garrison Municipal
+15545,Emporia,VA,Emporia Greensville Regional
+15546,Chesapeake,VA,Chesapeake Regional
+15547,Marion/Wytheville,VA,Mountain Empire
+15548,Leesburg,VA,Leesburg Executive
+15550,Valdosta,GA,Moody AFB
+15554,Chevak,AK,Chevak Airport
+15561,Lompoc,CA,Vandenberg Sfb
+15565,View Cove,AK,View Cove Airport
+15569,Victoria,TX,Victoria Regional
+15570,Victorville,CA,Southern California Logistics
+15574,Vidalia,GA,Vidalia Regional
+15579,Valdez,AK,Valdez Pioneer Field
+15581,Venetie,AK,Venetie Airport
+15582,Vernal,UT,Vernal Regional
+15583,Versailles,MO,Roy Otten Memorial Airfield
+15589,Las Vegas,NV,North Las Vegas
+15597,Vichy,MO,Rolla National
+15599,Kavik River,AK,Kavik River Airport
+15601,Visalia,CA,Visalia Municipal
+15605,Vicksburg,MS,Vicksburg Municipal
+15607,Valdosta,GA,Valdosta Regional
+15615,Venice,FL,Venice Municipal
+15618,Van Nuys,CA,Van Nuys Airport
+15620,Camp Douglas,WI,Volk Field
+15622,Cartersville,GA,Cartersville Airport
+15624,Valparaiso,FL,Eglin AFB Destin Fort Walton Beach
+15625,Valparaiso,IN,Porter County Regional
+15626,Vieques,PR,Antonio Rivera Rodriguez
+15628,Vero Beach,FL,Vero Beach Regional
+15634,Springfield,VT,Hartness State
+15637,Valentine,NE,Miller Field
+15639,Albemarle,NC,Stanly County
+15640,Vancouver,WA,Pearson Field
+15646,Headland,AL,Headland Municipal
+15647,Myrtle Creek,OR,Myrtle Creek Municipal
+15648,Gallatin,TN,Music City Exec
+15649,Hanford,CA,Hanford Municipal
+15650,Chelan,WA,Lake Chelan
+15651,Custer,SD,Custer County
+15652,Garibaldi,OR,Tillamook
+15653,Midland/Odessa,TX,Odessa Schlemeyer Field
+15654,California City,CA,California City Municipal
+15655,Cameron,SC,McNeil
+15656,Saratoga Springs,NY,Saratoga County
+15657,Bemidji,MN,Nary National Shefland Field
+15658,Weed,CA,Weed Airport
+15659,Parker,AZ,Avi Suquilla
+15660,Arlington,WA,Arlington Municipal
+15661,Bernard,ID,Bernard Usfs
+15662,Lodi,CA,Kingdon Airpark
+15663,Independence,CA,Independence Airport
+15664,Wichita,KS,Colonel James Jabara
+15665,Americus,GA,Jimmy Carter Regional
+15668,Deer Lodge,MT,Deer Lodge-City-County
+15669,Hondo,TX,South Texas Regional at Hondo
+15671,Granite Creek Mine,AK,Granite Creek Mine Airport
+15675,Peru,IL,Illinois Valley Regional
+15676,Marvel Creek Mine,AK,Marvel Creek Mine Airport
+15677,Mitrofania,AK,Mitrofania Airport
+15678,Mush Bay,AK,Mush Bay Airport
+15679,Campbell Lagoon,AK,Campbell Lagoon Airport
+15680,Frazer Lake,AK,Frazer Lake Airport
+15681,Afognak Straits,AK,Afognak Straits Airport
+15682,Moffet Bay,AK,Moffet Bay Airport
+15683,Mineola,TX,Mineola Wisener Field
+15684,Brundidge,AL,Brundidge Municipal
+15685,Payette,ID,Payette Municipal
+15687,Los Alamitos,CA,Los Alamitos AAF
+15688,Jensens Strip,AK,Jensens Strip Airport
+15689,Wildman Creek,AK,Wildman Creek Airport
+15690,Stepovak,AK,Stepovak Airport
+15692,Puale Bay,AK,Puale Bay Airport
+15693,Katmai Bay,AK,Katmai Bay Airport
+15694,Kashvik Bay,AK,Kashvik Bay Airport
+15695,Cinder Mountain,AK,Cinder Mountain Airport
+15696,Hagemeister Island,AK,Hagemeister Island Airport
+15697,Cape Peirce,AK,Cape Peirce Airport
+15698,Cape Greig,AK,Cape Greig Airport
+15700,Katmai Lodge,AK,Katmai Lodge Airport
+15701,South St. Paul,MN,South St. Paul Municipal-Richard E. Fleming Field
+15703,Mansfield,WA,Mansfield Airport
+15704,Burlington,WA,Bayview Farms
+15705,Medical Lake,WA,Isaacson
+15706,Winthrop,WA,Methow Valley State
+15707,Stehekin,WA,Stehekin Seaplane Landing
+15708,Chelan,WA,Chelan Seaplane Landing
+15709,Wales,AK,Wales Airport
+15713,Chincoteague,VA,Wallops Flight Facility
+15714,Warsaw,IN,Warsaw Municipal
+15715,Washington,DC,Washington DC Metropolitan Area
+15721,Stebbins,AK,Stebbins Airport
+15722,Commerce/Montebello,CA,Commerce/Montebello Heliport
+15724,Woburn,MA,Woburn Airport
+15725,Beaver,AK,Beaver Airport
+15726,Big Rapids,MI,Roben-Hood
+15727,Bennettsville,SC,Bennettsville Airport
+15728,Downtown,CA,Downtown Airport
+15730,Whalers Cove Lodge,AK,Whalers Cove Lodge Airport
+15731,Chandalar,AK,Chandalar Lake
+15732,Wide Bay,AK,Wide Bay Airport
+15734,Enid,OK,Enid Woodring Regional
+15736,Eastsound,WA,Waldron Airstrip
+15737,Winder,GA,Barrow County
+15741,Ketchikan,AK,Ketchikan Waterfront Seaplane Base
+15749,Winchester,VA,Winchester Regional
+15751,Frenchville,ME,Northern Aroostook Regional
+15754,Hyder,AK,Hyder Seaplane Base
+15758,Eagle,CO,Vail/Avon
+15759,Wharton,TX,Wharton Regional
+15760,Black River Falls,WI,Black River Falls Area
+15761,Phillips,WI,Price County
+15762,Wilbur,WA,Wilbur Airport
+15769,Lancaster,CA,General William J. Fox Airfield
+15774,Aleknagik,AK,Aleknagik New
+15775,Waikoloa Village,HI,Waikoloa Heliport
+15779,Philadelphia,PA,Penns Landing Seaplane Base
+15781,Labouchere Bay,AK,Labouchere Bay Airport
+15782,Winfield,KS,Strother Field
+15785,Selawik,AK,Selawik Airport
+15786,Waltham,MA,Waltham Hospital Heliport
+15789,Willows,CA,Willows Glenn County
+15791,Winnemucca,NV,Winnemucca Municipal
+15792,Mountain Home,AR,Baxter County
+15793,Meyers Chuck,AK,Meyers Chuck Seaplane Base
+15794,White Mountain,AK,White Mountain Airport
+15798,Napakiak,AK,Napakiak Airport
+15805,Wood River,AK,Wood River Airport
+15807,Willow,AK,Willow Airport
+15813,Ovid,NY,Ovid Airport
+15814,Mandan,ND,Mandan Regional Lawler Field
+15815,Hamilton,MT,Ravalli County
+15816,Tulelake,CA,Tulelake Municipal
+15817,Dinsmore,CA,Dinsmore Airport
+15818,Rigby,ID,Rigby Airport
+15819,Hesperia,CA,Hesperia Airport
+15820,Dorris,CA,Butte Valley
+15821,Connell,WA,Connell City
+15822,Peard Bay,AK,Peard Bay Airport
+15823,Townsend,MT,Broadwater County
+15824,Bluff,AK,Bluff Airport
+15825,Lake Charles,LA,Chennault International
+15826,Campbellsville,KY,Taylor County
+15827,Rosamond,CA,Rosamond Skypark
+15828,Oceano,CA,Oceano County
+15829,Fairburn,SD,Custer State Park
+15830,Naknek,AK,Tibbetts
+15831,Poplar,MT,Poplar Municipal
+15832,Bridger,MT,Bridger Municipal
+15833,Portales,NM,Portales Municipal
+15835,David River,AK,David River Airport
+15836,Kiavak,AK,Kiavak Airport
+15837,Port Wakefield,AK,Port Wakefield Airport
+15838,Chignik Lake,AK,Chignik Lake Airport
+15839,Macon,GA,Robins AFB
+15841,Wrangell,AK,Wrangell Airport
+15842,Fort Dix,NJ,McGuire Field
+15843,Worland,WY,Worland Municipal
+15846,Steamboat Bay,AK,Steamboat Bay Airport
+15847,Washington,PA,Washington County
+15848,Shirley,NY,Brookhaven
+15849,Wasilla,AK,Wasilla Airport
+15850,San Juan,AK,San Juan Airport
+15852,Wiseman,AK,Wiseman Airport
+15853,South Naknek,AK,South Naknek 2
+15855,Westerly,RI,Westerly State
+15856,Westsound,WA,Westsound Airport
+15859,New York,NY,World Trade Center Heliport
+15861,Noatak,AK,Noatak Airport
+15862,Tuntutuliak,AK,Tuntutuliak Airport
+15864,Whiteriver,AZ,Whiteriver Airport
+15866,Whittier,AK,Whittier Airport
+15869,Duchesne,UT,Duchesne Municipal
+15870,Ocean Shores,WA,Avco
+15873,Charleston,WV,Mcs-Pad Heliport
+15874,Falls Church,VA,Washington-Virginia
+15877,Watsonville,CA,Watsonville Municipal
+15879,Augusta/Waterville,ME,Waterville Regional
+15881,Wasilla,AK,Wasilla Airport
+15882,Cape May,NJ,Cape May County
+15885,Whale Pass,AK,Whale Pass Airport
+15886,Woodward,OK,West Woodward
+15887,Newtok,AK,Mertarvik
+15892,Pinedale,WY,Ralph Wenz Field
+15894,Yes Bay,AK,Yes Bay Lodge Seaplane Base
+15897,West Yellowstone,MT,Yellowstone
+15907,Lake Geneva,WI,Americana
+15915,Madison,SD,Madison Municipal
+15919,Fayetteville,AR,Northwest Arkansas National
+15927,Reston,VA,Reston Airport
+15930,Tonopah,NV,Tonopah Test Range
+15931,Leonardtown,MD,St. Mary's County Regional
+15934,Granite Point,AK,Granite Point Ndb
+15936,Yantarni Bay,AK,Yantarni Bay Airport
+15938,Copalis,WA,Copalis State
+15939,Jerome,ID,Jerome County
+15941,Aztec,NM,Aztec Municipal
+15943,Dexter,ME,Dexter Regional
+15944,Port Orchard,WA,Port Orchard Airport
+15945,Blackfoot,ID,McCarley Field
+15947,Jupiter,FL,William P Gwinn
+15948,Kimball,NE,Kimball Municipal/Robert E. Arraj Field
+15952,Oliktok,AK,Oliktok LRRS
+15953,Nushagak Bay,AK,Nushagak Bay Airport
+15954,Marion,AL,Perry County
+15956,Driggs,ID,Teton Peaks
+15963,Clarendon,TX,Smiley Johnson Municipal/Bass Field
+15964,Lakewood,NJ,Lakewood Airport
+15966,Cambridge,MA,Arthur D. Little Heliport
+15971,Willits,CA,Ells Field-Willits Municipal
+15972,Hurricane,UT,General Dick Stout Field
+15973,Lakeport,CA,Lampson Field
+15975,Mariposa,CA,Mariposa-Yosemite
+15976,Creswell,OR,Hobby Field
+15977,Polson,MT,Polson Airport
+15978,Ashland,OR,Ashland Municipal-Sumner Parker Field
+15979,Decatur,WA,Decatur Shores
+15980,Lake City,FL,Lake City Gateway
+15981,Mena,AR,Mena Intermountain Municipal
+15982,Fortuna,CA,Rohnerville
+15983,Zuni Pueblo,NM,Black Rock
+15991,Yakutat,AK,Yakutat Airport
+16091,Detroit,MI,Willow Run
+16101,Yakima,WA,Yakima Air Terminal/McAllister Field
+16102,Yankton,SD,Chan Gurney Municipal
+16133,Youngstown/Warren,OH,Youngstown-Warren Regional
+16218,Yuma,AZ,Yuma MCAS/Yuma International
+16292,Branson,MO,John the Diver
+16311,Nyac,AK,Nyac Airport
+16335,Albuquerque,NM,Double Eagle II
+16336,Gasquet,CA,Ward Field
+16339,Illinois Creek,AK,Illinois Creek Airport
+16340,Chomondely Sound,AK,Chomondely Sound Airport
+16341,Coal Bay,AK,Coal Bay Airport
+16342,Happy Harbour,AK,Happy Harbour Airport
+16343,Lancaster Cove,AK,Lancaster Cove Airport
+16344,Reid Cove,AK,Reid Cove Airport
+16345,Saltery Cove,AK,Saltery Cove Airport
+16346,Clover Bay,AK,Clover Bay Airport
+16347,El Capitan,AK,El Capitan Peak
+16348,Salmon Bay Lake,AK,Salmon Bay Lake Airport
+16352,Cloverdale,CA,Cloverdale Municipal
+16353,North Kingstown,RI,Quonset State
+16354,Nappanee,IN,Nappanee Municipal
+16355,Paradise,CA,Paradise Skypark
+16356,Kennewick,WA,Vista Field
+16357,Delta,CO,Blake Field
+16358,Waterville,WA,Waterville Airport
+16361,Zanesville,OH,Zanesville Municipal
+16363,Fernandina Beach,FL,Fernandina Beach Municipal
+16390,Beluga,AK,Beluga Airport
+16392,McCord,AK,McCord Seaplane Base
+16396,Nellie Juan,AK,Nellie Juan Airport
+16404,South Naknek,AK,Peter Pan Seafoods
+16409,Marquette,MI,K. I. Sawyer AFB
+16412,Slaton,TX,City of Slaton Larry T Neal Meml
+16414,Picayune,MS,Picayune Municipal
+16419,Sewanee,TN,Franklin County
+16422,Gulf Shores,AL,Gulf Shores International Jack Edwards Field
+16423,Andalusia/Opp,AL,South Alabama Regional at Bill Benton Field
+16424,Frankfort,MI,Frankfort Dow Memorial Field
+16425,Potsdam,NY,Potsdam Municipal Damon Field
+16426,Ada,OK,Ada Regional
+16427,Tuxekan Island,AK,Naukati Bay Seaplane Base
+16428,Marble Canyon,AZ,Marble Canyon Airport
+16429,Middlebury,VT,Middlebury State
+16431,Aberdeen,ID,Aberdeen Municipal
+16438,Lima,OH,Lima Airport
+16440,Austin,TX,Robert Mueller Municipal
+16441,Plainville,CT,Robertson Field
+16442,Millbrook,NY,Sky Acres
+16445,Driggs,ID,Driggs-Reed Memorial
+16449,Paragould,AR,Kirk Field
+16451,Salome,AZ,Sheepy Hollow Ranch
+16453,Gregory,SD,Gregory Municipal Flynn Field
+16454,Hamilton,NY,Hamilton Municipal
+16455,Demopolis,AL,Demopolis Regional
+16459,Fremont,OH,Sandusky County Regional
+16463,Michellville,MD,Freeway
+16468,Philadelphia,MS,Philadelphia Municipal
+16469,Wadena,MN,Wadena Municipal
+16470,Bluffton,OH,Bluffton Airport
+16472,Independence Creek,AK,Independence Creek Airport
+16473,Wichita,KS,Beech Factory
+16474,Jefferson,GA,Jackson County
+16479,Montague,MA,Turners Falls
+16487,Taunton,MA,Taunton Municipal King Field
+16489,Seward Peninsula,AK,Kelly Creek Airstrip
+16490,Bear Fish Camp,AK,Bear Fish Camp Airport
+16491,Princeton,ME,Princeton Municipal
+16495,Simsbury,CT,Simsbury Airport
+16496,Logan,WV,Logan County
+16497,Fairhope,AL,H. L. Sonny Callahan
+16498,Skaneateles,NY,Skaneateles Aero Drome
+16499,Johnstown,NY,Fulton County
+16500,Red Wing,MN,Red Wing Regional
+16501,Madison,CT,Griswold
+16502,Oxford,NC,Henderson Oxford
+16503,Islesboro,ME,Islesboro Airport
+16504,Honesdale,PA,Cherry Ridge
+16505,Fairbanks,AK,Gold King Creek
+16508,Squaw Lake,AK,Squaw Lake Airport
+16509,Sevierville,TN,Gatlinburg-Pigeon Forge
+16510,Beaufort,NC,Michael J. Smith Field
+16511,Indianapolis,IN,Indianapolis Metro
+16512,Mattituck,NY,Mattituck Airport
+16515,Brewster,WA,Anderson Field
+16517,Chemehuevi Valley,CA,Chemehuevi Valley Airport
+16519,Carlisle,PA,Carlisle Airport
+16520,Middletown,DE,Summit
+16521,Big Piney,WY,Miley Memorial Field
+16524,Petersburg,WV,Grant County
+16525,West Chester,PA,Brandywine Regional
+16526,Marshfield,MA,Marshfield Municipal George Harlow Field
+16527,Monroeville,AL,Monroe County Aeroplex
+16528,Richmond,VA,Hanover County Municipal
+16532,Medina,OH,Medina Municipal
+16534,Clewiston,FL,Airglades
+16536,Troy,AL,Troy Municipal at N Kenneth Campbell Field
+16537,Notchitoches,LA,Natchitoches Regional
+16538,Clinton,NC,Clinton Sampson County
+16539,Indianapolis,IN,Eagle Creek Airpark
+16540,Belfast,ME,Belfast Municipal
+16541,Okeechobee,FL,Okeechobee County
+16542,Walterboro,SC,Lowcountry Regional
+16543,Northampton,MA,Northampton Airport
+16547,Pella,IA,Pella Municipal
+16548,Hampton,NH,Hampton Airfield
+16549,Winters,TX,Winters Municipal
+16552,Burlington,NC,Burlington Alamance Regional
+16553,Oxford,ME,Oxford County Regional
+16555,Midlothian/Waxahachie,TX,Mid Way Regional
+16558,Hammond,LA,Hammond Northshore Regional
+16560,Bend,OR,Bend Municipal
+16561,Springerville,AZ,Springerville Municipal
+16563,Osceola,WI,L O Simenstad Municipal
+16566,Jean,NV,Jean Airport
+16567,Akun,AK,Akun Airport
+16568,Ocean City,NJ,Ocean City Municipal
+16569,Hornell,NY,Hornell Municipal
+16571,Penn Yan,NY,Penn Yan Yates County
+16572,Searchlight,NV,Searchlight Airport
+16573,Broken Bow,NE,Broken Bow Municipal Keith Glaze Field
+16577,Moncks Corner,SC,Berkeley County
+16580,Qugruc,AK,Qugruc Airport
+16581,Gold King 2,AK,Gold King 2 Airport
+16582,Thomson,GA,Thomson McDuffie County
+16583,Summerville,SC,Summerville Airport
+16584,Rampart,AK,Hunter Creek Mine
+16585,Sussex,NJ,Sussex Airport
+16588,West Dover,VT,Deerfield Valley Regional
+16589,Hallock,MN,Hallock Municipal
+16594,Willimantic,CT,Windham
+16598,Tracy,CA,Tracy Municipal
+16603,Deer Harbor,WA,Deer Harbor Marina
+16621,Zips,AK,Zips Airport
+16624,Warren,VT,Warren Sugarbush
+16625,Lumberton,NJ,Flying W
+16627,Bethel,ME,Bethel Regional
+16628,Ehpriam,WI,Ephraim Gibraltar
+16630,Tolstoi Bay,AK,Tolstoi Bay Airport
+16633,Bethel2,ME,Cole Dyke
+16634,Quincy,MA,Quincy Airport
+16635,Belen,NM,Alexander Municipal
+16639,Gila Bend,AZ,Gila Bend Municipal
+16640,Rockingham,NC,Richmond County
+16643,Pittsburgh,PA,Pittsburgh Northeast
+16644,New Milford,CT,Candlelight Farms
+16647,Fitiuta Village,TT,Fitiuta
+16651,Camp Orkila Eastsound,WA,Camp Orkila Seaplane Base
+16654,Shaw Island,WA,Shaw Islands Water Aerodrome
+16656,Danielson,CT,Danielson Airport
+16658,Gainesville,TX,Gainesville Municipal
+16659,Wichita Falls,TX,Kickapoo Downtown
+16661,York,NE,York Municipal
+16662,Naknek-1,AK,Icicle Seafoods
+16663,Jeffersonville,IN,Clark Regional
+16665,Brady,TX,Curtis Field
+16666,Dover-Cheswold,DE,Delware Airpark
+16668,Deadhorse1,AK,Point Thomson Airstrip
+16669,Jasper,AL,Walker County Bevill Field
+16672,Toughkenamon,PA,New Garden
+16673,Canton,GA,Cherokee County Regional
+16678,Los Angeles,CA,Whiteman
+16679,Marfa,TX,Marfa Municipal
+16680,Canandaigua,NY,Canandaigua Airport
+16681,East Haddam,CT,Goodspeed
+16682,Gettysburg,PA,Gettysburg Regional
+16683,Dowagiac,MI,Dowagiac Municipal
+16684,Collegeville,PA,Perkiomen Valley
+16688,Eastman,GA,Heart of Georgia Regional
+16689,Tarentum,PA,Rock
+16692,Three Forks,MT,Three Forks Airport
+16694,Hereford,TX,Hereford Municipal
+16695,Lafayette,TN,Lafayette Municipal
+16696,Smith Bay,AK,Smith Bay Airport
+16697,Moneta,VA,Smith Mountain Lake
+16698,Dune Lake,AK,Dune Lake Airport
+16699,Junction,TX,Kimble County
+16700,Patterson,CA,Del Mar Farms
+16702,Encino,TX,El Coyote Ranch
+16704,Brockport,NY,Ledgedale Airpark
+16706,Austin,TX,Austin Executive Airpark
+16709,Castroville,TX,Castroville Municipal
+16710,Indian Head,MD,Maryland
+16711,Reno,NV,Reno Stead
+16715,Seneca Falls,NY,Finger Lakes Regional
+16719,Monroe,NC,Charlotte Monroe Executive
+16720,Fairbanks1,AK,Van Curlers Sandbar
+16721,Bridgewater,VA,Bridgewater Air Park
+16722,Millersburg,OH,Holmes County
+16723,Nakochna,AK,Nakochna Airport
+16724,Ticonderoga,NY,Ticonderoga Municipal
+16725,Gerlach,NV,Black Rock City
+16727,New Jersey,NJ,Old Bridge
+16728,Franklin,NC,Macon County
+16729,Mount Vernon,OH,Knox County
+16730,Gorham,NH,Gorham Airport
+16731,Haverhill,NH,Dean Memorial
+16736,Stonington,ME,Stonington Municipal
+16737,Scottsboro,AL,Scottsboro Municipal Word Field
+16738,Bentonville,AR,Bentonville Municipal Louise M Thaden Field
+16739,Columbus,OH,Bolton Field
+16740,Delaware,OH,Delaware Municipal Jim Moore Field
+16741,Selmer,TN,Robert Sibley
+16742,Indianapolis,IN,Indy South Greenwood
+16743,Batesville,MS,Panola County
+16744,Effingham,IL,Effingham County Regional
+16745,Houston,TX,Houston Executive
+16746,Grants,NM,Grants Milan Municipal
+16748,Doylestown,PA,Doylestown Airport
+16749,China Spring,TX,Wildcat Canyon
+16750,Sanford,NC,Raleigh Exec Jetport at Sanford Lee County
+16751,Placida,FL,Coral Creek
+16754,Whiteville,NC,Columbus County Regional
+16755,Dallas,TX,McKinney National
+16758,Brawley,CA,Brawley Municipal
+16760,Glen Canyon,UT,Bullfrog Basin
+16761,Bowling Green,OH,Wood County
+16762,Reserve,LA,Port of South Louisiana Executive
+16764,Fort Meade,MD,Tipton
+16765,Lone Rock,WI,Tri County Regional
+16767,Fort A P Hill,VA,Mary Walker Lz
+16769,Siler City,NC,Siler City Municipal
+16770,Monte Vista,CO,Monte Vista Municipal
+16771,New Richmond,WI,New Richmond Regional
+16774,Richmond,VA,Richmond Executive Chesterfield County
+16775,Richland,MO,Richland Municipal
+16776,Clevland,TN,Cleveland Regional Jetport
+16777,Farmington,PA,Nemacolin
+16778,Middleton,WI,Middleton Municipal Morey Field
+16780,Ashland,OH,Ashland County
+16783,Greensboro,GA,Greene County Regional
+16784,Mayfield,KY,Mayfield Graves County
+16785,Carrizo Springs,TX,Dimmit County
+16787,Ramona,CA,Ramona Airport
+16788,Thomaston,GA,Thomaston Upson County
+16789,Van Horn,TX,Culberson County
+16790,Sylacauga,AL,Merkel Field Sylacauga Municipal
+16791,Terrell,TX,Terrell Municipal
+16792,West Milford,NJ,Greenwood Lake
+16793,Moroe,WI,Monroe Municipal
+16795,Minneapolis,MN,Anoka County Blaine
+16796,Estherville,IA,Estherville Municipal
+16801,Philadelphia,PA,Penns Landing Heliport
+16802,Paxson,HI,Paxson Airport
+16803,Paxson,AK,Paxson Airport
+16804,Napaimute,AK,Napaimute Pioneer Airfield
+16805,Champion,NE,Smith Field
+16807,Hopedale,MA,Hopedale Industrial Park
+16810,Fort Payne,AL,Isbell Field
+16811,Cullman,AL,Cullman Regional Folsom Field
+16812,Monroe,GA,Cy Nunnally Memorial
+16813,Moultonboro,NH,Moultonborough
+16815,Southampton,NY,Southampton Heliport
+16816,Deland,FL,Deland Municipal Sidney H Taylor Field
+16817,Pahrump,NV,Calvada Meadows
+16818,Nikisha,AK,McGahan Industrial Park
+16819,New Roads,LA,False River Regional
+16820,Fairfield,IA,Fairfield Municipal
+16821,South Haven,MI,South Haven Area Regional
+16823,Buena,CO,Central Colorado Regional
+16828,Essington,PA,Philadelphia Seaplane Base
+16829,West Palm Beach,FL,Palm Beach County Park
+16830,Port Washington,NY,Sands Point Seaplane Base
+16831,Suffolk,NY,Sebonac
+16832,New York,NY,New York Skyports Seaplane Base
+16837,Colorado City,AZ,Colorado City Municipal
+16838,Norfolk,VA,Hampton Roads Executive
+16839,Huntingburg,IN,Huntingburg Airport
+16840,Lexington Parsons,TN,Beech River Regional
+16842,Hampton,GA,Atlanta Speedway
+16843,Rio Vista,CA,Rio Vista Municipal
+16844,Delano,CA,Delano Municipal
+16846,Lake Wales,FL,Lake Wales Municipal
+16847,Litchfield,IL,Litchfield Municipal
+16848,Camilla,GA,Camilla Mitchell County
+16849,Atlantic,IA,Atlantic Municipal
+16850,North Salt Lake,UT,A A Helicopters Inc
+16851,Cross Keys,NJ,Cross Keys Airport
+16853,Dumas,TX,Moore County
+16856,Abingdon,VA,Virginia Highlands
+16857,San Antonio,TX,Stinson Municipal
+16860,Waupaca,WI,Waupaca Municipal
+16861,Hackettstown,NJ,Hackettstown Airport
+16863,South Bethlehem,NY,South Albany
+16865,Holdrege,NE,Brewster Field
+16867,Ellenville,NY,Joseph Y Resnick
+16868,Hillsboro,NH,Hawthorne Feather Airpark
+16869,Williston,ND,Williston Basin International
+16871,Chester,CT,Chester Airport
+16872,Galliano,LA,South Lafourche Leonard Miller Jr
+16873,Truth Or Consequences,NM,Spaceport America
+16875,Blakely,GA,Early County
+16876,Charleston,SC,Charleston Executive
+16879,Llano,TX,Llano Municipal
+16880,Lancaster,TX,Lancaster Regional
+16883,Ahoskie,NC,Tri County at Henry Joyner Field
+16886,Colt,AR,Delta Regional
+16897,Brenham,TX,Brenham Municipal
+16898,Dayton,TN,Mark Anton
+16900,Lajitas,TX,Lajitas International
+16901,West Palm Beach,FL,North Palm Beach County Gen Aviation
+16902,Beaumont,TX,Beaumont Municipal
+16903,Eastport,ME,Eastport Municipal
+16904,Millbrook,NY,Johnson Landing Strip
+16905,Spanish Fork,UT,Spanish Fork Municipal Woodhouse Field
+16906,Sandpoint,ID,Sandpoint Airport
+16907,Garberville,CA,Garberville Airport
+16908,Deer Park,WA,Deer Park Airport
+16909,Edinburg,TX,South Texas International at Edinburg
+16910,Louisa,VA,Louisa County Freeman Field
+16911,Caldwell,ID,Caldwell Exec
+16913,Atlanta,GA,Paulding Memorial Hospital Heliport
+16914,El Mirage,CA,El Mirage Field Adelanto
+16915,Clinton,MO,Clinton Regional
+16916,Leakey,TX,Real County
+16917,Baytown,TX,Baytown Airport
+16918,Meeker,CO,Meeker Coulter Field
+16919,Graford,TX,Possum Kingdom
+16920,Davis,CA,University
+16922,Washington,IN,Daviess County
+16923,Mertarvik,AK,Mertarvik Quarry Road Landing Strip
+16924,Reading,NJ,Solberg Hunterdon
+16925,Malone,NY,Malone Dufort
+16926,Waco,TX,McGregor Exec
+16927,Oak Island,NC,Cape Fear Regional Jetport Howie Franklin
+16934,Asheboro,NC,Asheboro Regional
+16935,Willoughby,OH,Lake County Executive
+16936,Ennis,MT,Ennis Big Sky
+16937,Greenville,ME,Greenville Municipal
+16938,West Bend,WI,West Bend Municipal
+16940,Elizabethon,TN,Elizabethton Municipal
+16941,Brookfield,MO,North Central Missouri Regional
+16942,Center,TX,Center Municipal
+16947,Fredericksburg,TX,Gillespie County
+16948,Comanche,TX,Comanche County City
+16951,Warrenton,VA,Warrenton Fauquier
+16952,Cleveland,MS,Cleveland Municipal
+16953,Huntsville,TX,Huntsville Municipal
+16954,Boston,MA,Boston Harbor Seaplane Base
+16955,New York,NY,Sag Harbor
+16956,New York,NY,Shelter Island
+16957,New York,NY,Noyack
+16958,New Braunfels,TX,New Braunfels National
+16959,Connellsville,PA,Joseph A Hardy Connellsville
+16961,Bridgeport,TX,Bridgeport Municipal
+16962,Granbury,TX,Granbury Regional
+16964,Hot Springs,SD,Hot Springs Municipal
+16965,Shelter Island,NY,Sbnysh
+16966,North Haven,NY,Sbnynb
+16967,Belie Haven,CT,Sbctbh
+16968,Moriarty,NM,Moriarty Municipal
+16969,Silver Springs,NV,Silver Springs Airport
+16972,Sturgis,SD,Sturgis Municipal
+16973,Green Valley,AZ,Ruby Star Airpark
+16974,Churchville,MD,Harford County
+16975,Coolidge,AZ,Coolidge Municipal
+16976,Milledgeville,GA,Baldwin County Regional
+16978,Morehead,KY,Morehead Rowan County Clyde A Thomas Regional
+16979,Columbia,MS,Columbia Marion County
+16980,Williamsburg,VA,Camp Peary Landing Strip
+16982,Deerpark,AK,Deer Park
+16983,Odessa,WA,Odessa Municipal
+16984,Fulton,TX,Kalt Ranch
+16985,Healy,AK,Temsco Helicopters Inc Heliport
+16986,Pahokee,FL,Palm Beach County Glades
+16987,Blackstone,VA,Allan C Perkinson Blackstone AAF
+16990,Andover,NJ,Aeroflex Andover
+16991,Hendersonville,NC,Hendersonville Airport
+16992,Tintina,AK,Gold Mining Landing Strip
+16993,Walker,MN,Walker Municipal
+16994,North Pole,AK,Bradley Sky Ranch
+16995,Lawing,AK,Lawing Airport
+16999,Cabo Rojo,PR,Boqueron
+17000,Meriden,CT,Meriden Markham Municipal
+17002,Calhoun,GA,Tom B David Field
+17004,Condon,OR,Condon State Pauling Field
+17005,Juneau,WI,Dodge County
+17007,Cornelia,GA,Habersham County
+17008,Williamstown,NJ,Southern Cross
+17011,Newtok,AK,Newtok Seaplane Base
+17012,Wauchula,FL,Wauchula Municipal
+17013,Fulshear,TX,Covey Trails
+17014,Allendale,SC,Allendale County
+17020,Palmdale,CA,Gray Butte Field
+17021,Camden,NJ,76ers Camden Heliport
+17022,Pomona,NJ,Pomona Airport
+17023,Newark,NJ,Prudential Center Heliport
+17024,Philadelphia,PA,Heliport 76er
+17025,Atlantic City,NJ,Ocean Casino Resort
+17026,Aberdeen,MD,Fanatics Aberdeen Fulfillment Center
+17027,East Rutherford,NJ,Meadowlands 2 Nj Complex Heliport
+17028,Baltimore,MD,Johns Hopkins Hosp Crit Care Twr Heliport
+17029,Conshohocken,PA,Conshohocken Heliport
+17030,Bensalem,PA,Total Rf Heliport
+17031,Somers,CT,Valley Farm
+17033,Oxford,OH,Miami University
+17035,Little River,CA,Little River Airport
+17036,Quincy,FL,Quincy Municipal
+17037,Tacoma,WA,Tacoma Seaplane Base
+17039,Andrews,NC,Western Carolina Regional
+17040,Harriman,NY,Avie M Harriman
+17042,Kearny,NJ,Helo Kearny Heliport
+17043,Newport,NH,Parlin Field
+17044,Elkton,MD,Claremont
+17045,Baraboo,WI,Baraboo Wisconsin Dells Regional
+17047,Madison,IN,Madison Municipal
+17048,West Point,VA,Middle Peninsula Regional
+17049,Allentown,PA,Allentown Queen City Municipal
+17050,Norridgewock,ME,Central Maine of Norridgewock
+17051,Apalachicola,FL,St George Island
+17052,Chambersburg,PA,Franklin County Regional
+17053,Nuiqsut,AK,Willow Conocophillips
+17054,Lees Summit,MO,Kansas City Lees Summit Regional
+17058,Buckeye,AZ,Buckeye Municipal
+17059,Auburn,NY,Murphy Field
+17060,Lincoln,CA,Lincoln Regional Karl Harder Field
+17062,Arcadia,FL,Arcadia Municipal
+17063,Coshocton,OH,Richard Downing
+17064,Stanton,KY,Stanton Airport
+17065,West Palm Beach,FL,Wellington Aero Club
+17074,French Lick,IN,French Lick Municipal
+17075,Manville,NJ,Central Jersey Regional
+17076,Keystone Heights,FL,Keystone Heights Airport
+17077,Palmer,AK,Wolf Lake
+17078,Pittsfield,IL,Pittsfield Penstone Municipal
+17079,Pittstown,NJ,Sky Manor
+17086,Ambler,AK,Ambler Airport
+17089,Kodiak,AK,Kodiak Airport
+17133,Eagles Mere,PA,Merritt Field

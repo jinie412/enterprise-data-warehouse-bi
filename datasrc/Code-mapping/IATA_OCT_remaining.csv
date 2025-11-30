@@ -1,0 +1,16 @@
+IATA_CODE,AIRPORT,CITY,STATE,COUNTRY,LATITUDE,LONGITUDE,CITY_TOKENS,NAME_TOKENS
+AKN,King Salmon Airport,King Salmon,AK,USA,58.6768,-156.64922,"['king', 'salmon']","['king', 'salmon']"
+CEC,Del Norte County Airport (Jack McNamara Field),Crescent City,CA,USA,41.78016,-124.23653,"['crescent', 'city']","['del', 'norte', 'county', 'jack', 'mcnamara', 'field']"
+CLD,McClellan-Palomar Airport,San Diego,CA,USA,33.12723,-117.27873,"['san', 'diego']","['mcclellan', 'palomar']"
+CNY,Canyonlands Field,Moab,UT,USA,38.75496,-109.75484,['moab'],"['canyonlands', 'field']"
+DLG,Dillingham Airport,Dillingham,AK,USA,59.04541,-158.50334,['dillingham'],['dillingham']
+GST,Gustavus Airport,Gustavus,AK,USA,58.42438,-135.70738,['gustavus'],['gustavus']
+GUC,Gunnison-Crested Butte Regional Airport,Gunnison,CO,USA,38.53396,-106.93318,['gunnison'],"['gunnison', 'crested', 'butte', 'regional']"
+HYA,Barnstable Municipal Airport,Hyannis,MA,USA,41.66934,-70.28036,['hyannis'],"['barnstable', 'municipal']"
+ILG,Wilmington Airport,Wilmington,DE,USA,39.67872,-75.60653,['wilmington'],['wilmington']
+ITH,Ithaca Tompkins Regional Airport,Ithaca,NY,USA,42.49103,-76.45844,['ithaca'],"['ithaca', 'tompkins', 'regional']"
+MMH,Mammoth Yosemite Airport,Mammoth Lakes,CA,USA,37.62405,-118.83777,"['mammoth', 'lakes']","['mammoth', 'yosemite']"
+PUB,Pueblo Memorial Airport,Pueblo,CO,USA,38.28909,-104.49657,['pueblo'],"['pueblo', 'memorial']"
+STC,St. Cloud Regional Airport,St Cloud,MN,USA,45.54532,-94.05834,"['st', 'cloud']","['st.', 'cloud', 'regional']"
+VEL,Valdez Airport,Vernal,UT,USA,40.4409,-109.50992,['vernal'],['valdez']
+WYS,Westerly State Airport,West Yellowstone,MT,USA,44.6884,-111.11764,"['west', 'yellowstone']","['westerly', 'state']"

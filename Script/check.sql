@@ -1,0 +1,51 @@
+USE STAGE_DATH
+GO
+
+SELECT * FROM STG_Airline
+SELECT * FROM STG_Airport
+SELECT * FROM STG_Flight
+
+
+SELECT * FROM STG_Flight where Cancelled=1
+
+SELECT DISTINCT Destination_Airport, Origin_Airport FROM STG_Flight WHERE Month_Value='10'
+SELECT DISTINCT Destination_Airport, Origin_Airport, Distance FROM STG_Flight
+SELECT DISTINCT Destination_Airport, Origin_Airport FROM STG_Flight
+
+SELECT IATA_CODE, LEN(IATA_CODE)
+FROM STG_Airline
+WHERE IATA_CODE LIKE '% '
+
+SELECT IATA_CODE, LEN(IATA_CODE)
+FROM STG_Airport
+WHERE IATA_CODE LIKE '% '
+
+
+SELECT DISTINCT Destination_Airport, Origin_Airport, MAX(Distance)
+FROM STG_FLIGHT
+GROUP BY Destination_Airport, Origin_Airport
+
+USE META_DATH
+GO
+
+UPDATE data_flow
+SET LSET='2010-01-01 00:00:00'
+
+
+USE NDS_DATH
+GO
+
+SELECT * FROM NDS_Airline
+SELECT IATA_CODE, LEN(IATA_CODE)
+FROM NDS_Airline
+WHERE IATA_CODE LIKE '% '
+
+SELECT * FROM NDS_Airport
+SELECT IATA_CODE, LEN(Iata_Code)
+FROM NDS_Airport
+WHERE IATA_CODE LIKE '% '
+
+SELECT * FROM NDS_Time
+SELECT * FROM NDS_Reason
+SELECT * FROM NDS_Flight
+SELECT * FROM NDS_Distance

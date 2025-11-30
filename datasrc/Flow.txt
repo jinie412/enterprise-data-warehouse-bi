@@ -1,0 +1,20 @@
+Giải thích các file và thứ tự luồng mapping:
+
+1. Từ file ban đầu của nguồn chính thống: L_AIRPORT_ID.csv, tách ra các sân bay chỉ ở USA --> File: L_AIRPORT_ID_US.csv (kèm việc tách tên, thành phố, bang trong cột Description của file gốc)
+
+2. Lọc unique các số (DOT) của 2 cột DESTINATION, ORIGIN trong các chuyến bay tháng 10 (flight_OCT.csv). Đồng thời nối với các sân bay ở USA (File: L_AIRPORT_ID_US.csv) --> File: OCT_airport_codes.csv
+
+3. Mapping mã IATA từ file Airport.csv với các mã số (DOT) sân bay ở file OCT_airport_codes.csv,
+sẽ xuất ra được 3 file:
+- airport_OCT_mapping.csv: danh sách các sân bay đã mapping được (Mapping được fUll 307 sân bay có trong file OCT_airport_codes.csv)
+- airport_OCT_unmatched.csv: những sân bay không match được (Số lương: 0)
+- IATA_OCT_remaining.csv: Những sân bây ở file Airport.csv chưa map được (Số lượng: 15)
+
+4. Mapping các sân bay IATA còn lại (trong file IATA_OCT_remaining.csv) với file L_AIRPORT_ID_US.csv. Cho ra file: 15_airport_left_mapping.csv (Mapping được đủ 15 sân bay còn lại)
+
+5. Ghép nội dung 2 file lại để đủ 322 sân bay có trong Airport.csv ban đầu: 15_airport_left_mapping.csv và airport_OCT_mapping.csv --> airport_code_mapping.csv
+
+6. Kiểm tra xem các số (DOT) trong file airport_code_mapping.csv có unique không.
+
+
+File Special_Case.txt: Chứa những trường hợp bắt buộc map do đã thay đổi tên sân bay hoặc thành phố.
