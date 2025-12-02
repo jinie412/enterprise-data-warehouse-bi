@@ -54,7 +54,7 @@ CREATE TABLE NDS_Time (
     Year_Value INT,
     Month_Value INT,
     Day_Value INT,
-    Day_Of_Week VARCHAR(50),
+    Day_Of_Week NVARCHAR(50),
 	Created_Date DATETIME,
 	Updated_Date DATETIME,
 	CONSTRAINT UQ_NDS_Time_YearMonthDay

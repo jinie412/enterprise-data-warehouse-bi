@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SourceToStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="176"
-  DTS:VersionGUID="{59163B6E-7E47-4C6E-9D61-0035ED04F2DD}">
+  DTS:VersionBuild="189"
+  DTS:VersionGUID="{4435E90F-020D-4640-957F-74A797CEAA1F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1042,10 +1042,10 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LAPTOP-80T8CRON\MSSQLSERVER01.META_DATH]"
+      DTS:refId="Package.ConnectionManagers[Localhost.META_DATH]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{0A14ACE2-EBA1-4A9D-8CB3-5FDF3815D5F9}"
-      DTS:ObjectName="LAPTOP-80T8CRON\MSSQLSERVER01.META_DATH">
+      DTS:ObjectName="Localhost.META_DATH">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -1189,7 +1189,7 @@
   </DTS:ConnectionManagers>
   <DTS:LogProviders>
     <DTS:LogProvider
-      DTS:ConfigString="LAPTOP-80T8CRON\MSSQLSERVER01.META_DATH"
+      DTS:ConfigString="Localhost.META_DATH"
       DTS:CreationName="Microsoft.LogProviderSQLServer"
       DTS:Description="Writes log entries for events to a SQL Server database"
       DTS:DTSID="{20D9E4EF-77C3-4156-9668-A6903E623CBB}"
@@ -1643,11 +1643,11 @@
                       refId="Package\Import to STG_Airline\Derived Column.Inputs[Derived Column Input].Columns[IATA_CODE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="2"
+                      cachedLength="50"
                       cachedName="IATA_CODE"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Import to STG_Airline\Data Conversion.Outputs[Data Conversion Output].Columns[IATA_CODE]"
+                      lineageId="Package\Import to STG_Airline\File Airline.Outputs[Flat File Source Output].Columns[IATA_CODE]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -1655,13 +1655,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[UPPER]([TRIM](#{Package\Import to STG_Airline\Data Conversion.Outputs[Data Conversion Output].Columns[IATA_CODE]}))</property>
+                          name="Expression">[UPPER]([TRIM](#{Package\Import to STG_Airline\File Airline.Outputs[Flat File Source Output].Columns[IATA_CODE]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">UPPER(TRIM([Data Conversion].IATA_CODE))</property>
+                          name="FriendlyExpression">UPPER(TRIM(IATA_CODE))</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -1956,17 +1956,17 @@
           <paths>
             <path
               refId="Package\Import to STG_Airline.Paths[Data Conversion Output]"
-              endId="Package\Import to STG_Airline\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\Import to STG_Airline\STG_Airline.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Import to STG_Airline\Data Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Import to STG_Airline.Paths[Derived Column Output]"
-              endId="Package\Import to STG_Airline\STG_Airline.Inputs[OLE DB Destination Input]"
+              endId="Package\Import to STG_Airline\Data Conversion.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\Import to STG_Airline\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\Import to STG_Airline.Paths[Flat File Source Output]"
-              endId="Package\Import to STG_Airline\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Import to STG_Airline\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Import to STG_Airline\File Airline.Outputs[Flat File Source Output]" />
           </paths>
@@ -10328,7 +10328,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[OLE DB Destination 1]</property>
+                  name="OpenRowset">[dbo].[STG_Flight_DOT]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -13835,7 +13835,7 @@
                   O.Departure_Time_Fix, O.Destination_Airport_Fix, O.DISTANCE_Fix, O.DIVERTED_Fix, O.Elapsed_Time_Fix, O.FLIGHT_NUMBER_Fix, O.Late_Aircraft_Delay_Fix, O.MONTH_Fix, O.Origin_Airport_Fix, O.Scheduled_Arrival_Fix, 
                   O.Scheduled_Departure_Fix, O.Scheduled_Time_Fix, O.Security_Delay_Fix, O.Tail_Number_Fix, O.Taxi_In_Fix, O.Taxi_Out_Fix, O.Weather_Delay_Fix, O.Wheels_Off_Fix, O.Wheels_On_Fix, O.YEAR_Fix, S1.IATA_CODE AS Destination_IATA, 
                   S2.IATA_CODE AS Origin_IATA
-FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
+FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                   STG_AirportCodeMapping AS S1 ON O.Destination_Airport_Fix = S1.DOT_Code LEFT OUTER JOIN
                   STG_AirportCodeMapping AS S2 ON O.Origin_Airport_Fix = S2.DOT_Code</property>
                 <property
@@ -15124,13 +15124,13 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Truncate table OLE DB Destination 1"
+      DTS:refId="Package\Truncate table STG_Flight_DOT"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{18616A46-D2AE-4928-8C76-1A8AA38AA058}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Truncate table OLE DB Destination 1"
+      DTS:ObjectName="Truncate table STG_Flight_DOT"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -15139,7 +15139,7 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{08A73CB6-29D0-414E-A6E8-455FA2E2AC2F}"
-          SQLTask:SqlStatementSource="Truncate table [OLE DB Destination 1]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="Truncate table STG_Flight_DOT" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -15167,7 +15167,7 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       DTS:From="Package\Truncate STG_Flight"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Truncate table OLE DB Destination 1" />
+      DTS:To="Package\Truncate table STG_Flight_DOT" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
@@ -15212,7 +15212,7 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
       DTS:CreationName=""
       DTS:DTSID="{3405B537-C853-433C-878B-24B07D4ACBB0}"
-      DTS:From="Package\Truncate table OLE DB Destination 1"
+      DTS:From="Package\Truncate table STG_Flight_DOT"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 8"
       DTS:To="Package\Import to STG_Flight" />
@@ -15325,9 +15325,9 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
           Id="Package\Truncate STG_Flight"
           TopLeft="761.458325788882,340.137253266117" />
         <NodeLayout
-          Size="248.8,41.6"
-          Id="Package\Truncate table OLE DB Destination 1"
-          TopLeft="720.833293948738,420.333330410388" />
+          Size="228,41.6"
+          Id="Package\Truncate table STG_Flight_DOT"
+          TopLeft="732.499959977966,419.466663749748" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="118.574998395021,252.199998535514">
@@ -15374,18 +15374,18 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="846.94580986881,381.737253266117">
+          TopLeft="847.579142883424,381.737253266117">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.5960771442707"
+              EndConnector="0,37.7294104836311"
               Start="0,0"
-              End="0,31.0960771442707">
+              End="0,30.2294104836311">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.0960771442707" />
+                    End="0,30.2294104836311" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15488,14 +15488,14 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.3166661317977"
+              EndConnector="0,35.3166661317979"
               Start="0,0"
-              End="0,27.8166661317977">
+              End="0,27.8166661317979">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.8166661317977" />
+                    End="0,27.8166661317979" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15506,18 +15506,18 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="844.654143327354,461.933330410388">
+          TopLeft="845.287476341969,461.066663749748">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.2539210432033"
+              EndConnector="0,38.1205877038428"
               Start="0,0"
-              End="0,29.7539210432033">
+              End="0,30.6205877038428">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.7539210432033" />
+                    End="0,30.6205877038428" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15547,57 +15547,35 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Import to STG_Airline\STG_Airline"
-          TopLeft="266.999985491237,378.333330313034" />
-        <NodeLayout
           Size="127.2,41.6"
           Id="Package\Import to STG_Airline\File Airline"
           TopLeft="271.166651930247,44.6000002859041" />
         <NodeLayout
-          Size="156,41.6"
-          Id="Package\Import to STG_Airline\Data Conversion"
-          TopLeft="250.999986127019,164.399999285937" />
-        <NodeLayout
           Size="152.8,41.6"
           Id="Package\Import to STG_Airline\Derived Column"
-          TopLeft="256.999986037612,272.933333397574" />
+          TopLeft="440.999975745877,45.7333333324065" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Import to STG_Airline\STG_Airline"
+          TopLeft="446.999975656471,292.533330909676" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Import to STG_Airline\Data Conversion"
+          TopLeft="437.666642594669,156.599999340177" />
         <EdgeLayout
           Id="Package\Import to STG_Airline.Paths[Flat File Source Output]"
-          TopLeft="331.883319028633,86.2000002859041">
+          TopLeft="398.366651930247,65.9666668091553">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78.1999990000326"
+              EndConnector="42.6333238156301,0"
               Start="0,0"
-              End="0,70.6999990000326">
+              End="35.1333238156301,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70.6999990000326" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_Airline.Paths[Data Conversion Output]"
-          TopLeft="331.199986082316,205.999999285937">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.9333341116376"
-              Start="0,0"
-              End="0,59.4333341116376">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.4333341116376" />
+                    End="35.1333238156301,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15608,18 +15586,40 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Import to STG_Airline.Paths[Derived Column Output]"
-          TopLeft="333.799985764424,314.533333397574">
+          TopLeft="516.533309170273,87.3333333324065">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63.7999969154596"
+              EndConnector="0,69.2666660077707"
               Start="0,0"
-              End="0,56.2999969154596">
+              End="0,61.7666660077707">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.2999969154596" />
+                    End="0,61.7666660077707" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Airline.Paths[Data Conversion Output]"
+          TopLeft="514.93330912557,198.199999340177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,94.3333315694993"
+              Start="0,0"
+              End="0,86.8333315694993">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.8333315694993" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15662,17 +15662,17 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,41.6"
-          Id="Package\Import to STG_Airport\Data Conversion"
-          TopLeft="318.99999524653,299.999995529652" />
+          Size="128.8,41.6"
+          Id="Package\Import to STG_Airport\File Airport"
+          TopLeft="328.333328507013,67.9999983668323" />
         <NodeLayout
           Size="136,41.6"
           Id="Package\Import to STG_Airport\STG_Airport"
           TopLeft="328.333315393992,396.933330573108" />
         <NodeLayout
-          Size="128.8,41.6"
-          Id="Package\Import to STG_Airport\File Airport"
-          TopLeft="328.333328507013,67.9999983668323" />
+          Size="156,41.6"
+          Id="Package\Import to STG_Airport\Data Conversion"
+          TopLeft="318.99999524653,299.999995529652" />
         <NodeLayout
           Size="152.8,45.6"
           Id="Package\Import to STG_Airport\Derived Column"
@@ -15777,10 +15777,6 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,41.6"
-          Id="Package\Import to STG_AirportCodeMapping\Data Conversion 1"
-          TopLeft="647.999990344048,153.999997705221" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Import to STG_AirportCodeMapping\File mapping Airport"
           TopLeft="642.999990418553,65.9999990165233" />
@@ -15788,6 +15784,10 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
           Size="200.8,41.6"
           Id="Package\Import to STG_AirportCodeMapping\STG_AirportCodeMapping"
           TopLeft="629.999990612269,280.999995812774" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Import to STG_AirportCodeMapping\Data Conversion 1"
+          TopLeft="647.999990344048,153.999997705221" />
         <EdgeLayout
           Id="Package\Import to STG_AirportCodeMapping.Paths[Flat File Source Output]"
           TopLeft="729.2999903813,107.599999016523">
@@ -15867,22 +15867,6 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152.8,41.6"
-          Id="Package\Import to STG_Flight\Derived Column"
-          TopLeft="233.4285714529,187.676470449149" />
-        <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Import to STG_Flight\Derived Column 2"
-          TopLeft="721.83333447655,189.938235338525" />
-        <NodeLayout
-          Size="144,41.6"
-          Id="Package\Import to STG_Flight\Flight_batch 2"
-          TopLeft="512.022717954195,71.8545458564613" />
-        <NodeLayout
-          Size="144,41.6"
-          Id="Package\Import to STG_Flight\Flight_batch 3"
-          TopLeft="734.85280301247,67.2562790918359" />
-        <NodeLayout
-          Size="152.8,41.6"
           Id="Package\Import to STG_Flight\Derived Column 1"
           TopLeft="512.976189200554,193.377450894122" />
         <NodeLayout
@@ -15894,79 +15878,127 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
           Id="Package\Import to STG_Flight\Data Conversion"
           TopLeft="519.472222504379,431.047152413626" />
         <NodeLayout
+          Size="144,41.6"
+          Id="Package\Import to STG_Flight\Flight_batch 3"
+          TopLeft="734.85280301247,67.2562790918359" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Import to STG_Flight\OLE DB Destination 1"
+          TopLeft="814.285669795107,541.90475940799" />
+        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Import to STG_Flight\OLE DB Destination"
           TopLeft="504.08333419396,676.043975898474" />
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Flat File Source Output1]"
-          TopLeft="586.699453577375,113.454545856461">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,79.9229050376606"
-              Start="0,0"
-              End="0,72.4229050376606">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,72.4229050376606" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Flat File Source Output]"
-          TopLeft="310.060714314794,119.026470520368">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,68.6499999287812"
-              Start="0,0"
-              End="0,61.1499999287812">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,61.1499999287812" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Flat File Source Output2]"
-          TopLeft="804.74306874451,108.856279091836">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,81.0819562466891"
-              Start="0,0"
-              End="0,73.5819562466891">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,73.5819562466891" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Import to STG_Flight\Derived Column"
+          TopLeft="233.4285714529,187.676470449149" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Import to STG_Flight\Derived Column 2"
+          TopLeft="721.83333447655,189.938235338525" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\Import to STG_Flight\Flight_batch 2"
+          TopLeft="512.022717954195,71.8545458564613" />
         <NodeLayout
           Size="153.6,41.6"
           Id="Package\Import to STG_Flight\Conditional Split"
           TopLeft="516.666638437246,545.619045096447" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Import to STG_Flight\Union All"
+          TopLeft="533.333304193286,292.370368368169" />
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Derived Column Output2]"
+          TopLeft="802.63333447655,231.538235338525">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-181.300030283264,60.8321330296444"
+              Start="0,0"
+              End="-181.300030283264,53.3321330296444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.6731302367246" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.6731302367246"
+                    Point2="0,39.6731302367246"
+                    Point3="-4,39.6731302367246" />
+                  <mssgle:LineSegment
+                    End="-177.300030283264,39.6731302367246" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-177.300030283264,39.6731302367246"
+                    Point2="-181.300030283264,39.6731302367246"
+                    Point3="-181.300030283264,43.6731302367246" />
+                  <mssgle:LineSegment
+                    End="-181.300030283264,53.3321330296444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Derived Column Output1]"
+          TopLeft="591.35474669692,234.977450894122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.3929174740474"
+              Start="0,0"
+              End="0,49.8929174740474">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.8929174740474" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Derived Column Output]"
+          TopLeft="309.8285714529,229.276470449149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="255.504732740386,63.0938979190203"
+              Start="0,0"
+              End="255.504732740386,55.5938979190203">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.1481942950133" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.1481942950133"
+                    Point2="0,41.1481942950133"
+                    Point3="4,41.1481942950133" />
+                  <mssgle:LineSegment
+                    End="251.504732740386,41.1481942950133" />
+                  <mssgle:CubicBezierSegment
+                    Point1="251.504732740386,41.1481942950133"
+                    Point2="255.504732740386,41.1481942950133"
+                    Point3="255.504732740386,45.1481942950133" />
+                  <mssgle:LineSegment
+                    End="255.504732740386,55.5938979190203" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Import to STG_Flight.Paths[Data Conversion Output]"
           TopLeft="595.469430470812,472.647152413626">
@@ -16013,128 +16045,6 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Import to STG_Flight\OLE DB Destination 1"
-          TopLeft="814.285669795107,541.90475940799" />
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[DOT]"
-          TopLeft="670.266638437246,564.561902252218">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="144.019031357861,0"
-              Start="0,0"
-              End="136.519031357861,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="136.519031357861,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="57.7758047414304,5,20.967421875,9.5732421875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\Import to STG_Flight\Union All"
-          TopLeft="533.333304193286,292.370368368169" />
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Derived Column Output]"
-          TopLeft="309.8285714529,229.276470449149">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="255.504732740386,63.0938979190203"
-              Start="0,0"
-              End="255.504732740386,55.5938979190203">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.1481942950133" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.1481942950133"
-                    Point2="0,41.1481942950133"
-                    Point3="4,41.1481942950133" />
-                  <mssgle:LineSegment
-                    End="251.504732740386,41.1481942950133" />
-                  <mssgle:CubicBezierSegment
-                    Point1="251.504732740386,41.1481942950133"
-                    Point2="255.504732740386,41.1481942950133"
-                    Point3="255.504732740386,45.1481942950133" />
-                  <mssgle:LineSegment
-                    End="255.504732740386,55.5938979190203" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Derived Column Output1]"
-          TopLeft="591.35474669692,234.977450894122">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57.3929174740474"
-              Start="0,0"
-              End="0,49.8929174740474">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.8929174740474" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Derived Column Output2]"
-          TopLeft="802.63333447655,231.538235338525">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-181.300030283264,60.8321330296444"
-              Start="0,0"
-              End="-181.300030283264,53.3321330296444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.6731302367246" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.6731302367246"
-                    Point2="0,39.6731302367246"
-                    Point3="-4,39.6731302367246" />
-                  <mssgle:LineSegment
-                    End="-177.300030283264,39.6731302367246" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-177.300030283264,39.6731302367246"
-                    Point2="-181.300030283264,39.6731302367246"
-                    Point3="-181.300030283264,43.6731302367246" />
-                  <mssgle:LineSegment
-                    End="-181.300030283264,53.3321330296444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Import to STG_Flight.Paths[Union All Output 1]"
           TopLeft="595.402763348832,333.970368368169">
@@ -16155,6 +16065,96 @@ FROM     [OLE DB Destination 1] AS O LEFT OUTER JOIN
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Flat File Source Output2]"
+          TopLeft="804.74306874451,108.856279091836">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,81.0819562466891"
+              Start="0,0"
+              End="0,73.5819562466891">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.5819562466891" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Flat File Source Output1]"
+          TopLeft="586.699453577375,113.454545856461">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,79.9229050376606"
+              Start="0,0"
+              End="0,72.4229050376606">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72.4229050376606" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Flat File Source Output]"
+          TopLeft="310.060714314794,119.026470520368">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.6499999287812"
+              Start="0,0"
+              End="0,61.1499999287812">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.1499999287812" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[DOT]"
+          TopLeft="670.266638437246,564.561902252218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="144.019031357861,0"
+              Start="0,0"
+              End="136.519031357861,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="136.519031357861,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="57.7758047414305,5,20.967421875,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -69,10 +69,9 @@ CREATE TABLE STG_AirportCodeMapping (
     IATA_CODE VARCHAR(3)
 );
 
-DROP TABLE IF EXISTS [OLE DB Destination 1];
+DROP TABLE IF EXISTS [STG_Flight_DOT];
 GO
-CREATE TABLE [OLE DB Destination 1] (
-   
+CREATE TABLE [STG_Flight_DOT] (
     [Air_System_Delay_Fix] int,
     [Air_Time_Fix] int,
     [Airline_Delay_Fix] int,
