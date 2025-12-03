@@ -33,7 +33,7 @@ CREATE TABLE ds_table (
     table_key INT PRIMARY KEY IDENTITY(1,1),
     name VARCHAR(255) UNIQUE NOT NULL,
     entity_type INT NOT NULL,  
-    data_store VARCHAR(20),            
+    data_store VARCHAR(20) CHECK (data_store IN ('STAGE', 'NDS', 'DDS', 'META')),            
     description NVARCHAR(255) NULL,
     create_timestamp DATETIME DEFAULT GETDATE() NULL,
     update_timestamp DATETIME DEFAULT GETDATE() NULL,

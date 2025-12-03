@@ -6,11 +6,13 @@ GO
 ---------------------------------------------------------
 INSERT INTO ds_table_type (table_type, description)
 VALUES
-('SOURCE', N'Data nguồn'),
-('STAGE', N'Data stage'),
-('NDS', N'Normalized Data Store'),
-('DDS', N'Dimensional Data Store');
---('REFERENCE', N'Data danh mục');
+('Dimension', N'Dimension table'),
+('Fact', N'Fact table'),
+('Master', N'Master table'),
+('Transaction', N'Transaction table'),
+('Stage', N'Stage table'),
+('Metadata', N'Metadata table');
+
 ---------------------------------------------------------
 
 ---------------------------------------------------------
@@ -18,16 +20,18 @@ VALUES
 ---------------------------------------------------------
 INSERT INTO ds_table (name, entity_type, data_store, description)
 VALUES
-('STG_Airline', 2, 'SQL', N'Stage Airlines'),
-('STG_Airport', 2, 'SQL', N'Stage Airport'),
-('STG_Flight',  2, 'SQL', N'Stage Flight'),
+('STG_Airline', 5, 'STAGE', N'Stage Airlines'),
+('STG_Airport', 5, 'STAGE', N'Stage Airport'),
+('STG_Flight',  5, 'STAGE', N'Stage Flight'),
+('STG_AirportCodeMapping',  5, 'STAGE', N'Stage Airport Code mapping between DOT and IATA'),
+('STG_Flight_DOT',  5, 'STAGE', N'Stage for flight using DOT in the Destination and Origin airport'),
 
-('NDS_Airline', 3, 'SQL', N'NDS Airline'),
-('NDS_Airport', 3, 'SQL', N'NDS Airport'),
-('NDS_Reason',  3, 'SQL', N'NDS Delay Reason'),
-('NDS_Time',    3, 'SQL', N'NDS Date'),
-('NDS_Flight',  3, 'SQL', N'NDS Detail Flight'),
-('NDS_Distance',3, 'SQL', N'NDS Airport Distance');
+('NDS_Airline', 3, 'NDS', N'NDS Airline'),
+('NDS_Airport', 3, 'NDS', N'NDS Airport'),
+('NDS_Reason',  3, 'NDS', N'NDS Delay Reason'),
+('NDS_Time',    3, 'NDS', N'NDS Date'),
+('NDS_Flight',  4, 'NDS', N'NDS Detail Flight'),
+('NDS_Distance',3, 'NDS', N'NDS Airport Distance');
 ---------------------------------------------------------
 
 ---------------------------------------------------------
@@ -37,6 +41,9 @@ VALUES
 DECLARE @STG_Airline INT = (SELECT table_key FROM ds_table WHERE name='STG_Airline');
 DECLARE @STG_Airport INT = (SELECT table_key FROM ds_table WHERE name='STG_Airport');
 DECLARE @STG_Flight  INT = (SELECT table_key FROM ds_table WHERE name='STG_Flight');
+DECLARE @STG_AirportCodeMapping INT = (SELECT table_key FROM ds_table WHERE name='STG_AirportCodeMapping');
+DECLARE @STG_Flight_DOT INT         = (SELECT table_key FROM ds_table WHERE name='STG_Flight_DOT');
+
 
 DECLARE @NDS_Airline INT  = (SELECT table_key FROM ds_table WHERE name='NDS_Airline');
 DECLARE @NDS_Airport INT  = (SELECT table_key FROM ds_table WHERE name='NDS_Airport');
@@ -79,21 +86,21 @@ VALUES
 (@STG_Flight, 'Flight_Number', 'INT'),
 (@STG_Flight, 'Time_Id', 'INT'),
 (@STG_Flight, 'Tail_Number', 'VARCHAR(20)'),
-(@STG_Flight, 'Origin_Airport', 'CHAR(3)'),
-(@STG_Flight, 'Destination_Airport', 'CHAR(3)'),
+(@STG_Flight, 'Origin_Airport', 'VARCHAR(5)'),
+(@STG_Flight, 'Destination_Airport', 'VARCHAR(5)'),
 (@STG_Flight, 'Distance', 'INT'),
-(@STG_Flight, 'Scheduled_Departure', 'INT'),
-(@STG_Flight, 'Departure_Time', 'INT'),
+(@STG_Flight, 'Scheduled_Departure', 'TIME'),
+(@STG_Flight, 'Departure_Time', 'TIME'),
 (@STG_Flight, 'Departure_Delay', 'INT'),
 (@STG_Flight, 'Taxi_Out', 'INT'),
-(@STG_Flight, 'Wheels_Off', 'INT'),
+(@STG_Flight, 'Wheels_Off', 'TIME'),
 (@STG_Flight, 'Scheduled_Time', 'INT'),
 (@STG_Flight, 'Elapsed_Time', 'INT'),
 (@STG_Flight, 'Air_Time', 'INT'),
-(@STG_Flight, 'Wheels_On', 'INT'),
+(@STG_Flight, 'Wheels_On', 'TIME'),
 (@STG_Flight, 'Taxi_In', 'INT'),
-(@STG_Flight, 'Scheduled_Arrival', 'INT'),
-(@STG_Flight, 'Arrival_Time', 'INT'),
+(@STG_Flight, 'Scheduled_Arrival', 'TIME'),
+(@STG_Flight, 'Arrival_Time', 'TIME'),
 (@STG_Flight, 'Arrival_Delay', 'INT'),
 (@STG_Flight, 'Diverted', 'BIT'),
 (@STG_Flight, 'Cancelled', 'BIT'),
@@ -103,6 +110,53 @@ VALUES
 (@STG_Flight, 'Late_Aircraft_Delay', 'INT'),
 (@STG_Flight, 'Weather_Delay', 'INT'),
 (@STG_Flight, 'Cancellation_Reason', 'CHAR(1)');
+
+---------------------------------------------------------
+-- STAGE: AirportCodeMapping
+---------------------------------------------------------
+INSERT INTO ds_column (table_key, column_name, data_type)
+VALUES
+(@STG_AirportCodeMapping, 'DOT_Code', 'VARCHAR(5)'),
+(@STG_AirportCodeMapping, 'IATA_CODE', 'VARCHAR(3)');
+
+
+---------------------------------------------------------
+-- STAGE: Flight_DOT
+---------------------------------------------------------
+INSERT INTO ds_column (table_key, column_name, data_type)
+VALUES
+(@STG_Flight_DOT, 'Air_System_Delay_Fix', 'INT'),
+(@STG_Flight_DOT, 'Air_Time_Fix', 'INT'),
+(@STG_Flight_DOT, 'Airline_Delay_Fix', 'INT'),
+(@STG_Flight_DOT, 'Airline_Fix', 'VARCHAR(2)'),
+(@STG_Flight_DOT, 'Arrival_Delay_Fix', 'INT'),
+(@STG_Flight_DOT, 'Arrival_Time_Fix', 'DATETIME'), 
+(@STG_Flight_DOT, 'Cancellation_Reason_Fix', 'VARCHAR(1)'),
+(@STG_Flight_DOT, 'Cancelled_Fix', 'BIT'),
+(@STG_Flight_DOT, 'DAY_Fix', 'INT'),
+(@STG_Flight_DOT, 'DAY_OF_WEEK_Fix', 'INT'),
+(@STG_Flight_DOT, 'Departure_Delay_Fix', 'INT'),
+(@STG_Flight_DOT, 'Departure_Time_Fix', 'DATETIME'), 
+(@STG_Flight_DOT, 'Destination_Airport_Fix', 'VARCHAR(5)'),
+(@STG_Flight_DOT, 'DISTANCE_Fix', 'INT'),
+(@STG_Flight_DOT, 'DIVERTED_Fix', 'BIT'),
+(@STG_Flight_DOT, 'Elapsed_Time_Fix', 'INT'),
+(@STG_Flight_DOT, 'FLIGHT_NUMBER_Fix', 'INT'),
+(@STG_Flight_DOT, 'Late_Aircraft_Delay_Fix', 'INT'),
+(@STG_Flight_DOT, 'MONTH_Fix', 'INT'),
+(@STG_Flight_DOT, 'Origin_Airport_Fix', 'VARCHAR(5)'),
+(@STG_Flight_DOT, 'Scheduled_Arrival_Fix', 'DATETIME'), 
+(@STG_Flight_DOT, 'Scheduled_Departure_Fix', 'DATETIME'), 
+(@STG_Flight_DOT, 'Scheduled_Time_Fix', 'INT'),
+(@STG_Flight_DOT, 'Security_Delay_Fix', 'INT'),
+(@STG_Flight_DOT, 'Tail_Number_Fix', 'VARCHAR(20)'),
+(@STG_Flight_DOT, 'Taxi_In_Fix', 'INT'),
+(@STG_Flight_DOT, 'Taxi_Out_Fix', 'INT'),
+(@STG_Flight_DOT, 'Weather_Delay_Fix', 'INT'),
+(@STG_Flight_DOT, 'Wheels_Off_Fix', 'DATETIME'), 
+(@STG_Flight_DOT, 'Wheels_On_Fix', 'DATETIME'), 
+(@STG_Flight_DOT, 'YEAR_Fix', 'INT');
+
 
 ---------------------------------------------------------
 -- NDS: Airline
@@ -221,31 +275,4 @@ VALUES
 ('DF_STG_FLIGHT_TO_NDS_DISTANCE', 'Load Flight distance', 'STAGE', 'NDS_Distance', 'Transform + Insert', 3, '2010-01-02 01:00:00', '2010-01-02 01:30:00');
 
 
----------------------------------------------------------
--- 6. event_type
----------------------------------------------------------
---INSERT INTO event_type (event_type)
---VALUES ('START'),('END'),('INFO'),('ERROR'),('ROW_COUNT');
 
-INSERT INTO event_type (event_type)
-VALUES 
-('Error'),
-('Load Stage Airline'),
-('Load Stage Airport'),
-('Load Stage Flight'),
-
-('Load NDS Airline'),
-('Load NDS Airport'),
-('Load NDS Reason'),
-('Load NDS Time'),
-('Load NDS Distance'),
-('Load NDS Flight');
-
------------------------------------------------------------
----- 7. event_log
------------------------------------------------------------
---INSERT INTO event_log (event_type, timestamp, object, rows, note, data_flow)
---VALUES
---(1, GETDATE(), 1, NULL, 'Start load airline', 1),
---(5, GETDATE(), 1, 3, 'Loaded Airline rows', 1),
---(2, GETDATE(), 1, NULL, 'End load airline', 1);
