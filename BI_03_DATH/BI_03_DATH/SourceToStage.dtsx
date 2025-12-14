@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SourceToStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="189"
-  DTS:VersionGUID="{4435E90F-020D-4640-957F-74A797CEAA1F}">
+  DTS:VersionBuild="191"
+  DTS:VersionGUID="{C311F62D-B051-4185-AA6A-C3CC94456F25}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1420,7 +1420,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -14959,7 +14959,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -14978,7 +14978,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -14997,7 +14997,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_Airline"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15075,7 +15075,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_Airlport"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15113,7 +15113,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15132,7 +15132,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate table STG_Flight_DOT"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
