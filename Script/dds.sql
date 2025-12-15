@@ -4,6 +4,15 @@ GO
 USE DDS_DATH;
 GO
 
+DROP TABLE IF EXISTS FACT_FLIGHT;
+
+DROP TABLE IF EXISTS DIM_TIME_OF_DAY;
+DROP TABLE IF EXISTS DIM_REASON;
+DROP TABLE IF EXISTS DIM_AIRPORT;
+DROP TABLE IF EXISTS DIM_AIRLINE;
+DROP TABLE IF EXISTS DIM_DATE;
+GO
+
 -- Bảng Dim_Date
 -- Phân tích theo ngày / tháng / quý / năm / mùa / cuối tuần
 
@@ -56,7 +65,7 @@ CREATE TABLE DIM_AIRPORT (
 -- Phục vụ: tỉ lệ chuyến bay bị huỷ theo nguyên nhân
 
 CREATE TABLE DIM_REASON (
-    Reason_Key INT IDENTITY(1,1),
+    Reason_Key INT IDENTITY(1,1) PRIMARY KEY,
 	Reason_Code CHAR(1),
 	Reason_Description NVARCHAR(255) NOT NULL,
 	CREATED_DATE DATETIME DEFAULT GETDATE(),
@@ -88,77 +97,41 @@ CREATE TABLE FACT_FLIGHT (
 
 	-- DEGENERATE DIMENSIONS
 	Flight_Number INT,
-	Tail_Number VARCHAR(20),
 
 	-- MEASURES (FACTS)
 	Flight_Count INT NOT NULL DEFAULT 1, -- Luôn = 1, dùng để đếm số chuyến bay
 	Dep_Delay_Minutes INT, -- Thời gian trễ lúc khởi hành
 	Arr_Delay_Minutes INT, -- Thời gian trễ lúc đến nơi
-	Taxi_Out INT, -- Thời gian lăn bánh ra
-	Taxi_In INT, -- Thời gian lăn bánh vào
-	Air_Time INT, -- Thời gian bay trên không
+	--Taxi_Out INT, -- Thời gian lăn bánh ra
+	--Taxi_In INT, -- Thời gian lăn bánh vào
+	--Air_Time INT, -- Thời gian bay trên không
       
     -- KPI FLAGS (0 / 1)
 	Is_Cancelled INT NOT NULL, -- 1: chuyến bị hủy
 	Is_Diverted INT NOT NULL, -- 1: chuyển hướng
 	Is_OTP INT NOT NULL, -- 1: Arr_Delay <= 15 phút
+
     -- DELAY BREAKDOWN
 	Air_System_Delay INT NOT NULL DEFAULT 0,
 	Security_Delay INT NOT NULL DEFAULT 0,
 	Airline_Delay INT NOT NULL DEFAULT 0,
-
 	Late_Aircraft_Delay INT NOT NULL DEFAULT 0,
 	Weather_Delay INT NOT NULL DEFAULT 0,
+
 	CREATED_DATE DATETIME DEFAULT GETDATE(),
-	UPDATED_DATE DATETIME DEFAULT GETDATE()
+	UPDATED_DATE DATETIME DEFAULT GETDATE(),
+
+	CONSTRAINT FK_Fact_Date FOREIGN KEY (Date_Key) REFERENCES DIM_DATE(Date_Key),
+	CONSTRAINT FK_Fact_Airline FOREIGN KEY (Airline_Key) REFERENCES DIM_AIRLINE(Airline_Key),
+	CONSTRAINT FK_Fact_OriginAirport FOREIGN KEY (Origin_Airport_Key) REFERENCES DIM_AIRPORT(Airport_Key),
+	CONSTRAINT FK_Fact_DestAirport FOREIGN KEY (Dest_Airport_Key) REFERENCES DIM_AIRPORT(Airport_Key),
+	CONSTRAINT FK_Fact_Reason FOREIGN KEY (Reason_Key) REFERENCES DIM_REASON(Reason_Key),
+	CONSTRAINT FK_Fact_TimeOfDay FOREIGN KEY (Time_Of_Day_Key) REFERENCES DIM_TIME_OF_DAY(Time_Of_Day_Key)
 );
 
-USE DDS_DATH;
-GO
 
--- ---------------------------------------------------------
--- BƯỚC 1: Sửa lỗi thiếu Primary Key ở bảng DIM_REASON
--- (Bắt buộc phải chạy câu này trước khi tạo Foreign Key)
--- ---------------------------------------------------------
-ALTER TABLE DIM_REASON
-ADD CONSTRAINT PK_DIM_REASON PRIMARY KEY (Reason_Key);
-GO
 
--- ---------------------------------------------------------
--- BƯỚC 2: Thêm các Khóa ngoại cho bảng FACT_FLIGHT_PERFORMANCE
--- ---------------------------------------------------------
 
--- 1. Liên kết với Dim_Date
-ALTER TABLE FACT_FLIGHT
-ADD CONSTRAINT FK_Fact_Date
-FOREIGN KEY (Date_Key) REFERENCES DIM_DATE(Date_Key);
-
--- 2. Liên kết với Dim_Airline
-ALTER TABLE FACT_FLIGHT
-ADD CONSTRAINT FK_Fact_Airline
-FOREIGN KEY (Airline_Key) REFERENCES DIM_AIRLINE(Airline_Key);
-
--- 3. Liên kết với Dim_Airport (Điểm đi - Origin)
-ALTER TABLE FACT_FLIGHT
-ADD CONSTRAINT FK_Fact_OriginAirport
-FOREIGN KEY (Origin_Airport_Key) REFERENCES DIM_AIRPORT(Airport_Key);
-
--- 4. Liên kết với Dim_Airport (Điểm đến - Destination)
--- (Bảng Fact tham chiếu 2 lần tới bảng Dim_Airport đóng vai trò khác nhau)
-ALTER TABLE FACT_FLIGHT
-ADD CONSTRAINT FK_Fact_DestAirport
-FOREIGN KEY (Dest_Airport_Key) REFERENCES DIM_AIRPORT(Airport_Key);
-
--- 5. Liên kết với Dim_Reason
-ALTER TABLE FACT_FLIGHT
-ADD CONSTRAINT FK_Fact_Reason
-FOREIGN KEY (Reason_Key) REFERENCES DIM_REASON(Reason_Key);
-
--- 6. Liên kết với Dim_Time_Of_Day
-ALTER TABLE FACT_FLIGHT
-ADD CONSTRAINT FK_Fact_TimeOfDay
-FOREIGN KEY (Time_Of_Day_Key) REFERENCES DIM_TIME_OF_DAY(Time_Of_Day_Key);
-GO
 
 USE DDS_DATH;
 GO
@@ -216,13 +189,6 @@ SELECT
 FROM Date_CTE
 OPTION (MAXRECURSION 0);
 
-select * from DIM_DATE;
-
-Select * from DIM_AIRLINE;
-Select * from DIM_AIRPORT;
-Select * from DIM_REASON;
-select * from FACT_FLIGHT;
-
 USE DDS_DATH;
 GO
 
@@ -257,3 +223,11 @@ END;
 
 INSERT INTO DIM_REASON (Reason_Code, Reason_Description, CREATED_DATE, UPDATED_DATE)
 VALUES ('N', 'Not Cancelled', GETDATE(), GETDATE());
+
+
+select * from DIM_DATE;
+
+Select * from DIM_AIRLINE;
+Select * from DIM_AIRPORT;
+Select * from DIM_REASON;
+select * from FACT_FLIGHT;

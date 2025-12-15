@@ -39,18 +39,18 @@ CREATE TABLE STG_Flight (
     Origin_Airport VARCHAR(5), -- từ 3 sang 5
     Destination_Airport VARCHAR(5), -- từ 3 sang 5
 	Distance Int,
-    Scheduled_Departure TIME, -- time
-    Departure_Time TIME, -- time
+    Scheduled_Departure INT, -- time
+    Departure_Time INT, -- time
     Departure_Delay INT, 
     Taxi_Out INT,
-    Wheels_Off TIME, -- time
+    Wheels_Off INT, -- time
     Scheduled_Time INT,
     Elapsed_Time INT,
     Air_Time INT,
-    Wheels_On TIME, -- time
+    Wheels_On INT, -- time
     Taxi_In INT,
-    Scheduled_Arrival TIME, -- time
-    Arrival_Time TIME, -- time
+    Scheduled_Arrival INT, -- time
+    Arrival_Time INT, -- time
     Arrival_Delay INT,
     Diverted BIT,
     Cancelled BIT,
@@ -77,13 +77,13 @@ CREATE TABLE [STG_Flight_DOT] (
     [Airline_Delay_Fix] int,
     [Airline_Fix] varchar(2),
     [Arrival_Delay_Fix] int,
-    [Arrival_Time_Fix] datetime,
+    [Arrival_Time_Fix] INT,
     [Cancellation_Reason_Fix] varchar(1),
     [Cancelled_Fix] bit,
     [DAY_Fix] int,
     [DAY_OF_WEEK_Fix] int,
     [Departure_Delay_Fix] int,
-    [Departure_Time_Fix] datetime,
+    [Departure_Time_Fix] INT,
     [Destination_Airport_Fix] varchar(5),
     [DISTANCE_Fix] int,
     [DIVERTED_Fix] bit,
@@ -92,16 +92,16 @@ CREATE TABLE [STG_Flight_DOT] (
     [Late_Aircraft_Delay_Fix] int,
     [MONTH_Fix] int,
     [Origin_Airport_Fix] varchar(5),
-    [Scheduled_Arrival_Fix] datetime,
-    [Scheduled_Departure_Fix] datetime,
+    [Scheduled_Arrival_Fix] INT,
+    [Scheduled_Departure_Fix] INT,
     [Scheduled_Time_Fix] int,
     [Security_Delay_Fix] int,
     [Tail_Number_Fix] varchar(20),
     [Taxi_In_Fix] int,
     [Taxi_Out_Fix] int,
     [Weather_Delay_Fix] int,
-    [Wheels_Off_Fix] datetime,
-    [Wheels_On_Fix] datetime,
+    [Wheels_Off_Fix] INT,
+    [Wheels_On_Fix] INT,
     [YEAR_Fix] int
 )
 

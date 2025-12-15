@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="dc885d31-14e6-48a7-a2ee-5683c9b6df4d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1173d471-3fab-4380-923d-fac539032000" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>DIM TIME OF DAY</ID>
   <Name>DIM TIME OF DAY</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1990" scrolltop="-3387" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7895" y="9440" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1990" scrolltop="-5588" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7895" y="13250" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
@@ -51,7 +51,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-3387</Value>
+      <Value>-5588</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -76,11 +76,17 @@
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
+            <Shape Id="Hour" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hour" />
+              </Attributes>
+              <Position x="223" y="20" />
+            </Shape>
             <Shape Id="Time Of Day Name" Expanded="false">
               <Attributes>
                 <Attribute Id="Time Of Day Name" />
               </Attributes>
-              <Position x="223" y="20" />
+              <Position x="427" y="20" />
             </Shape>
           </Shapes>
         </DiagramLayout>
@@ -89,38 +95,61 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="e18a2d3f-7427-4aab-be67-43a39036f37e">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ec4cfc27-042b-4165-8c7f-87bbaba871ed">
     <DataSourceViewID>DDS DATH</DataSourceViewID>
   </Source>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="8ad1b4e9-8ffd-44b1-88aa-c4d1803864c0">
+  <ErrorConfiguration dwd:design-time-name="21e07aba-5bf1-4fa3-8f75-24b1eb1f92d5">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="cacb9438-ae4a-4911-8b60-4298d190ae02">
+    <Attribute dwd:design-time-name="1cbae460-8a4b-4930-86c4-a286936becce">
       <ID>Time Of Day Key</ID>
       <Name>Time Of Day Key</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="843b0665-f147-4121-8da3-d19a0e20d8f8">
+        <KeyColumn dwd:design-time-name="a30985b3-b1e8-4600-9f64-66f0ce5a9204">
           <DataType>Integer</DataType>
           <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a93c57cc-d978-4ccd-b71c-9ffc74123bea">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3930c176-e97b-4c88-ae8b-7889e84b05a2">
             <TableID>dbo_DIM_TIME_OF_DAY</TableID>
             <ColumnID>Time_Of_Day_Key</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="388bdf50-662e-450d-b949-272c9513f816">
+        <AttributeRelationship dwd:design-time-name="9282b742-639d-45b7-86d2-1703ff1c31d6">
           <AttributeID>Hour</AttributeID>
           <Name>Hour</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="dafffe7e-6b31-4a41-8bb6-8cc7d242cffd">
+        <AttributeRelationship dwd:design-time-name="4ccb25c8-6ab3-49fa-99ce-883c9168a6d5">
+          <AttributeID>Sort Order</AttributeID>
+          <Name>Sort Order</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8ea6e79e-e1d5-4d56-bb5e-c0a720a2d752">
+      <ID>Hour</ID>
+      <Name>Hour</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ebb93268-dada-4ac5-86cb-8fa2a7e2bc4f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bed38556-22b7-4cda-a229-7713ed92e96d">
+            <TableID>dbo_DIM_TIME_OF_DAY</TableID>
+            <ColumnID>Hour</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1ac4842d-0b79-42ca-b6bf-031bea3bd34d">
           <AttributeID>Time Of Day Name</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Time Of Day Name</Name>
         </AttributeRelationship>
       </AttributeRelationships>
@@ -128,37 +157,64 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="aef68072-c112-4341-b8ab-b30c5f461113">
-      <ID>Hour</ID>
-      <Name>Hour</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="f2bdabc5-ae6a-4342-a5cf-5b5b958eb23e">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="018f573f-1a26-4230-b6da-1b2f8eed4957">
-            <TableID>dbo_DIM_TIME_OF_DAY</TableID>
-            <ColumnID>Hour</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="4eea6e11-c23a-411d-bdbf-4fb9143f17fb">
+    <Attribute dwd:design-time-name="2b951c27-174a-4d01-b807-509a50d49371">
       <ID>Time Of Day Name</ID>
       <Name>Time Of Day Name</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="37887839-d08a-45ab-b72a-e6ed411f0635">
-          <DataType>WChar</DataType>
-          <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="0d1cd211-50e1-4767-81cd-5d96c5f298c2">
+        <KeyColumn dwd:design-time-name="74721aab-78b2-4629-a417-488bf6e465cd">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="18aef9e5-a649-4ca1-b560-1b4ece037578">
             <TableID>dbo_DIM_TIME_OF_DAY</TableID>
-            <ColumnID>Time_Of_Day_Name</ColumnID>
+            <ColumnID>Sort_Order</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="5b282661-45b1-4766-8d0d-af589a7d359b">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7bfdc563-eb26-4ba5-9805-fd078579ee17">
+          <TableID>dbo_DIM_TIME_OF_DAY</TableID>
+          <ColumnID>Time_Of_Day_Name</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a6927f46-7083-4ecf-b57d-682dab5ceb44">
+      <ID>Sort Order</ID>
+      <Name>Sort Order</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fc151ffb-ebeb-4bf2-b292-86c97babf669">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00561349-ff17-490e-8f3f-938ec2832051">
+            <TableID>dbo_DIM_TIME_OF_DAY</TableID>
+            <ColumnID>Sort_Order</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="0ac9b540-1419-41d9-b906-a694f6766f00">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="d7a757bb-db1e-41fd-82a2-0fa5a2da90a5">
+          <ID>Time Of Day Name</ID>
+          <Name>Time Of Day Name</Name>
+          <SourceAttributeID>Time Of Day Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="a5169e51-9c51-448b-b2c4-013a4b7e600b">
+          <ID>Hour</ID>
+          <Name>Hour</Name>
+          <SourceAttributeID>Hour</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>

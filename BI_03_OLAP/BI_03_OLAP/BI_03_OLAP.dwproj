@@ -60,7 +60,7 @@
           <ConfigurationSetting>
             <Id>DDS DATH</Id>
             <Name>DDS DATH</Name>
-            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=DESKTOP-B1OU3RF\SQL2022;Integrated Security=SSPI;Initial Catalog=DDS_DATH</Value>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=localhost;Integrated Security=SSPI;Initial Catalog=DDS_DATH</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

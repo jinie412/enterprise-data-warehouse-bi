@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-B1OU3RF</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlqLu0uxjzEC6BPX4S7H1/QAAAAACAAAAAAAQZgAAAAEAACAAAAC2uqDeKv3w+Zb3RJIwz74wRrlQIRkPy+Nj1RLyywHCsQAAAAAOgAAAAAIAACAAAACIGGq1dEa79kh+gaRT20S43MCyY/6P4a2ZobYXtQ6RGpAAAAAf9LJ/rdxgjHmTUmQxlsFk4NoX93bh9fvQHXMp5eLCPGLLzdOqKd7OlSVSbLX3goRYTBVZ9v62DFxI7qEDxhSqKSmF8a1vyu2187uw08p8ZwkDcLBMba9n02QjvvU5UKFvFq8mFstoHL8lHRx1/fYW+HCPa7uuLMIuRUW+GWu2Hkdx58nD+XzOSC8pgFV7RvBAAAAAnxItLRpZRKKHfb5CiNUqgGJ4LIkMr1ZVrU5pnXMHKBHK/NyUzm1kBIygrpxWVoJ74IN8lm0Z1XDQ5RYFCK+9Mg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlqLu0uxjzEC6BPX4S7H1/QAAAAACAAAAAAAQZgAAAAEAACAAAABlAGnPpjOr46nwt6WaUTrIEiI5msmRGs5/eSriKI5j8QAAAAAOgAAAAAIAACAAAAAdAN6+9iTEMrvELOKInGfQ6PLPRMBkmEOgwN+0x1CQR5AAAABwIvA3WfH1auYtWKCHFAdXNMrBsfv6HDMZDVKyJGELQYmukiww7gmpOiIVMvsXOgSBgLV90IsS5M4nabJa2RciH/2nCATEP3Tpkj21jCGy50B9hw4Efm1OGwq00rtcXt44DzxaHD7e7aaRDabbN7BSz1XsVqsvyVfXNWasPTA1HlPGPR9pbIdwPAehU8PMS3hAAAAADVnSGoFZeotH3WXKNLTuFn59xc5YCRt1DvElkrQ4aubUqH6iXYh6CIZuuIw1fCPMdS/X5jbV9AH1ls+tUjxz9w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -524,10 +524,10 @@
                 <SSIS:Property SSIS:Name="Name">SourceToStage</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">204</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">211</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{17132D3A-8290-4D72-BB9F-8D27560D2C50}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{48807C0C-327A-4955-9734-66A484363C96}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -605,7 +605,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\STPK1N4\BI\DATH\datasrc\airport_code_mapping.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\1.Major\1.BI\DATH\datasrc\airport_code_mapping.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -802,7 +802,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\STPK1N4\BI\DATH\datasrc\flights_batch_1.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\1.Major\1.BI\DATH\datasrc\flights_batch_1.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -999,7 +999,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\STPK1N4\BI\DATH\datasrc\flights_batch_2.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\1.Major\1.BI\DATH\datasrc\flights_batch_2.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1196,7 +1196,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\STPK1N4\BI\DATH\datasrc\flights_batch_3.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\1.Major\1.BI\DATH\datasrc\flights_batch_3.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1689,7 +1689,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\STPK1N4\BI\DATH\datasrc\airlines.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\1.Major\1.BI\DATH\datasrc\airlines.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1886,7 +1886,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\STPK1N4\BI\DATH\datasrc\airports.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\1.Major\1.BI\DATH\datasrc\airports.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2020,10 +2020,10 @@
                 <SSIS:Property SSIS:Name="Name">NDSToDDS</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">122</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">126</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{10F7DD0B-6BAA-4D05-8925-E191E8715671}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C2B3B367-BF05-41F7-A666-BD5EC818CE31}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

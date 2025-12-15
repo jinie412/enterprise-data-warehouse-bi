@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SourceToStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="205"
-  DTS:VersionGUID="{FCB36524-7E21-4375-87AC-A26901F7BC25}">
+  DTS:VersionBuild="213"
+  DTS:VersionGUID="{CE5B954F-F353-4A67-9E7F-35F279289B40}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\STPK1N4\BI\DATH\datasrc\airport_code_mapping.csv">
+          DTS:ConnectionString="D:\1.Major\1.BI\DATH\datasrc\airport_code_mapping.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="IATA_CODE"
-              DTS:DTSID="{C1882C02-F8B9-4DA9-AC7C-C2E1BEB43F2C}"
+              DTS:DTSID="{5958D000-F091-4F65-B039-E4F4C80F8256}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DOT_Code"
-              DTS:DTSID="{DB19B6BA-9045-42B5-BD81-1E3C0A5832C0}"
+              DTS:DTSID="{22FA9339-2D0A-45AA-99CC-6675091CB053}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Cities"
-              DTS:DTSID="{592BBA92-4981-453A-BC19-E56357B9B473}"
+              DTS:DTSID="{AFB2E2BE-1175-4EA3-B9B7-ECBA2385DD46}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="State"
-              DTS:DTSID="{7B95A817-97C6-41CA-9AB9-CADC57C03E21}"
+              DTS:DTSID="{87BE0388-D507-45B4-94F1-7BB601338870}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DOT_Airport_Name"
-              DTS:DTSID="{DA22C314-5230-493B-BCD7-06C7B32E344D}"
+              DTS:DTSID="{077E45A7-FFCE-45AF-B3C4-5CBA3C966343}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="IATA_Airport_Name"
-              DTS:DTSID="{36162DCF-3927-4365-83FB-1E14A3FC62E7}"
+              DTS:DTSID="{4EFEFE02-A879-4843-81E7-4223EE1B660C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -104,7 +104,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\STPK1N4\BI\DATH\datasrc\flights_batch_1.csv">
+          DTS:ConnectionString="D:\1.Major\1.BI\DATH\datasrc\flights_batch_1.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -113,7 +113,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="﻿YEAR"
-              DTS:DTSID="{CA3BE27D-3513-4DC6-8E6A-9B8A8C16C3CF}"
+              DTS:DTSID="{C0CE010C-D625-40AA-85D7-51C24C3891C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -122,7 +122,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MONTH"
-              DTS:DTSID="{63198A26-CA77-4143-8294-C7F28D072821}"
+              DTS:DTSID="{76A150C9-F5F8-482C-9F2E-38BDABD8DFA8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -131,7 +131,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DAY"
-              DTS:DTSID="{76F9BAD1-2681-495C-AB41-EF308A9D6BB8}"
+              DTS:DTSID="{4AA06FFB-BEDE-404A-99CB-D76235B252EC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -140,7 +140,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DAY_OF_WEEK"
-              DTS:DTSID="{D4DB0726-6994-4DF2-A280-34516A9C9B3F}"
+              DTS:DTSID="{9EDC5283-E589-4AD8-8439-E95A8FD49446}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -149,7 +149,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIRLINE"
-              DTS:DTSID="{04547715-B2F1-43D5-836E-ECB6241D8886}"
+              DTS:DTSID="{35B7AFF9-D091-409A-849C-E1DBD55339A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -158,7 +158,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FLIGHT_NUMBER"
-              DTS:DTSID="{C155A56C-FF6D-4035-82F8-1278C3DEF5CA}"
+              DTS:DTSID="{434E6741-2F64-4B48-88B2-EB32D954E98A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -167,7 +167,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TAIL_NUMBER"
-              DTS:DTSID="{608777E1-4E3B-4CB8-BF8E-C124A69D001E}"
+              DTS:DTSID="{C8F4CA59-9217-470E-9B59-713009C1F64F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -176,7 +176,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ORIGIN_AIRPORT"
-              DTS:DTSID="{DFF0A115-C8F6-4E64-9536-378270D41F1C}"
+              DTS:DTSID="{447B5DB8-CD50-44EE-A832-16FC945BA0BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -185,7 +185,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DESTINATION_AIRPORT"
-              DTS:DTSID="{20957565-24C3-42AF-92C2-D2A7A88CA669}"
+              DTS:DTSID="{280A05F4-EE1B-40B8-8023-B781AA206831}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -194,7 +194,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SCHEDULED_DEPARTURE"
-              DTS:DTSID="{6A0BF24B-E664-48AF-B37B-C9B1EFD81E0D}"
+              DTS:DTSID="{05EC3B90-3878-40FD-BB22-7B0EDB62E503}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -203,7 +203,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DEPARTURE_TIME"
-              DTS:DTSID="{E835C47E-94A3-41C0-88D3-BCB206FEDF52}"
+              DTS:DTSID="{4B122AC4-C173-44E5-A576-0F4FE7BFDEA6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -212,7 +212,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DEPARTURE_DELAY"
-              DTS:DTSID="{C3F79960-9FA9-4612-9E75-D577496E30CD}"
+              DTS:DTSID="{DAE03E4E-359F-4654-9F12-9E1A45ADD88A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -221,7 +221,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TAXI_OUT"
-              DTS:DTSID="{3F60F323-F700-4F79-983C-0A3B6B201B00}"
+              DTS:DTSID="{9E2AA21F-99B4-403D-B744-788A858A550B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -230,7 +230,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WHEELS_OFF"
-              DTS:DTSID="{51ACF521-B88C-460C-90A4-4504C8BE6634}"
+              DTS:DTSID="{6C58A0C4-CC31-418F-A08C-8A8D69E4FB9C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -239,7 +239,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SCHEDULED_TIME"
-              DTS:DTSID="{BD0E4CC5-F510-4365-8D43-92DAE4FD20EA}"
+              DTS:DTSID="{670B5196-BAC3-4475-A660-840650D21F08}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -248,7 +248,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ELAPSED_TIME"
-              DTS:DTSID="{713D8D83-A2D1-425F-9274-EB890790A326}"
+              DTS:DTSID="{022B8A50-FAFC-4D82-A1DE-9E8F36FE0600}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -257,7 +257,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIR_TIME"
-              DTS:DTSID="{6348CCB2-4C56-450E-AA44-898FA1C779BF}"
+              DTS:DTSID="{2D0092A9-DC31-4A0C-BC6E-1345092D22F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -266,7 +266,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DISTANCE"
-              DTS:DTSID="{C522B992-2CB6-4BE4-828F-41DB0EAAA8D3}"
+              DTS:DTSID="{8384A3A9-92EA-45BC-971E-63E04A1047BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -275,7 +275,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WHEELS_ON"
-              DTS:DTSID="{5C54A0C3-EDA3-4D28-9E1A-3E02058BA86C}"
+              DTS:DTSID="{244D7369-8537-46EC-841C-68E6DF0D3015}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -284,7 +284,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TAXI_IN"
-              DTS:DTSID="{95AECB58-C253-47AC-9E27-6E5B0CA13338}"
+              DTS:DTSID="{20DE3982-B2A1-4198-BC0B-AC9431492B98}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -293,7 +293,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SCHEDULED_ARRIVAL"
-              DTS:DTSID="{B67EF1A2-3ACF-4B89-8E7C-43370C75A401}"
+              DTS:DTSID="{9F8FFE5D-FD9D-48C5-8D19-2FA6011D4F46}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -302,7 +302,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ARRIVAL_TIME"
-              DTS:DTSID="{1896244B-A7C2-4303-93A8-D207FF53510D}"
+              DTS:DTSID="{047E670F-2E2D-454B-B696-E21A7B46F686}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -311,7 +311,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ARRIVAL_DELAY"
-              DTS:DTSID="{3A712745-19AA-4B49-BBE7-A53EAC0CBBDC}"
+              DTS:DTSID="{F9362110-DD97-42A8-9A18-C896B5F1FF5D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -320,7 +320,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DIVERTED"
-              DTS:DTSID="{527D00C1-38C6-444B-8C8A-14ABEDAEE179}"
+              DTS:DTSID="{25C0A706-C8A2-4660-A5DD-30571C8427CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -329,7 +329,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CANCELLED"
-              DTS:DTSID="{B0EA8152-586B-45A2-934D-620910241754}"
+              DTS:DTSID="{E4D5B297-4A5A-4228-B9F1-7B63E5E2AA72}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -338,7 +338,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CANCELLATION_REASON"
-              DTS:DTSID="{3F4E7C98-07C3-447D-95CD-67A8A9AB8AD5}"
+              DTS:DTSID="{99911609-736A-423D-9834-BD3006D63A98}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -347,7 +347,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIR_SYSTEM_DELAY"
-              DTS:DTSID="{1DB454ED-D4C6-4E89-B240-27A74C7B502B}"
+              DTS:DTSID="{4CA55ACC-3F72-43F4-A6EE-FDED62AEF004}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -356,7 +356,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SECURITY_DELAY"
-              DTS:DTSID="{CFD88E89-D80C-40BA-B036-B43203B6EC80}"
+              DTS:DTSID="{5F9F3FF9-BCA2-4409-A6E5-D636D27A52D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -365,7 +365,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIRLINE_DELAY"
-              DTS:DTSID="{BF21B23B-1699-4230-9F19-E825279DE895}"
+              DTS:DTSID="{AD54013F-F09B-4D95-8ABF-17241AD478E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -374,7 +374,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LATE_AIRCRAFT_DELAY"
-              DTS:DTSID="{D4746005-F16F-4CA5-991B-A9867E2BB12B}"
+              DTS:DTSID="{24E31BA8-EF8B-48A0-AE79-DF54254F9187}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -383,7 +383,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WEATHER_DELAY"
-              DTS:DTSID="{9607702C-BB62-4445-A64F-40814B14232E}"
+              DTS:DTSID="{BD2BEA82-3936-4AA6-BFCC-99456603B1D6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -392,7 +392,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="created_at"
-              DTS:DTSID="{7D3F96D3-8DEC-4BC7-B4C3-6A680CC64D7B}"
+              DTS:DTSID="{0CCECB07-E4F8-4644-A6AF-AA06917C6755}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -401,7 +401,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="modified_at"
-              DTS:DTSID="{0F824D98-5F21-445F-B177-C67C95252322}"
+              DTS:DTSID="{781EC26F-2159-4C9C-8A7C-A87BBD86A856}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -421,7 +421,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\STPK1N4\BI\DATH\datasrc\flights_batch_2.csv">
+          DTS:ConnectionString="D:\1.Major\1.BI\DATH\datasrc\flights_batch_2.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -430,7 +430,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="YEAR"
-              DTS:DTSID="{0316DE27-3035-4A80-9449-8E11D96546D6}"
+              DTS:DTSID="{0F3B768F-A2BB-4D08-A45F-C804253DD600}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -439,7 +439,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MONTH"
-              DTS:DTSID="{B280C2D8-6D20-4E2A-911C-ADA27DB57E59}"
+              DTS:DTSID="{8391F4FD-5A18-4A85-9789-216C267173E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -448,7 +448,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DAY"
-              DTS:DTSID="{0D88CC3A-ECC4-4F5B-B066-B80C3C91026F}"
+              DTS:DTSID="{9283E682-9EF6-42BB-973F-286DDEC5FDCD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -457,7 +457,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DAY_OF_WEEK"
-              DTS:DTSID="{48FCCF28-2F98-4F17-9D05-DCB0EA7463CC}"
+              DTS:DTSID="{99DF251E-AE1E-4E78-82A4-FCA19A37FCC6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -466,7 +466,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIRLINE"
-              DTS:DTSID="{13A180A5-C05A-42F3-8F77-240DC081E3BD}"
+              DTS:DTSID="{5830B373-F4EB-43CF-994B-B25EE6B88D69}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -475,7 +475,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FLIGHT_NUMBER"
-              DTS:DTSID="{12BEB5EA-6469-4AD7-87E9-33602FFDA572}"
+              DTS:DTSID="{F1B5ECBB-C8DE-4E27-8C71-CB77B747D669}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -484,7 +484,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TAIL_NUMBER"
-              DTS:DTSID="{3A774A81-34D7-41BA-AAA5-6468B814EBDE}"
+              DTS:DTSID="{0F5A41C0-BA83-4A42-A57F-0D9A49D4D2F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -493,7 +493,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ORIGIN_AIRPORT"
-              DTS:DTSID="{E1C770C7-80FA-41E3-A93F-93DD24620827}"
+              DTS:DTSID="{4C617AB7-E1C5-4995-8E44-E58067B55085}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -502,7 +502,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DESTINATION_AIRPORT"
-              DTS:DTSID="{ED71CB8E-A73A-4B44-A2AD-42574D54868E}"
+              DTS:DTSID="{F67BA2BE-7DB2-4738-A64C-22AE3B1796F2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -511,7 +511,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SCHEDULED_DEPARTURE"
-              DTS:DTSID="{42ABE600-E131-4E7F-8D1D-C29C8D3C7167}"
+              DTS:DTSID="{9A6D1871-5148-4110-856A-487ACF4BCFDC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -520,7 +520,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DEPARTURE_TIME"
-              DTS:DTSID="{003473E7-EBF1-4A3F-A10A-396D6D8D063A}"
+              DTS:DTSID="{169AAB3A-8AFE-47E0-B931-8C11BC80FE53}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -529,7 +529,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DEPARTURE_DELAY"
-              DTS:DTSID="{6A840175-8AFF-4A88-877F-9493469F3E03}"
+              DTS:DTSID="{DA799FF9-F585-4511-B97C-A9051D0BC05B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -538,7 +538,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TAXI_OUT"
-              DTS:DTSID="{54D759CE-766B-483D-A1B0-44CC9A565E4F}"
+              DTS:DTSID="{3F8EA9E0-E0AE-482A-9387-8BF10D56B237}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -547,7 +547,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WHEELS_OFF"
-              DTS:DTSID="{81889C99-9815-49AA-A2B2-5044D2CF174E}"
+              DTS:DTSID="{835AEF9B-4CF5-4810-A079-6E070CEE7869}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -556,7 +556,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SCHEDULED_TIME"
-              DTS:DTSID="{F9705959-EECA-4909-8D6E-F5A0541F3485}"
+              DTS:DTSID="{C7448A81-9422-422E-AFFB-04D7AB868441}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -565,7 +565,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ELAPSED_TIME"
-              DTS:DTSID="{63351ADA-60F0-41AC-96AF-B9BDF23E29A6}"
+              DTS:DTSID="{4A10E456-9926-4623-B369-B9B660643E7F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -574,7 +574,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIR_TIME"
-              DTS:DTSID="{DB27A76F-982B-4FA4-AB81-F10716C5B907}"
+              DTS:DTSID="{2A3DCE7F-DD2E-41D8-8B76-981C32B3C97F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -583,7 +583,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DISTANCE"
-              DTS:DTSID="{5F3F8733-9FB5-4F70-98AA-13BF7A6864CC}"
+              DTS:DTSID="{6B277DA1-3DE6-4ECB-B0BB-83AED44D0956}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -592,7 +592,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WHEELS_ON"
-              DTS:DTSID="{70DEAF83-3E7C-4FAE-AEEB-1373F5D415F9}"
+              DTS:DTSID="{F0895565-653C-4B83-B778-A954FB568267}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -601,7 +601,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TAXI_IN"
-              DTS:DTSID="{D1C9A792-4DD1-4CD1-A00C-F1132002C492}"
+              DTS:DTSID="{7D9FD667-4516-4F43-8849-337C437A1E13}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -610,7 +610,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SCHEDULED_ARRIVAL"
-              DTS:DTSID="{2B7FCCC6-63CA-4F37-B0BC-522388E2DC96}"
+              DTS:DTSID="{F7A58A1D-1E41-4A2F-B52D-1386F9CDD94C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -619,7 +619,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ARRIVAL_TIME"
-              DTS:DTSID="{CA5D9E93-EBA4-49D0-B276-7EE024E26063}"
+              DTS:DTSID="{E55B9D85-04AB-499A-9F01-A7CF51B75EF1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -628,7 +628,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ARRIVAL_DELAY"
-              DTS:DTSID="{4717DAD3-F821-4777-9468-01C3F5AC43F1}"
+              DTS:DTSID="{3FF4157A-62A8-4E48-B836-BF4996A676D3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -637,7 +637,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DIVERTED"
-              DTS:DTSID="{8A05F9DC-4576-4D46-924E-6D271718D8CC}"
+              DTS:DTSID="{F75EA552-5E9E-4364-A02B-CBF6217DA893}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -646,7 +646,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CANCELLED"
-              DTS:DTSID="{EA18CA8C-0ACF-406B-AD0E-78ACFCB41C8D}"
+              DTS:DTSID="{7E46AD0E-5527-4214-B2F6-7FF285073517}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -655,7 +655,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CANCELLATION_REASON"
-              DTS:DTSID="{21C5F2C3-E646-4FDE-BD84-6570239F3443}"
+              DTS:DTSID="{8A8C0541-03DD-446A-A472-4A5F3686FF63}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -664,7 +664,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIR_SYSTEM_DELAY"
-              DTS:DTSID="{A3CD1C4A-EDED-4B50-B0C1-086D35DE7FDD}"
+              DTS:DTSID="{A8CB983C-6062-4383-AA8E-6704FD343630}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -673,7 +673,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SECURITY_DELAY"
-              DTS:DTSID="{6CE59649-FEB7-423F-92A7-8A8A00F52B5F}"
+              DTS:DTSID="{1D4150EB-4785-4ECE-A8B8-3028631D0B4B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -682,7 +682,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIRLINE_DELAY"
-              DTS:DTSID="{A38F0CCB-4FD4-44DD-8EB6-164C4626C978}"
+              DTS:DTSID="{798A0B0E-1C38-4508-8F60-0EBEB9F07689}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -691,7 +691,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LATE_AIRCRAFT_DELAY"
-              DTS:DTSID="{31D4CF5F-13BE-4FEB-925E-6A8E9FABBC2C}"
+              DTS:DTSID="{6ACDA90D-9293-420C-8286-8D2B7FE8871C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -700,7 +700,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WEATHER_DELAY"
-              DTS:DTSID="{FFFB1F8E-4636-46D4-88D3-C7586D4F77CF}"
+              DTS:DTSID="{96E1CEBA-C8E5-4A3C-AE2B-8BCCCFCC6A25}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -709,7 +709,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="created_at"
-              DTS:DTSID="{F3AFB0B8-8BF2-4136-B058-074597E92FCB}"
+              DTS:DTSID="{ABBF17C8-CB6E-49A5-98D7-BF9E4D7F4B93}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -718,7 +718,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="modified_at"
-              DTS:DTSID="{0A1747CC-EB84-48A3-88BD-CAA0D9A3E06C}"
+              DTS:DTSID="{3C0458A3-9F27-4747-97EF-FC00D208EC0B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -738,7 +738,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\STPK1N4\BI\DATH\datasrc\flights_batch_3.csv">
+          DTS:ConnectionString="D:\1.Major\1.BI\DATH\datasrc\flights_batch_3.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -747,7 +747,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="YEAR"
-              DTS:DTSID="{2F86E7B6-F31A-4643-B5BC-4972C96A20B1}"
+              DTS:DTSID="{B867B197-289E-4DDC-9793-9EBC405C727C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -756,7 +756,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MONTH"
-              DTS:DTSID="{546045F8-9B22-49FA-B45D-8E885091473B}"
+              DTS:DTSID="{B304A956-4CDF-4079-AD7D-ACCC227C4771}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -765,7 +765,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DAY"
-              DTS:DTSID="{061B6FBC-AA1A-4FF8-B39A-816FD9D7FA5C}"
+              DTS:DTSID="{619A0E6E-A564-4348-B648-064705B24163}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -774,7 +774,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DAY_OF_WEEK"
-              DTS:DTSID="{E0BF39B8-648B-4CC9-A788-A6F69E37E491}"
+              DTS:DTSID="{D90803C8-22EC-4B6B-B307-3B603A6066BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -783,7 +783,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIRLINE"
-              DTS:DTSID="{5F5D53D9-9887-4003-8B81-C43AB21AA186}"
+              DTS:DTSID="{FFABEA62-1FCA-4CF3-8583-837C20FBB48C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -792,7 +792,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FLIGHT_NUMBER"
-              DTS:DTSID="{46E1A24A-E94F-4F36-9728-EB27E9B5FE5D}"
+              DTS:DTSID="{B0C50E70-D1EA-43E2-9A5D-233912F450C4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -801,7 +801,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TAIL_NUMBER"
-              DTS:DTSID="{0D7B644B-D735-42EE-A2E5-91138ADEEBC7}"
+              DTS:DTSID="{E99D25F0-B993-49AC-8577-EFE2D092D104}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -810,7 +810,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ORIGIN_AIRPORT"
-              DTS:DTSID="{41099191-53A6-4540-9BC6-6958EE3435A4}"
+              DTS:DTSID="{B01B415E-B53B-4CBA-9875-4DD65F7C6A8B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -819,7 +819,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DESTINATION_AIRPORT"
-              DTS:DTSID="{38B878B8-4487-436C-855B-6115B9883008}"
+              DTS:DTSID="{03C0E86D-E7A5-4FDE-9356-F8375FE37E25}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -828,7 +828,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SCHEDULED_DEPARTURE"
-              DTS:DTSID="{C4E4C300-E40D-4BB7-A8A4-3A61D435C593}"
+              DTS:DTSID="{8DCFBE9E-74F7-4C11-A6E7-30188E15E748}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -837,7 +837,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DEPARTURE_TIME"
-              DTS:DTSID="{CE221FCA-46B8-4F6F-AEA7-AFE268B27364}"
+              DTS:DTSID="{E7645382-A3F1-4A28-8AB6-0F6A20071F66}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -846,7 +846,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DEPARTURE_DELAY"
-              DTS:DTSID="{F5948493-9C3A-491B-B1F1-31045687A617}"
+              DTS:DTSID="{80E849C0-02F9-43D7-9964-0C9E143A0A91}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -855,7 +855,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TAXI_OUT"
-              DTS:DTSID="{7265F108-BAC4-4BDD-B6DC-F9703F6CA6F2}"
+              DTS:DTSID="{73146594-93AB-4D2B-A01A-7E59A550AADE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -864,7 +864,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WHEELS_OFF"
-              DTS:DTSID="{E178A09E-2A46-4936-822B-4930F58E7561}"
+              DTS:DTSID="{14722A9A-8EA8-4A4F-A509-6FE26648BAE0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -873,7 +873,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SCHEDULED_TIME"
-              DTS:DTSID="{F0A239C2-C4C9-40F2-8DBC-47D7D8FAC190}"
+              DTS:DTSID="{13DAD256-493C-40DE-A9DE-E4BFA44DBFB0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -882,7 +882,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ELAPSED_TIME"
-              DTS:DTSID="{48AA646F-EC59-47AD-BD0D-FCFB714AC8F7}"
+              DTS:DTSID="{7ED39C32-9684-47C0-854D-DAE8E860DA82}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -891,7 +891,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIR_TIME"
-              DTS:DTSID="{80A8AD3B-7C6B-4876-9544-9CA968E22B8D}"
+              DTS:DTSID="{DC40B7CF-F018-4A0F-8A13-FB91ED1620D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -900,7 +900,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DISTANCE"
-              DTS:DTSID="{0F47295C-A637-40B6-80A4-AAC19B1DA014}"
+              DTS:DTSID="{79548C97-C910-4A6D-96CF-C9D0B1336F0E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -909,7 +909,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WHEELS_ON"
-              DTS:DTSID="{F0AD79DD-3F4E-4BF8-B1BF-AEB3680C4B62}"
+              DTS:DTSID="{3823DEE0-AD43-4B33-86A6-95FCEE0023DF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -918,7 +918,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TAXI_IN"
-              DTS:DTSID="{5D0300B6-C40B-479E-A091-EADCAD9EDF8F}"
+              DTS:DTSID="{35F714F4-516F-45F8-996B-CD372DF97CF2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -927,7 +927,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SCHEDULED_ARRIVAL"
-              DTS:DTSID="{14A46DA4-55DC-41D5-AEF0-59C53E7AA0CB}"
+              DTS:DTSID="{88959FBA-0CE9-4705-9010-9D436F53E973}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -936,7 +936,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ARRIVAL_TIME"
-              DTS:DTSID="{B4582201-7133-4AFA-B7A5-E7D82B3499A7}"
+              DTS:DTSID="{38021851-41B4-4895-9C8F-D732557E4F3E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -945,7 +945,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ARRIVAL_DELAY"
-              DTS:DTSID="{6DCD90D8-9C01-485E-8E6D-5738F6852837}"
+              DTS:DTSID="{B71FC0EF-94EB-43CE-870E-CE324CDDCACA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -954,7 +954,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DIVERTED"
-              DTS:DTSID="{E379B7E8-0D4A-4B78-BBB4-DB42903C0D54}"
+              DTS:DTSID="{57F4A72D-02EE-408A-8DBF-6E7B4F166280}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -963,7 +963,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CANCELLED"
-              DTS:DTSID="{CF0793E1-6524-4316-B8BC-25D59EF2E728}"
+              DTS:DTSID="{E1CB17E6-E7DE-431B-B4EE-5704B6B85EAD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -972,7 +972,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CANCELLATION_REASON"
-              DTS:DTSID="{8646D4FE-28E1-4CC9-8E65-E76E3D1851CB}"
+              DTS:DTSID="{53D39330-7FF6-4A8D-97A6-7007B8DF338A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -981,7 +981,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIR_SYSTEM_DELAY"
-              DTS:DTSID="{F0438728-F4DB-4C8F-A98D-8F0860C03A3A}"
+              DTS:DTSID="{051E9D32-8011-4925-9830-FAF995B3B69A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -990,7 +990,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SECURITY_DELAY"
-              DTS:DTSID="{7AABB566-F2B0-4ADC-9CF5-B4A2394F592C}"
+              DTS:DTSID="{7174EC77-3A1D-4D33-83F6-C52A6C27945F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -999,7 +999,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIRLINE_DELAY"
-              DTS:DTSID="{EA3BDEB0-6EFF-4738-BCCE-EDE00266D1CC}"
+              DTS:DTSID="{988695BD-2D67-442F-9227-9A601CFC9CC7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1008,7 +1008,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LATE_AIRCRAFT_DELAY"
-              DTS:DTSID="{B880C2F7-6DFD-4301-9EE4-A52E56E625BE}"
+              DTS:DTSID="{C504729E-D5B8-4C51-A512-A17140E62130}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1017,7 +1017,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WEATHER_DELAY"
-              DTS:DTSID="{9635BF84-A051-47D3-8FE7-BADB63DA7DA8}"
+              DTS:DTSID="{D6A7F70D-F88F-4DE3-A3BF-975AC1A5DF99}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1026,7 +1026,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="created_at"
-              DTS:DTSID="{EBFC38EC-B15C-499B-9048-E0FD6404D0E5}"
+              DTS:DTSID="{84E39488-C2F1-440A-971C-ECDB32C0F8FC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1035,7 +1035,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="modified_at"
-              DTS:DTSID="{D0DDD378-29DB-41ED-A55C-146DC45E0A7F}"
+              DTS:DTSID="{EB347D66-8108-4BCB-8A1E-0AE2AC70296B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1079,7 +1079,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\STPK1N4\BI\DATH\datasrc\airlines.csv">
+          DTS:ConnectionString="D:\1.Major\1.BI\DATH\datasrc\airlines.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1088,7 +1088,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="IATA_CODE"
-              DTS:DTSID="{E153FA42-AC84-4961-B4F7-AFCD4A0834DC}"
+              DTS:DTSID="{043918B8-CE94-44AA-A2FF-F65BA3FB4D83}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1097,7 +1097,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIRLINE"
-              DTS:DTSID="{3015DAEB-ABBE-4FC8-8229-517F3A339FA5}"
+              DTS:DTSID="{BAD3FC69-B9AA-45FA-A80E-5BEAB249DE4A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1117,7 +1117,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\STPK1N4\BI\DATH\datasrc\airports.csv">
+          DTS:ConnectionString="D:\1.Major\1.BI\DATH\datasrc\airports.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1126,7 +1126,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="IATA_CODE"
-              DTS:DTSID="{97AFC4B4-CFF1-4F7F-BC44-FFF26CA7C37A}"
+              DTS:DTSID="{1BA32353-BB2D-4BC5-AD02-CA9E456C55D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1135,7 +1135,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AIRPORT"
-              DTS:DTSID="{8B893AFA-AF48-4388-970F-F48CDFB4B923}"
+              DTS:DTSID="{CC14D9A7-6191-4B8D-9847-D504DC6AE302}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1144,7 +1144,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CITY"
-              DTS:DTSID="{50BBE984-B147-4DC1-B8B4-57580A974881}"
+              DTS:DTSID="{8A3705F4-F120-4A42-AC9A-66A76BA62EC6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1153,7 +1153,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="STATE"
-              DTS:DTSID="{DB0FC976-9931-4EFA-9C48-23225CEF3C4F}"
+              DTS:DTSID="{D04D98CB-A20B-441C-83C2-AE79F5AEE6B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1162,7 +1162,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="COUNTRY"
-              DTS:DTSID="{A3567448-86EC-4B82-A1DC-FB132005E13D}"
+              DTS:DTSID="{6FF3314E-19F5-402A-82BB-131F351A6F14}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1171,7 +1171,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LATITUDE"
-              DTS:DTSID="{76E2083E-BF10-4C8C-ADA0-66874A017954}"
+              DTS:DTSID="{D696E5A1-F398-4994-B934-126E5D8AE864}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1180,7 +1180,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LONGITUDE"
-              DTS:DTSID="{E6535883-2981-4000-BA1B-948A439189B7}"
+              DTS:DTSID="{88409430-94CF-4854-9B65-9847FD068ACB}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1420,7 +1420,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -2332,13 +2332,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Import to STG_Airport\File Airport.Outputs[Flat File Source Output].Columns[LATITUDE]}) ? (DT_R8)0.0 : (DT_R8)#{Package\Import to STG_Airport\File Airport.Outputs[Flat File Source Output].Columns[LATITUDE]}</property>
+                          name="Expression">([TRIM](#{Package\Import to STG_Airport\File Airport.Outputs[Flat File Source Output].Columns[LATITUDE]}) == "") ? NULL(DT_R8) : (DT_R8)#{Package\Import to STG_Airport\File Airport.Outputs[Flat File Source Output].Columns[LATITUDE]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(LATITUDE) ? (DT_R8)0.0 : (DT_R8)LATITUDE</property>
+                          name="FriendlyExpression">(TRIM(LATITUDE) == "") ? NULL(DT_R8) : (DT_R8)LATITUDE</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2357,13 +2357,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Import to STG_Airport\File Airport.Outputs[Flat File Source Output].Columns[LONGITUDE]}) ? (DT_R8)0.0 : (DT_R8)#{Package\Import to STG_Airport\File Airport.Outputs[Flat File Source Output].Columns[LONGITUDE]}</property>
+                          name="Expression">([TRIM](#{Package\Import to STG_Airport\File Airport.Outputs[Flat File Source Output].Columns[LONGITUDE]}) == "") ? NULL(DT_R8) : (DT_R8)#{Package\Import to STG_Airport\File Airport.Outputs[Flat File Source Output].Columns[LONGITUDE]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(LONGITUDE) ? (DT_R8)0.0 : (DT_R8)LONGITUDE</property>
+                          name="FriendlyExpression">(TRIM(LONGITUDE) == "") ? NULL(DT_R8) : (DT_R8)LONGITUDE</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3573,27 +3573,32 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Inputs[Data Conversion Input].Columns[Scheduled_Departure_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Scheduled_Departure_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Scheduled_Departure_Fix_DC]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Inputs[Data Conversion Input].Columns[Departure_Time_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Departure_Time_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Departure_Time_Fix_DC]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Inputs[Data Conversion Input].Columns[Wheels_Off_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Wheels_Off_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Wheels_Off_Fix_DC]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Inputs[Data Conversion Input].Columns[Scheduled_Arrival_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Scheduled_Arrival_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Scheduled_Arrival_Fix_DC]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Inputs[Data Conversion Input].Columns[Arrival_Time_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Arrival_Time_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Arrival_Time_Fix_DC]" />
                     <inputColumn
@@ -3742,7 +3747,8 @@
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Scheduled_Time_Fix_DC]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Inputs[Data Conversion Input].Columns[Wheels_On_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Wheels_On_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Wheels_On_Fix_DC]" />
                     <inputColumn
@@ -3872,7 +3878,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Arrival_Time_Fix]"
-                      dataType="dbTime"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Arrival_Time_Fix]"
@@ -3994,7 +4000,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Departure_Time_Fix]"
-                      dataType="dbTime"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Departure_Time_Fix]"
@@ -4178,7 +4184,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Scheduled_Arrival_Fix]"
-                      dataType="dbTime"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Scheduled_Arrival_Fix]"
@@ -4198,7 +4204,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Scheduled_Departure_Fix]"
-                      dataType="dbTime"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Scheduled_Departure_Fix]"
@@ -4340,7 +4346,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Wheels_Off_Fix]"
-                      dataType="dbTime"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Wheels_Off_Fix]"
@@ -4360,7 +4366,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Wheels_On_Fix]"
-                      dataType="dbTime"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Wheels_On_Fix]"
@@ -4634,9 +4640,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Scheduled_Departure_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Scheduled_Departure_Fix_DC]"
                       name="Scheduled_Departure_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -4645,20 +4652,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(SCHEDULED_DEPARTURE) || TRIM(SCHEDULED_DEPARTURE) == "" ? "00:00:00" : (TRIM(SCHEDULED_DEPARTURE) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(SCHEDULED_DEPARTURE),LEN("0000" + TRIM(SCHEDULED_DEPARTURE)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(SCHEDULED_DEPARTURE),LEN("0000" + TRIM(SCHEDULED_DEPARTURE)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(SCHEDULED_DEPARTURE) || TRIM(SCHEDULED_DEPARTURE) == "" ? "0" : TRIM(SCHEDULED_DEPARTURE))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Departure_Time_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Departure_Time_Fix_DC]"
                       name="Departure_Time_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -4667,20 +4675,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(DEPARTURE_TIME) || TRIM(DEPARTURE_TIME) == "" ? "00:00:00" : (TRIM(DEPARTURE_TIME) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(DEPARTURE_TIME),LEN("0000" + TRIM(DEPARTURE_TIME)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(DEPARTURE_TIME),LEN("0000" + TRIM(DEPARTURE_TIME)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(DEPARTURE_TIME) || TRIM(DEPARTURE_TIME) == "" ? "0" : TRIM(DEPARTURE_TIME))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Wheels_Off_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Wheels_Off_Fix_DC]"
                       name="Wheels_Off_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -4689,20 +4698,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(WHEELS_OFF) || TRIM(WHEELS_OFF) == "" ? "00:00:00" : (TRIM(WHEELS_OFF) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(WHEELS_OFF),LEN("0000" + TRIM(WHEELS_OFF)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(WHEELS_OFF),LEN("0000" + TRIM(WHEELS_OFF)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(WHEELS_OFF) || TRIM(WHEELS_OFF) == "" ? "0" : TRIM(WHEELS_OFF))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Scheduled_Arrival_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Scheduled_Arrival_Fix_DC]"
                       name="Scheduled_Arrival_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -4711,20 +4721,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(SCHEDULED_ARRIVAL) || TRIM(SCHEDULED_ARRIVAL) == "" ? "00:00:00" : (TRIM(SCHEDULED_ARRIVAL) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(SCHEDULED_ARRIVAL),LEN("0000" + TRIM(SCHEDULED_ARRIVAL)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(SCHEDULED_ARRIVAL),LEN("0000" + TRIM(SCHEDULED_ARRIVAL)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(SCHEDULED_ARRIVAL) || TRIM(SCHEDULED_ARRIVAL) == "" ? "0" : TRIM(SCHEDULED_ARRIVAL))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Arrival_Time_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Arrival_Time_Fix_DC]"
                       name="Arrival_Time_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -4733,13 +4744,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(ARRIVAL_TIME) || TRIM(ARRIVAL_TIME) == "" ? "00:00:00" : (TRIM(ARRIVAL_TIME) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(ARRIVAL_TIME),LEN("0000" + TRIM(ARRIVAL_TIME)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(ARRIVAL_TIME),LEN("0000" + TRIM(ARRIVAL_TIME)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(ARRIVAL_TIME) || TRIM(ARRIVAL_TIME) == "" ? "0" : TRIM(ARRIVAL_TIME))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5158,9 +5169,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Wheels_On_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Wheels_On_Fix_DC]"
                       name="Wheels_On_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -5169,13 +5181,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 1.Outputs[Flat File Source Output].Columns[WHEELS_ON]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(WHEELS_ON) || TRIM(WHEELS_ON) == "" ? "00:00:00" : (TRIM(WHEELS_ON) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(WHEELS_ON),LEN("0000" + TRIM(WHEELS_ON)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(WHEELS_ON),LEN("0000" + TRIM(WHEELS_ON)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(WHEELS_ON) || TRIM(WHEELS_ON) == "" ? "0" : TRIM(WHEELS_ON))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5461,9 +5473,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Scheduled_Departure_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Scheduled_Departure_Fix_DC]"
                       name="Scheduled_Departure_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -5472,20 +5485,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(SCHEDULED_DEPARTURE) || TRIM(SCHEDULED_DEPARTURE) == "" ? "00:00:00" : (TRIM(SCHEDULED_DEPARTURE) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(SCHEDULED_DEPARTURE),LEN("0000" + TRIM(SCHEDULED_DEPARTURE)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(SCHEDULED_DEPARTURE),LEN("0000" + TRIM(SCHEDULED_DEPARTURE)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(SCHEDULED_DEPARTURE) || TRIM(SCHEDULED_DEPARTURE) == "" ? "0" : TRIM(SCHEDULED_DEPARTURE))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Departure_Time_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Departure_Time_Fix_DC]"
                       name="Departure_Time_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -5494,20 +5508,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(DEPARTURE_TIME) || TRIM(DEPARTURE_TIME) == "" ? "00:00:00" : (TRIM(DEPARTURE_TIME) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(DEPARTURE_TIME),LEN("0000" + TRIM(DEPARTURE_TIME)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(DEPARTURE_TIME),LEN("0000" + TRIM(DEPARTURE_TIME)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(DEPARTURE_TIME) || TRIM(DEPARTURE_TIME) == "" ? "0" : TRIM(DEPARTURE_TIME))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Wheels_Off_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Wheels_Off_Fix_DC]"
                       name="Wheels_Off_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -5516,20 +5531,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(WHEELS_OFF) || TRIM(WHEELS_OFF) == "" ? "00:00:00" : (TRIM(WHEELS_OFF) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(WHEELS_OFF),LEN("0000" + TRIM(WHEELS_OFF)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(WHEELS_OFF),LEN("0000" + TRIM(WHEELS_OFF)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(WHEELS_OFF) || TRIM(WHEELS_OFF) == "" ? "0" : TRIM(WHEELS_OFF))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Scheduled_Arrival_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Scheduled_Arrival_Fix_DC]"
                       name="Scheduled_Arrival_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -5538,20 +5554,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(SCHEDULED_ARRIVAL) || TRIM(SCHEDULED_ARRIVAL) == "" ? "00:00:00" : (TRIM(SCHEDULED_ARRIVAL) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(SCHEDULED_ARRIVAL),LEN("0000" + TRIM(SCHEDULED_ARRIVAL)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(SCHEDULED_ARRIVAL),LEN("0000" + TRIM(SCHEDULED_ARRIVAL)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(SCHEDULED_ARRIVAL) || TRIM(SCHEDULED_ARRIVAL) == "" ? "0" : TRIM(SCHEDULED_ARRIVAL))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Arrival_Time_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Arrival_Time_Fix_DC]"
                       name="Arrival_Time_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -5560,13 +5577,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(ARRIVAL_TIME) || TRIM(ARRIVAL_TIME) == "" ? "00:00:00" : (TRIM(ARRIVAL_TIME) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(ARRIVAL_TIME),LEN("0000" + TRIM(ARRIVAL_TIME)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(ARRIVAL_TIME),LEN("0000" + TRIM(ARRIVAL_TIME)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(ARRIVAL_TIME) || TRIM(ARRIVAL_TIME) == "" ? "0" : TRIM(ARRIVAL_TIME))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5985,9 +6002,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Wheels_On_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Wheels_On_Fix_DC]"
                       name="Wheels_On_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -5996,13 +6014,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 2.Outputs[Flat File Source Output].Columns[WHEELS_ON]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(WHEELS_ON) || TRIM(WHEELS_ON) == "" ? "00:00:00" : (TRIM(WHEELS_ON) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(WHEELS_ON),LEN("0000" + TRIM(WHEELS_ON)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(WHEELS_ON),LEN("0000" + TRIM(WHEELS_ON)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(WHEELS_ON) || TRIM(WHEELS_ON) == "" ? "0" : TRIM(WHEELS_ON))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -6288,9 +6306,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Scheduled_Departure_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Scheduled_Departure_Fix_DC]"
                       name="Scheduled_Departure_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -6299,20 +6318,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_DEPARTURE]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(SCHEDULED_DEPARTURE) || TRIM(SCHEDULED_DEPARTURE) == "" ? "00:00:00" : (TRIM(SCHEDULED_DEPARTURE) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(SCHEDULED_DEPARTURE),LEN("0000" + TRIM(SCHEDULED_DEPARTURE)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(SCHEDULED_DEPARTURE),LEN("0000" + TRIM(SCHEDULED_DEPARTURE)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(SCHEDULED_DEPARTURE) || TRIM(SCHEDULED_DEPARTURE) == "" ? "0" : TRIM(SCHEDULED_DEPARTURE))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Departure_Time_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Departure_Time_Fix_DC]"
                       name="Departure_Time_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -6321,20 +6341,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[DEPARTURE_TIME]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(DEPARTURE_TIME) || TRIM(DEPARTURE_TIME) == "" ? "00:00:00" : (TRIM(DEPARTURE_TIME) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(DEPARTURE_TIME),LEN("0000" + TRIM(DEPARTURE_TIME)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(DEPARTURE_TIME),LEN("0000" + TRIM(DEPARTURE_TIME)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(DEPARTURE_TIME) || TRIM(DEPARTURE_TIME) == "" ? "0" : TRIM(DEPARTURE_TIME))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Wheels_Off_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Wheels_Off_Fix_DC]"
                       name="Wheels_Off_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -6343,20 +6364,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_OFF]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(WHEELS_OFF) || TRIM(WHEELS_OFF) == "" ? "00:00:00" : (TRIM(WHEELS_OFF) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(WHEELS_OFF),LEN("0000" + TRIM(WHEELS_OFF)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(WHEELS_OFF),LEN("0000" + TRIM(WHEELS_OFF)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(WHEELS_OFF) || TRIM(WHEELS_OFF) == "" ? "0" : TRIM(WHEELS_OFF))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Scheduled_Arrival_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Scheduled_Arrival_Fix_DC]"
                       name="Scheduled_Arrival_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -6365,20 +6387,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[SCHEDULED_ARRIVAL]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(SCHEDULED_ARRIVAL) || TRIM(SCHEDULED_ARRIVAL) == "" ? "00:00:00" : (TRIM(SCHEDULED_ARRIVAL) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(SCHEDULED_ARRIVAL),LEN("0000" + TRIM(SCHEDULED_ARRIVAL)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(SCHEDULED_ARRIVAL),LEN("0000" + TRIM(SCHEDULED_ARRIVAL)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(SCHEDULED_ARRIVAL) || TRIM(SCHEDULED_ARRIVAL) == "" ? "0" : TRIM(SCHEDULED_ARRIVAL))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Arrival_Time_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Arrival_Time_Fix_DC]"
                       name="Arrival_Time_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -6387,13 +6410,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[ARRIVAL_TIME]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(ARRIVAL_TIME) || TRIM(ARRIVAL_TIME) == "" ? "00:00:00" : (TRIM(ARRIVAL_TIME) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(ARRIVAL_TIME),LEN("0000" + TRIM(ARRIVAL_TIME)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(ARRIVAL_TIME),LEN("0000" + TRIM(ARRIVAL_TIME)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(ARRIVAL_TIME) || TRIM(ARRIVAL_TIME) == "" ? "0" : TRIM(ARRIVAL_TIME))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -6812,9 +6835,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Wheels_On_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Wheels_On_Fix_DC]"
                       name="Wheels_On_Fix_DC"
                       truncationRowDisposition="FailComponent">
@@ -6823,13 +6847,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) == "" ? "00:00:00" : ([TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) == "2400" ? "00:00:00" : [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]})) - 3,2) + ":" + [SUBSTRING]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]}),[LEN]("0000" + [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]})) - 1,2) + ":00"))</property>
+                          name="Expression">([ISNULL](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) || [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]}) == "" ? "0" : [TRIM](#{Package\Import to STG_Flight\Flight_batch 3.Outputs[Flat File Source Output].Columns[WHEELS_ON]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIME)(ISNULL(WHEELS_ON) || TRIM(WHEELS_ON) == "" ? "00:00:00" : (TRIM(WHEELS_ON) == "2400" ? "00:00:00" : SUBSTRING("0000" + TRIM(WHEELS_ON),LEN("0000" + TRIM(WHEELS_ON)) - 3,2) + ":" + SUBSTRING("0000" + TRIM(WHEELS_ON),LEN("0000" + TRIM(WHEELS_ON)) - 1,2) + ":00"))</property>
+                          name="FriendlyExpression">(ISNULL(WHEELS_ON) || TRIM(WHEELS_ON) == "" ? "0" : TRIM(WHEELS_ON))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -9999,19 +10023,19 @@
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[DISTANCE_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Scheduled_Departure_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Scheduled_Departure_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Departure]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Scheduled_Departure_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Departure_Time_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Departure_Time_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Time]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Departure_Time_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Wheels_Off_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Wheels_Off_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_Off]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Wheels_Off_Fix]" />
@@ -10029,7 +10053,7 @@
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Security_Delay_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Scheduled_Arrival_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Scheduled_Arrival_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Arrival]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Scheduled_Arrival_Fix]" />
@@ -10055,7 +10079,7 @@
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Cancellation_Reason_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Arrival_Time_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Arrival_Time_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Time]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Arrival_Time_Fix]" />
@@ -10097,7 +10121,7 @@
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Taxi_In_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Wheels_On_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Wheels_On_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_On]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Wheels_On_Fix]" />
@@ -10194,13 +10218,11 @@
                       name="Distance" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Departure]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Scheduled_Departure" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Time]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Departure_Time" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Delay]"
@@ -10212,8 +10234,7 @@
                       name="Taxi_Out" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_Off]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Wheels_Off" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Time]"
@@ -10229,8 +10250,7 @@
                       name="Air_Time" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_On]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Wheels_On" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Taxi_In]"
@@ -10238,13 +10258,11 @@
                       name="Taxi_In" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Arrival]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Scheduled_Arrival" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Time]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Arrival_Time" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Delay]"
@@ -10418,7 +10436,7 @@
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Arrival_Delay_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Arrival_Time_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Arrival_Time_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Time_Fix]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Arrival_Time_Fix]" />
@@ -10456,7 +10474,7 @@
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Departure_Delay_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Departure_Time_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Departure_Time_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Time_Fix]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Departure_Time_Fix]" />
@@ -10514,13 +10532,13 @@
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Origin_Airport_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Scheduled_Arrival_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Scheduled_Arrival_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Arrival_Fix]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Scheduled_Arrival_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Scheduled_Departure_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Scheduled_Departure_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Departure_Fix]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Scheduled_Departure_Fix]" />
@@ -10564,13 +10582,13 @@
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Weather_Delay_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Wheels_Off_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Wheels_Off_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_Off_Fix]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Wheels_Off_Fix]" />
                     <inputColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Wheels_On_Fix]"
-                      cachedDataType="dbTime"
+                      cachedDataType="i4"
                       cachedName="Wheels_On_Fix"
                       externalMetadataColumnId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_On_Fix]"
                       lineageId="Package\Import to STG_Flight\Data Conversion.Outputs[Data Conversion Output].Columns[Wheels_On_Fix]" />
@@ -10607,7 +10625,7 @@
                       name="Arrival_Delay_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Time_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Arrival_Time_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Cancellation_Reason_Fix]"
@@ -10633,7 +10651,7 @@
                       name="Departure_Delay_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Time_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Departure_Time_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Destination_Airport_Fix]"
@@ -10673,11 +10691,11 @@
                       name="Origin_Airport_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Arrival_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Scheduled_Arrival_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Departure_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Scheduled_Departure_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Time_Fix]"
@@ -10707,11 +10725,11 @@
                       name="Weather_Delay_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_Off_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Wheels_Off_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_On_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Wheels_On_Fix" />
                     <externalMetadataColumn
                       refId="Package\Import to STG_Flight\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[YEAR_Fix]"
@@ -11254,7 +11272,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 1].Columns[Scheduled_Departure_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Scheduled_Departure_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Scheduled_Departure_Fix_DC]">
                       <properties>
@@ -11267,7 +11286,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 1].Columns[Departure_Time_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Departure_Time_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Departure_Time_Fix_DC]">
                       <properties>
@@ -11280,7 +11300,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 1].Columns[Wheels_Off_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Wheels_Off_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Wheels_Off_Fix_DC]">
                       <properties>
@@ -11293,7 +11314,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 1].Columns[Scheduled_Arrival_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Scheduled_Arrival_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Scheduled_Arrival_Fix_DC]">
                       <properties>
@@ -11306,7 +11328,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 1].Columns[Arrival_Time_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Arrival_Time_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Arrival_Time_Fix_DC]">
                       <properties>
@@ -11571,7 +11594,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 1].Columns[Wheels_On_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Wheels_On_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column.Outputs[Derived Column Output].Columns[Wheels_On_Fix_DC]">
                       <properties>
@@ -12115,7 +12139,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 2].Columns[Scheduled_Departure_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Scheduled_Departure_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Scheduled_Departure_Fix_DC]">
                       <properties>
@@ -12128,7 +12153,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 2].Columns[Departure_Time_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Departure_Time_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Departure_Time_Fix_DC]">
                       <properties>
@@ -12141,7 +12167,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 2].Columns[Wheels_Off_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Wheels_Off_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Wheels_Off_Fix_DC]">
                       <properties>
@@ -12154,7 +12181,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 2].Columns[Scheduled_Arrival_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Scheduled_Arrival_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Scheduled_Arrival_Fix_DC]">
                       <properties>
@@ -12167,7 +12195,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 2].Columns[Arrival_Time_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Arrival_Time_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Arrival_Time_Fix_DC]">
                       <properties>
@@ -12432,7 +12461,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 2].Columns[Wheels_On_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Wheels_On_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 1.Outputs[Derived Column Output].Columns[Wheels_On_Fix_DC]">
                       <properties>
@@ -12976,7 +13006,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 3].Columns[Scheduled_Departure_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Scheduled_Departure_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Scheduled_Departure_Fix_DC]">
                       <properties>
@@ -12989,7 +13020,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 3].Columns[Departure_Time_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Departure_Time_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Departure_Time_Fix_DC]">
                       <properties>
@@ -13002,7 +13034,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 3].Columns[Wheels_Off_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Wheels_Off_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Wheels_Off_Fix_DC]">
                       <properties>
@@ -13015,7 +13048,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 3].Columns[Scheduled_Arrival_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Scheduled_Arrival_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Scheduled_Arrival_Fix_DC]">
                       <properties>
@@ -13028,7 +13062,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 3].Columns[Arrival_Time_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Arrival_Time_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Arrival_Time_Fix_DC]">
                       <properties>
@@ -13293,7 +13328,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Import to STG_Flight\Union All.Inputs[Union All Input 3].Columns[Wheels_On_Fix_DC]"
-                      cachedDataType="dbTime"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Wheels_On_Fix_DC"
                       lineageId="Package\Import to STG_Flight\Derived Column 2.Outputs[Derived Column Output].Columns[Wheels_On_Fix_DC]">
                       <properties>
@@ -13581,27 +13617,32 @@
                       name="modified_at" />
                     <outputColumn
                       refId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Scheduled_Departure_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Scheduled_Departure_Fix_DC]"
                       name="Scheduled_Departure_Fix_DC" />
                     <outputColumn
                       refId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Departure_Time_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Departure_Time_Fix_DC]"
                       name="Departure_Time_Fix_DC" />
                     <outputColumn
                       refId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Wheels_Off_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Wheels_Off_Fix_DC]"
                       name="Wheels_Off_Fix_DC" />
                     <outputColumn
                       refId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Scheduled_Arrival_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Scheduled_Arrival_Fix_DC]"
                       name="Scheduled_Arrival_Fix_DC" />
                     <outputColumn
                       refId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Arrival_Time_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Arrival_Time_Fix_DC]"
                       name="Arrival_Time_Fix_DC" />
                     <outputColumn
@@ -13714,7 +13755,8 @@
                       name="Scheduled_Time_Fix_DC" />
                     <outputColumn
                       refId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Wheels_On_Fix_DC]"
-                      dataType="dbTime"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Import to STG_Flight\Union All.Outputs[Union All Output 1].Columns[Wheels_On_Fix_DC]"
                       name="Wheels_On_Fix_DC" />
                     <outputColumn
@@ -13922,7 +13964,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arrival_Time_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Arrival_Time_Fix]"
@@ -13978,7 +14020,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Departure_Time_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Departure_Time_Fix]"
@@ -14041,7 +14083,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Scheduled_Arrival_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Arrival_Fix]"
@@ -14050,7 +14092,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Scheduled_Departure_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Departure_Fix]"
@@ -14115,7 +14157,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Wheels_Off_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Wheels_Off_Fix]"
@@ -14124,7 +14166,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Wheels_On_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Wheels_On_Fix]"
@@ -14189,7 +14231,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Arrival_Delay_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Arrival_Time_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Arrival_Time_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cancellation_Reason_Fix]"
@@ -14215,7 +14257,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Departure_Delay_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Departure_Time_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Departure_Time_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Destination_Airport_Fix]"
@@ -14255,11 +14297,11 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Origin_Airport_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Arrival_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Scheduled_Arrival_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Departure_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Scheduled_Departure_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Time_Fix]"
@@ -14289,11 +14331,11 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Weather_Delay_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Wheels_Off_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Wheels_Off_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Wheels_On_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       name="Wheels_On_Fix" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[YEAR_Fix]"
@@ -14347,7 +14389,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Arrival_Delay_Fix" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Arrival_Time_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Arrival_Time_Fix]"
                       name="Arrival_Time_Fix" />
                     <outputColumn
@@ -14379,7 +14421,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Departure_Delay_Fix" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Departure_Time_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Departure_Time_Fix]"
                       name="Departure_Time_Fix" />
                     <outputColumn
@@ -14414,12 +14456,12 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="MONTH_Fix" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Scheduled_Arrival_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Scheduled_Arrival_Fix]"
                       name="Scheduled_Arrival_Fix" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Scheduled_Departure_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Scheduled_Departure_Fix]"
                       name="Scheduled_Departure_Fix" />
                     <outputColumn
@@ -14456,12 +14498,12 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Weather_Delay_Fix" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Wheels_Off_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Wheels_Off_Fix]"
                       name="Wheels_Off_Fix" />
                     <outputColumn
                       refId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Wheels_On_Fix]"
-                      dataType="dbTimeStamp"
+                      dataType="i4"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Wheels_On_Fix]"
                       name="Wheels_On_Fix" />
                     <outputColumn
@@ -14642,13 +14684,13 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[DISTANCE_Fix]" />
                     <inputColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].Columns[Scheduled_Departure_Fix]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="i4"
                       cachedName="Scheduled_Departure_Fix"
                       externalMetadataColumnId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Departure]"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Scheduled_Departure_Fix]" />
                     <inputColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].Columns[Departure_Time_Fix]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="i4"
                       cachedName="Departure_Time_Fix"
                       externalMetadataColumnId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Time]"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Departure_Time_Fix]" />
@@ -14666,7 +14708,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Taxi_Out_Fix]" />
                     <inputColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].Columns[Wheels_Off_Fix]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="i4"
                       cachedName="Wheels_Off_Fix"
                       externalMetadataColumnId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_Off]"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Wheels_Off_Fix]" />
@@ -14690,7 +14732,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Air_Time_Fix]" />
                     <inputColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].Columns[Wheels_On_Fix]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="i4"
                       cachedName="Wheels_On_Fix"
                       externalMetadataColumnId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_On]"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Wheels_On_Fix]" />
@@ -14702,13 +14744,13 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Taxi_In_Fix]" />
                     <inputColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].Columns[Scheduled_Arrival_Fix]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="i4"
                       cachedName="Scheduled_Arrival_Fix"
                       externalMetadataColumnId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Arrival]"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Scheduled_Arrival_Fix]" />
                     <inputColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].Columns[Arrival_Time_Fix]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="i4"
                       cachedName="Arrival_Time_Fix"
                       externalMetadataColumnId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Time]"
                       lineageId="Package\Mapping airport code\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arrival_Time_Fix]" />
@@ -14821,13 +14863,11 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Distance" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Departure]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Scheduled_Departure" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Time]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Departure_Time" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Delay]"
@@ -14839,8 +14879,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Taxi_Out" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_Off]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Wheels_Off" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Time]"
@@ -14856,8 +14895,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Air_Time" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_On]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Wheels_On" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Taxi_In]"
@@ -14865,13 +14903,11 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
                       name="Taxi_In" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Arrival]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Scheduled_Arrival" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Time]"
-                      dataType="wstr"
-                      length="16"
+                      dataType="i4"
                       name="Arrival_Time" />
                     <externalMetadataColumn
                       refId="Package\Mapping airport code\STG_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Delay]"
@@ -14959,7 +14995,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -14978,7 +15014,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -14997,7 +15033,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_Airline"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15075,7 +15111,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_Airlport"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15094,7 +15130,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_AirportCodeMapping"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15113,7 +15149,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate STG_Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15132,7 +15168,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate table STG_Flight_DOT"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -15545,7 +15581,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
     design-time-name="Package\Import to STG_Airline">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="127.2,41.6"
           Id="Package\Import to STG_Airline\File Airline"
@@ -15581,7 +15617,9 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15603,7 +15641,9 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15625,7 +15665,9 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15660,7 +15702,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
     design-time-name="Package\Import to STG_Airport">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="128.8,41.6"
           Id="Package\Import to STG_Airport\File Airport"
@@ -15696,9 +15738,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15720,9 +15760,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15744,9 +15782,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15876,10 +15912,6 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Import to STG_Flight\Derived Column 1"
-          TopLeft="512.976189200554,193.377450894122" />
-        <NodeLayout
           Size="144.8,41.6"
           Id="Package\Import to STG_Flight\Flight_batch 1"
           TopLeft="237.892857176689,77.426470520368" />
@@ -15904,117 +15936,13 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
           Id="Package\Import to STG_Flight\Derived Column"
           TopLeft="233.4285714529,187.676470449149" />
         <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Import to STG_Flight\Derived Column 2"
-          TopLeft="721.83333447655,189.938235338525" />
-        <NodeLayout
           Size="144,41.6"
           Id="Package\Import to STG_Flight\Flight_batch 2"
-          TopLeft="512.022717954195,71.8545458564613" />
+          TopLeft="522.737003691289,71.8545458564613" />
         <NodeLayout
           Size="153.6,41.6"
           Id="Package\Import to STG_Flight\Conditional Split"
           TopLeft="516.666638437246,545.619045096447" />
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\Import to STG_Flight\Union All"
-          TopLeft="533.333304193286,292.370368368169" />
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Derived Column Output2]"
-          TopLeft="802.63333447655,231.538235338525">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-181.300030283264,60.8321330296444"
-              Start="0,0"
-              End="-181.300030283264,53.3321330296444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.6731302367246" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.6731302367246"
-                    Point2="0,39.6731302367246"
-                    Point3="-4,39.6731302367246" />
-                  <mssgle:LineSegment
-                    End="-177.300030283264,39.6731302367246" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-177.300030283264,39.6731302367246"
-                    Point2="-181.300030283264,39.6731302367246"
-                    Point3="-181.300030283264,43.6731302367246" />
-                  <mssgle:LineSegment
-                    End="-181.300030283264,53.3321330296444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Derived Column Output1]"
-          TopLeft="591.35474669692,234.977450894122">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57.3929174740474"
-              Start="0,0"
-              End="0,49.8929174740474">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.8929174740474" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Derived Column Output]"
-          TopLeft="309.8285714529,229.276470449149">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="255.504732740386,63.0938979190203"
-              Start="0,0"
-              End="255.504732740386,55.5938979190203">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.1481942950133" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.1481942950133"
-                    Point2="0,41.1481942950133"
-                    Point3="4,41.1481942950133" />
-                  <mssgle:LineSegment
-                    End="251.504732740386,41.1481942950133" />
-                  <mssgle:CubicBezierSegment
-                    Point1="251.504732740386,41.1481942950133"
-                    Point2="255.504732740386,41.1481942950133"
-                    Point3="255.504732740386,45.1481942950133" />
-                  <mssgle:LineSegment
-                    End="255.504732740386,55.5938979190203" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Import to STG_Flight.Paths[Data Conversion Output]"
           TopLeft="595.469430470812,472.647152413626">
@@ -16034,9 +15962,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16064,78 +15990,6 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Union All Output 1]"
-          TopLeft="595.402763348832,333.970368368169">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,97.0767840454566"
-              Start="0,0"
-              End="0,89.5767840454566">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,89.5767840454566" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Flat File Source Output2]"
-          TopLeft="804.74306874451,108.856279091836">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,81.0819562466891"
-              Start="0,0"
-              End="0,73.5819562466891">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,73.5819562466891" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to STG_Flight.Paths[Flat File Source Output1]"
-          TopLeft="586.699453577375,113.454545856461">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,79.9229050376606"
-              Start="0,0"
-              End="0,72.4229050376606">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,72.4229050376606" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Import to STG_Flight.Paths[Flat File Source Output]"
           TopLeft="310.060714314794,119.026470520368">
           <EdgeLayout.Curve>
@@ -16154,9 +16008,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16181,6 +16033,174 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             <mssgm:EdgeLabel
               BoundingBox="57.7758047414305,5,20.967421875,9.5732421875"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Import to STG_Flight\Derived Column 1"
+          TopLeft="518.250000630639,187.864564650733" />
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Flat File Source Output1]"
+          TopLeft="597.093502160964,113.454545856461">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.4100187942713"
+              Start="0,0"
+              End="0,66.9100187942713">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.9100187942713" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Import to STG_Flight\Derived Column 2"
+          TopLeft="733.428572517269,189.776329354939" />
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Flat File Source Output2]"
+          TopLeft="810.740687764869,108.856279091836">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80.9200502631033"
+              Start="0,0"
+              End="0,73.4200502631033">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.4200502631033" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Import to STG_Flight\Union All"
+          TopLeft="536.607143999439,311.617646785679" />
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Derived Column Output]"
+          TopLeft="309.8285714529,229.276470449149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="258.778572546539,82.3411763365297"
+              Start="0,0"
+              End="258.778572546539,74.8411763365297">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.7007671759976" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.7007671759976"
+                    Point2="0,53.7007671759976"
+                    Point3="4,53.7007671759976" />
+                  <mssgle:LineSegment
+                    End="254.778572546539,53.7007671759976" />
+                  <mssgle:CubicBezierSegment
+                    Point1="254.778572546539,53.7007671759976"
+                    Point2="258.778572546539,53.7007671759976"
+                    Point3="258.778572546539,57.7007671759976" />
+                  <mssgle:LineSegment
+                    End="258.778572546539,74.8411763365297" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Derived Column Output1]"
+          TopLeft="598.028572315039,229.464564650733">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82.1530821349461"
+              Start="0,0"
+              End="0,74.6530821349461">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.6530821349461" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Derived Column Output2]"
+          TopLeft="814.628572517269,231.376329354939">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-190.02142851783,80.2413174307395"
+              Start="0,0"
+              End="-190.02142851783,72.7413174307395">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.3312939765692" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.3312939765692"
+                    Point2="0,52.3312939765692"
+                    Point3="-4,52.3312939765692" />
+                  <mssgle:LineSegment
+                    End="-186.02142851783,52.3312939765692" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-186.02142851783,52.3312939765692"
+                    Point2="-190.02142851783,52.3312939765692"
+                    Point3="-190.02142851783,56.3312939765692" />
+                  <mssgle:LineSegment
+                    End="-190.02142851783,72.7413174307395" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to STG_Flight.Paths[Union All Output 1]"
+          TopLeft="597.039683251909,353.217646785679">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.8295056279473"
+              Start="0,0"
+              End="0,70.3295056279473">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.3295056279473" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16228,7 +16248,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
     design-time-name="Package\Mapping airport code">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="152,41.6"
           Id="Package\Mapping airport code\OLE DB Source"
@@ -16256,9 +16276,7 @@ FROM     [STG_Flight_DOT] AS O LEFT OUTER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
