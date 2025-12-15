@@ -92,11 +92,11 @@ CREATE TABLE FACT_FLIGHT (
 
 	-- MEASURES (FACTS)
 	Flight_Count INT NOT NULL DEFAULT 1, -- Luôn = 1, dùng để đếm số chuyến bay
-	Dep_Delay_Minutes INT,
-	Arr_Delay_Minutes INT,
-	Taxi_Out INT,
-	Taxi_In INT,
-	Air_Time INT,
+	Dep_Delay_Minutes INT, -- Thời gian trễ lúc khởi hành
+	Arr_Delay_Minutes INT, -- Thời gian trễ lúc đến nơi
+	Taxi_Out INT, -- Thời gian lăn bánh ra
+	Taxi_In INT, -- Thời gian lăn bánh vào
+	Air_Time INT, -- Thời gian bay trên không
       
     -- KPI FLAGS (0 / 1)
 	Is_Cancelled INT NOT NULL, -- 1: chuyến bị hủy

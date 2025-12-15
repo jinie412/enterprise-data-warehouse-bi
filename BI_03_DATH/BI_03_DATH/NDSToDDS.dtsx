@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="NDSToDDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="118"
-  DTS:VersionGUID="{964CF6C0-D6CE-47A2-8E81-347A266BF34F}">
+  DTS:VersionBuild="123"
+  DTS:VersionGUID="{E20F8C92-0DF7-4104-9FDD-A8FFCA5B7E2E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LOCALHOST;Initial Catalog=DDS_DATH;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-NDSToDDS-{2BA9F75E-F4EB-4A7D-AE62-20BBBBBB37CD}LOCALHOST.DDS_DATH;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=LOCALHOST;Initial Catalog=DDS_DATH;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-NDSToDDS-{2BA9F75E-F4EB-4A7D-AE62-20BBBBBB37CD}LOCALHOST.DDS_DATH;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -49,7 +49,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LOCALHOST;Initial Catalog=NDS_DATH;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-NDSToDDS-{66767081-24E0-4B77-A588-391AD87131FA}LOCALHOST.NDS_DATH;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=LOCALHOST;Initial Catalog=NDS_DATH;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-NDSToDDS-{66767081-24E0-4B77-A588-391AD87131FA}LOCALHOST.NDS_DATH;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -83,7 +83,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Airline"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -108,7 +108,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Airport"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -347,11 +347,11 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight"
+                  refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
-                  name="Insert Dim_Flight"
+                  name="Insert Dim_Airline"
                   usesDispositions="true"
                   version="4">
                   <properties>
@@ -404,7 +404,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Connections[OleDbConnection]"
+                      refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Connections[OleDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[LOCALHOST.DDS_DATH]"
                       connectionManagerRefId="Package.ConnectionManagers[LOCALHOST.DDS_DATH]"
                       description="The OLE DB runtime connection used to access the database."
@@ -412,61 +412,61 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input]"
+                      refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].Columns[Iata_Code]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].Columns[Iata_Code]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="10"
                           cachedName="Iata_Code"
-                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].ExternalColumns[IATA_Code]"
+                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].ExternalColumns[IATA_Code]"
                           lineageId="Package\Sequence Container\Populate Airline Dimension\Union All.Outputs[Union All Output 1].Columns[Iata_Code]" />
                         <inputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].Columns[Airline_Name]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].Columns[Airline_Name]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="Airline_Name"
-                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Airline_Name]"
+                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].ExternalColumns[Airline_Name]"
                           lineageId="Package\Sequence Container\Populate Airline Dimension\Union All.Outputs[Union All Output 1].Columns[Airline_Name]" />
                         <inputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].Columns[Is_Active]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].Columns[Is_Active]"
                           cachedDataType="bool"
                           cachedName="Is_Active"
-                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Is_Active]"
+                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].ExternalColumns[Is_Active]"
                           lineageId="Package\Sequence Container\Populate Airline Dimension\Derived Column 1.Outputs[Derived Column Output].Columns[Is_Active]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Airline_Key]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].ExternalColumns[Airline_Key]"
                           dataType="i4"
                           name="Airline_Key" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].ExternalColumns[IATA_Code]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].ExternalColumns[IATA_Code]"
                           codePage="1252"
                           dataType="str"
                           length="2"
                           name="IATA_Code" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Airline_Name]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].ExternalColumns[Airline_Name]"
                           dataType="wstr"
                           length="255"
                           name="Airline_Name" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Is_Active]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].ExternalColumns[Is_Active]"
                           dataType="bool"
                           name="Is_Active" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].ExternalColumns[CREATED_DATE]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].ExternalColumns[CREATED_DATE]"
                           dataType="dbTimeStamp"
                           name="CREATED_DATE" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input].ExternalColumns[UPDATED_DATE]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input].ExternalColumns[UPDATED_DATE]"
                           dataType="dbTimeStamp"
                           name="UPDATED_DATE" />
                       </externalMetadataColumns>
@@ -474,22 +474,22 @@
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Outputs[OLE DB Destination Error Output]"
+                      refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Outputs[OLE DB Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input]">
+                      synchronousInputId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -498,11 +498,11 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight"
+                  refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline"
                   componentClassID="Microsoft.OLEDBSource"
                   contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
                   description="OLE DB Source"
-                  name="NDS_Flight"
+                  name="NDS_Airline"
                   usesDispositions="true"
                   version="7">
                   <properties>
@@ -547,7 +547,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Connections[OleDbConnection]"
+                      refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Connections[OleDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[LOCALHOST.NDS_DATH]"
                       connectionManagerRefId="Package.ConnectionManagers[LOCALHOST.NDS_DATH]"
                       description="The OLE DB runtime connection used to access the database."
@@ -555,110 +555,110 @@
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output]"
+                      refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output]"
                       name="OLE DB Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Iata_Code]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Iata_Code]"
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Iata_Code]"
+                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].ExternalColumns[Iata_Code]"
                           length="10"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Iata_Code]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Iata_Code]"
                           name="Iata_Code"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Airline_Name]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Airline_Name]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Airline_Name]"
+                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].ExternalColumns[Airline_Name]"
                           length="255"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Airline_Name]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Airline_Name]"
                           name="Airline_Name"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Created_Date]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Created_Date]"
                           dataType="dbTimeStamp"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Created_Date]"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Created_Date]"
+                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].ExternalColumns[Created_Date]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Created_Date]"
                           name="Created_Date"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Updated_Date]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Updated_Date]"
                           dataType="dbTimeStamp"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Updated_Date]"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Updated_Date]"
+                          externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].ExternalColumns[Updated_Date]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Updated_Date]"
                           name="Updated_Date"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Iata_Code]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].ExternalColumns[Iata_Code]"
                           codePage="1252"
                           dataType="str"
                           length="10"
                           name="Iata_Code" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Airline_Name]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].ExternalColumns[Airline_Name]"
                           dataType="wstr"
                           length="255"
                           name="Airline_Name" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Created_Date]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].ExternalColumns[Created_Date]"
                           dataType="dbTimeStamp"
                           name="Created_Date" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Updated_Date]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].ExternalColumns[Updated_Date]"
                           dataType="dbTimeStamp"
                           name="Updated_Date" />
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output]"
+                      refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output]"
                       isErrorOut="true"
                       name="OLE DB Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Iata_Code]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[Iata_Code]"
                           codePage="1252"
                           dataType="str"
                           length="10"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Iata_Code]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[Iata_Code]"
                           name="Iata_Code" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Airline_Name]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[Airline_Name]"
                           dataType="wstr"
                           length="255"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Airline_Name]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[Airline_Name]"
                           name="Airline_Name" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Created_Date]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[Created_Date]"
                           dataType="dbTimeStamp"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Created_Date]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[Created_Date]"
                           name="Created_Date" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Updated_Date]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[Updated_Date]"
                           dataType="dbTimeStamp"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Updated_Date]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[Updated_Date]"
                           name="Updated_Date" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -713,7 +713,7 @@
                           cachedLength="10"
                           cachedName="Iata_Code"
                           externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Iata_Code]" />
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Iata_Code]" />
                         <inputColumn
                           refId="Package\Sequence Container\Populate Airline Dimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[Is_Active]"
                           cachedDataType="bool"
@@ -828,13 +828,13 @@
                           cachedLength="255"
                           cachedName="Airline_Name"
                           externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Airline_Name]" />
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Airline_Name]" />
                         <inputColumn
                           refId="Package\Sequence Container\Populate Airline Dimension\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Created_Date]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Created_Date"
                           externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Created_Date]" />
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Created_Date]" />
                         <inputColumn
                           refId="Package\Sequence Container\Populate Airline Dimension\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Iata_Code]"
                           cachedCodepage="1252"
@@ -842,13 +842,13 @@
                           cachedLength="10"
                           cachedName="Iata_Code"
                           externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Iata_Code]" />
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Iata_Code]" />
                         <inputColumn
                           refId="Package\Sequence Container\Populate Airline Dimension\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Updated_Date]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Updated_Date"
                           externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Updated_Date]" />
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Updated_Date]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -1000,7 +1000,7 @@
                           cachedLength="255"
                           cachedName="Airline_Name"
                           externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Airline_Name]"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Airline_Name]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Airline_Name]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1015,7 +1015,7 @@
                           cachedLength="10"
                           cachedName="Iata_Code"
                           externalMetadataColumnId="Package\Sequence Container\Populate Airline Dimension\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[IATA_Code]"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Iata_Code]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Iata_Code]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1113,7 +1113,7 @@
                           cachedDataType="str"
                           cachedLength="10"
                           cachedName="Iata_Code"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Iata_Code]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Iata_Code]">
                           <properties>
                             <property
                               containsID="true"
@@ -1127,7 +1127,7 @@
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="Airline_Name"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Airline_Name]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Airline_Name]">
                           <properties>
                             <property
                               containsID="true"
@@ -1140,7 +1140,7 @@
                           refId="Package\Sequence Container\Populate Airline Dimension\Union All.Inputs[Union All Input 1].Columns[Created_Date]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Created_Date"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Created_Date]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Created_Date]">
                           <properties>
                             <property
                               containsID="true"
@@ -1153,7 +1153,7 @@
                           refId="Package\Sequence Container\Populate Airline Dimension\Union All.Inputs[Union All Input 1].Columns[Updated_Date]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Updated_Date"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Updated_Date]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Updated_Date]">
                           <properties>
                             <property
                               containsID="true"
@@ -1176,7 +1176,7 @@
                           cachedDataType="str"
                           cachedLength="10"
                           cachedName="Iata_Code"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Iata_Code]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Iata_Code]">
                           <properties>
                             <property
                               containsID="true"
@@ -1190,7 +1190,7 @@
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="Airline_Name"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Airline_Name]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Airline_Name]">
                           <properties>
                             <property
                               containsID="true"
@@ -1203,7 +1203,7 @@
                           refId="Package\Sequence Container\Populate Airline Dimension\Union All.Inputs[Union All Input 2].Columns[Created_Date]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Created_Date"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Created_Date]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Created_Date]">
                           <properties>
                             <property
                               containsID="true"
@@ -1216,7 +1216,7 @@
                           refId="Package\Sequence Container\Populate Airline Dimension\Union All.Inputs[Union All Input 2].Columns[Updated_Date]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Updated_Date"
-                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output].Columns[Updated_Date]">
+                          lineageId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output].Columns[Updated_Date]">
                           <properties>
                             <property
                               containsID="true"
@@ -1278,7 +1278,7 @@
                   startId="Package\Sequence Container\Populate Airline Dimension\Derived Column.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Sequence Container\Populate Airline Dimension.Paths[Derived Column Output1]"
-                  endId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight.Inputs[OLE DB Destination Input]"
+                  endId="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline.Inputs[OLE DB Destination Input]"
                   name="Derived Column Output"
                   startId="Package\Sequence Container\Populate Airline Dimension\Derived Column 1.Outputs[Derived Column Output]" />
                 <path
@@ -1305,7 +1305,7 @@
                   refId="Package\Sequence Container\Populate Airline Dimension.Paths[OLE DB Source Output]"
                   endId="Package\Sequence Container\Populate Airline Dimension\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
                   name="OLE DB Source Output"
-                  startId="Package\Sequence Container\Populate Airline Dimension\NDS_Flight.Outputs[OLE DB Source Output]" />
+                  startId="Package\Sequence Container\Populate Airline Dimension\NDS_Airline.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sequence Container\Populate Airline Dimension.Paths[Union All Output 1]"
                   endId="Package\Sequence Container\Populate Airline Dimension\Derived Column 1.Inputs[Derived Column Input]"
@@ -3785,7 +3785,7 @@ where [refTable].[IATA_Code] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Sequence Container\Populate Flight Fact\319:invalid};</property>
+                      name="ParameterMap">#{Package\Sequence Container\Populate Flight Fact\1484:invalid};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3945,7 +3945,7 @@ where [refTable].[IATA_Code] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Sequence Container\Populate Flight Fact\320:invalid};</property>
+                      name="ParameterMap">#{Package\Sequence Container\Populate Flight Fact\1485:invalid};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -6003,7 +6003,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Airline"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6020,7 +6020,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Airport"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6546,33 +6546,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="130.4,41.6"
-          Id="Package\Sequence Container\Populate Airline Dimension\NDS_Flight"
-          TopLeft="165.7,5.49999999999995" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Sequence Container\Populate Airline Dimension\Derived Column 1"
-          TopLeft="149.7,513.5" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Sequence Container\Populate Airline Dimension\OLE DB Command"
-          TopLeft="5.50000000000003,310.3" />
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Sequence Container\Populate Airline Dimension\OLE DB Command 1"
-          TopLeft="291.7,208.7" />
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\Sequence Container\Populate Airline Dimension\Union All"
-          TopLeft="170.9,411.9" />
-        <NodeLayout
-          Size="160,41.6"
-          Id="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight"
-          TopLeft="149.7,615.099999999999" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Sequence Container\Populate Airline Dimension\Derived Column"
-          TopLeft="17.5,208.7" />
+          Size="133.6,41.6"
+          Id="Package\Sequence Container\Populate Airline Dimension\NDS_Airline"
+          TopLeft="164.1,5.49999999999995" />
         <NodeLayout
           Size="208,41.6"
           Id="Package\Sequence Container\Populate Airline Dimension\Slowly Changing Dimension"
@@ -6599,32 +6575,64 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Sequence Container\Populate Airline Dimension\Derived Column"
+          TopLeft="17.5,208.7" />
         <EdgeLayout
-          Id="Package\Sequence Container\Populate Airline Dimension.Paths[OLE DB Command Output]"
-          TopLeft="87.9,351.9">
+          Id="Package\Sequence Container\Populate Airline Dimension.Paths[Historical Attribute Inserts Output]"
+          TopLeft="180.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="124.333333333333,59.9999999999999"
+              EndConnector="-87,59.9999999999999"
               Start="0,0"
-              End="124.333333333333,52.4999999999999">
+              End="-87,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5263157894736" />
+                    End="0,16.506329113924" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5263157894736"
-                    Point2="0,35.5263157894736"
-                    Point3="4,35.5263157894736" />
+                    Point1="0,16.506329113924"
+                    Point2="0,20.506329113924"
+                    Point3="-4,20.506329113924" />
                   <mssgle:LineSegment
-                    End="120.333333333333,35.5263157894736" />
+                    End="-83,20.506329113924" />
                   <mssgle:CubicBezierSegment
-                    Point1="120.333333333333,35.5263157894736"
-                    Point2="124.333333333333,35.5263157894736"
-                    Point3="124.333333333333,39.5263157894736" />
+                    Point1="-83,20.506329113924"
+                    Point2="-87,20.506329113924"
+                    Point3="-87,24.506329113924" />
                   <mssgle:LineSegment
-                    End="124.333333333333,52.4999999999999" />
+                    End="-87,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-118.55638671875,25.506329113924,150.1127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Sequence Container\Populate Airline Dimension\OLE DB Command"
+          TopLeft="5.50000000000003,310.3" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Airline Dimension.Paths[Derived Column Output]"
+          TopLeft="90.9,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6633,6 +6641,10 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Sequence Container\Populate Airline Dimension\Union All"
+          TopLeft="170.9,411.9" />
         <EdgeLayout
           Id="Package\Sequence Container\Populate Airline Dimension.Paths[New Output]"
           TopLeft="230.9,148.7">
@@ -6670,6 +6682,96 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Sequence Container\Populate Airline Dimension.Paths[OLE DB Command Output]"
+          TopLeft="87.9,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.333333333333,59.9999999999999"
+              Start="0,0"
+              End="124.333333333333,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5263157894736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5263157894736"
+                    Point2="0,35.5263157894736"
+                    Point3="4,35.5263157894736" />
+                  <mssgle:LineSegment
+                    End="120.333333333333,35.5263157894736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120.333333333333,35.5263157894736"
+                    Point2="124.333333333333,35.5263157894736"
+                    Point3="124.333333333333,39.5263157894736" />
+                  <mssgle:LineSegment
+                    End="124.333333333333,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Sequence Container\Populate Airline Dimension\Derived Column 1"
+          TopLeft="149.7,513.5" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Airline Dimension.Paths[Union All Output 1]"
+          TopLeft="230.9,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline"
+          TopLeft="149.7,615.099999999999" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Airline Dimension.Paths[Derived Column Output1]"
+          TopLeft="231.1,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Sequence Container\Populate Airline Dimension\OLE DB Command 1"
+          TopLeft="291.7,208.7" />
+        <EdgeLayout
           Id="Package\Sequence Container\Populate Airline Dimension.Paths[Inferred Member Updates Output]"
           TopLeft="280.9,148.7">
           <EdgeLayout.Curve>
@@ -6705,129 +6807,14 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Airline Dimension.Paths[Historical Attribute Inserts Output]"
-          TopLeft="180.9,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-87,59.9999999999999"
-              Start="0,0"
-              End="-87,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.506329113924" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.506329113924"
-                    Point2="0,20.506329113924"
-                    Point3="-4,20.506329113924" />
-                  <mssgle:LineSegment
-                    End="-83,20.506329113924" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-83,20.506329113924"
-                    Point2="-87,20.506329113924"
-                    Point3="-87,24.506329113924" />
-                  <mssgle:LineSegment
-                    End="-87,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-118.55638671875,25.506329113924,150.1127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Airline Dimension.Paths[Derived Column Output1]"
-          TopLeft="230.3,555.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Airline Dimension.Paths[Derived Column Output]"
-          TopLeft="90.9,250.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Airline Dimension.Paths[Union All Output 1]"
-          TopLeft="230.9,453.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Airline Dimension\NDS_Flight">
+    design-time-name="Package\Sequence Container\Populate Airline Dimension\NDS_Airline">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Flight">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -6843,25 +6830,25 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
   &lt;TableName&gt;[dbo].[DIM_AIRLINE]&lt;/TableName&gt;
   &lt;InputToColumnsCollection&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;NDS_Flight.Outputs[OLE DB Source Output].Columns[Airline_Name]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;NDS_Airline.Outputs[OLE DB Source Output].Columns[Airline_Name]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;Airline_Name&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;NDS_Flight.Outputs[OLE DB Source Output].Columns[Created_Date]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;NDS_Airline.Outputs[OLE DB Source Output].Columns[Created_Date]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;CREATED_DATE&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;NDS_Flight.Outputs[OLE DB Source Output].Columns[Iata_Code]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;NDS_Airline.Outputs[OLE DB Source Output].Columns[Iata_Code]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;IATA_Code&lt;/ColumnName&gt;
       &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;NDS_Flight.Outputs[OLE DB Source Output].Columns[Updated_Date]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;NDS_Airline.Outputs[OLE DB Source Output].Columns[Updated_Date]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;UPDATED_DATE&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
@@ -6896,81 +6883,13 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Sequence Container\Populate Airport Dimension\OLE DB Command"
-          TopLeft="5.50000000000003,310.3" />
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Sequence Container\Populate Airport Dimension\OLE DB Command 1"
-          TopLeft="291.7,208.7" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Sequence Container\Populate Airport Dimension\Derived Column 1"
-          TopLeft="149.7,513.5" />
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\Sequence Container\Populate Airport Dimension\Union All"
-          TopLeft="170.9,411.9" />
+          Size="208,41.6"
+          Id="Package\Sequence Container\Populate Airport Dimension\Slowly Changing Dimension"
+          TopLeft="126.9,107.1" />
         <NodeLayout
           Size="136,41.6"
           Id="Package\Sequence Container\Populate Airport Dimension\NDS_Airport"
           TopLeft="162.9,5.49999999999995" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Sequence Container\Populate Airport Dimension\Insert Destination"
-          TopLeft="149.7,615.099999999999" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Sequence Container\Populate Airport Dimension\Derived Column"
-          TopLeft="17.5,208.7" />
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\Sequence Container\Populate Airport Dimension\Slowly Changing Dimension"
-          TopLeft="126.9,107.1" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Airport Dimension.Paths[Derived Column Output]"
-          TopLeft="90.9,250.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Airport Dimension.Paths[Union All Output 1]"
-          TopLeft="230.9,453.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Populate Airport Dimension.Paths[OLE DB Source Output]"
           TopLeft="230.9,47.1">
@@ -6993,32 +6912,64 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Sequence Container\Populate Airport Dimension\Derived Column"
+          TopLeft="17.5,208.7" />
         <EdgeLayout
-          Id="Package\Sequence Container\Populate Airport Dimension.Paths[OLE DB Command Output]"
-          TopLeft="87.9,351.9">
+          Id="Package\Sequence Container\Populate Airport Dimension.Paths[Historical Attribute Inserts Output]"
+          TopLeft="180.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="124.333333333333,59.9999999999999"
+              EndConnector="-87,59.9999999999999"
               Start="0,0"
-              End="124.333333333333,52.4999999999999">
+              End="-87,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5263157894736" />
+                    End="0,16.506329113924" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5263157894736"
-                    Point2="0,35.5263157894736"
-                    Point3="4,35.5263157894736" />
+                    Point1="0,16.506329113924"
+                    Point2="0,20.506329113924"
+                    Point3="-4,20.506329113924" />
                   <mssgle:LineSegment
-                    End="120.333333333333,35.5263157894736" />
+                    End="-83,20.506329113924" />
                   <mssgle:CubicBezierSegment
-                    Point1="120.333333333333,35.5263157894736"
-                    Point2="124.333333333333,35.5263157894736"
-                    Point3="124.333333333333,39.5263157894736" />
+                    Point1="-83,20.506329113924"
+                    Point2="-87,20.506329113924"
+                    Point3="-87,24.506329113924" />
                   <mssgle:LineSegment
-                    End="124.333333333333,52.4999999999999" />
+                    End="-87,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-118.55638671875,25.506329113924,150.1127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Sequence Container\Populate Airport Dimension\OLE DB Command"
+          TopLeft="5.50000000000003,310.3" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Airport Dimension.Paths[Derived Column Output]"
+          TopLeft="90.9,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7027,6 +6978,10 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Sequence Container\Populate Airport Dimension\Union All"
+          TopLeft="170.9,411.9" />
         <EdgeLayout
           Id="Package\Sequence Container\Populate Airport Dimension.Paths[New Output]"
           TopLeft="230.9,148.7">
@@ -7064,6 +7019,96 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Sequence Container\Populate Airport Dimension.Paths[OLE DB Command Output]"
+          TopLeft="87.9,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.333333333333,59.9999999999999"
+              Start="0,0"
+              End="124.333333333333,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5263157894736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5263157894736"
+                    Point2="0,35.5263157894736"
+                    Point3="4,35.5263157894736" />
+                  <mssgle:LineSegment
+                    End="120.333333333333,35.5263157894736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120.333333333333,35.5263157894736"
+                    Point2="124.333333333333,35.5263157894736"
+                    Point3="124.333333333333,39.5263157894736" />
+                  <mssgle:LineSegment
+                    End="124.333333333333,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Sequence Container\Populate Airport Dimension\Derived Column 1"
+          TopLeft="149.7,513.5" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Airport Dimension.Paths[Union All Output 1]"
+          TopLeft="230.9,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Sequence Container\Populate Airport Dimension\Insert Destination"
+          TopLeft="149.7,615.099999999999" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Airport Dimension.Paths[Derived Column Output1]"
+          TopLeft="230.9,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Sequence Container\Populate Airport Dimension\OLE DB Command 1"
+          TopLeft="291.7,208.7" />
+        <EdgeLayout
           Id="Package\Sequence Container\Populate Airport Dimension.Paths[Inferred Member Updates Output]"
           TopLeft="280.9,148.7">
           <EdgeLayout.Curve>
@@ -7099,93 +7144,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Airport Dimension.Paths[Historical Attribute Inserts Output]"
-          TopLeft="180.9,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-87,59.9999999999999"
-              Start="0,0"
-              End="-87,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.506329113924" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.506329113924"
-                    Point2="0,20.506329113924"
-                    Point3="-4,20.506329113924" />
-                  <mssgle:LineSegment
-                    End="-83,20.506329113924" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-83,20.506329113924"
-                    Point2="-87,20.506329113924"
-                    Point3="-87,24.506329113924" />
-                  <mssgle:LineSegment
-                    End="-87,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-118.55638671875,25.506329113924,150.1127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Airport Dimension.Paths[Derived Column Output1]"
-          TopLeft="230.9,555.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Airport Dimension\NDS_Airport">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Airport Dimension\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Populate Airport Dimension\Slowly Changing Dimension">
     <Properties>
@@ -7275,6 +7236,19 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Populate Airport Dimension\NDS_Airport">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Sequence Container\Populate Flight Fact">
     <LayoutInfo>
@@ -7289,10 +7263,6 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           Id="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Airport2"
           TopLeft="5.50000000000007,310.3" />
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Date"
-          TopLeft="283.814286290565,118.676470489032" />
-        <NodeLayout
           Size="150.4,41.6"
           Id="Package\Sequence Container\Populate Flight Fact\Lookup Reason"
           TopLeft="19.1000000000001,411.9" />
@@ -7300,6 +7270,10 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           Size="130.4,41.6"
           Id="Package\Sequence Container\Populate Flight Fact\NDS_Flight"
           TopLeft="749.957143991456,108.864706326087" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Sequence Container\Populate Flight Fact\Derived Column 1"
+          TopLeft="702.142858637535,194.235293947392" />
         <NodeLayout
           Size="176.8,41.6"
           Id="Package\Sequence Container\Populate Flight Fact\Lookup Time_of_day"
@@ -7309,9 +7283,79 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           Id="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Airport1"
           TopLeft="5.50000000000007,208.7" />
         <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Date"
+          TopLeft="283.814286290565,118.676470489032" />
+        <NodeLayout
           Size="124,41.6"
           Id="Package\Sequence Container\Populate Flight Fact\FactFlight"
           TopLeft="32.3000000000001,615.099999999999" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Sequence Container\Populate Flight Fact\Derived Column"
+          TopLeft="449.285715242126,172.823529260278" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Flight Fact.Paths[Derived Column Output]"
+          TopLeft="449.285715242126,193.623529260278">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84.2714289515601,-33.3470587712465"
+              Start="0,0"
+              End="-84.2714289515601,-25.8470587712465">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-80.2714289515601,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-80.2714289515601,0"
+                    Point2="-84.2714289515601,0"
+                    Point3="-84.2714289515601,-4" />
+                  <mssgle:LineSegment
+                    End="-84.2714289515601,-25.8470587712465" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Flight Fact.Paths[OLE DB Source Output]"
+          TopLeft="815.157143991456,150.464706326087">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31.8142853539207,43.7705876213052"
+              Start="0,0"
+              End="-31.8142853539207,36.2705876213052">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.8852938106526" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.8852938106526"
+                    Point2="0,21.8852938106526"
+                    Point3="-4,21.8852938106526" />
+                  <mssgle:LineSegment
+                    End="-27.8142853539207,21.8852938106526" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27.8142853539207,21.8852938106526"
+                    Point2="-31.8142853539207,21.8852938106526"
+                    Point3="-31.8142853539207,25.8852938106526" />
+                  <mssgle:LineSegment
+                    End="-31.8142853539207,36.2705876213052" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Populate Flight Fact.Paths[Lookup Match Output5]"
           TopLeft="94.3000000000001,555.1">
@@ -7332,7 +7376,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7380,7 +7424,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7428,7 +7472,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7466,76 +7510,6 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             <mssgm:EdgeLabel
               BoundingBox="-100.548529864033,1,96.3827734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Sequence Container\Populate Flight Fact\Derived Column"
-          TopLeft="449.285715242126,172.823529260278" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Flight Fact.Paths[Derived Column Output]"
-          TopLeft="449.285715242126,193.623529260278">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-84.2714289515601,-33.3470587712465"
-              Start="0,0"
-              End="-84.2714289515601,-25.8470587712465">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-80.2714289515601,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-80.2714289515601,0"
-                    Point2="-84.2714289515601,0"
-                    Point3="-84.2714289515601,-4" />
-                  <mssgle:LineSegment
-                    End="-84.2714289515601,-25.8470587712465" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Sequence Container\Populate Flight Fact\Derived Column 1"
-          TopLeft="702.142858637535,194.235293947392" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Flight Fact.Paths[OLE DB Source Output]"
-          TopLeft="815.157143991456,150.464706326087">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-31.8142853539207,43.7705876213052"
-              Start="0,0"
-              End="-31.8142853539207,36.2705876213052">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.8852938106526" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.8852938106526"
-                    Point2="0,21.8852938106526"
-                    Point3="-4,21.8852938106526" />
-                  <mssgle:LineSegment
-                    End="-27.8142853539207,21.8852938106526" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-27.8142853539207,21.8852938106526"
-                    Point2="-31.8142853539207,21.8852938106526"
-                    Point3="-31.8142853539207,25.8852938106526" />
-                  <mssgle:LineSegment
-                    End="-31.8142853539207,36.2705876213052" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7622,29 +7596,6 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Date">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_DATE]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Populate Flight Fact\Lookup Reason">
     <Properties>
       <Property>
@@ -7686,7 +7637,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7727,6 +7678,29 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Date">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_DATE]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Populate Flight Fact\FactFlight">
     <Properties>
       <Property>
@@ -7745,6 +7719,10 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Sequence Container\Populate Reason Dimension\OLE DB Command"
+          TopLeft="228.3,208.7" />
+        <NodeLayout
           Size="139.2,41.6"
           Id="Package\Sequence Container\Populate Reason Dimension\NDS_Reason"
           TopLeft="241.1,5.49999999999984" />
@@ -7757,13 +7735,67 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           Id="Package\Sequence Container\Populate Reason Dimension\Slowly Changing Dimension"
           TopLeft="206.7,107.1" />
         <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Sequence Container\Populate Reason Dimension\OLE DB Command"
-          TopLeft="228.3,208.7" />
-        <NodeLayout
           Size="162.4,41.6"
           Id="Package\Sequence Container\Populate Reason Dimension\Insert Destination"
           TopLeft="5.5000000000001,208.7" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Reason Dimension.Paths[OLE DB Source Output]"
+          TopLeft="310.7,47.0999999999998">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Reason Dimension.Paths[New Output]"
+          TopLeft="260.7,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-174,60"
+              Start="0,0"
+              End="-174,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.506329113924" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.506329113924"
+                    Point2="0,20.506329113924"
+                    Point3="-4,20.506329113924" />
+                  <mssgle:LineSegment
+                    End="-170,20.506329113924" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-170,20.506329113924"
+                    Point2="-174,20.506329113924"
+                    Point3="-174,24.506329113924" />
+                  <mssgle:LineSegment
+                    End="-174,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-114.09138671875,25.506329113924,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Populate Reason Dimension.Paths[Inferred Member Updates Output]"
           TopLeft="310.7,148.7">
@@ -7824,67 +7856,35 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Reason Dimension.Paths[OLE DB Source Output]"
-          TopLeft="310.7,47.0999999999998">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Reason Dimension.Paths[New Output]"
-          TopLeft="260.7,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-174,60"
-              Start="0,0"
-              End="-174,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.506329113924" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.506329113924"
-                    Point2="0,20.506329113924"
-                    Point3="-4,20.506329113924" />
-                  <mssgle:LineSegment
-                    End="-170,20.506329113924" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-170,20.506329113924"
-                    Point2="-174,20.506329113924"
-                    Point3="-174,24.506329113924" />
-                  <mssgle:LineSegment
-                    End="-174,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-114.09138671875,25.506329113924,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Populate Reason Dimension\NDS_Reason">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Populate Reason Dimension\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Populate Reason Dimension\Slowly Changing Dimension">
     <Properties>
@@ -7942,7 +7942,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Reason Dimension\Insert Destination">
+    design-time-name="Package\Sequence Container\Populate Airport Dimension\Insert Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7955,7 +7955,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Reason Dimension\NDS_Reason">
+    design-time-name="Package\Sequence Container\Populate Airline Dimension\Insert Dim_Airline">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
