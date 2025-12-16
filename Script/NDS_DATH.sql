@@ -20,7 +20,7 @@ GO
 
 
 CREATE TABLE NDS_Airline (
-    Iata_Code VARCHAR(10) PRIMARY KEY,
+    Iata_Code VARCHAR(2) PRIMARY KEY,
     Airline_Name NVARCHAR(255),
     Created_Date DATETIME,
     Updated_Date DATETIME,    
@@ -28,7 +28,7 @@ CREATE TABLE NDS_Airline (
 
 
 CREATE TABLE NDS_Airport (
-    Iata_Code VARCHAR(5) PRIMARY KEY,
+    Iata_Code VARCHAR(3) PRIMARY KEY,
     Airport_Name VARCHAR(255),
     City_Name VARCHAR(255),
     State_Code VARCHAR(50),
@@ -64,12 +64,12 @@ UNIQUE (Year_Value, Month_Value, Day_Value)
 
 CREATE TABLE NDS_Flight (
 	Flight_ID INT IDENTITY(1,1) PRIMARY KEY,
-    Iata_Airline VARCHAR(10),
+    Iata_Airline VARCHAR(2),
     Flight_Number INT,
     Time_Id INT,
     Tail_Number VARCHAR(20),
-    Origin_Airport VARCHAR(5),
-    Destination_Airport VARCHAR(5),
+    Origin_Airport VARCHAR(3),
+    Destination_Airport VARCHAR(3),
     Scheduled_Departure INT,
     Departure_Time INT,
     Departure_Delay INT,
@@ -104,8 +104,8 @@ CREATE TABLE NDS_Flight (
 );
 
 CREATE TABLE NDS_Distance (
-    Origin_Airport VARCHAR(5),
-    Destination_Airport VARCHAR(5),
+    Origin_Airport VARCHAR(3),
+    Destination_Airport VARCHAR(3),
     Distance INT,
     Created_Date DATETIME,
     Updated_Date DATETIME,

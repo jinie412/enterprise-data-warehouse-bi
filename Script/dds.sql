@@ -109,7 +109,7 @@ CREATE TABLE FACT_FLIGHT (
     -- KPI FLAGS (0 / 1)
 	Is_Cancelled INT NOT NULL, -- 1: chuyến bị hủy
 	Is_Diverted INT NOT NULL, -- 1: chuyển hướng
-	Is_OTP INT NOT NULL, -- 1: Arr_Delay <= 15 phút
+	Is_OTP INT, -- 1: Arr_Delay <= 15 phút
 
     -- DELAY BREAKDOWN
 	Air_System_Delay INT NOT NULL DEFAULT 0,

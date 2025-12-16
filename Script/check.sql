@@ -5,8 +5,8 @@ SELECT * FROM STG_Airline
 SELECT * FROM STG_Airport
 SELECT * FROM STG_Flight
 
-
 SELECT * FROM STG_Flight where Cancelled=1
+SELECT * FROM STG_Flight where Cancelled=0 and Arrival_Delay<=15
 
 SELECT DISTINCT Destination_Airport, Origin_Airport FROM STG_Flight WHERE Month_Value='10'
 SELECT DISTINCT Destination_Airport, Origin_Airport, Distance FROM STG_Flight
@@ -21,7 +21,7 @@ FROM STG_Airport
 WHERE IATA_CODE LIKE '% '
 
 
-SELECT DISTINCT Destination_Airport, Origin_Airport, MAX(Distance)
+SELECT DISTINCT Destination_Airport, Origin_Airport
 FROM STG_FLIGHT
 GROUP BY Destination_Airport, Origin_Airport
 
@@ -56,9 +56,14 @@ GO
 
 SELECT * FROM DIM_AIRLINE
 SELECT * FROM DIM_AIRPORT
+SELECT * FROM DIM_AIRPORT where city = 'Albany'
 SELECT * FROM DIM_DATE
 SELECT * FROM DIM_REASON
 SELECT * FROM DIM_TIME_OF_DAY
 
 
-SELECT * FROM FACT_FLIGHT
+SELECT * FROM FACT_FLIGHT where Is_Cancelled=0
+SELECT * FROM FACT_FLIGHT where Is_Cancelled=1
+
+SELECT * FROM FACT_FLIGHT where Is_Cancelled=0 and Is_OTP=1
+select count(is_otp) from FACT_FLIGHT

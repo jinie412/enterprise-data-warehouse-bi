@@ -36,8 +36,8 @@ CREATE TABLE STG_Flight (
     Iata_Airline CHAR(2),
     Flight_Number INT,
     Tail_Number VARCHAR(20),
-    Origin_Airport VARCHAR(5), -- từ 3 sang 5
-    Destination_Airport VARCHAR(5), -- từ 3 sang 5
+    Origin_Airport VARCHAR(3), -- từ 3 sang 5
+    Destination_Airport VARCHAR(3), -- từ 3 sang 5
 	Distance Int,
     Scheduled_Departure INT, -- time
     Departure_Time INT, -- time
