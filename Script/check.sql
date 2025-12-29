@@ -50,13 +50,14 @@ SELECT * FROM NDS_Reason
 SELECT * FROM NDS_Flight
 SELECT * FROM NDS_Distance
 
+SELECT * FROM NDS_Flight WHERE Departure_Delay > 15 AND Arrival_Delay <=15 and Cancelled=0
 
 USE DDS_DATH
 GO
 
 SELECT * FROM DIM_AIRLINE
 SELECT * FROM DIM_AIRPORT
-SELECT * FROM DIM_AIRPORT where city = 'Albany'
+
 SELECT * FROM DIM_DATE
 SELECT * FROM DIM_REASON
 SELECT * FROM DIM_TIME_OF_DAY
@@ -66,4 +67,37 @@ SELECT * FROM FACT_FLIGHT where Is_Cancelled=0
 SELECT * FROM FACT_FLIGHT where Is_Cancelled=1
 
 SELECT * FROM FACT_FLIGHT where Is_Cancelled=0 and Is_OTP=1
+SELECT * FROM FACT_FLIGHT where Is_Delayed=1 and Is_OTP=1
 select count(is_otp) from FACT_FLIGHT
+SELECT * FROM DIM_AIRPORT where city = 'Albany'
+
+SELECT * FROM FACT_FLIGHT where Is_OTP=1 and (Air_System_Delay<>0 or Security_Delay<>0 or Airline_Delay<>0 or Late_Aircraft_Delay<>0 or Weather_Delay<>0)
+
+UPDATE DIM_AIRPORT
+SET Latitude='30.357106',
+Longitude='-85.795414'
+WHERE IATA_Code='ECP'
+
+
+UPDATE DIM_AIRPORT
+SET Latitude='44.650901794433594',
+Longitude='-73.46810150146484'
+WHERE IATA_Code='PBG'
+
+
+UPDATE DIM_AIRPORT
+SET Latitude='29.9592',
+Longitude='-81.339798'
+WHERE IATA_Code='UST'
+
+
+UPDATE DIM_AIRPORT
+SET Latitude='13.4834003448',
+Longitude='144.796005249'
+WHERE IATA_Code='GUM'
+
+
+UPDATE DIM_AIRPORT
+SET Latitude='13.4834003448',
+Longitude='144.796005249'
+WHERE IATA_Code='PPG'

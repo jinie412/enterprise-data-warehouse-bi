@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="91"
-  DTS:VersionGUID="{9A8DF85C-931C-40A5-9244-EB83A2ACDB71}">
+  DTS:VersionBuild="92"
+  DTS:VersionGUID="{3DBFBDD3-454D-49C4-9B51-A8A539183248}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -500,7 +500,7 @@ WHERE Iata_Code=?</property>
                       refId="Package\Import to NDS_Airline\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="2"
                       name="Param_2">
                       <properties>
                         <property
@@ -650,7 +650,7 @@ WHERE Iata_Code=?</property>
                       refId="Package\Import to NDS_Airline\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Iata_Code]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="2"
                       name="Iata_Code" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Airline\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Airline_Name]"
@@ -1386,7 +1386,7 @@ WHERE Iata_Code=?</property>
                       refId="Package\Import to NDS_Airport\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       name="Param_7">
                       <properties>
                         <property
@@ -1573,7 +1573,7 @@ WHERE Iata_Code=?</property>
                       refId="Package\Import to NDS_Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Iata_Code]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       name="Iata_Code" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Airport\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created_Date]"
@@ -2365,7 +2365,7 @@ WHERE Origin_Airport=? AND Destination_Airport=?</property>
                       refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       name="Param_2">
                       <properties>
                         <property
@@ -2378,7 +2378,7 @@ WHERE Origin_Airport=? AND Destination_Airport=?</property>
                       refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       name="Param_3">
                       <properties>
                         <property
@@ -2543,13 +2543,13 @@ WHERE Origin_Airport=? AND Destination_Airport=?</property>
                       refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Origin_Airport]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       name="Origin_Airport" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Destination_Airport]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       name="Destination_Airport" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distance]"

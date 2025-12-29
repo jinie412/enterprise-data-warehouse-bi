@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="NDSToDDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="138"
-  DTS:VersionGUID="{828B46C0-A16A-417B-827F-ABFE34D78E01}">
+  DTS:VersionBuild="164"
+  DTS:VersionGUID="{F2DD8F15-F4F3-4C4A-852D-2694324C77DB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -205,7 +205,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Airport"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -232,7 +232,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -259,7 +259,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Reason"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -3100,10 +3100,10 @@
                       name="Derived Column Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Sequence Container\Populate Flight Fact\Derived Column.Inputs[Derived Column Input].Columns[Arrival_Delay]"
+                          refId="Package\Sequence Container\Populate Flight Fact\Derived Column.Inputs[Derived Column Input].Columns[Scheduled_Departure]"
                           cachedDataType="i4"
-                          cachedName="Arrival_Delay"
-                          lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]" />
+                          cachedName="Scheduled_Departure"
+                          lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Departure]" />
                         <inputColumn
                           refId="Package\Sequence Container\Populate Flight Fact\Derived Column.Inputs[Derived Column Input].Columns[Cancelled]"
                           cachedDataType="bool"
@@ -3115,10 +3115,10 @@
                           cachedName="Diverted"
                           lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Diverted]" />
                         <inputColumn
-                          refId="Package\Sequence Container\Populate Flight Fact\Derived Column.Inputs[Derived Column Input].Columns[Scheduled_Departure]"
+                          refId="Package\Sequence Container\Populate Flight Fact\Derived Column.Inputs[Derived Column Input].Columns[Arrival_Delay]"
                           cachedDataType="i4"
-                          cachedName="Scheduled_Departure"
-                          lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Departure]" />
+                          cachedName="Arrival_Delay"
+                          lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -3144,13 +3144,13 @@
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">(#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Cancelled]} ==  TRUE ) ? NULL(DT_I4) : ([ISNULL](#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]}) ? 0 : ((DT_I4)#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]} &lt;= 15 ? 1 : 0))</property>
+                              name="Expression">(#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Cancelled]} ==  TRUE ) ? NULL(DT_I4) : ([ISNULL](#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]}) ? 0 : ((DT_I4)#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]} &lt; 15 ? 1 : 0))</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">(Cancelled ==  TRUE ) ? NULL(DT_I4) : (ISNULL(Arrival_Delay) ? 0 : ((DT_I4)Arrival_Delay &lt;= 15 ? 1 : 0))</property>
+                              name="FriendlyExpression">(Cancelled ==  TRUE ) ? NULL(DT_I4) : (ISNULL(Arrival_Delay) ? 0 : ((DT_I4)Arrival_Delay &lt; 15 ? 1 : 0))</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -3239,6 +3239,28 @@
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
                               name="FriendlyExpression">Scheduled_Departure &lt; 0 ? -1 : (DT_I4)(Scheduled_Departure / 100)</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Populate Flight Fact\Derived Column.Outputs[Derived Column Output].Columns[Is_Delayed]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Sequence Container\Populate Flight Fact\Derived Column.Outputs[Derived Column Output].Columns[Is_Delayed]"
+                          name="Is_Delayed"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Cancelled]} ==  TRUE ) ? NULL(DT_I4) : ([ISNULL](#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]}) ? 0 : ((DT_I4)#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]} &gt;= 15 ? 1 : 0))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(Cancelled ==  TRUE ) ? NULL(DT_I4) : (ISNULL(Arrival_Delay) ? 0 : ((DT_I4)Arrival_Delay &gt;= 15 ? 1 : 0))</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -3438,11 +3460,17 @@
                           externalMetadataColumnId="Package\Sequence Container\Populate Flight Fact\FactFlight.Inputs[OLE DB Destination Input].ExternalColumns[Date_Key]"
                           lineageId="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Date.Outputs[Lookup Match Output].Columns[Date_Key]" />
                         <inputColumn
-                          refId="Package\Sequence Container\Populate Flight Fact\FactFlight.Inputs[OLE DB Destination Input].Columns[Scheduled_Departure_Hour]"
+                          refId="Package\Sequence Container\Populate Flight Fact\FactFlight.Inputs[OLE DB Destination Input].Columns[Is_Delayed]"
                           cachedDataType="i4"
-                          cachedName="Scheduled_Departure_Hour"
+                          cachedName="Is_Delayed"
+                          externalMetadataColumnId="Package\Sequence Container\Populate Flight Fact\FactFlight.Inputs[OLE DB Destination Input].ExternalColumns[Is_Delayed]"
+                          lineageId="Package\Sequence Container\Populate Flight Fact\Derived Column.Outputs[Derived Column Output].Columns[Is_Delayed]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Populate Flight Fact\FactFlight.Inputs[OLE DB Destination Input].Columns[Departure_Delay]"
+                          cachedDataType="i4"
+                          cachedName="Departure_Delay"
                           externalMetadataColumnId="Package\Sequence Container\Populate Flight Fact\FactFlight.Inputs[OLE DB Destination Input].ExternalColumns[Dep_Delay_Minutes]"
-                          lineageId="Package\Sequence Container\Populate Flight Fact\Derived Column.Outputs[Derived Column Output].Columns[Scheduled_Departure_Hour]" />
+                          lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Departure_Delay]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -3526,6 +3554,10 @@
                           refId="Package\Sequence Container\Populate Flight Fact\FactFlight.Inputs[OLE DB Destination Input].ExternalColumns[UPDATED_DATE]"
                           dataType="dbTimeStamp"
                           name="UPDATED_DATE" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Populate Flight Fact\FactFlight.Inputs[OLE DB Destination Input].ExternalColumns[Is_Delayed]"
+                          dataType="i4"
+                          name="Is_Delayed" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -4409,7 +4441,7 @@ where [refTable].[Hour] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Departure_Hour]};</property>
+                      name="ParameterMap">#{Package\Sequence Container\Populate Flight Fact\Derived Column.Outputs[Derived Column Output].Columns[Scheduled_Departure_Hour]};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4550,7 +4582,7 @@ where [refTable].[Hour] = ?</property>
     t.Year_Value * 10000 + t.Month_Value * 100 + t.Day_Value AS Date_Key,
     
     -- Measures
-    f.Departure_Delay AS Dep_Delay_Minutes,
+    f.Departure_Delay,
     f.Arrival_Delay,
     f.Taxi_Out,
     f.Taxi_In,
@@ -4805,15 +4837,6 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
                           name="UPDATED_DATE"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Dep_Delay_Minutes]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Dep_Delay_Minutes]"
-                          lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Dep_Delay_Minutes]"
-                          name="Dep_Delay_Minutes"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
                           refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Cancelled]"
                           dataType="bool"
                           errorOrTruncationOperation="Conversion"
@@ -4848,6 +4871,15 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
                           externalMetadataColumnId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Departure_Hour]"
                           lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Departure_Hour]"
                           name="Scheduled_Departure_Hour"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Departure_Delay]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Departure_Delay]"
+                          lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Departure_Delay]"
+                          name="Departure_Delay"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
@@ -4943,10 +4975,6 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
                           dataType="dbTimeStamp"
                           name="UPDATED_DATE" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Dep_Delay_Minutes]"
-                          dataType="i4"
-                          name="Dep_Delay_Minutes" />
-                        <externalMetadataColumn
                           refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Cancelled]"
                           dataType="bool"
                           name="Cancelled" />
@@ -4962,6 +4990,10 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
                           refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Departure_Hour]"
                           dataType="i4"
                           name="Scheduled_Departure_Hour" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].ExternalColumns[Departure_Delay]"
+                          dataType="i4"
+                          name="Departure_Delay" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -5028,10 +5060,10 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
                           lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Date_Key]"
                           name="Date_Key" />
                         <outputColumn
-                          refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Dep_Delay_Minutes]"
+                          refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Departure_Delay]"
                           dataType="i4"
-                          lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Dep_Delay_Minutes]"
-                          name="Dep_Delay_Minutes" />
+                          lineageId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Departure_Delay]"
+                          name="Departure_Delay" />
                         <outputColumn
                           refId="Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Error Output].Columns[Arrival_Delay]"
                           dataType="i4"
@@ -6002,7 +6034,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Airport"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -6021,7 +6053,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -6040,7 +6072,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Reason"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -6586,7 +6618,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6608,7 +6642,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6642,7 +6678,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6772,7 +6810,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6794,7 +6834,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6972,7 +7014,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6994,7 +7038,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7016,7 +7062,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7038,7 +7086,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7072,7 +7122,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7275,6 +7327,26 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           Id="Package\Sequence Container\Populate Flight Fact\NDS_Flight"
           TopLeft="719.242858211788,106.570588681039" />
         <NodeLayout
+          Size="124,41.6"
+          Id="Package\Sequence Container\Populate Flight Fact\FactFlight"
+          TopLeft="32.3000000000001,615.099999999999" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Sequence Container\Populate Flight Fact\Derived Column"
+          TopLeft="516.928572517269,105.700000535564" />
+        <NodeLayout
+          Size="177.6,41.6"
+          Id="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Airport1"
+          TopLeft="5.50000000000007,208.7" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Date"
+          TopLeft="286.67142915379,110.264705790523" />
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\Sequence Container\Populate Flight Fact\Lookup Time_of_day"
+          TopLeft="5.90000000000012,513.5" />
+        <NodeLayout
           Size="169.6,41.6"
           Id="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Airline"
           TopLeft="9.50000000000007,107.1" />
@@ -7286,86 +7358,20 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
           Size="150.4,41.6"
           Id="Package\Sequence Container\Populate Flight Fact\Lookup Reason"
           TopLeft="19.1000000000001,411.9" />
-        <NodeLayout
-          Size="124,41.6"
-          Id="Package\Sequence Container\Populate Flight Fact\FactFlight"
-          TopLeft="32.3000000000001,615.099999999999" />
-        <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\Sequence Container\Populate Flight Fact\Lookup Time_of_day"
-          TopLeft="5.90000000000012,513.5" />
-        <NodeLayout
-          Size="177.6,41.6"
-          Id="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Airport1"
-          TopLeft="5.50000000000007,208.7" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Date"
-          TopLeft="286.67142915379,110.264705790523" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Sequence Container\Populate Flight Fact\Derived Column"
-          TopLeft="500.000001064369,103.99999990884" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Flight Fact.Paths[Lookup Match Output]"
-          TopLeft="286.67142915379,129.482352895261">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-107.57142915379,0"
-              Start="0,0"
-              End="-100.07142915379,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-100.07142915379,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-98.227101295645,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Populate Flight Fact.Paths[Derived Column Output]"
-          TopLeft="500.000001064369,127.932352849681">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-50.9285719105791,0"
-              Start="0,0"
-              End="-43.4285719105791,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-43.4285719105791,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Populate Flight Fact.Paths[OLE DB Source Output]"
-          TopLeft="719.242858211788,126.085294294939">
+          TopLeft="719.242858211788,126.935294608302">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-66.4428571474186,0"
+              EndConnector="-49.514285694519,0"
               Start="0,0"
-              End="-58.9428571474186,0">
+              End="-42.014285694519,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-58.9428571474186,0" />
+                    End="-42.014285694519,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7494,6 +7500,52 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Flight Fact.Paths[Lookup Match Output]"
+          TopLeft="286.67142915379,129.482352895261">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-107.57142915379,0"
+              Start="0,0"
+              End="-100.07142915379,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-100.07142915379,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-98.227101295645,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Populate Flight Fact.Paths[Derived Column Output]"
+          TopLeft="516.928572517269,128.782353163044">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-67.8571433634789,0"
+              Start="0,0"
+              End="-60.3571433634789,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-60.3571433634789,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -7507,6 +7559,88 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Populate Flight Fact\FactFlight">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Airport1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_AIRPORT]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Date">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_DATE]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Populate Flight Fact\Lookup Time_of_day">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_TIME_OF_DAY]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -7568,88 +7702,6 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[DIM_REASON]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Flight Fact\FactFlight">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Flight Fact\Lookup Time_of_day">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_TIME_OF_DAY]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Airport1">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_AIRPORT]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Populate Flight Fact\Lookup Dim_Date">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_DATE]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
