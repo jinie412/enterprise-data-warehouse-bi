@@ -140,8 +140,8 @@ GO
 -- Xóa dữ liệu cũ nếu cần (chỉ dùng khi làm lại)
 -- TRUNCATE TABLE DIM_DATE;
 
-DECLARE @StartDate DATE = '2005-01-01';
-DECLARE @EndDate   DATE = '2035-12-31';
+DECLARE @StartDate DATE = '2015-01-01';
+DECLARE @EndDate   DATE = '2015-12-31';
 
 ;WITH Date_CTE AS (
     SELECT @StartDate AS Full_Date
