@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="37a2b66b-a822-4bd1-b2b4-b19707e38c5f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a0e32d7a-9e0d-4ef7-a265-a3f444305f02" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>DDS DATH</ID>
   <Name>DDS DATH</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="26" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2889" scrolltop="2546" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="85" x="18881" y="15134" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="26" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2889" scrolltop="1126" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="85" x="18881" y="14542" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                   </font>
@@ -60,9 +60,9 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DATE" left="0" top="5067" logicalid="15" controlid="3" masterid="0" hint1="0" hint2="0" width="3429" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DATE" left="0" top="5067" logicalid="15" controlid="3" masterid="0" hint1="0" hint2="0" width="3429" height="6096" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
-                    <ddsxmlobjectstreaminitwrapper binary="000e0000650d000088130000" />
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000650d0000d0170000" />
                   </control>
                   <layoutobject>
                     <ddsxmlobj>
@@ -209,7 +209,7 @@
                     <point x="5754" y="13261" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3129" top="4968" logicalid="24" controlid="12" masterid="0" hint1="0" hint2="0" width="2925" height="893" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3129" top="4966" logicalid="24" controlid="12" masterid="0" hint1="0" hint2="0" width="2925" height="895" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -223,8 +223,8 @@
                     </ddsxmlobj>
                   </layoutobject>
                   <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="6" sourceattachpoint="11" destattachpoint="24" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="3429" y="5367" />
-                    <point x="4629" y="5367" />
+                    <point x="3429" y="5365" />
+                    <point x="4629" y="5365" />
                     <point x="4629" y="5561" />
                     <point x="5754" y="5561" />
                   </connector>
@@ -234,7 +234,7 @@
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
             <DiagramViewPortLeft>-2889</DiagramViewPortLeft>
-            <DiagramViewPortTop>2546</DiagramViewPortTop>
+            <DiagramViewPortTop>1126</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>85</DiagramZoom>
@@ -360,6 +360,8 @@
                   </xs:element>
                   <xs:element name="CREATED_DATE" msprop:FriendlyName="CREATED_DATE" msprop:DbColumnName="CREATED_DATE" msprop:design-time-name="b8111d20-2df0-4487-8831-a8271c2ef1e1" type="xs:dateTime" minOccurs="0" />
                   <xs:element name="UPDATED_DATE" msprop:FriendlyName="UPDATED_DATE" msprop:DbColumnName="UPDATED_DATE" msprop:design-time-name="b5fd300a-7ace-4500-9803-c23e7e8768d4" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="full_date_convert" msdata:ReadOnly="true" msprop:DbColumnName="full_date_convert" msprop:IsLogical="True" msprop:ComputedColumnExpression="CONVERT(DATETIME, full_date, 111)" msprop:design-time-name="a476b302-80a2-4b2c-bdc3-55f3c90b4617" msprop:Description="" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Season_Num" msdata:ReadOnly="true" msprop:Description="" msprop:design-time-name="65a82159-b0af-46aa-94fa-9c4c919d448d" msprop:IsLogical="True" msprop:DbColumnName="Season_Num" msprop:ComputedColumnExpression="CASE [Season] WHEN 'Spring' THEN 1 WHEN 'Summer' THEN 2 WHEN 'Autumn' THEN 3 WHEN 'Winter' THEN 4 END" type="xs:int" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -436,7 +438,7 @@
                   <xs:element name="Weather_Delay_Cnt" msdata:ReadOnly="true" msprop:DbColumnName="Weather_Delay_Cnt" msprop:IsLogical="True" msprop:design-time-name="012d8e82-cb2f-44cf-a0e2-ecabedb0fbe5" msprop:Description="" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [Weather_Delay]&gt;0 THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" type="xs:int" />
                   <xs:element name="Flight_Cancel_Reason_A" msdata:ReadOnly="true" msprop:DbColumnName="Flight_Cancel_Reason_A" msprop:IsLogical="True" msprop:design-time-name="9ecd8a8f-f780-483f-b2ef-8b7cb73248b5" msprop:Description="" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [Reason_Key] = 2 THEN 1&#xD;&#xA;    ELSE 0 &#xD;&#xA;END" type="xs:int" />
                   <xs:element name="Dep_Delay_Minutes_GE15" msdata:ReadOnly="true" msprop:DbColumnName="Dep_Delay_Minutes_GE15" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [Dep_Delay_Minutes] &gt;= 15 THEN [Dep_Delay_Minutes] &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="98758842-0e66-469d-99de-af20bde018d5" msprop:Description="" type="xs:int" minOccurs="0" />
-                  <xs:element name="Is_Dep_Delay" msdata:ReadOnly="true" msprop:Description="" msprop:design-time-name="4ea9086d-fbff-4eef-a2b4-e95ec983b702" msprop:IsLogical="True" msprop:DbColumnName="Is_Dep_Delay" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [Dep_Delay_Minutes] &gt;= 15 THEN 1&#xD;&#xA;    ELSE 0 &#xD;&#xA;END" type="xs:int" />
+                  <xs:element name="Is_Dep_Delay" msdata:ReadOnly="true" msprop:DbColumnName="Is_Dep_Delay" msprop:IsLogical="True" msprop:design-time-name="4ea9086d-fbff-4eef-a2b4-e95ec983b702" msprop:Description="" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [Dep_Delay_Minutes] &gt;= 15 THEN 1&#xD;&#xA;    ELSE 0 &#xD;&#xA;END" type="xs:int" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -462,29 +464,29 @@
           <xs:selector xpath=".//dbo_DIM_TIME_OF_DAY" />
           <xs:field xpath="Time_Of_Day_Key" />
         </xs:unique>
-        <xs:keyref name="FK_Fact_Date" refer="dbo_DIM_DATE_Constraint1">
+        <xs:keyref name="FK_Fact_TimeOfDay" refer="dbo_DIM_TIME_OF_DAY_Constraint1">
           <xs:selector xpath=".//dbo_FACT_FLIGHT" />
-          <xs:field xpath="Date_Key" />
-        </xs:keyref>
-        <xs:keyref name="FK_Fact_DestAirport" refer="dbo_DIM_AIRPORT_Constraint1">
-          <xs:selector xpath=".//dbo_FACT_FLIGHT" />
-          <xs:field xpath="Dest_Airport_Key" />
-        </xs:keyref>
-        <xs:keyref name="FK_Fact_Reason" refer="dbo_DIM_REASON_Constraint1">
-          <xs:selector xpath=".//dbo_FACT_FLIGHT" />
-          <xs:field xpath="Reason_Key" />
-        </xs:keyref>
-        <xs:keyref name="FK_Fact_Airline" refer="Constraint1">
-          <xs:selector xpath=".//dbo_FACT_FLIGHT" />
-          <xs:field xpath="Airline_Key" />
+          <xs:field xpath="Time_Of_Day_Key" />
         </xs:keyref>
         <xs:keyref name="FK_Fact_OriginAirport" refer="dbo_DIM_AIRPORT_Constraint1">
           <xs:selector xpath=".//dbo_FACT_FLIGHT" />
           <xs:field xpath="Origin_Airport_Key" />
         </xs:keyref>
-        <xs:keyref name="FK_Fact_TimeOfDay" refer="dbo_DIM_TIME_OF_DAY_Constraint1">
+        <xs:keyref name="FK_Fact_Airline" refer="Constraint1">
           <xs:selector xpath=".//dbo_FACT_FLIGHT" />
-          <xs:field xpath="Time_Of_Day_Key" />
+          <xs:field xpath="Airline_Key" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Reason" refer="dbo_DIM_REASON_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_FLIGHT" />
+          <xs:field xpath="Reason_Key" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_DestAirport" refer="dbo_DIM_AIRPORT_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_FLIGHT" />
+          <xs:field xpath="Dest_Airport_Key" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Date" refer="dbo_DIM_DATE_Constraint1">
+          <xs:selector xpath=".//dbo_FACT_FLIGHT" />
+          <xs:field xpath="Date_Key" />
         </xs:keyref>
       </xs:element>
     </xs:schema>
