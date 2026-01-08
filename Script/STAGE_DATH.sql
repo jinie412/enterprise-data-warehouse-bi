@@ -40,17 +40,17 @@ CREATE TABLE STG_Flight (
     Destination_Airport VARCHAR(3), -- từ 3 sang 5
 	Distance Int,
     Scheduled_Departure INT, -- time
-    Departure_Time INT, -- time
+    Departure_Time TIME, -- time
     Departure_Delay INT, 
     Taxi_Out INT,
-    Wheels_Off INT, -- time
+    Wheels_Off TIME, -- time
     Scheduled_Time INT,
     Elapsed_Time INT,
     Air_Time INT,
-    Wheels_On INT, -- time
+    Wheels_On TIME, -- time
     Taxi_In INT,
-    Scheduled_Arrival INT, -- time
-    Arrival_Time INT, -- time
+    Scheduled_Arrival TIME, -- time
+    Arrival_Time TIME, -- time
     Arrival_Delay INT,
     Diverted BIT,
     Cancelled BIT,
@@ -77,13 +77,13 @@ CREATE TABLE [STG_Flight_DOT] (
     [Airline_Delay_Fix] int,
     [Airline_Fix] varchar(2),
     [Arrival_Delay_Fix] int,
-    [Arrival_Time_Fix] INT,
+    [Arrival_Time_Fix] datetime,
     [Cancellation_Reason_Fix] varchar(1),
     [Cancelled_Fix] bit,
     [DAY_Fix] int,
     [DAY_OF_WEEK_Fix] int,
     [Departure_Delay_Fix] int,
-    [Departure_Time_Fix] INT,
+    [Departure_Time_Fix] datetime,
     [Destination_Airport_Fix] varchar(5),
     [DISTANCE_Fix] int,
     [DIVERTED_Fix] bit,
@@ -92,7 +92,7 @@ CREATE TABLE [STG_Flight_DOT] (
     [Late_Aircraft_Delay_Fix] int,
     [MONTH_Fix] int,
     [Origin_Airport_Fix] varchar(5),
-    [Scheduled_Arrival_Fix] INT,
+    [Scheduled_Arrival_Fix] datetime,
     [Scheduled_Departure_Fix] INT,
     [Scheduled_Time_Fix] int,
     [Security_Delay_Fix] int,
@@ -100,12 +100,24 @@ CREATE TABLE [STG_Flight_DOT] (
     [Taxi_In_Fix] int,
     [Taxi_Out_Fix] int,
     [Weather_Delay_Fix] int,
-    [Wheels_Off_Fix] INT,
-    [Wheels_On_Fix] INT,
+    [Wheels_Off_Fix] datetime,
+    [Wheels_On_Fix] datetime,
     [YEAR_Fix] int
+)
+
+
+DROP TABLE IF EXISTS [STG_AirportMappingLocation];
+GO
+CREATE TABLE [STG_AirportMappingLocation] (
+    [AirportID] varchar(50),
+    [IATA] varchar(3),
+    [Latitude] float,
+    [Longitude] float
 )
 
 SELECT * FROM STG_Airline
 
 SELECT * FROM STG_Airport
 SELECT * FROM STG_Flight
+
+select * from [STG_AirportMappingLocation]

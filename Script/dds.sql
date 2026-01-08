@@ -87,6 +87,7 @@ CREATE TABLE DIM_TIME_OF_DAY (
 -- Bảng Fact_Flight_Performance
 
 CREATE TABLE FACT_FLIGHT (
+    Flight INT IDENTITY(1,1) PRIMARY KEY,
     -- FOREIGN KEYS (DIMENSIONS)
     Date_Key INT NOT NULL,
 	Airline_Key INT NOT NULL,
@@ -222,8 +223,8 @@ BEGIN
     SET @Hour = @Hour + 1;
 END;
 
-INSERT INTO DIM_REASON (Reason_Code, Reason_Description, CREATED_DATE, UPDATED_DATE)
-VALUES ('N', 'Not Cancelled', GETDATE(), GETDATE());
+--INSERT INTO DIM_REASON (Reason_Code, Reason_Description, CREATED_DATE, UPDATED_DATE)
+--VALUES ('N', 'Not Cancelled', GETDATE(), GETDATE());
 
 
 select * from DIM_DATE;

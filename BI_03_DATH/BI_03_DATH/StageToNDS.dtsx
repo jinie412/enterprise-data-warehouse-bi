@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="92"
-  DTS:VersionGUID="{3DBFBDD3-454D-49C4-9B51-A8A539183248}">
+  DTS:VersionBuild="99"
+  DTS:VersionGUID="{FDC33655-C082-4E9E-A5F0-90E48E170968}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3472,12 +3472,6 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       externalMetadataColumnId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Departure]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Departure]" />
                     <inputColumn
-                      refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].Columns[Departure_Time]"
-                      cachedDataType="i4"
-                      cachedName="Departure_Time"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Time]"
-                      lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Departure_Time]" />
-                    <inputColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].Columns[Departure_Delay]"
                       cachedDataType="i4"
                       cachedName="Departure_Delay"
@@ -3491,7 +3485,8 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Taxi_Out]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].Columns[Wheels_Off]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="16"
                       cachedName="Wheels_Off"
                       externalMetadataColumnId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_Off]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Wheels_Off]" />
@@ -3502,12 +3497,6 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       externalMetadataColumnId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Time]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Time]" />
                     <inputColumn
-                      refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].Columns[Elapsed_Time]"
-                      cachedDataType="i4"
-                      cachedName="Elapsed_Time"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Elapsed_Time]"
-                      lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Elapsed_Time]" />
-                    <inputColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].Columns[Air_Time]"
                       cachedDataType="i4"
                       cachedName="Air_Time"
@@ -3515,7 +3504,8 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Air_Time]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].Columns[Wheels_On]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="16"
                       cachedName="Wheels_On"
                       externalMetadataColumnId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_On]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Wheels_On]" />
@@ -3527,16 +3517,11 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Taxi_In]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].Columns[Scheduled_Arrival]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="16"
                       cachedName="Scheduled_Arrival"
                       externalMetadataColumnId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Arrival]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Arrival]" />
-                    <inputColumn
-                      refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].Columns[Arrival_Time]"
-                      cachedDataType="i4"
-                      cachedName="Arrival_Time"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Time]"
-                      lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Time]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].Columns[Arrival_Delay]"
                       cachedDataType="i4"
@@ -3651,10 +3636,6 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       dataType="i4"
                       name="Scheduled_Departure" />
                     <externalMetadataColumn
-                      refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Time]"
-                      dataType="i4"
-                      name="Departure_Time" />
-                    <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Departure_Delay]"
                       dataType="i4"
                       name="Departure_Delay" />
@@ -3664,23 +3645,21 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       name="Taxi_Out" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_Off]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Wheels_Off" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Time]"
                       dataType="i4"
                       name="Scheduled_Time" />
                     <externalMetadataColumn
-                      refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Elapsed_Time]"
-                      dataType="i4"
-                      name="Elapsed_Time" />
-                    <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Air_Time]"
                       dataType="i4"
                       name="Air_Time" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Wheels_On]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Wheels_On" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Taxi_In]"
@@ -3688,12 +3667,9 @@ where [refTable].[Year_Value] = ? and [refTable].[Month_Value] = ? and [refTable
                       name="Taxi_In" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Scheduled_Arrival]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Scheduled_Arrival" />
-                    <externalMetadataColumn
-                      refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Time]"
-                      dataType="i4"
-                      name="Arrival_Time" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\NDS_Flight.Inputs[OLE DB Destination Input].ExternalColumns[Arrival_Delay]"
                       dataType="i4"
@@ -3798,17 +3774,14 @@ SET
     Origin_Airport = ?,
     Destination_Airport = ?,
     Scheduled_Departure = ?,
-    Departure_Time = ?,
     Departure_Delay = ?,
     Taxi_Out = ?,
     Wheels_Off = ?,
     Scheduled_Time = ?,
-    Elapsed_Time = ?,
     Air_Time = ?,
     Wheels_On = ?,
     Taxi_In = ?,
     Scheduled_Arrival = ?,
-    Arrival_Time = ?,
     Arrival_Delay = ?,
     Diverted = ?,
     Cancelled = ?,
@@ -3842,18 +3815,6 @@ WHERE
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Flight_ID]"
-                      cachedDataType="i4"
-                      cachedName="Flight_ID"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_27]"
-                      lineageId="Package\Import to NDS_Flight\Lookup in NDS_Flight.Outputs[Lookup Match Output].Columns[Flight_ID]" />
-                    <inputColumn
-                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Updated_Date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Updated_Date"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_26]"
-                      lineageId="Package\Import to NDS_Flight\Updated_Date.Outputs[Derived Column Output].Columns[Updated_Date]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Iata_Airline]"
                       cachedCodepage="1252"
@@ -3899,118 +3860,103 @@ WHERE
                       externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Departure]" />
                     <inputColumn
-                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Departure_Time]"
-                      cachedDataType="i4"
-                      cachedName="Departure_Time"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Departure_Time]" />
-                    <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Departure_Delay]"
                       cachedDataType="i4"
                       cachedName="Departure_Delay"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Departure_Delay]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Taxi_Out]"
                       cachedDataType="i4"
                       cachedName="Taxi_Out"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Taxi_Out]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Wheels_Off]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="16"
                       cachedName="Wheels_Off"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Wheels_Off]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Scheduled_Time]"
                       cachedDataType="i4"
                       cachedName="Scheduled_Time"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Time]" />
-                    <inputColumn
-                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Elapsed_Time]"
-                      cachedDataType="i4"
-                      cachedName="Elapsed_Time"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
-                      lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Elapsed_Time]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Air_Time]"
                       cachedDataType="i4"
                       cachedName="Air_Time"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Air_Time]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Wheels_On]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="16"
                       cachedName="Wheels_On"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Wheels_On]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Taxi_In]"
                       cachedDataType="i4"
                       cachedName="Taxi_In"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Taxi_In]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Scheduled_Arrival]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="16"
                       cachedName="Scheduled_Arrival"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Arrival]" />
-                    <inputColumn
-                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Arrival_Time]"
-                      cachedDataType="i4"
-                      cachedName="Arrival_Time"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
-                      lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Time]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Arrival_Delay]"
                       cachedDataType="i4"
                       cachedName="Arrival_Delay"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Diverted]"
                       cachedDataType="bool"
                       cachedName="Diverted"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Diverted]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Cancelled]"
                       cachedDataType="bool"
                       cachedName="Cancelled"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Cancelled]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Air_System_Delay]"
                       cachedDataType="i4"
                       cachedName="Air_System_Delay"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Air_System_Delay]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Security_Delay]"
                       cachedDataType="i4"
                       cachedName="Security_Delay"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_21]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Security_Delay]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Airline_Delay]"
                       cachedDataType="i4"
                       cachedName="Airline_Delay"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_22]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Airline_Delay]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Late_Aircraft_Delay]"
                       cachedDataType="i4"
                       cachedName="Late_Aircraft_Delay"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_23]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Late_Aircraft_Delay]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Weather_Delay]"
                       cachedDataType="i4"
                       cachedName="Weather_Delay"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_24]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_21]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Weather_Delay]" />
                     <inputColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Cancellation_Reason]"
@@ -4018,8 +3964,20 @@ WHERE
                       cachedDataType="str"
                       cachedLength="1"
                       cachedName="Cancellation_Reason"
-                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_25]"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_22]"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Cancellation_Reason]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Updated_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Updated_Date"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_23]"
+                      lineageId="Package\Import to NDS_Flight\Updated_Date.Outputs[Derived Column Output].Columns[Updated_Date]" />
+                    <inputColumn
+                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].Columns[Flight_ID]"
+                      cachedDataType="i4"
+                      cachedName="Flight_ID"
+                      externalMetadataColumnId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_24]"
+                      lineageId="Package\Import to NDS_Flight\Lookup in NDS_Flight.Outputs[Lookup Match Output].Columns[Flight_ID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4121,7 +4079,8 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Param_8">
                       <properties>
                         <property
@@ -4154,7 +4113,8 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Param_11">
                       <properties>
                         <property
@@ -4176,7 +4136,8 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Param_13">
                       <properties>
                         <property
@@ -4198,7 +4159,7 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
-                      dataType="i4"
+                      dataType="bool"
                       name="Param_15">
                       <properties>
                         <property
@@ -4209,7 +4170,7 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
-                      dataType="i4"
+                      dataType="bool"
                       name="Param_16">
                       <properties>
                         <property
@@ -4231,7 +4192,7 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
-                      dataType="bool"
+                      dataType="i4"
                       name="Param_18">
                       <properties>
                         <property
@@ -4242,7 +4203,7 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
-                      dataType="bool"
+                      dataType="i4"
                       name="Param_19">
                       <properties>
                         <property
@@ -4275,7 +4236,9 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_22]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
                       name="Param_22">
                       <properties>
                         <property
@@ -4286,7 +4249,7 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_23]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_23">
                       <properties>
                         <property
@@ -4304,41 +4267,6 @@ WHERE
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_25]"
-                      codePage="1252"
-                      dataType="str"
-                      length="1"
-                      name="Param_25">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_26]"
-                      dataType="dbTimeStamp"
-                      name="Param_26">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Import to NDS_Flight\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_27]"
-                      dataType="i4"
-                      name="Param_27">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">17</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -4546,10 +4474,11 @@ WHERE
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Departure_Time]"
-                      dataType="i4"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Departure_Time]"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Departure_Time]"
                       name="Departure_Time"
                       truncationRowDisposition="FailComponent" />
@@ -4573,10 +4502,11 @@ WHERE
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Wheels_Off]"
-                      dataType="i4"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Wheels_Off]"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Wheels_Off]"
                       name="Wheels_Off"
                       truncationRowDisposition="FailComponent" />
@@ -4609,10 +4539,11 @@ WHERE
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Wheels_On]"
-                      dataType="i4"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Wheels_On]"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Wheels_On]"
                       name="Wheels_On"
                       truncationRowDisposition="FailComponent" />
@@ -4627,19 +4558,21 @@ WHERE
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Arrival]"
-                      dataType="i4"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Arrival]"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Scheduled_Arrival]"
                       name="Scheduled_Arrival"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Time]"
-                      dataType="i4"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Arrival_Time]"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Time]"
                       name="Arrival_Time"
                       truncationRowDisposition="FailComponent" />
@@ -4783,7 +4716,8 @@ WHERE
                       name="Scheduled_Departure" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Departure_Time]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Departure_Time" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Departure_Delay]"
@@ -4795,7 +4729,8 @@ WHERE
                       name="Taxi_Out" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Wheels_Off]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Wheels_Off" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Time]"
@@ -4811,7 +4746,8 @@ WHERE
                       name="Air_Time" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Wheels_On]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Wheels_On" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Taxi_In]"
@@ -4819,11 +4755,13 @@ WHERE
                       name="Taxi_In" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Scheduled_Arrival]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Scheduled_Arrival" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Arrival_Time]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       name="Arrival_Time" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Arrival_Delay]"
@@ -4935,7 +4873,8 @@ WHERE
                       name="Scheduled_Departure" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Departure_Time]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Departure_Time]"
                       name="Departure_Time" />
                     <outputColumn
@@ -4950,7 +4889,8 @@ WHERE
                       name="Taxi_Out" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Wheels_Off]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Wheels_Off]"
                       name="Wheels_Off" />
                     <outputColumn
@@ -4970,7 +4910,8 @@ WHERE
                       name="Air_Time" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Wheels_On]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Wheels_On]"
                       name="Wheels_On" />
                     <outputColumn
@@ -4980,12 +4921,14 @@ WHERE
                       name="Taxi_In" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Scheduled_Arrival]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Scheduled_Arrival]"
                       name="Scheduled_Arrival" />
                     <outputColumn
                       refId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Arrival_Time]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="16"
                       lineageId="Package\Import to NDS_Flight\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Arrival_Time]"
                       name="Arrival_Time" />
                     <outputColumn
@@ -5293,7 +5236,25 @@ WHERE
                       cachedDataType="str"
                       cachedLength="1"
                       cachedName="Reason_Id"
-                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]" />
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,1)([ISNULL](#{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]}) ? "N" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "A" ? "A" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "B" ? "B" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "C" ? "C" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "D" ? "D" : "U")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,1)(ISNULL(Reason_Id) ? "N" : Reason_Id == "A" ? "A" : Reason_Id == "B" ? "B" : Reason_Id == "C" ? "C" : Reason_Id == "D" ? "D" : "U")</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5305,31 +5266,6 @@ WHERE
                   exclusionGroup="1"
                   name="Derived Column Output"
                   synchronousInputId="Package\Import to NDS_Reason\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Output].Columns[Reason_Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Output].Columns[Reason_Name]"
-                      name="Reason_Name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_WSTR,255)(#{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "A" ? "Airline/Carrier" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "B" ? "Weather" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "C" ? "National Air System" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "D" ? "Security" : "")</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_WSTR,255)(Reason_Id == "A" ? "Airline/Carrier" : Reason_Id == "B" ? "Weather" : Reason_Id == "C" ? "National Air System" : Reason_Id == "D" ? "Security" : "")</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -5350,6 +5286,89 @@ WHERE
                       refId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import to NDS_Reason\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import to NDS_Reason\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import to NDS_Reason\Derived Column 1.Inputs[Derived Column Input].Columns[Reason_Id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Reason_Id"
+                      lineageId="Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Import to NDS_Reason\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Output].Columns[Reason_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Output].Columns[Reason_Name]"
+                      name="Reason_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,255)(#{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "N" ? "Not Cancelled" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "A" ? "Airline/Carrier" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "B" ? "Weather" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "C" ? "National Air System" : #{Package\Import to NDS_Reason\STG_Flight.Outputs[OLE DB Source Output].Columns[Reason_Id]} == "D" ? "Security" : "Unknown")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)(Reason_Id == "N" ? "Not Cancelled" : Reason_Id == "A" ? "Airline/Carrier" : Reason_Id == "B" ? "Weather" : Reason_Id == "C" ? "National Air System" : Reason_Id == "D" ? "Security" : "Unknown")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Import to NDS_Reason\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5598,7 +5617,7 @@ where [refTable].[Reason_Id] = ?</property>
                       cachedLength="255"
                       cachedName="Reason_Name"
                       externalMetadataColumnId="Package\Import to NDS_Reason\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reason_Name]"
-                      lineageId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Output].Columns[Reason_Name]" />
+                      lineageId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Output].Columns[Reason_Name]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5676,8 +5695,7 @@ where [refTable].[Reason_Id] = ?</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT
     CANCELLATION_REASON AS Reason_Id
-FROM STG_Flight
-WHERE CANCELLATION_REASON IS NOT NULL AND CANCELLATION_REASON &lt;&gt; ''</property>
+FROM STG_Flight</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -5774,6 +5792,11 @@ WHERE CANCELLATION_REASON IS NOT NULL AND CANCELLATION_REASON &lt;&gt; ''</prope
             <path
               refId="Package\Import to NDS_Reason.Paths[Derived Column Output1]"
               endId="Package\Import to NDS_Reason\Lookup in NDS_Reason.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Import to NDS_Reason\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Import to NDS_Reason.Paths[Derived Column Output2]"
+              endId="Package\Import to NDS_Reason\Derived Column 1.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\Import to NDS_Reason\Derived Column.Outputs[Derived Column Output]" />
             <path
@@ -7128,7 +7151,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7222,7 +7247,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7244,7 +7271,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7347,7 +7376,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7369,7 +7400,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7391,7 +7424,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7566,7 +7601,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7660,7 +7697,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7682,7 +7721,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8008,9 +8049,9 @@ From STG_Flight</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Import to NDS_Reason\Derived Column"
-          TopLeft="426.666643354629,58.9333329235183" />
+          Size="162.4,41.6"
+          Id="Package\Import to NDS_Reason\Derived Column 1"
+          TopLeft="471.666643450422,54.3450976334224" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\Import to NDS_Reason\OLE DB Destination"
@@ -8022,7 +8063,7 @@ From STG_Flight</property>
         <NodeLayout
           Size="131.2,41.6"
           Id="Package\Import to NDS_Reason\STG_Flight"
-          TopLeft="214.166658243372,60" />
+          TopLeft="60.5952293450303,55.4117647099041" />
         <NodeLayout
           Size="143.2,41.6"
           Id="Package\Import to NDS_Reason\Created_Date"
@@ -8041,28 +8082,6 @@ From STG_Flight</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,31.4999994395172" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import to NDS_Reason.Paths[OLE DB Source Output]"
-          TopLeft="345.366658243372,80.2666664617592">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="81.2999851112569,0"
-              Start="0,0"
-              End="73.7999851112569,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="73.7999851112569,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8097,30 +8116,78 @@ From STG_Flight</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Import to NDS_Reason.Paths[Derived Column Output1]"
-          TopLeft="503.066643354629,100.533332923518">
+          TopLeft="552.866643450422,95.9450976334224">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-217.433317169713,62.5999996926387"
+              EndConnector="-267.233317265506,67.1882349827346"
               Start="0,0"
-              End="-217.433317169713,55.0999996926387">
+              End="-267.233317265506,59.6882349827346">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.2999998463193" />
+                    End="0,29.5941174913673" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.2999998463193"
-                    Point2="0,31.2999998463193"
-                    Point3="-4,31.2999998463193" />
+                    Point1="0,29.5941174913673"
+                    Point2="0,33.5941174913673"
+                    Point3="-4,33.5941174913673" />
                   <mssgle:LineSegment
-                    End="-213.433317169713,31.2999998463193" />
+                    End="-263.233317265506,33.5941174913673" />
                   <mssgle:CubicBezierSegment
-                    Point1="-213.433317169713,31.2999998463193"
-                    Point2="-217.433317169713,31.2999998463193"
-                    Point3="-217.433317169713,35.2999998463193" />
+                    Point1="-263.233317265506,33.5941174913673"
+                    Point2="-267.233317265506,33.5941174913673"
+                    Point3="-267.233317265506,37.5941174913673" />
                   <mssgle:LineSegment
-                    End="-217.433317169713,55.0999996926387" />
+                    End="-267.233317265506,59.6882349827346" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Import to NDS_Reason\Derived Column"
+          TopLeft="231.428571921222,52.7647058361026" />
+        <EdgeLayout
+          Id="Package\Import to NDS_Reason.Paths[OLE DB Source Output]"
+          TopLeft="191.79522934503,74.8882352730034">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="39.6333425761917,0"
+              Start="0,0"
+              End="32.1333425761917,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="32.1333425761917,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import to NDS_Reason.Paths[Derived Column Output2]"
+          TopLeft="384.228571921222,74.3549017347625">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.4380715292003,0"
+              Start="0,0"
+              End="79.9380715292003,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="79.9380715292003,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8132,27 +8199,6 @@ From STG_Flight</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Reason\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Reason\STG_Flight">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Import to NDS_Reason\Lookup in NDS_Reason">
     <Properties>
@@ -8173,6 +8219,27 @@ From STG_Flight</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Reason\STG_Flight">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Reason\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -8316,7 +8383,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8338,7 +8407,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8360,7 +8431,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8382,7 +8455,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8404,7 +8479,9 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
