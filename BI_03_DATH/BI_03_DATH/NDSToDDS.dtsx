@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="NDSToDDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="170"
-  DTS:VersionGUID="{4B4D0BDE-26D4-4CF7-BCF2-8026A76CF058}">
+  DTS:VersionBuild="175"
+  DTS:VersionGUID="{34C25D3A-4CDA-4C3B-A917-5B48B44ED141}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -178,7 +178,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Airline"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -205,7 +205,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Airport"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -232,7 +232,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -259,7 +259,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET, LSET Reason"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -3144,13 +3144,13 @@
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">(#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Cancelled]} ==  TRUE ) ? NULL(DT_I4) : ([ISNULL](#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]}) ? 0 : ((DT_I4)#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]} &lt; 15 ? 1 : 0))</property>
+                              name="Expression">(#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Cancelled]} ==  TRUE ) ? 0 : ([ISNULL](#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]}) ? 0 : ((DT_I4)#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]} &lt; 15 ? 1 : 0))</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">(Cancelled ==  TRUE ) ? NULL(DT_I4) : (ISNULL(Arrival_Delay) ? 0 : ((DT_I4)Arrival_Delay &lt; 15 ? 1 : 0))</property>
+                              name="FriendlyExpression">(Cancelled ==  TRUE ) ? 0 : (ISNULL(Arrival_Delay) ? 0 : ((DT_I4)Arrival_Delay &lt; 15 ? 1 : 0))</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -3254,13 +3254,13 @@
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">(#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Cancelled]} ==  TRUE ) ? NULL(DT_I4) : ([ISNULL](#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]}) ? 0 : ((DT_I4)#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]} &gt;= 15 ? 1 : 0))</property>
+                              name="Expression">(#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Cancelled]} ==  TRUE ) ? 1 : ([ISNULL](#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]}) ? 0 : ((DT_I4)#{Package\Sequence Container\Populate Flight Fact\NDS_Flight.Outputs[OLE DB Source Output].Columns[Arrival_Delay]} &gt;= 15 ? 1 : 0))</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">(Cancelled ==  TRUE ) ? NULL(DT_I4) : (ISNULL(Arrival_Delay) ? 0 : ((DT_I4)Arrival_Delay &gt;= 15 ? 1 : 0))</property>
+                              name="FriendlyExpression">(Cancelled ==  TRUE ) ? 1 : (ISNULL(Arrival_Delay) ? 0 : ((DT_I4)Arrival_Delay &gt;= 15 ? 1 : 0))</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -6015,7 +6015,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Airline"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -6034,7 +6034,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Airport"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -6053,7 +6053,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Flight"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -6072,7 +6072,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET Reason"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -6618,7 +6618,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6640,7 +6642,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6674,7 +6678,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6804,7 +6810,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6826,7 +6834,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7004,7 +7014,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7026,7 +7038,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7048,7 +7062,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7070,7 +7086,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7104,7 +7122,9 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7607,7 +7627,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7617,7 +7637,7 @@ INNER JOIN NDS_DATH.dbo.NDS_Time t ON f.Time_Id = t.Time_Id WHERE
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
