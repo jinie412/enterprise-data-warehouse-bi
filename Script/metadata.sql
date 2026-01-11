@@ -1,5 +1,127 @@
-﻿USE META_DATH;
+﻿USE master;
 GO
+
+DROP DATABASE META_DATH
+GO
+CREATE DATABASE META_DATH
+GO
+
+USE META_DATH
+GO
+
+
+DROP TABLE IF EXISTS event_log;
+GO
+DROP TABLE IF EXISTS event_type;
+GO
+DROP TABLE IF EXISTS data_flow;
+GO
+DROP TABLE IF EXISTS status_table;
+GO
+
+DROP TABLE IF EXISTS dq_rule;
+GO
+DROP TABLE IF EXISTS dq_notification;
+GO
+DROP TABLE IF EXISTS usage_log;
+GO
+
+DROP TABLE IF EXISTS dq_rule_category;
+GO
+DROP TABLE IF EXISTS dq_rule_action;
+GO
+DROP TABLE IF EXISTS dw_user;
+GO
+
+DROP TABLE IF EXISTS ds_column;
+GO
+DROP TABLE IF EXISTS ds_table;
+GO
+DROP TABLE IF EXISTS ds_table_type;
+GO
+
+CREATE TABLE ds_table_type (
+    table_type_key INT PRIMARY KEY IDENTITY(1,1),
+    table_type VARCHAR(20) UNIQUE NOT NULL, 
+    description NVARCHAR(255) NULL,
+    create_timestamp DATETIME DEFAULT GETDATE() NULL,
+    update_timestamp DATETIME DEFAULT GETDATE() NULL
+);
+
+CREATE TABLE ds_table (
+    table_key INT PRIMARY KEY IDENTITY(1,1),
+    name VARCHAR(255) UNIQUE NOT NULL,
+    entity_type INT NOT NULL,  
+    data_store VARCHAR(20),            
+    description NVARCHAR(255) NULL,
+    create_timestamp DATETIME DEFAULT GETDATE() NULL,
+    update_timestamp DATETIME DEFAULT GETDATE() NULL,
+
+    FOREIGN KEY (entity_type) REFERENCES ds_table_type(table_type_key)
+);
+
+CREATE TABLE ds_column (
+    column_key INT PRIMARY KEY IDENTITY(1,1),
+    table_key INT NOT NULL,  
+    column_name VARCHAR(255) NOT NULL,
+    data_type VARCHAR(255) NOT NULL,
+    is_PK BIT NULL DEFAULT 0,
+    is_FK BIT NULL DEFAULT 0,
+    is_null BIT NULL DEFAULT 1, 
+    is_identity BIT NULL DEFAULT 0,
+    create_timestamp DATETIME DEFAULT GETDATE() NULL,
+    update_timestamp DATETIME DEFAULT GETDATE() NULL,
+
+    
+    FOREIGN KEY (table_key) REFERENCES ds_table(table_key),
+	UNIQUE (table_key, column_name)
+);
+
+
+CREATE TABLE status_table (
+    status_key INT PRIMARY KEY IDENTITY(1,1),
+    status VARCHAR(50) UNIQUE NOT NULL,
+      
+    create_timestamp DATETIME DEFAULT GETDATE() NULL,
+    update_timestamp DATETIME DEFAULT GETDATE() NULL
+);
+
+CREATE TABLE data_flow (
+    data_flow_key INT PRIMARY KEY IDENTITY(1,1),
+    name VARCHAR(50) UNIQUE NOT NULL,
+    description NVARCHAR(255) NULL,
+    source VARCHAR(50) NULL,
+    target VARCHAR(50) NULL,
+    transformation NVARCHAR(MAX) NULL, 
+    --Package INT NULL,    
+    Status INT NULL,     
+    LSET DATETIME NULL,  
+    CET DATETIME NULL,   
+    create_timestamp DATETIME DEFAULT GETDATE() NULL,
+    update_timestamp DATETIME DEFAULT GETDATE() NULL,
+
+    FOREIGN KEY (status) REFERENCES status_table(status_key),
+);
+
+CREATE TABLE event_type (
+    event_type_key INT PRIMARY KEY IDENTITY(1,1),
+    event_type NVARCHAR(255) UNIQUE NOT NULL 
+);
+
+CREATE TABLE event_log (
+    log_key INT PRIMARY KEY IDENTITY(1,1),
+    event_type INT NOT NULL, 
+    timestamp DATETIME DEFAULT GETDATE(),
+    object INT NULL,              
+    rows INT NULL,
+    note VARCHAR(MAX) NULL,
+    data_flow INT NULL,
+    
+    
+    FOREIGN KEY (event_type) REFERENCES event_type(event_type_key),
+    FOREIGN KEY (data_flow) REFERENCES data_flow(data_flow_key),
+	FOREIGN KEY (object) REFERENCES ds_table(table_key)
+);
 
 ---------------------------------------------------------
 -- 1. ds_table_type
@@ -12,7 +134,10 @@ VALUES
 ('Transaction', N'Transaction table'),
 ('Stage', N'Stage table'),
 ('Metadata', N'Metadata table');
-
+INSERT INTO ds_table_type (table_type, description)
+VALUES 
+('Cube', N'SSAS OLAP Cube'),
+('Dashboard', N'Power BI / Excel Dashboard');
 ---------------------------------------------------------
 
 ---------------------------------------------------------
@@ -32,6 +157,13 @@ VALUES
 ('NDS_Time',    3, 'NDS', N'NDS Date'),
 ('NDS_Flight',  4, 'NDS', N'NDS Detail Flight'),
 ('NDS_Distance',3, 'NDS', N'NDS Airport Distance');
+
+-- Khai báo Cube và Dashboard
+-- Cột data_store để đánh dấu nơi dữ liệu thực sự nằm
+INSERT INTO ds_table (name, entity_type, data_store, description)
+VALUES 
+('DDS_DATH_CUBE',7 , 'SSAS', N'Aviation OLAP Cube'),
+('FLIGHT_ANALYSIS_DASHBOARD', 8, 'PowerBI', N'Dashboard connect live to Cube');
 ---------------------------------------------------------
 
 ---------------------------------------------------------
@@ -229,17 +361,14 @@ VALUES
 (@NDS_Flight, 'Origin_Airport', 'VARCHAR(10)', 0),
 (@NDS_Flight, 'Destination_Airport', 'VARCHAR(10)', 0),
 (@NDS_Flight, 'Scheduled_Departure', 'INT', 0),
-(@NDS_Flight, 'Departure_Time', 'INT', 0),
 (@NDS_Flight, 'Departure_Delay', 'INT', 0),
 (@NDS_Flight, 'Taxi_Out', 'INT', 0),
 (@NDS_Flight, 'Wheels_Off', 'INT', 0),
 (@NDS_Flight, 'Scheduled_Time', 'INT', 0),
-(@NDS_Flight, 'Elapsed_Time', 'INT', 0),
 (@NDS_Flight, 'Air_Time', 'INT', 0),
 (@NDS_Flight, 'Wheels_On', 'INT', 0),
 (@NDS_Flight, 'Taxi_In', 'INT', 0),
 (@NDS_Flight, 'Scheduled_Arrival', 'INT', 0),
-(@NDS_Flight, 'Arrival_Time', 'INT', 0),
 (@NDS_Flight, 'Arrival_Delay', 'INT', 0),
 (@NDS_Flight, 'Diverted', 'BIT', 0),
 (@NDS_Flight, 'Cancelled', 'BIT', 0),
@@ -287,14 +416,14 @@ VALUES
 ('DIM_AIRPORT', 1, 'DDS', N'Dimension Airport'),
 ('DIM_REASON', 1, 'DDS', N'Dimension Delay / Cancellation Reason'),
 ('DIM_TIME_OF_DAY', 1, 'DDS', N'Dimension Time of Day'),
-('FACT_FLIGHT_PERFORMANCE', 2, 'DDS', N'Fact Flight Performance');
+('FACT_FLIGHT', 2, 'DDS', N'Fact Flight Performance');
 
 DECLARE @DIM_DATE INT = (SELECT table_key FROM ds_table WHERE name='DIM_DATE');
 DECLARE @DIM_AIRLINE INT = (SELECT table_key FROM ds_table WHERE name='DIM_AIRLINE');
 DECLARE @DIM_AIRPORT INT = (SELECT table_key FROM ds_table WHERE name='DIM_AIRPORT');
 DECLARE @DIM_REASON INT = (SELECT table_key FROM ds_table WHERE name='DIM_REASON');
 DECLARE @DIM_TIME_OF_DAY INT = (SELECT table_key FROM ds_table WHERE name='DIM_TIME_OF_DAY');
-DECLARE @FACT_FLIGHT_PERFORMANCE INT = (SELECT table_key FROM ds_table WHERE name='FACT_FLIGHT_PERFORMANCE');
+DECLARE @FACT_FLIGHT INT = (SELECT table_key FROM ds_table WHERE name='FACT_FLIGHT');
 
 INSERT INTO ds_column (table_key, column_name, data_type, is_PK)
 VALUES
@@ -352,38 +481,35 @@ VALUES
 
 INSERT INTO ds_column (table_key, column_name, data_type, is_PK)
 VALUES
-(@FACT_FLIGHT_PERFORMANCE, 'Date_Key', 'INT', 1),
-(@FACT_FLIGHT_PERFORMANCE, 'Airline_Key', 'INT', 1),
-(@FACT_FLIGHT_PERFORMANCE, 'Origin_Airport_Key', 'INT', 1),
-(@FACT_FLIGHT_PERFORMANCE, 'Dest_Airport_Key', 'INT', 1),
-(@FACT_FLIGHT_PERFORMANCE, 'Reason_Key', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Time_Of_Day_Key', 'INT', 0),
+(@FACT_FLIGHT, 'FlightID', 'INT', 1),
+(@FACT_FLIGHT, 'Date_Key', 'INT', 0),
+(@FACT_FLIGHT, 'Airline_Key', 'INT', 0),
+(@FACT_FLIGHT, 'Origin_Airport_Key', 'INT', 0),
+(@FACT_FLIGHT, 'Dest_Airport_Key', 'INT', 0),
+(@FACT_FLIGHT, 'Reason_Key', 'INT', 0),
+(@FACT_FLIGHT, 'Time_Of_Day_Key', 'INT', 0),
 
-(@FACT_FLIGHT_PERFORMANCE, 'Flight_Number', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Tail_Number', 'VARCHAR(20)', 0),
+(@FACT_FLIGHT, 'Flight_Number', 'INT', 0),
+(@FACT_FLIGHT, 'Tail_Number', 'VARCHAR(20)', 0),
 
-(@FACT_FLIGHT_PERFORMANCE, 'Flight_Count', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Dep_Delay_Minutes', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Arr_Delay_Minutes', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Taxi_Out', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Taxi_In', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Air_Time', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Distance', 'INT', 0),
+(@FACT_FLIGHT, 'Flight_Count', 'INT', 0),
+(@FACT_FLIGHT, 'Dep_Delay_Minutes', 'INT', 0),
+(@FACT_FLIGHT, 'Arr_Delay_Minutes', 'INT', 0),
 
-(@FACT_FLIGHT_PERFORMANCE, 'Is_Cancelled', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Is_Diverted', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Is_OTP', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Is_Delayed', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Is_Early', 'INT', 0),
 
-(@FACT_FLIGHT_PERFORMANCE, 'Air_System_Delay', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Security_Delay', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Airline_Delay', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Late_Aircraft_Delay', 'INT', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'Weather_Delay', 'INT', 0),
+(@FACT_FLIGHT, 'Is_Cancelled', 'INT', 0),
+(@FACT_FLIGHT, 'Is_Diverted', 'INT', 0),
+(@FACT_FLIGHT, 'Is_OTP', 'INT', 0),
+(@FACT_FLIGHT, 'Is_Delayed', 'INT', 0),
 
-(@FACT_FLIGHT_PERFORMANCE, 'CREATED_DATE', 'DATETIME', 0),
-(@FACT_FLIGHT_PERFORMANCE, 'UPDATED_DATE', 'DATETIME', 0);
+(@FACT_FLIGHT, 'Air_System_Delay', 'INT', 0),
+(@FACT_FLIGHT, 'Security_Delay', 'INT', 0),
+(@FACT_FLIGHT, 'Airline_Delay', 'INT', 0),
+(@FACT_FLIGHT, 'Late_Aircraft_Delay', 'INT', 0),
+(@FACT_FLIGHT, 'Weather_Delay', 'INT', 0),
+
+(@FACT_FLIGHT, 'CREATED_DATE', 'DATETIME', 0),
+(@FACT_FLIGHT, 'UPDATED_DATE', 'DATETIME', 0);
 
 INSERT INTO data_flow (name, description, source, target, transformation, status)
 VALUES
@@ -424,3 +550,134 @@ VALUES
  3,
  '2010-01-02 03:00:00',
  '2010-01-02 04:00:00');
+
+
+USE META_DATH;
+GO
+
+
+-- DATA QUALITY METADATA TABLES
+---------------------------------------------------------
+-- Danh mục kiểm tra
+CREATE TABLE dq_rule_category (
+    category_id CHAR(1) PRIMARY KEY,
+    description VARCHAR(100)
+);
+INSERT INTO dq_rule_category VALUES 
+('I', 'Incoming data validation (Stage)'),
+('C', 'Cross reference validation (NDS)'),
+('D', 'Internal data warehouse validation (DDS)');
+
+
+-- Hành động xử lý: R (Reject), A (Allow), F (Fix)
+CREATE TABLE dq_rule_action (
+    action_id CHAR(1) PRIMARY KEY,
+    description VARCHAR(50)
+);
+INSERT INTO dq_rule_action VALUES ('R', 'Reject Record'), ('A', 'Allow with Warning'), ('F', 'Auto Fix');
+
+---------------------------------------------------------
+-- BẢNG THÔNG TIN NGƯỜI DÙNG & NHÓM
+---------------------------------------------------------
+
+CREATE TABLE dw_user (
+    user_key INT IDENTITY(1,1) PRIMARY KEY,
+    name NVARCHAR(100),
+    department NVARCHAR(100),
+    role NVARCHAR(100),
+    email_address VARCHAR(255),
+    user_group_key INT -- Để gom nhóm nhận thông báo
+);
+
+INSERT INTO dw_user (name, department, role, email_address, user_group_key)
+VALUES 
+(N'Phạm Khánh Hân', 'Data Engineering', 'DE', '22120091.@student.hcmus.edu.vn', 2),
+(N'Nguyễn Thị Tú Ngọc', 'Data Engineering', 'DE', '22120233.@student.hcmus.edu.vn', 2),
+(N'Quách Quỳnh Như', 'Data Engineering', 'DE', '22120258.@student.hcmus.edu.vn', 2),
+(N'Dương Kim Phụng', 'Data Engineering', 'DE', '22120284.@student.hcmus.edu.vn', 2);
+
+---------------------------------------------------------
+-- BẢNG QUY TẮC DQ (DQ_RULE)
+---------------------------------------------------------
+
+CREATE TABLE dq_rule (
+    rule_key INT IDENTITY(1,1) PRIMARY KEY,
+    rule_name NVARCHAR(255),
+    description NVARCHAR(MAX),
+    rule_type CHAR(1),
+    rule_category CHAR(1) FOREIGN KEY REFERENCES dq_rule_category(category_id),
+    risk_level INT CHECK (risk_level BETWEEN 1 AND 5),
+    status VARCHAR(7) DEFAULT 'Active', -- Active, Inactive
+    action CHAR(1) FOREIGN KEY REFERENCES dq_rule_action(action_id),
+    
+    -- Liên kết với hệ thống hiện tại của bạn
+    table_key INT FOREIGN KEY REFERENCES ds_table(table_key), 
+    
+    create_timestamp DATETIME DEFAULT GETDATE(),
+    update_timestamp DATETIME DEFAULT GETDATE()
+);
+
+---------------------------------------------------------
+-- BẢNG THÔNG BÁO (DQ_NOTIFICATION)
+---------------------------------------------------------
+
+CREATE TABLE dq_notification (
+    notification_key INT IDENTITY(1,1) PRIMARY KEY,
+    rule_key INT FOREIGN KEY REFERENCES dq_rule(rule_key),
+    recipient_type CHAR(1), -- I (Individual), G (Group)
+    recipient_id INT,       -- ID của user / group
+    method CHAR(1),         -- E (Email), S (SMS)
+    last_notified DATETIME
+);
+
+---------------------------------------------------------
+-- DATA
+---------------------------------------------------------
+
+DECLARE @tbl_STG_Airport INT = (SELECT table_key FROM ds_table WHERE name='STG_Airport');
+DECLARE @tbl_NDS_Flight INT = (SELECT table_key FROM ds_table WHERE name='NDS_Flight');
+
+INSERT INTO dq_rule (rule_name, description, rule_type, rule_category, risk_level, action, table_key)
+VALUES 
+-- Quy tắc 1: Kiểm tra mã IATA Sân bay (3 ký tự chữ)
+(N'VAL_IATA_AIRPORT', N'IATA Airport code must be exactly 3 uppercase letters', 'E', 'I', 4, 'R', @tbl_STG_Airport),
+
+-- Quy tắc 2: Kiểm tra tính logic của thời gian (Delay không được âm)
+(N'VAL_DELAY_POSITIVE', N'Departure delay should not be negative in NDS', 'W', 'C', 2, 'A', @tbl_NDS_Flight),
+
+-- Quy tắc 3: Kiểm tra tính nhất quán mã Airline (Phải tồn tại trong DIM_AIRLINE)
+(N'REF_AIRLINE_EXIST', N'Airline code must exist in Dimension Airline before loading Fact', 'E', 'D', 5, 'R', @tbl_NDS_Flight);
+
+-- Thiết lập thông báo cho Quy tắc 1 gửi cho Admin Duy
+INSERT INTO dq_notification (rule_key, recipient_type, recipient_id, method)
+VALUES (1, 'I', 1, 'E');
+
+GO
+
+---------------------------------------------------------
+-- USAGE METADATA TABLE
+---------------------------------------------------------
+CREATE TABLE usage_log (
+    usage_key INT IDENTITY(1,1) PRIMARY KEY,
+    user_key INT FOREIGN KEY REFERENCES dw_user(user_key),
+    object_key INT FOREIGN KEY REFERENCES ds_table(table_key), -- Dashboard hoặc Cube
+    
+    access_via NVARCHAR(50), -- 'Power BI', 'Excel', 'SSMS (MDX Query)'
+    
+    timestamp DATETIME DEFAULT GETDATE(),
+);
+
+-- Data
+DECLARE @uHanh INT = (SELECT user_key FROM dw_user WHERE name LIKE N'%Khánh Hân%');
+DECLARE @uNgoc INT = (SELECT user_key FROM dw_user WHERE name LIKE N'%Tú Ngọc%');
+
+DECLARE @objCube INT = (SELECT table_key FROM ds_table WHERE name = 'DDS_DATH_CUBE');
+DECLARE @objDash INT = (SELECT table_key FROM ds_table WHERE name = 'FLIGHT_ANALYSIS_DASHBOARD');
+
+INSERT INTO usage_log (user_key, object_key, access_via, timestamp)
+VALUES 
+-- Trường hợp 1: Người dùng mở Dashboard (Dashboard tự động gọi Cube)
+(@uHanh, @objDash, 'Power BI', GETDATE()),
+
+-- Trường hợp 2: Người dùng dùng Excel kết nối trực tiếp vào Cube để kéo Pivot table
+(@uNgoc, @objCube, 'Excel Pivot', GETDATE());

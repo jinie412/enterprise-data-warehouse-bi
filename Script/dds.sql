@@ -84,10 +84,10 @@ CREATE TABLE DIM_TIME_OF_DAY (
 );
 
 
--- Bảng Fact_Flight_Performance
+-- Bảng Fact_Flight
 
 CREATE TABLE FACT_FLIGHT (
-    Flight INT IDENTITY(1,1) PRIMARY KEY,
+    FlightID INT IDENTITY(1,1) PRIMARY KEY,
     -- FOREIGN KEYS (DIMENSIONS)
     Date_Key INT NOT NULL,
 	Airline_Key INT NOT NULL,
@@ -103,15 +103,12 @@ CREATE TABLE FACT_FLIGHT (
 	Flight_Count INT NOT NULL DEFAULT 1, -- Luôn = 1, dùng để đếm số chuyến bay
 	Dep_Delay_Minutes INT, -- Thời gian trễ lúc khởi hành
 	Arr_Delay_Minutes INT, -- Thời gian trễ lúc đến nơi
-	--Taxi_Out INT, -- Thời gian lăn bánh ra
-	--Taxi_In INT, -- Thời gian lăn bánh vào
-	--Air_Time INT, -- Thời gian bay trên không
       
     -- KPI FLAGS (0 / 1)
 	Is_Cancelled INT NOT NULL, -- 1: chuyến bị hủy
 	Is_Diverted INT NOT NULL, -- 1: chuyển hướng
-	Is_OTP INT, -- 1: Arr_Delay <= 15 phút
-	Is_Delayed INT, -- 1: Dep_Delay > 15 phút
+	Is_OTP INT, -- 1: Arr_Delay < 15 phút
+	Is_Delayed INT, -- 1: ArrDelay >= 15 phút & Cancelled = 1
 
     -- DELAY BREAKDOWN
 	Air_System_Delay INT NOT NULL DEFAULT 0,
@@ -193,6 +190,7 @@ OPTION (MAXRECURSION 0);
 
 USE DDS_DATH;
 GO
+
 
 -- Xóa dữ liệu cũ nếu cần
 -- TRUNCATE TABLE DIM_TIME_OF_DAY;

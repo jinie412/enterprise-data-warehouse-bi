@@ -1,0 +1,107 @@
+﻿-- Tổng số chuyến bay theo năm
+SELECT
+  {[Measures].[Flight Count]} ON COLUMNS,
+  NON EMPTY
+  [DIM DATE].[Hierarchy].[Year].Members ON ROWS
+FROM [DDS DATH];
+
+-- Tổng số chuyến bay theo quý
+SELECT
+  {[Measures].[Flight Count]} ON COLUMNS,
+  NON EMPTY
+  [DIM DATE].[Hierarchy].[Quarter].Members ON ROWS
+FROM [DDS DATH];
+
+-- Tổng số chuyến bay theo tháng
+SELECT
+  {[Measures].[Flight Count]} ON COLUMNS,
+  NON EMPTY
+  [DIM DATE].[Hierarchy].[Month].Members ON ROWS
+FROM [DDS DATH];
+
+-- Tỉ lệ chuyến bay đúng giờ (OTP) theo hãng hàng không
+WITH 
+MEMBER [Measures].[OTP Rate] AS
+    IIF(
+        [Measures].[Flight Count] = 0,
+        NULL,
+        [Measures].[Is OTP] / [Measures].[Flight Count]
+    ),
+    FORMAT_STRING = "Percent"
+
+SELECT
+{
+    [Measures].[OTP Rate]
+} ON COLUMNS,
+
+NON EMPTY
+[DIM AIRLINE].[Airline Name].MEMBERS ON ROWS
+
+FROM [DDS DATH];
+
+
+-- Trung bình delay theo sân bay đến
+SELECT 
+    {[Measures].[Avg Arrival Delay]} ON COLUMNS,
+    [DEST Airport].[Airport Name].Members ON ROWS
+FROM [DDS DATH];
+
+-- Trung bình delay theo sân bay đi
+SELECT 
+	{[Measures].[Avg Departure Delay]} ON COLUMNS,
+[Origin Airport].[Airport Name].Members ON ROWS
+FROM [DDS DATH];
+
+-- Top 5 hãng hàng không có nhiều chuyến bay nhất
+SELECT 
+  { [Measures].[Flight Count] } ON COLUMNS,
+  { 
+    TOPCOUNT(
+      [DIM AIRLINE].[Airline Name].[Airline Name].MEMBERS, 
+      5, 
+      [Measures].[Flight Count]
+    ) 
+  } ON ROWS
+FROM [DDS DATH];
+
+
+WITH
+-- Tổng số chuyến BỊ HỦY của TOÀN BỘ nguyên nhân
+MEMBER [Measures].[Total Cancellations All Reasons] AS
+    (
+        [Measures].[Is Cancelled],
+        [DIM REASON].[Reason Description].[All]
+    )
+
+
+-- Tỉ lệ đóng góp của từng nguyên nhân
+
+MEMBER [Measures].[Reason Contribution Rate] AS
+    IIF(
+        [Measures].[Total Cancellations All Reasons] = 0,
+        NULL,
+        [Measures].[Is Cancelled]
+        /
+        [Measures].[Total Cancellations All Reasons]
+    ),
+    FORMAT_STRING = "0.00%"
+
+SELECT
+{
+    [Measures].[Is Cancelled],                       -- Số chuyến bị hủy theo nguyên nhân
+    [Measures].[Total Cancellations All Reasons],    -- Tổng số chuyến bị hủy (luôn cố định)
+    [Measures].[Reason Contribution Rate]             -- % đóng góp của nguyên nhân
+} ON COLUMNS,
+
+
+-- Chỉ lấy các nguyên nhân THỰC SỰ gây hủy chuyến
+
+NON EMPTY
+FILTER(
+    [DIM REASON].[Reason Description].[Reason Description].MEMBERS,
+        [Measures].[Is Cancelled] > 0
+        AND NOT ISEMPTY([Measures].[Is Cancelled])
+        AND [DIM REASON].[Reason Description].CURRENTMEMBER.NAME <> "Not Cancelled"
+) ON ROWS
+
+FROM [DDS DATH]

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="99"
-  DTS:VersionGUID="{FDC33655-C082-4E9E-A5F0-90E48E170968}">
+  DTS:VersionBuild="100"
+  DTS:VersionGUID="{EC9D45CB-27CF-411E-8DF6-F21B5858E5A9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2186,7 +2186,7 @@ where [refTable].[Origin_Airport] = ? and [refTable].[Destination_Airport] = ?</
                       refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Inputs[Lookup Input].Columns[Origin_Airport]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="5"
+                      cachedLength="3"
                       cachedName="Origin_Airport"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]">
                       <properties>
@@ -2204,7 +2204,7 @@ where [refTable].[Origin_Airport] = ? and [refTable].[Destination_Airport] = ?</
                       refId="Package\Import to NDS_Distance\Lookup in NDS_Distance.Inputs[Lookup Input].Columns[Destination_Airport]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="5"
+                      cachedLength="3"
                       cachedName="Destination_Airport"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]">
                       <properties>
@@ -2324,7 +2324,7 @@ WHERE Origin_Airport=? AND Destination_Airport=?</property>
                       refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].Columns[Origin_Airport]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="5"
+                      cachedLength="3"
                       cachedName="Origin_Airport"
                       externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]" />
@@ -2332,7 +2332,7 @@ WHERE Origin_Airport=? AND Destination_Airport=?</property>
                       refId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].Columns[Destination_Airport]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="5"
+                      cachedLength="3"
                       cachedName="Destination_Airport"
                       externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]" />
@@ -2510,7 +2510,7 @@ WHERE Origin_Airport=? AND Destination_Airport=?</property>
                       refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Origin_Airport]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="5"
+                      cachedLength="3"
                       cachedName="Origin_Airport"
                       externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Origin_Airport]"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]" />
@@ -2518,7 +2518,7 @@ WHERE Origin_Airport=? AND Destination_Airport=?</property>
                       refId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Destination_Airport]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="5"
+                      cachedLength="3"
                       cachedName="Destination_Airport"
                       externalMetadataColumnId="Package\Import to NDS_Distance\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Destination_Airport]"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]" />
@@ -2653,7 +2653,7 @@ GROUP BY Destination_Airport, Origin_Airport</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Origin_Airport]"
-                      length="5"
+                      length="3"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Origin_Airport]"
                       name="Origin_Airport"
                       truncationRowDisposition="FailComponent" />
@@ -2664,7 +2664,7 @@ GROUP BY Destination_Airport, Origin_Airport</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Destination_Airport]"
-                      length="5"
+                      length="3"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].Columns[Destination_Airport]"
                       name="Destination_Airport"
                       truncationRowDisposition="FailComponent" />
@@ -2684,13 +2684,13 @@ GROUP BY Destination_Airport, Origin_Airport</property>
                       refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Origin_Airport]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       name="Origin_Airport" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Destination_Airport]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       name="Destination_Airport" />
                     <externalMetadataColumn
                       refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Output].ExternalColumns[Distance]"
@@ -2707,14 +2707,14 @@ GROUP BY Destination_Airport, Origin_Airport</property>
                       refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Origin_Airport]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Origin_Airport]"
                       name="Origin_Airport" />
                     <outputColumn
                       refId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Destination_Airport]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="3"
                       lineageId="Package\Import to NDS_Distance\STG_Flight.Outputs[OLE DB Source Error Output].Columns[Destination_Airport]"
                       name="Destination_Airport" />
                     <outputColumn
@@ -7601,9 +7601,7 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7697,9 +7695,7 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7721,9 +7717,7 @@ From STG_Flight</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7972,6 +7966,19 @@ From STG_Flight</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Import to NDS_Flight\STG_Flight">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Import to NDS_Flight\Lookup TimeID in NDS_Time">
     <Properties>
       <Property>
@@ -8019,19 +8026,6 @@ From STG_Flight</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Import to NDS_Flight\NDS_Flight">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import to NDS_Flight\STG_Flight">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

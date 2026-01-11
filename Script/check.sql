@@ -76,6 +76,8 @@ SELECT * FROM FACT_FLIGHT where Is_Delayed=1 and Is_OTP=1
 select count(is_otp) from FACT_FLIGHT
 SELECT * FROM DIM_AIRPORT where city = 'Albany'
 
+
+
 SELECT * FROM FACT_FLIGHT where Is_OTP=1 and (Air_System_Delay<>0 or Security_Delay<>0 or Airline_Delay<>0 or Late_Aircraft_Delay<>0 or Weather_Delay<>0)
 
 UPDATE DIM_AIRPORT
