@@ -71,17 +71,14 @@ CREATE TABLE NDS_Flight (
     Origin_Airport VARCHAR(3),
     Destination_Airport VARCHAR(3),
     Scheduled_Departure INT,
-   -- Departure_Time TIME,
     Departure_Delay INT,
     Taxi_Out INT,
     Wheels_Off TIME,
     Scheduled_Time INT,
-    --Elapsed_Time INT,
     Air_Time INT,
     Wheels_On TIME,
     Taxi_In INT,
     Scheduled_Arrival TIME,
-   --Arrival_Time TIME,
     Arrival_Delay INT,
     Diverted BIT,
     Cancelled BIT,
@@ -122,3 +119,4 @@ SELECT * FROM NDS_Time
 SELECT * FROM NDS_Distance
 
 SELECT * FROM NDS_Reason
+SELECT * FROM NDS_Flight

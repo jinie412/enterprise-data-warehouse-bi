@@ -37,25 +37,16 @@ UPDATE data_flow
 SET LSET='2010-01-01 00:00:00'
 
 
+
+
 USE NDS_DATH
 GO
-
-SELECT * FROM NDS_Airline
-SELECT IATA_CODE, LEN(IATA_CODE)
-FROM NDS_Airline
-WHERE IATA_CODE LIKE '% '
-
-SELECT * FROM NDS_Airport
-SELECT IATA_CODE, LEN(Iata_Code)
-FROM NDS_Airport
-WHERE IATA_CODE LIKE '% '
 
 SELECT * FROM NDS_Time
 SELECT * FROM NDS_Reason
 SELECT * FROM NDS_Flight
 SELECT * FROM NDS_Distance
 
-SELECT * FROM NDS_Flight WHERE Departure_Delay > 15 AND Arrival_Delay <=15 and Cancelled=0
 
 USE DDS_DATH
 GO
@@ -77,34 +68,4 @@ select count(is_otp) from FACT_FLIGHT
 SELECT * FROM DIM_AIRPORT where city = 'Albany'
 
 
-
-SELECT * FROM FACT_FLIGHT where Is_OTP=1 and (Air_System_Delay<>0 or Security_Delay<>0 or Airline_Delay<>0 or Late_Aircraft_Delay<>0 or Weather_Delay<>0)
-
-UPDATE DIM_AIRPORT
-SET Latitude='30.357106',
-Longitude='-85.795414'
-WHERE IATA_Code='ECP'
-
-
-UPDATE DIM_AIRPORT
-SET Latitude='44.650901794433594',
-Longitude='-73.46810150146484'
-WHERE IATA_Code='PBG'
-
-
-UPDATE DIM_AIRPORT
-SET Latitude='29.9592',
-Longitude='-81.339798'
-WHERE IATA_Code='UST'
-
-
-UPDATE DIM_AIRPORT
-SET Latitude='13.4834003448',
-Longitude='144.796005249'
-WHERE IATA_Code='GUM'
-
-
-UPDATE DIM_AIRPORT
-SET Latitude='-14.3310003281',
-Longitude='-170.710006714'
-WHERE IATA_Code='PPG'
+select * from [dbo].[sysssislog]
